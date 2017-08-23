@@ -4,9 +4,13 @@ import ReactDOM from "react-dom"; // import reactDOM
 import App from "./app/App.jsx"; // import the main app component
 import { Provider } from "react-redux";
 import Store from "./Store";
+
+import GrommetApp from "grommet/components/App";
 ReactDOM.render(
-  <Provider store={Store}>
-    <App />
-  </Provider>,
+  <GrommetApp>
+    <Provider store={Store}>
+      <App />
+    </Provider>
+  </GrommetApp>,
   document.getElementById("root")
 ); // render our App component and mount it to our #root element
