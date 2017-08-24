@@ -1,6 +1,9 @@
-// hide skip to element
-#skip-link-layer {
-    display: none;
+@import "grommet/scss/vanilla/index";
+.grommet.grommetux-app--centered {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 html,
