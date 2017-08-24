@@ -10,12 +10,12 @@ import { BrowserRouter } from "react-router-dom";
 
 // import GrommetApp from "grommet/components/App"; Not working......
 ReactDOM.render(
-  <BrowserRouter>
-    <GrommetApp>
+  <GrommetApp>
+    <BrowserRouter>
       <Provider store={Store}>
         <App />
       </Provider>
-    </GrommetApp>
-  </BrowserRouter>,
+    </BrowserRouter>
+  </GrommetApp>,
   document.getElementById("root")
 ); // render our App component and mount it to our #root element
