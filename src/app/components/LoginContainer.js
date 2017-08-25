@@ -27,8 +27,10 @@ class LoginContainer extends Component {
     this.props.randomData();
   }
 
-  redirect() {
-    // do logic to test if the user entered value info for email/password
+  redirect(login) {
+    // "login" contains the users email/password
+    console.log({ login });
+    // logic to test if the user entered value info for email/password
     this.props.history.push("/dashboard");
   }
 
@@ -44,7 +46,7 @@ class LoginContainer extends Component {
             align="center"
           >
             <Heading tag="h1" strong={true}>
-              Test
+              Dashboard
             </Heading>
             <Paragraph align="center" size="large">
               Development with Grommet is cool.
