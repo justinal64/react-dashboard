@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import randomData from "../../actions/random_data";
 import LoginCard from "./LoginCard";
 import PasswordInput from "grommet/components/PasswordInput";
+import { withRouter } from "react-router-dom";
 
 import Split from "grommet/components/Split";
 import Sidebar from "grommet/components/Sidebar";
@@ -16,12 +17,21 @@ import Footer from "grommet/components/Footer";
 
 import Logo from "grommet/components/icons/Grommet";
 
-const test = () => {
-  console.log("test");
-};
 class LoginContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.redirect = this.redirect.bind(this);
+  }
+
   componentWillMount() {
     this.props.randomData();
+  }
+
+  redirect(login) {
+    // "login" contains the users email/password
+    console.log({ login });
+    // logic to test if the user entered value info for email/password
+    this.props.history.push("/dashboard");
   }
 
   render() {
@@ -36,7 +46,7 @@ class LoginContainer extends Component {
             align="center"
           >
             <Heading tag="h1" strong={true}>
-              Test
+              Dashboard
             </Heading>
             <Paragraph align="center" size="large">
               Development with Grommet is cool.
@@ -46,7 +56,7 @@ class LoginContainer extends Component {
 
         <Sidebar justify="between" align="center" pad="none" size="large">
           <span />
-          <LoginForm onSubmit={test} />
+          <LoginForm onSubmit={this.redirect} />
           <Footer
             direction="row"
             size="small"
