@@ -16,6 +16,9 @@ import Footer from "grommet/components/Footer";
 
 import Logo from "grommet/components/icons/Grommet";
 
+const test = () => {
+  console.log("test");
+};
 class LoginContainer extends Component {
   componentWillMount() {
     this.props.randomData();
@@ -43,7 +46,7 @@ class LoginContainer extends Component {
 
         <Sidebar justify="between" align="center" pad="none" size="large">
           <span />
-          <LoginForm onSubmit={this.test} />
+          <LoginForm onSubmit={test} />
           <Footer
             direction="row"
             size="small"
