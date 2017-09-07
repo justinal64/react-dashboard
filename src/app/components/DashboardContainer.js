@@ -16,6 +16,8 @@ import Box from "grommet/components/Box";
 import Title from "grommet/components/Title";
 import Menu from "grommet/components/Menu";
 import Button from "grommet/components/Button";
+import Columns from "grommet/components/Columns";
+import Headline from "grommet/components/Headline";
 
 class DashboardContainer extends Component {
   componentWillMount() {
@@ -50,14 +52,67 @@ class DashboardContainer extends Component {
             <Footer pad="medium" />
           </Sidebar>
         </Box>
-        <Box
-          colorIndex="neutral-2"
-          justify="center"
-          align="center"
-          pad="medium"
-        >
-          <DashboardCard />
-        </Box>
+        <Section>
+          <Headline align="center">Overview</Headline>
+          <Columns masonry={false}>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 1
+            </Box>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 2
+            </Box>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 3
+            </Box>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 4
+            </Box>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 5
+            </Box>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 6
+            </Box>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 7
+            </Box>
+          </Columns>
+        </Section>
       </Split>
     );
   }
