@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DashboardCard from "./DashboardCard";
+import ChartTest from "./Charts/ChartTest";
 import { connect } from "react-redux";
 import fetchData from "../../actions/fetch_data";
 import Split from "grommet/components/Split";
@@ -54,8 +55,9 @@ class DashboardContainer extends Component {
         </Box>
         <Section>
           <Headline align="center">Overview</Headline>
+          <ChartTest />
           <Columns masonry={false}>
-            <Box
+            {/* <Box
               align="center"
               pad="medium"
               margin="small"
@@ -110,7 +112,7 @@ class DashboardContainer extends Component {
               colorIndex="light-2"
             >
               Box 7
-            </Box>
+            </Box> */}
           </Columns>
         </Section>
       </Split>
