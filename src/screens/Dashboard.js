@@ -1,7 +1,8 @@
 import React from "react";
+import DashboardContainer from "../app/components/DashboardContainer";
 
 const Dashboard = props => {
-  return <div>Dashboard Page!</div>;
+  return <DashboardContainer />;
 };
 
 export default Dashboard;
