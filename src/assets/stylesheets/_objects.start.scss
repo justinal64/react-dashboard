@@ -1,0 +1,22 @@
+.infographic-start {
+	border-bottom: $border;
+	width: 100%;
+
+	.grommetux-heading {
+		max-width: 950px;
+	}
+
+	.col__span-50 {
+		width: 50%;
+		height: auto;
+	}
+
+	.col__span-100 {
+		width: 100%;
+		height: auto;
+	}
+
+	&.col-row {
+		padding-bottom: 20px;
+	}
+}

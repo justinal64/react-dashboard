@@ -56,7 +56,7 @@ class DashboardContainer extends Component {
             <Footer pad="medium" />
           </Sidebar>
         </Box>
-        <Section>
+        <Section colorIndex="grey-1">
           <Headline align="center">Overview</Headline>
           <Box
             className="stacked-row"
@@ -69,8 +69,10 @@ class DashboardContainer extends Component {
               pad={{ horizontal: "medium" }}
               align="center"
             >
-              1
               <VPieChart />
+              <Heading align="center" tag="h2">
+                Tickets Per Hour
+              </Heading>
             </Box>
             <Box
               className="area-box col__span-25"
@@ -78,17 +80,21 @@ class DashboardContainer extends Component {
               pad={{ horizontal: "medium" }}
               align="center"
             >
-              2
               <VPieChart />
+              <Heading align="center" tag="h2">
+                Sample Heading
+              </Heading>
             </Box>
             <Box
-              className="map-box col__span-50"
+              className="meter-box col__span-25"
               justify="start"
               pad={{ horizontal: "medium" }}
               align="center"
             >
-              3
               <VPieChart />
+              <Heading align="center" tag="h2">
+                Sample Heading
+              </Heading>
             </Box>
           </Box>
           <CombinationChart />

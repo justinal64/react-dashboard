@@ -20,7 +20,6 @@ class VPieChart extends React.Component {
 
     return (
       <div className="app">
-        Victory Pie Chart
         <VictoryPie
           colorScale={["tomato", "orange", "gold", "cyan", "navy"]}
           data={sampleData}
