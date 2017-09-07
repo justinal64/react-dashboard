@@ -9,9 +9,8 @@ import {
   Legend,
   LineSeries
 } from "react-jsx-highcharts";
-// import code from "./exampleCode";
 
-class ChartTest extends Component {
+class LineSeriesChart extends Component {
   render() {
     const plotOptions = {
       series: {
@@ -63,11 +62,9 @@ class ChartTest extends Component {
             />
           </YAxis>
         </HighchartsChart>
-
-        {/* <ExampleCode name="SimpleLine">{code}</ExampleCode> */}
       </div>
     );
   }
 }
 
-export default ChartTest;
+export default LineSeriesChart;
