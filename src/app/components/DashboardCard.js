@@ -33,7 +33,7 @@ const DashboardCard = props => {
   //   }
 
   return (
-    <div className="astronomy-card">
+    <div>
       DashboardCard
       {/* {renderContent()}
       <div className="img-details">

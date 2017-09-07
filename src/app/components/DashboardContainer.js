@@ -2,7 +2,22 @@ import React, { Component } from "react";
 import DashboardCard from "./DashboardCard";
 import { connect } from "react-redux";
 import fetchData from "../../actions/fetch_data";
-import SidebarMenu from "./SidebarMenu";
+import Split from "grommet/components/Split";
+import Sidebar from "grommet/components/Sidebar";
+import LoginForm from "grommet/components/LoginForm";
+import Article from "grommet/components/Article";
+import Section from "grommet/components/Section";
+import Heading from "grommet/components/Heading";
+import Paragraph from "grommet/components/Paragraph";
+import Footer from "grommet/components/Footer";
+import Header from "grommet/components/Header";
+import Anchor from "grommet/components/Anchor";
+import Box from "grommet/components/Box";
+import Title from "grommet/components/Title";
+import Menu from "grommet/components/Menu";
+import Button from "grommet/components/Button";
+import Columns from "grommet/components/Columns";
+import Headline from "grommet/components/Headline";
 
 class DashboardContainer extends Component {
   componentWillMount() {
@@ -14,10 +29,91 @@ class DashboardContainer extends Component {
   }
   render() {
     return (
-      <div>
-        <SidebarMenu />
-        <DashboardCard data={this.props.astronomy} />
-      </div>
+      <Split flex="right">
+        <Box
+          colorIndex="neutral-1"
+          justify="center"
+          align="center"
+          pad="medium"
+        >
+          <Sidebar colorIndex="neutral-1" fixed={true}>
+            <Header pad="medium" justify="between">
+              <Title>Dashboard</Title>
+            </Header>
+            <Box flex="grow" justify="start">
+              <Menu primary={true}>
+                <Anchor href="#" className="active">
+                  First
+                </Anchor>
+                <Anchor href="#">Second</Anchor>
+                <Anchor href="#">Third</Anchor>
+              </Menu>
+            </Box>
+            <Footer pad="medium" />
+          </Sidebar>
+        </Box>
+        <Section>
+          <Headline align="center">Overview</Headline>
+          <Columns masonry={false}>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 1
+            </Box>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 2
+            </Box>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 3
+            </Box>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 4
+            </Box>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 5
+            </Box>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 6
+            </Box>
+            <Box
+              align="center"
+              pad="medium"
+              margin="small"
+              colorIndex="light-2"
+            >
+              Box 7
+            </Box>
+          </Columns>
+        </Section>
+      </Split>
     );
   }
 }
