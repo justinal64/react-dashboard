@@ -3,6 +3,9 @@ import DashboardCard from "./DashboardCard";
 import LineSeriesChart from "./Charts/LineSeriesChart";
 import GaugeChart from "./Charts/GaugeChart";
 import CombinationChart from "./Charts/CombinationChart";
+import VBarChart from "./Charts/VBarChart";
+import VPieChart from "./Charts/VPieChart";
+
 import { connect } from "react-redux";
 import fetchData from "../../actions/fetch_data";
 import Split from "grommet/components/Split";
@@ -21,6 +24,9 @@ import Menu from "grommet/components/Menu";
 import Button from "grommet/components/Button";
 import Columns from "grommet/components/Columns";
 import Headline from "grommet/components/Headline";
+import Tiles from "grommet/components/Tiles";
+import Tile from "grommet/components/Tile";
+import Card from "grommet/components/Card";
 
 class DashboardContainer extends Component {
   componentWillMount() {
@@ -33,13 +39,8 @@ class DashboardContainer extends Component {
   render() {
     return (
       <Split flex="right">
-        <Box
-          colorIndex="neutral-1"
-          justify="center"
-          align="center"
-          pad="medium"
-        >
-          <Sidebar colorIndex="neutral-1" fixed={true}>
+        <Box colorIndex="neutral-1" justify="center" align="center" pad="none">
+          <Sidebar colorIndex="neutral-1" fixed={true} size="small">
             <Header pad="medium" justify="between">
               <Title>Dashboard</Title>
             </Header>
@@ -57,67 +58,42 @@ class DashboardContainer extends Component {
         </Box>
         <Section>
           <Headline align="center">Overview</Headline>
-          <LineSeriesChart />
-          <GaugeChart />
+          <Box
+            className="stacked-row"
+            direction="row"
+            pad={{ vertical: "medium" }}
+          >
+            <Box
+              className="meter-box col__span-25"
+              justify="start"
+              pad={{ horizontal: "medium" }}
+              align="center"
+            >
+              1
+              <VPieChart />
+            </Box>
+            <Box
+              className="area-box col__span-25"
+              justify="start"
+              pad={{ horizontal: "medium" }}
+              align="center"
+            >
+              2
+              <VPieChart />
+            </Box>
+            <Box
+              className="map-box col__span-50"
+              justify="start"
+              pad={{ horizontal: "medium" }}
+              align="center"
+            >
+              3
+              <VPieChart />
+            </Box>
+          </Box>
           <CombinationChart />
-          <Columns masonry={false}>
-            {/* <Box
-              align="center"
-              pad="medium"
-              margin="small"
-              colorIndex="light-2"
-            >
-              Box 1
-            </Box>
-            <Box
-              align="center"
-              pad="medium"
-              margin="small"
-              colorIndex="light-2"
-            >
-              Box 2
-            </Box>
-            <Box
-              align="center"
-              pad="medium"
-              margin="small"
-              colorIndex="light-2"
-            >
-              Box 3
-            </Box>
-            <Box
-              align="center"
-              pad="medium"
-              margin="small"
-              colorIndex="light-2"
-            >
-              Box 4
-            </Box>
-            <Box
-              align="center"
-              pad="medium"
-              margin="small"
-              colorIndex="light-2"
-            >
-              Box 5
-            </Box>
-            <Box
-              align="center"
-              pad="medium"
-              margin="small"
-              colorIndex="light-2"
-            >
-              Box 6
-            </Box>
-            <Box
-              align="center"
-              pad="medium"
-              margin="small"
-              colorIndex="light-2"
-            >
-              Box 7
-            </Box> */}
-          </Columns>
+          <VBarChart />
+          <VPieChart />
         </Section>
       </Split>
     );

@@ -5,6 +5,8 @@ import { Switch, Route } from "react-router-dom";
 import Login from "../screens/Login.js";
 import Dashboard from "../screens/Dashboard.js";
 import NotFound from "../screens/NotFound.js";
+import * as V from "victory"; // temp until we know what charts we are using
+
 const App = () => {
   return (
     <main>
