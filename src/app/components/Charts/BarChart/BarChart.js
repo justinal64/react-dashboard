@@ -12,7 +12,6 @@ class BarChart extends React.Component {
     };
     return (
       <div className="app">
-        Victory Bar Chart
         <VictoryChart
           // adding the material theme provided with Victory
           theme={VictoryTheme.material}

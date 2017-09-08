@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import DashboardCard from "./DashboardCard";
+
 import LineSeriesChart from "./Charts/LineSeriesChart";
 import GaugeChart from "./Charts/GaugeChart";
 import CombinationChart from "./Charts/CombinationChart/CombinationChart";
 import BarChart from "./Charts/BarChart/BarChart";
 import PieChart from "./Charts/PieChart/PieChart";
+import PolarChart from "./Charts/PolarChart/PolarChart";
+
 import SideNavigation from "./SideNavigation";
-import TopNavigation from "./TopNavigation";
 import SampleData from "../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../actions/fetch_data";
@@ -73,9 +75,84 @@ class DashboardContainer extends Component {
               </Heading>
             </Box>
           </Box>
-          <CombinationChart />
-          <BarChart sampleData={SampleData.BarChart} />
-          <PieChart />
+          <Box
+            className="stacked-row"
+            direction="row"
+            pad={{ vertical: "medium" }}
+          >
+            <Box
+              className="meter-box col__span-25"
+              justify="start"
+              pad={{ horizontal: "medium" }}
+              align="center"
+            >
+              <PolarChart />
+              <Heading align="center" tag="h2">
+                Polar Chart
+              </Heading>
+            </Box>
+            <Box
+              className="area-box col__span-25"
+              justify="start"
+              pad={{ horizontal: "medium" }}
+              align="center"
+            >
+              <CombinationChart />
+              <Heading align="center" tag="h2">
+                Combination Chart
+              </Heading>
+            </Box>
+            {/* <Box
+              className="meter-box col__span-25"
+              justify="start"
+              pad={{ horizontal: "medium" }}
+              align="center"
+            >
+              <PieChart sampleData={SampleData.PieChart2} />
+              <Heading align="center" tag="h2">
+                Sample Heading
+              </Heading>
+            </Box> */}
+          </Box>
+          <Box
+            className="stacked-row"
+            direction="row"
+            pad={{ vertical: "medium" }}
+          >
+            <Box
+              className="meter-box col__span-25"
+              justify="start"
+              pad={{ horizontal: "medium" }}
+              align="center"
+            >
+              <Heading align="center" tag="h2">
+                Bar Chart
+              </Heading>
+              <BarChart sampleData={SampleData.BarChart} />
+            </Box>
+            {/* <Box
+              className="area-box col__span-25"
+              justify="start"
+              pad={{ horizontal: "medium" }}
+              align="center"
+            >
+              <CombinationChart />
+              <Heading align="center" tag="h2">
+                Combination Chart
+              </Heading>
+            </Box> */}
+            {/* <Box
+              className="meter-box col__span-25"
+              justify="start"
+              pad={{ horizontal: "medium" }}
+              align="center"
+            >
+              <PieChart sampleData={SampleData.PieChart2} />
+              <Heading align="center" tag="h2">
+                Sample Heading
+              </Heading>
+            </Box> */}
+          </Box>
         </Section>
       </Split>
     );
