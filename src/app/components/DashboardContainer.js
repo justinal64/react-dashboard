@@ -2,31 +2,19 @@ import React, { Component } from "react";
 import DashboardCard from "./DashboardCard";
 import LineSeriesChart from "./Charts/LineSeriesChart";
 import GaugeChart from "./Charts/GaugeChart";
-import CombinationChart from "./Charts/CombinationChart";
-import VBarChart from "./Charts/VBarChart";
-import VPieChart from "./Charts/VPieChart";
-
+import CombinationChart from "./Charts/CombinationChart/CombinationChart";
+import BarChart from "./Charts/BarChart/BarChart";
+import PieChart from "./Charts/PieChart/PieChart";
+import SideNavigation from "./SideNavigation";
+import TopNavigation from "./TopNavigation";
+import SampleData from "../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../actions/fetch_data";
 import Split from "grommet/components/Split";
-import Sidebar from "grommet/components/Sidebar";
-import LoginForm from "grommet/components/LoginForm";
-import Article from "grommet/components/Article";
 import Section from "grommet/components/Section";
 import Heading from "grommet/components/Heading";
-import Paragraph from "grommet/components/Paragraph";
-import Footer from "grommet/components/Footer";
-import Header from "grommet/components/Header";
-import Anchor from "grommet/components/Anchor";
 import Box from "grommet/components/Box";
-import Title from "grommet/components/Title";
-import Menu from "grommet/components/Menu";
-import Button from "grommet/components/Button";
-import Columns from "grommet/components/Columns";
 import Headline from "grommet/components/Headline";
-import Tiles from "grommet/components/Tiles";
-import Tile from "grommet/components/Tile";
-import Card from "grommet/components/Card";
 
 class DashboardContainer extends Component {
   componentWillMount() {
@@ -39,25 +27,13 @@ class DashboardContainer extends Component {
   render() {
     return (
       <Split flex="right">
-        <Box colorIndex="neutral-1" justify="center" align="center" pad="none">
-          <Sidebar colorIndex="neutral-1" fixed={true} size="small">
-            <Header pad="medium" justify="between">
-              <Title>Dashboard</Title>
-            </Header>
-            <Box flex="grow" justify="start">
-              <Menu primary={true}>
-                <Anchor href="#" className="active">
-                  First
-                </Anchor>
-                <Anchor href="#">Second</Anchor>
-                <Anchor href="#">Third</Anchor>
-              </Menu>
-            </Box>
-            <Footer pad="medium" />
-          </Sidebar>
-        </Box>
+        <SideNavigation />
+
         <Section colorIndex="grey-1">
-          <Headline align="center">Overview</Headline>
+          {/* <TopNavigation /> */}
+          <Headline align="center" margin="small" size="medium">
+            Overview
+          </Headline>
           <Box
             className="stacked-row"
             direction="row"
@@ -69,7 +45,7 @@ class DashboardContainer extends Component {
               pad={{ horizontal: "medium" }}
               align="center"
             >
-              <VPieChart />
+              <PieChart sampleData={SampleData.PieChart0} />
               <Heading align="center" tag="h2">
                 Tickets Per Hour
               </Heading>
@@ -80,7 +56,7 @@ class DashboardContainer extends Component {
               pad={{ horizontal: "medium" }}
               align="center"
             >
-              <VPieChart />
+              <PieChart sampleData={SampleData.PieChart1} />
               <Heading align="center" tag="h2">
                 Sample Heading
               </Heading>
@@ -91,15 +67,15 @@ class DashboardContainer extends Component {
               pad={{ horizontal: "medium" }}
               align="center"
             >
-              <VPieChart />
+              <PieChart sampleData={SampleData.PieChart2} />
               <Heading align="center" tag="h2">
                 Sample Heading
               </Heading>
             </Box>
           </Box>
           <CombinationChart />
-          <VBarChart />
-          <VPieChart />
+          <BarChart sampleData={SampleData.BarChart} />
+          <PieChart />
         </Section>
       </Split>
     );
