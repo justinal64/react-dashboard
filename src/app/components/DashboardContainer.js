@@ -7,6 +7,7 @@ import CombinationChart from "./Charts/CombinationChart/CombinationChart";
 import BarChart from "./Charts/BarChart/BarChart";
 import PieChart from "./Charts/PieChart/PieChart";
 import PolarChart from "./Charts/PolarChart/PolarChart";
+import DonutChart from "./Charts/DonutChart/DonutChart";
 
 import SideNavigation from "./SideNavigation";
 import SampleData from "../../sample-data";
@@ -130,17 +131,17 @@ class DashboardContainer extends Component {
               </Heading>
               <BarChart sampleData={SampleData.BarChart} />
             </Box>
-            {/* <Box
+            <Box
               className="area-box col__span-25"
               justify="start"
               pad={{ horizontal: "medium" }}
               align="center"
             >
-              <CombinationChart />
               <Heading align="center" tag="h2">
-                Combination Chart
+                Gauge Chart
               </Heading>
-            </Box> */}
+              <DonutChart />
+            </Box>
             {/* <Box
               className="meter-box col__span-25"
               justify="start"
