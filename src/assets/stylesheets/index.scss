@@ -1,0 +1,114 @@
+// (C) Copyright 2014-2015 Hewlett Packard Enterprise Development LP
+
+@import 'infographics.defaults';
+@import 'grommet/scss/vanilla/index';
+@import 'grommet/scss/hpe/objects.button-hpe';
+
+@import 'objects.start';
+@import 'objects.layer';
+@import 'objects.infographic-map';
+@import 'layout';
+
+// With some screen sizes the overflow
+// has a white background.
+body,
+html {
+  background: nth($brand-grey-colors, 2);
+}
+
+.dashboard {
+  // Room for header.
+  padding-top: 98px;
+}
+
+.infographic-stat {
+  @media screen and (max-width: 44.9375em) {
+    // Swap the stat and image's positions.
+    flex-direction: column-reverse;
+  }
+  
+  @include media-query(lap-and-up) {
+    flex-direction: row;
+  }
+
+  span.unit {
+    font-size: 50%;
+  }
+
+  span.support {
+    font-size: 50%;
+  }
+
+  h3 {
+    line-height: 1.5rem;
+    font-weight: 400;
+
+    @include media-query(lap-and-up) {
+      line-height: 1.4rem;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    padding: 0 0 24px;
+
+    @include media-query(lap-and-up) {
+      padding: 0 24px 0 0;
+    }
+  }
+}
+
+.grommetux-header.section-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  .logo-hpe {
+    width: 118px;
+    height: 50px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+
+  @include media-query(lap-and-up) {
+    .logo-hpe {
+      width: 118px;
+      height: 50px;
+    }
+  }
+}
+
+.grommetux-legend {
+  .grommetux-legend__item {
+    display: inline-block;
+  }
+}
+
+.area-legend {
+  width: 100%;
+  
+  @media(min-width: 1645px) {
+    justify-content: center;
+  }
+
+  h1,
+  ol {
+    padding: 0;
+    margin: 0;
+  }
+
+  .area-legend__list {
+    flex-direction: row-reverse;
+    align-self: flex-start;
+
+    @media(min-width: 1540px) {
+      flex-direction: column;
+    }
+  }
+}
