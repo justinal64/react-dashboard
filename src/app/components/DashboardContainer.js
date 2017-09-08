@@ -48,7 +48,10 @@ class DashboardContainer extends Component {
               pad={{ horizontal: "medium" }}
               align="center"
             >
-              <PieChart sampleData={SampleData.PieChart0} />
+              <GaugeChart
+                percentTotal={SampleData.GaugeChart0[0].value}
+                color={SampleData.GaugeChart0[0].color}
+              />
               <Heading align="center" tag="h2">
                 Tickets Per Hour
               </Heading>
@@ -59,7 +62,10 @@ class DashboardContainer extends Component {
               pad={{ horizontal: "medium" }}
               align="center"
             >
-              <PieChart sampleData={SampleData.PieChart1} />
+              <GaugeChart
+                percentTotal={SampleData.GaugeChart1[0].value}
+                color={SampleData.GaugeChart1[0].color}
+              />
               <Heading align="center" tag="h2">
                 Sample Heading
               </Heading>
@@ -70,7 +76,10 @@ class DashboardContainer extends Component {
               pad={{ horizontal: "medium" }}
               align="center"
             >
-              <PieChart sampleData={SampleData.PieChart2} />
+              <GaugeChart
+                percentTotal={SampleData.GaugeChart2[0].value}
+                color={SampleData.GaugeChart2[0].color}
+              />
               <Heading align="center" tag="h2">
                 Sample Heading
               </Heading>
@@ -131,7 +140,7 @@ class DashboardContainer extends Component {
               </Heading>
               <BarChart sampleData={SampleData.BarChart} />
             </Box>
-            <Box
+            {/* <Box
               className="area-box col__span-25"
               justify="start"
               pad={{ horizontal: "medium" }}
@@ -141,7 +150,7 @@ class DashboardContainer extends Component {
                 Gauge Chart
               </Heading>
               <GaugeChart />
-            </Box>
+            </Box> */}
             {/* <Box
               className="meter-box col__span-25"
               justify="start"

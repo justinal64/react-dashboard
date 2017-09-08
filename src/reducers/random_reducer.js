@@ -7,7 +7,7 @@ export default (state = {}, action) => {
         ...state,
         action.payload.data.results
       );
-      console.log({ anotherState });
+      // console.log({ anotherState });
       return anotherState;
     default:
       return state;
