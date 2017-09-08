@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import AnnotatedMeter from "grommet-addons/components/AnnotatedMeter";
+import { VictoryPie, VictoryChart, VictoryTheme } from "victory";
 
 const sampleData = [
   { x: 1, y: 1 },
@@ -9,7 +9,7 @@ const sampleData = [
   { x: 4, y: 4 },
   { x: 5, y: 5 }
 ];
-class PieChart extends React.Component {
+class DonutChart extends React.Component {
   render() {
     const sampleData = this.props.sampleData;
     const plotOptions = {
@@ -19,19 +19,21 @@ class PieChart extends React.Component {
     };
 
     return (
-      <div className="app">
-        <AnnotatedMeter
-          type="circle"
-          units="TB"
-          max={70}
-          series={[
-            { label: "First", value: 20, colorIndex: "graph-1" },
-            { label: "Second", value: 50, colorIndex: "graph-2" }
-          ]}
+      //   <div>
+      //     <VictoryPie padAngle={3} innerRadius={100} data={sampleData} />
+      //   </div>
+      <svg width={300} height={300}>
+        <circle cx={150} cy={150} r={50} fill="#c43a31" />
+        <VictoryPie
+          standalone={false}
+          width={300}
+          height={300}
+          innerRadius={75}
+          data={sampleData}
         />
-      </div>
+      </svg>
     );
   }
 }
 
-export default PieChart;
+export default DonutChart;

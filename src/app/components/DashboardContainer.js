@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import DashboardCard from "./DashboardCard";
 
 import LineSeriesChart from "./Charts/LineSeriesChart";
-import GaugeChart from "./Charts/GaugeChart";
+import GaugeChart from "./Charts/GaugeChart/GaugeChart";
 import CombinationChart from "./Charts/CombinationChart/CombinationChart";
 import BarChart from "./Charts/BarChart/BarChart";
 import PieChart from "./Charts/PieChart/PieChart";
@@ -140,7 +140,7 @@ class DashboardContainer extends Component {
               <Heading align="center" tag="h2">
                 Gauge Chart
               </Heading>
-              <DonutChart />
+              <GaugeChart />
             </Box>
             {/* <Box
               className="meter-box col__span-25"
