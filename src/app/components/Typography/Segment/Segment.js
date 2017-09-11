@@ -3,8 +3,10 @@ import "./Segment.scss";
 
 const Segment = props => {
   return (
-    <div className="segment-wrapper">
-      <span className="segment">{props.title}</span>
+    <div className="segment-padding-top">
+      <div className="segment-wrapper">
+        <span className="segment">{props.title}</span>
+      </div>
     </div>
   );
 };

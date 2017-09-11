@@ -8,7 +8,7 @@ const dateFormat = time => {
   return `${time} days ago`;
 };
 
-const Segment = props => {
+const GraphFooter = props => {
   return (
     <div className="top-border">
       <div className="update-time ">
@@ -18,4 +18,4 @@ const Segment = props => {
   );
 };
 
-export default Segment;
+export default GraphFooter;

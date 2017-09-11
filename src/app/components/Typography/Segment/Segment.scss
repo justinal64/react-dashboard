@@ -10,7 +10,7 @@
 
 .segment-wrapper {
     width: 90%;
-    height: 20px;
+    height: 30px;
     border-bottom: 1px solid white;
     text-align: center;
     margin: 0 auto;
@@ -21,4 +21,8 @@
     background-color: black;
     padding: 0 10px;
     text-transform: uppercase;
+}
+
+.segment-padding-top {
+    padding-bottom: 1rem;
 }
