@@ -11,6 +11,7 @@ class GaugeChart extends React.Component {
     return (
       <div className="app">
         <AnnotatedMeter
+          size="small"
           type="circle"
           units="%"
           max={100}

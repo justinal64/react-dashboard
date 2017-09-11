@@ -1,0 +1,21 @@
+import React from "react";
+import UpdateIcon from "grommet/components/icons/base/Update";
+import "./GraphFooter.scss";
+
+const dateFormat = time => {
+  if (time === 1) return `${time} day ago`;
+  else return `${time} days ago`;
+};
+
+const Segment = props => {
+  dateFormat(props.updatetime);
+  return (
+    <div className="top-border">
+      <div className="update-time ">
+        <UpdateIcon size="xsmall" /> - Updated {dateFormat(props.updatetime)}
+      </div>
+    </div>
+  );
+};
+
+export default Segment;
