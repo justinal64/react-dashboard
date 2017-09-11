@@ -10,10 +10,12 @@ import PieChart from "../Charts/PieChart/PieChart";
 import PolarChart from "../Charts/PolarChart/PolarChart";
 import DonutChart from "../Charts/DonutChart/DonutChart";
 import SideNavigation from "../SideNavigation";
+import Segment from "../Segment/Segment";
 
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
+
 import Split from "grommet/components/Split";
 import Section from "grommet/components/Section";
 import Heading from "grommet/components/Heading";
@@ -34,10 +36,7 @@ class DashboardContainer extends Component {
         <SideNavigation />
 
         <Section colorIndex="grey-1">
-          {/* <TopNavigation /> */}
-          <Headline align="center" margin="small" size="medium">
-            Overview
-          </Headline>
+          <Segment title={"Overview"} />
           <Box
             className="stacked-row"
             direction="row"
