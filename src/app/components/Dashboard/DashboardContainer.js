@@ -10,8 +10,8 @@ import PieChart from "../Charts/PieChart/PieChart";
 import PolarChart from "../Charts/PolarChart/PolarChart";
 import DonutChart from "../Charts/DonutChart/DonutChart";
 import SideNavigation from "../SideNavigation";
-import Segment from "../Segment/Segment";
-
+import Segment from "../Typography/Segment/Segment";
+import GraphFooter from "../Typography/GraphFooter/GraphFooter";
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
@@ -52,9 +52,10 @@ class DashboardContainer extends Component {
                 percentTotal={SampleData.GaugeChart0[0].value}
                 color={SampleData.GaugeChart0[0].color}
               />
-              <Heading align="center" tag="h2">
+              <GraphFooter />
+              {/* <Heading align="center" tag="h2">
                 Tickets Per Hour
-              </Heading>
+              </Heading> */}
             </Box>
             <Box
               className="area-box col__span-25 equal-spacing"
