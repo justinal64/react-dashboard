@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import randomData from "../../actions/random_data";
+import randomData from "../../../actions/random_data";
 
 import Sidebar from "grommet/components/Sidebar";
 import Header from "grommet/components/Header";

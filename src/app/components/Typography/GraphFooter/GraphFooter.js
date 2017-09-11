@@ -3,12 +3,12 @@ import UpdateIcon from "grommet/components/icons/base/Update";
 import "./GraphFooter.scss";
 
 const dateFormat = time => {
-  if (time === 1) return `${time} day ago`;
-  else return `${time} days ago`;
+  if (time <= 0) return `today`;
+  else if (time === 1) return `${time} day ago`;
+  return `${time} days ago`;
 };
 
-const Segment = props => {
-  dateFormat(props.updatetime);
+const GraphFooter = props => {
   return (
     <div className="top-border">
       <div className="update-time ">
@@ -18,4 +18,4 @@ const Segment = props => {
   );
 };
 
-export default Segment;
+export default GraphFooter;
