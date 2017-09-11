@@ -52,7 +52,7 @@ class DashboardContainer extends Component {
                 percentTotal={SampleData.GaugeChart0[0].value}
                 color={SampleData.GaugeChart0[0].color}
               />
-              <GraphFooter />
+              <GraphFooter updatetime={2} />
               {/* <Heading align="center" tag="h2">
                 Tickets Per Hour
               </Heading> */}
