@@ -67,9 +67,7 @@ class DashboardContainer extends Component {
                 percentTotal={SampleData.GaugeChart1[0].value}
                 color={SampleData.GaugeChart1[0].color}
               />
-              <Heading align="center" tag="h2">
-                Sample Heading
-              </Heading>
+              <GraphFooter updatetime={0} />
             </Box>
             <Box
               className="meter-box col__span-25 equal-spacing"
@@ -81,9 +79,7 @@ class DashboardContainer extends Component {
                 percentTotal={SampleData.GaugeChart2[0].value}
                 color={SampleData.GaugeChart2[0].color}
               />
-              <Heading align="center" tag="h2">
-                Sample Heading
-              </Heading>
+              <GraphFooter updatetime={1} />
             </Box>
           </Box>
           <Box
