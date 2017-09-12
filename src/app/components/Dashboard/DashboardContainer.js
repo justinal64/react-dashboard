@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import DashboardCard from "./DashboardCard";
 import "./Dashboard.scss";
 
-import LineSeriesChart from "../Charts/LineSeriesChart";
+import LineChart from "../Charts/LineChart/LineChart";
 import GaugeChart from "../Charts/GaugeChart/GaugeChart";
 import CombinationChart from "../Charts/CombinationChart/CombinationChart";
 import BarChart from "../Charts/BarChart/BarChart";
@@ -57,9 +57,6 @@ class DashboardContainer extends Component {
                 />
               </Box>
               <GraphFooter updatetime={2} />
-              {/* <Heading align="center" tag="h2">
-                Tickets Per Hour
-              </Heading> */}
             </Box>
             <Box
               className="area-box col__span-25 equal-spacing"
@@ -96,77 +93,43 @@ class DashboardContainer extends Component {
             pad={{ vertical: "medium" }}
           >
             <Box
-              className="meter-box col__span-25"
+              className="meter-box col__span-25 equal-spacing"
               justify="start"
               pad={{ horizontal: "medium" }}
-              align="center"
             >
-              <PolarChart />
-              <Heading align="center" tag="h2">
-                Polar Chart
-              </Heading>
+              <Box align="center">
+                <LineChart />
+              </Box>
+              <GraphFooter updatetime={2} />
             </Box>
             <Box
-              className="area-box col__span-25"
+              className="area-box col__span-25 equal-spacing"
               justify="start"
               pad={{ horizontal: "medium" }}
-              align="center"
             >
-              <CombinationChart />
-              <Heading align="center" tag="h2">
-                Combination Chart
-              </Heading>
+              <GraphHeader title={"Memory Usage"} />
+              <Box align="center">
+                <GaugeChart
+                  percentTotal={SampleData.GaugeChart1[0].value}
+                  color={SampleData.GaugeChart1[0].color}
+                />
+              </Box>
+              <GraphFooter updatetime={0} />
             </Box>
-            {/* <Box
-              className="meter-box col__span-25"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-              align="center"
-            >
-              <PieChart sampleData={SampleData.PieChart2} />
-              <Heading align="center" tag="h2">
-                Sample Heading
-              </Heading>
-            </Box> */}
-          </Box>
-          <Box
-            className="stacked-row"
-            direction="row"
-            pad={{ vertical: "medium" }}
-          >
             <Box
-              className="meter-box col__span-25"
+              className="meter-box col__span-25 equal-spacing"
               justify="start"
               pad={{ horizontal: "medium" }}
-              align="center"
             >
-              <Heading align="center" tag="h2">
-                Bar Chart
-              </Heading>
-              <BarChart sampleData={SampleData.BarChart} />
+              <GraphHeader title={"Hard Drive Usage"} />
+              <Box align="center">
+                <GaugeChart
+                  percentTotal={SampleData.GaugeChart2[0].value}
+                  color={SampleData.GaugeChart2[0].color}
+                />
+              </Box>
+              <GraphFooter updatetime={1} />
             </Box>
-            {/* <Box
-              className="area-box col__span-25"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-              align="center"
-            >
-              <Heading align="center" tag="h2">
-                Gauge Chart
-              </Heading>
-              <GaugeChart />
-            </Box> */}
-            {/* <Box
-              className="meter-box col__span-25"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-              align="center"
-            >
-              <PieChart sampleData={SampleData.PieChart2} />
-              <Heading align="center" tag="h2">
-                Sample Heading
-              </Heading>
-            </Box> */}
           </Box>
         </Section>
       </Split>
