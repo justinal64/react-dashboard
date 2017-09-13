@@ -40,7 +40,7 @@ class SideNavigation extends Component {
                 Server
               </Anchor>
               <Anchor href="#">Email</Anchor>
-              <Anchor href="#">Forms</Anchor>
+              <Anchor href="/forms">Forms</Anchor>
             </Menu>
           </Box>
           <Footer pad="medium" />

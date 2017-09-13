@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import Login from "../screens/Login.js";
 import Dashboard from "../screens/Dashboard.js";
 import NotFound from "../screens/NotFound.js";
+import Forms from "../screens/Forms.js";
 import * as V from "victory"; // temp until we know what charts we are using
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Login} />
         <Route path="/dashboard" component={Dashboard} />
+        <Route path="/forms" component={Forms} />
         <Route path="*" component={NotFound} />
       </Switch>
     </main>

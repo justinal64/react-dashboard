@@ -11,6 +11,8 @@ import Chart, {
   Layers
 } from "grommet/components/chart/Chart";
 
+import Value from "grommet/components/Value";
+
 class LineChart extends React.Component {
   render() {
     // const label = this.props.sampleData.label;
@@ -26,7 +28,7 @@ class LineChart extends React.Component {
             vertical={true}
           />
           <Chart vertical={true}>
-            {/* <MarkerLabel count={12} index={11} /> */}
+            <MarkerLabel count={12} index={11} label={<Value value={50} />} />
             <Base height="medium" width="medium" />
             <Layers>
               <Grid rows={5} columns={3} />
