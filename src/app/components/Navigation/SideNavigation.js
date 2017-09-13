@@ -36,9 +36,7 @@ class SideNavigation extends Component {
           </Header>
           <Box flex="grow" justify="start">
             <Menu primary={true}>
-              <Anchor href="#" className="active">
-                Server
-              </Anchor>
+              <Anchor href="/dashboard">Dashboard</Anchor>
               <Anchor href="#">Email</Anchor>
               <Anchor href="/forms">Forms</Anchor>
             </Menu>
