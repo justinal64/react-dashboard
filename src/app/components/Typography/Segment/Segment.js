@@ -1,32 +1,14 @@
 import React from "react";
-import styled from "styled-components";
-
+import {
+  Segment as StyledSegment,
+  SegmentWrapper,
+  SegmentPadding
+} from "./Styles";
 const Segment = props => {
-  const SegmentPadding = styled.div`padding-bottom: 1rem;`;
-
-  const Segment = styled.span`
-    font-size: 2.5rem;
-    background-color: black;
-    padding: 0 1rem;
-    text-transform: uppercase;
-  `;
-
-  // example  pass paddingBottom={5} from SegmentWrapper
-  const getPaddingBottom = props =>
-    props.paddingBottom ? `padding-bottom: ${props.paddingBottom}rem;` : "";
-
-  const SegmentWrapper = styled.div`
-    ${getPaddingBottom};
-    width: 90%;
-    height: 30px;
-    border-bottom: 1px solid white;
-    text-align: center;
-    margin: 0 auto;
-  `;
   return (
     <SegmentPadding>
       <SegmentWrapper>
-        <Segment>{props.title}</Segment>
+        <StyledSegment>{props.title}</StyledSegment>
       </SegmentWrapper>
     </SegmentPadding>
   );
