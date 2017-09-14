@@ -1,13 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-// import "./GraphHeader.scss";
 
 const GraphHeader = props => {
-  const TopLeftHeader = styled.div`align-items: left;`;
+  const getAlignment = props =>
+    props.alignment ? `align-items: ${props.alignment};` : "";
+
+  const getFont = props => (props.font ? `font-size: ${props.font}px;` : "");
+
+  const GraphWrapper = styled.div`${getAlignment};`;
+
+  const GraphHeader = styled.span`${getFont};`;
+
   return (
-    <TopLeftHeader>
-      <span>{props.title}</span>
-    </TopLeftHeader>
+    <GraphWrapper alignment={props.alignment}>
+      <GraphHeader font={props.font}>{props.title}</GraphHeader>
+    </GraphWrapper>
   );
 };
 

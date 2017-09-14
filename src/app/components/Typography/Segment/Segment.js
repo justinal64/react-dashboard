@@ -11,8 +11,9 @@ const Segment = props => {
     text-transform: uppercase;
   `;
 
+  // example  pass paddingBottom={5} from SegmentWrapper
   const getPaddingBottom = props =>
-    props.paddingBottom ? "padding-bottom: 1rem;" : "";
+    props.paddingBottom ? `padding-bottom: ${props.paddingBottom}rem;` : "";
 
   const SegmentWrapper = styled.div`
     ${getPaddingBottom};
