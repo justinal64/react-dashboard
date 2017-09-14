@@ -1,8 +1,8 @@
 import React from "react";
-import DashboardContainer from "../app/components/Dashboard/DashboardContainer";
+import FormsContainer from "../app/components/Forms/FormsContainer";
 
 const Forms = props => {
-  return <div>This is the forms page</div>;
+  return <FormsContainer />;
 };
 
 export default Forms;

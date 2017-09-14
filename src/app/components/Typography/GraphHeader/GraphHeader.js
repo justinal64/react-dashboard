@@ -1,12 +1,12 @@
 import React from "react";
-import "./GraphHeader.scss";
-
-const Segment = props => {
+import styled from "styled-components";
+import { GraphHeader as StyledGraphHeader, GraphWrapper } from "./Styles";
+const GraphHeader = props => {
   return (
-    <div className="top-left-header">
-      <span>{props.title}</span>
-    </div>
+    <GraphWrapper alignment={props.alignment}>
+      <StyledGraphHeader font={props.font}>{props.title}</StyledGraphHeader>
+    </GraphWrapper>
   );
 };
 
-export default Segment;
+export default GraphHeader;
