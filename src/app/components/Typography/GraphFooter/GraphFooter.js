@@ -1,6 +1,6 @@
 import React from "react";
 import UpdateIcon from "grommet/components/icons/base/Update";
-import "./GraphFooter.scss";
+import { Border, UpdateTime } from "./Styles";
 
 const dateFormat = time => {
   if (time <= 0) return `today`;
@@ -10,11 +10,11 @@ const dateFormat = time => {
 
 const GraphFooter = props => {
   return (
-    <div className="top-border">
-      <div className="update-time ">
+    <Border>
+      <UpdateTime>
         <UpdateIcon size="xsmall" /> - Updated {dateFormat(props.updatetime)}
-      </div>
-    </div>
+      </UpdateTime>
+    </Border>
   );
 };
 
