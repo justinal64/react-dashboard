@@ -1,12 +1,14 @@
 import React from "react";
-import "./GraphHeader.scss";
+import styled from "styled-components";
+// import "./GraphHeader.scss";
 
-const Segment = props => {
+const GraphHeader = props => {
+  const TopLeftHeader = styled.div`align-items: left;`;
   return (
-    <div className="top-left-header">
+    <TopLeftHeader>
       <span>{props.title}</span>
-    </div>
+    </TopLeftHeader>
   );
 };
 
-export default Segment;
+export default GraphHeader;
