@@ -1,19 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-
+import { GraphHeader as StyledGraphHeader, GraphWrapper } from "./Styles";
 const GraphHeader = props => {
-  const getAlignment = props =>
-    props.alignment ? `align-items: ${props.alignment};` : "";
-
-  const getFont = props => (props.font ? `font-size: ${props.font}px;` : "");
-
-  const GraphWrapper = styled.div`${getAlignment};`;
-
-  const GraphHeader = styled.span`${getFont};`;
-
   return (
     <GraphWrapper alignment={props.alignment}>
-      <GraphHeader font={props.font}>{props.title}</GraphHeader>
+      <StyledGraphHeader font={props.font}>{props.title}</StyledGraphHeader>
     </GraphWrapper>
   );
 };

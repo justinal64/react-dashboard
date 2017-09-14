@@ -49,7 +49,7 @@ class DashboardContainer extends Component {
               justify="start"
               pad={{ horizontal: "medium" }}
             >
-              <GraphHeader title={"CPU Usage"} alignment={"right"} font={35} />
+              <GraphHeader title={"CPU Usage"} />
               <Box align="center">
                 <GaugeChart
                   percentTotal={SampleData.GaugeChart0[0].value}
