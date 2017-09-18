@@ -1,44 +1,39 @@
 import React, { Component } from "react";
-
-import LineChart from "../Charts/LineChart/LineChart";
-import GaugeChart from "../Charts/GaugeChart/GaugeChart";
-import CombinationChart from "../Charts/CombinationChart/CombinationChart";
-import BarChart from "../Charts/BarChart/BarChart";
-import PieChart from "../Charts/PieChart/PieChart";
-import PolarChart from "../Charts/PolarChart/PolarChart";
-import DonutChart from "../Charts/DonutChart/DonutChart";
+import "./Styles.scss";
 import SideNavigation from "../Navigation/SideNavigation";
-import Segment from "../Typography/Segment/Segment";
-import GraphFooter from "../Typography/GraphFooter/GraphFooter";
-import GraphHeader from "../Typography/GraphHeader/GraphHeader";
 
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
 
 import Split from "grommet/components/Split";
-import Section from "grommet/components/Section";
-import Heading from "grommet/components/Heading";
-import Box from "grommet/components/Box";
-import Headline from "grommet/components/Headline";
+import { Row, Col, Grid } from "react-flexbox-grid";
 
 class TestContainer extends Component {
   componentWillMount() {
-    this.props.fetchData();
+    // this.props.fetchData();
   }
 
   componentDidMount() {
-    setInterval(this.props.fetchData.bind(this), 100000); // 300000 = 5 minutes
+    // setInterval(this.props.fetchData.bind(this), 100000); // 300000 = 5 minutes
   }
   render() {
     return (
       <Split flex="right">
         <SideNavigation />
-        <div className="row">
-          <div className="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-            <div className="box">Responsive</div>
-          </div>
-        </div>
+        <Grid fluid>
+          <Row center="xs">
+            <Col className="test" xs={12} sm={6} md={4} lg={4}>
+              xs 12 sm 3 md 2 lg 1
+            </Col>
+            <Col className="test" xs={12} sm={6} md={4} lg={4}>
+              xs 12 sm 3 md 2 lg 1
+            </Col>
+            <Col className="test" xs={12} sm={6} md={4} lg={4}>
+              xs 12 sm 3 md 2 lg 1
+            </Col>
+          </Row>
+        </Grid>
       </Split>
     );
   }
