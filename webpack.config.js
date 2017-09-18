@@ -39,6 +39,11 @@ let config = {
         loader: "babel-loader" // use this (babel-core) loader
       },
       {
+        test: /\.css$/,
+        loader: "style-loader!css-loader",
+        include: /flexboxgrid/
+      },
+      {
         test: /\.scss$/,
         use: [
           {

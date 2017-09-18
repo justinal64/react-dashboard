@@ -1,0 +1,7 @@
+.col-xs-6 {
+    flex-basis: 50%;
+}
+
+Col {
+    background-color: red;
+}
