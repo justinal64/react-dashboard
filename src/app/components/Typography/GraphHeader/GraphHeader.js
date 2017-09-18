@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { getAlignment, getFont } from "../../../../assets/stylesheets/Styles";
 import { GraphHeader as StyledGraphHeader, GraphWrapper } from "./Styles";
 const GraphHeader = props => {
   return (

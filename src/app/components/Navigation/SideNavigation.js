@@ -39,6 +39,7 @@ class SideNavigation extends Component {
               <Anchor href="/dashboard">Dashboard</Anchor>
               <Anchor href="#">Email</Anchor>
               <Anchor href="/forms">Forms</Anchor>
+              <Anchor href="/test">Test</Anchor>
             </Menu>
           </Box>
           <Footer pad="medium" />
