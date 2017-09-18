@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { getPaddingBottom } from "../../../../assets/stylesheets/Styles";
+import { getPaddingBottom } from "../../Styles/Styles";
 
 export const Segment = styled.span`
   font-size: 2.5rem;
