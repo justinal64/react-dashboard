@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import "./Styles.css";
+import "./Styles.scss";
 import SideNavigation from "../Navigation/SideNavigation";
 
 import SampleData from "../../../sample-data";
@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
 
 import Split from "grommet/components/Split";
-import { Row, Col } from "react-flexbox-grid";
+import { Row, Col, Grid } from "react-flexbox-grid";
 
 class TestContainer extends Component {
   componentWillMount() {
@@ -21,17 +21,19 @@ class TestContainer extends Component {
     return (
       <Split flex="right">
         <SideNavigation />
-        <Row>
-          <Col xs={12} sm={3} md={2} lg={1}>
-            xs 12 sm 3 md 2 lg 1
-          </Col>
-          <Col xs={6} sm={6} md={8} lg={10}>
-            xs 6 sm 6 md 8 lg 10
-          </Col>
-          <Col xs={6} sm={3} md={2} lg={1}>
-            xs 6 sm 3 md 2 lg 1
-          </Col>
-        </Row>
+        <Grid fluid>
+          <Row center="xs">
+            <Col className="test" xs={12} sm={6} md={4} lg={4}>
+              xs 12 sm 3 md 2 lg 1
+            </Col>
+            <Col className="test" xs={12} sm={6} md={4} lg={4}>
+              xs 12 sm 3 md 2 lg 1
+            </Col>
+            <Col className="test" xs={12} sm={6} md={4} lg={4}>
+              xs 12 sm 3 md 2 lg 1
+            </Col>
+          </Row>
+        </Grid>
       </Split>
     );
   }
