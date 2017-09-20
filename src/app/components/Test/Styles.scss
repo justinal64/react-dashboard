@@ -2,10 +2,15 @@
     flex-basis: 50%;
 }
 
-.col {
+.test span {
     background-color: red;
+    padding: 2em;
 }
 
-.test {
-    background-color: red;
+.center {
+    align-items: center;
+}
+
+.bg {
+    background-color: black;
 }

@@ -4,7 +4,6 @@ import "./Dashboard.scss";
 
 import LineChart from "../Charts/LineChart/LineChart";
 import GaugeChart from "../Charts/GaugeChart/GaugeChart";
-import CombinationChart from "../Charts/CombinationChart/CombinationChart";
 import BarChart from "../Charts/BarChart/BarChart";
 import PieChart from "../Charts/PieChart/PieChart";
 import PolarChart from "../Charts/PolarChart/PolarChart";
