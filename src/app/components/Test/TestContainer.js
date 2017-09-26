@@ -4,7 +4,15 @@ import SideNavigation from "../Navigation/SideNavigation";
 import GraphHeader from "../Typography/GraphHeader/GraphHeader";
 import LineChart from "../Charts/LineChart/LineChart";
 import GaugeChart from "../Charts/GaugeChart/GaugeChart";
-import { VictoryArea, VictoryTheme, VictoryChart, VictoryLine } from "victory";
+import {
+  VictoryArea,
+  VictoryTheme,
+  VictoryChart,
+  VictoryLine,
+  VictoryTooltip,
+  VictoryVoronoiContainer,
+  VictoryAxis
+} from "victory";
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
@@ -13,11 +21,11 @@ import Split from "grommet/components/Split";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
 const dataVO = [
-  { x: 1, y: 2 },
-  { x: 2, y: 3 },
-  { x: 3, y: 5 },
-  { x: 4, y: 4 },
-  { x: 5, y: 6 }
+  { x: 1, y: 21 },
+  { x: 2, y: 2 },
+  { x: 3, y: 16 },
+  { x: 4, y: 18 },
+  { x: 5, y: 0 }
 ];
 const dataPV = [
   { x: 1, y: 2 },
@@ -54,19 +62,53 @@ class TestContainer extends Component {
                 <span className="subheader">Visitors Online</span>
               </div>
               <div>
-                <VictoryLine
-                  style={{
-                    data: {
-                      stroke: "#fff",
-                      strokeWidth: 10
-                    }
-                  }}
-                  animate={{
-                    duration: 2000,
-                    onLoad: { duration: 1000 }
-                  }}
-                  data={dataNU}
-                />
+                <VictoryChart
+                  containerComponent={
+                    <VictoryVoronoiContainer
+                      dimension="x"
+                      labels={d => `Visitors Per Hour: ${d.y}`}
+                      labelComponent={
+                        <VictoryTooltip
+                          style={{
+                            data: {
+                              fill: "#fff",
+                              strokeWidth: 15,
+                              strokeLinecap: "round"
+                            }
+                          }}
+                          cornerRadius={0}
+                          flyoutStyle={{
+                            fill: "black",
+                            color: "white",
+                            strokeWidth: 15,
+                            strokeLinecap: "round"
+                          }}
+                        />
+                      }
+                    />
+                  }
+                >
+                  <VictoryAxis />
+                  <VictoryArea
+                    width={200}
+                    height={200}
+                    interpolation="natural"
+                    animate={{
+                      duration: 2000,
+                      onLoad: { duration: 1000 }
+                    }}
+                    style={{
+                      data: {
+                        fill: "#fff",
+                        strokeWidth: 15,
+                        strokeLinecap: "round"
+                      },
+                      labels: { fill: "white" }
+                    }}
+                    data={dataVO}
+                    y0={d => d.y - 1}
+                  />
+                </VictoryChart>
               </div>
               {/* <VictoryArea
                 width={200}
