@@ -2,6 +2,10 @@
     flex-basis: 50%;
 }
 
+.row {
+    color: white;
+}
+
 .test span {
     background-color: red;
     padding: 2em;
@@ -11,6 +15,28 @@
     align-items: center;
 }
 
-.bg {
-    background-color: black;
+.green_bg {
+    background-color: green;
+}
+
+.red_bg {
+    background-color: red;
+}
+
+.blue_bg {
+    background-color: blue;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.header {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.header {
+    display: block;
+    font-size: 1.25rem;
 }
