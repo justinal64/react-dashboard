@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./Styles.scss";
 import SideNavigation from "../Navigation/SideNavigation";
-
+import GraphHeader from "../Typography/GraphHeader/GraphHeader";
 import LineChart from "../Charts/LineChart/LineChart";
 import GaugeChart from "../Charts/GaugeChart/GaugeChart";
-import { VictoryArea, VictoryTheme } from "victory";
+import { VictoryArea, VictoryTheme, VictoryChart, VictoryLine } from "victory";
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
@@ -12,12 +12,26 @@ import fetchData from "../../../actions/fetch_data";
 import Split from "grommet/components/Split";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
-const data = [
+const dataVO = [
   { x: 1, y: 2 },
   { x: 2, y: 3 },
   { x: 3, y: 5 },
   { x: 4, y: 4 },
   { x: 5, y: 6 }
+];
+const dataPV = [
+  { x: 1, y: 2 },
+  { x: 2, y: 3 },
+  { x: 3, y: 5 },
+  { x: 4, y: 4 },
+  { x: 5, y: 6 }
+];
+const dataNU = [
+  { x: 1, y: 2 },
+  { x: 2, y: 45 },
+  { x: 3, y: 12 },
+  { x: 4, y: 2 },
+  { x: 5, y: 32 }
 ];
 class TestContainer extends Component {
   componentWillMount() {
@@ -32,8 +46,52 @@ class TestContainer extends Component {
       <Split flex="right">
         <SideNavigation />
         <Grid fluid>
-          <Row center="lg" center="xs" around="lg">
-            <Col xs={12} sm={6} md={6} lg={4} className="bg">
+          <h2>Dashboard</h2>
+          <Row center="lg" center="xs" around="lg" className="row">
+            <Col xs={12} sm={6} md={6} lg={3} className="green_bg">
+              <div className="left-align">
+                <span className="header">9,123</span>
+                <span className="subheader">Visitors Online</span>
+              </div>
+              <div>
+                <VictoryLine
+                  style={{
+                    data: {
+                      stroke: "#fff",
+                      strokeWidth: 10
+                    }
+                  }}
+                  animate={{
+                    duration: 2000,
+                    onLoad: { duration: 1000 }
+                  }}
+                  data={dataNU}
+                />
+              </div>
+              {/* <VictoryArea
+                width={200}
+                height={200}
+                interpolation="natural"
+                animate={{
+                  duration: 2000,
+                  onLoad: { duration: 1000 }
+                }}
+                style={{
+                  data: {
+                    fill: "#fff",
+                    strokeWidth: 15,
+                    strokeLinecap: "round"
+                  }
+                }}
+                data={dataVO}
+                y0={d => d.y - 1}
+              /> */}
+            </Col>
+            <Col xs={12} sm={6} md={6} lg={3} className="red_bg">
+              <div className="left-align">
+                <span className="header">4,121</span>
+                <span className="subheader">Page Views</span>
+              </div>
               <VictoryArea
                 interpolation="natural"
                 animate={{
@@ -47,19 +105,31 @@ class TestContainer extends Component {
                     strokeLinecap: "round"
                   }
                 }}
-                data={data}
+                data={dataPV}
                 y0={d => d.y - 1}
               />
             </Col>
-            <Col xs={12} sm={6} md={6} lg={4}>
+            <Col xs={12} sm={6} md={6} lg={3} className="blue_bg">
+              <div className="left-align">
+                <span className="header">2,194</span>
+                <span className="subheader">New Users</span>
+              </div>
               <VictoryArea
                 interpolation="natural"
-                data={data}
+                animate={{
+                  duration: 2000,
+                  onLoad: { duration: 1000 }
+                }}
+                style={{
+                  data: {
+                    fill: "#fff",
+                    strokeWidth: 15,
+                    strokeLinecap: "round"
+                  }
+                }}
+                data={dataNU}
                 y0={d => d.y - 1}
               />
-            </Col>
-            <Col xs={12} sm={6} md={6} lg={4}>
-              <VictoryArea interpolation="natural" data={data} />
             </Col>
           </Row>
         </Grid>
@@ -76,3 +146,33 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, { fetchData })(TestContainer);
+
+// events={[
+//   {
+//     target: "parent",
+//     eventHandlers: {
+//       onClick: () => {
+//         return [
+//           {
+//             target: "data",
+//             eventKey: "all",
+//             mutation: props => {
+//               const stroke =
+//                 props.style && props.style.stroke;
+//               return stroke === "black"
+//                 ? null
+//                 : { style: { stroke: "black" } };
+//             }
+//           },
+//           {
+//             target: "labels",
+//             eventKey: 2,
+//             mutation: props => {
+//               return props.text ? null : { text: "clicked" };
+//             }
+//           }
+//         ];
+//       }
+//     }
+//   }
+// ]}
