@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Bar, Line, Pie } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 
-class ChartJS extends React.Component {
+class LineChart extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,6 +16,8 @@ class ChartJS extends React.Component {
         ],
         datasets: [
           {
+            pointHitRadius: 25,
+            fill: false,
             label: "Population",
             data: [6478364, 433333434, 43434535, 32324242, 23243434, 123454544],
             backgroundColor: [
@@ -34,16 +36,18 @@ class ChartJS extends React.Component {
   render() {
     return (
       <div className="chart">
-        Chart Component
-        <Bar
-          data={this.state.chartData}
+        Bar Component
+        <Line
           options={{
-            maintainAspectRation: false
+            legend: false,
+            maintainAspectRatio: false,
+            scaleShowGridLines: false
           }}
+          data={this.state.chartData}
         />
       </div>
     );
   }
 }
 
-export default ChartJS;
+export default LineChart;
