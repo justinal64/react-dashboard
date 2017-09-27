@@ -16,7 +16,7 @@ import {
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
-
+import Chartjs from "../ChartJS/Chartjs";
 import Split from "grommet/components/Split";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
@@ -56,78 +56,9 @@ class TestContainer extends Component {
         <Grid fluid>
           <h2>Dashboard</h2>
           <Row center="lg" center="xs" around="lg" className="row">
-            <Col xs={12} sm={6} md={6} lg={3} className="green_bg">
-              <div className="left-align">
-                <span className="header">9,123</span>
-                <span className="subheader">Visitors Online</span>
-              </div>
-              <div>
-                <VictoryChart
-                  containerComponent={
-                    <VictoryVoronoiContainer
-                      dimension="x"
-                      labels={d => `Visitors Per Hour: ${d.y}`}
-                      labelComponent={
-                        <VictoryTooltip
-                          style={{
-                            data: {
-                              fill: "#fff",
-                              strokeWidth: 15,
-                              strokeLinecap: "round"
-                            }
-                          }}
-                          cornerRadius={0}
-                          flyoutStyle={{
-                            fill: "black",
-                            color: "white",
-                            strokeWidth: 15,
-                            strokeLinecap: "round"
-                          }}
-                        />
-                      }
-                    />
-                  }
-                >
-                  <VictoryAxis />
-                  <VictoryArea
-                    width={200}
-                    height={200}
-                    interpolation="natural"
-                    animate={{
-                      duration: 2000,
-                      onLoad: { duration: 1000 }
-                    }}
-                    style={{
-                      data: {
-                        fill: "#fff",
-                        strokeWidth: 15,
-                        strokeLinecap: "round"
-                      },
-                      labels: { fill: "white" }
-                    }}
-                    data={dataVO}
-                    y0={d => d.y - 1}
-                  />
-                </VictoryChart>
-              </div>
-              {/* <VictoryArea
-                width={200}
-                height={200}
-                interpolation="natural"
-                animate={{
-                  duration: 2000,
-                  onLoad: { duration: 1000 }
-                }}
-                style={{
-                  data: {
-                    fill: "#fff",
-                    strokeWidth: 15,
-                    strokeLinecap: "round"
-                  }
-                }}
-                data={dataVO}
-                y0={d => d.y - 1}
-              /> */}
+            <Col xs={12} sm={6} md={6} lg={12}>
+              Green
+              <Chartjs />
             </Col>
             <Col xs={12} sm={6} md={6} lg={3} className="red_bg">
               <div className="left-align">
