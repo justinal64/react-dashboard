@@ -49,7 +49,7 @@ class TestContainer extends Component {
         <Grid fluid>
           <h2>Dashboard</h2>
           <Row center="lg" center="xs" around="lg" className="row">
-            <Col xs={12} sm={6} md={6} lg={12}>
+            <Col xs={12} sm={6} md={6} lg={3} className="green_bg">
               LineChart
               <LineChart />
             </Col>
