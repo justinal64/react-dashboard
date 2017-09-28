@@ -2,21 +2,14 @@ import React, { Component } from "react";
 import "./Styles.scss";
 import SideNavigation from "../Navigation/SideNavigation";
 import GraphHeader from "../Typography/GraphHeader/GraphHeader";
-import LineChart from "../Charts/LineChart/LineChart";
-import GaugeChart from "../Charts/GaugeChart/GaugeChart";
-import {
-  VictoryArea,
-  VictoryTheme,
-  VictoryChart,
-  VictoryLine,
-  VictoryTooltip,
-  VictoryVoronoiContainer,
-  VictoryAxis
-} from "victory";
+
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
-import Chartjs from "../ChartJS/Chartjs";
+import BarChart from "../ChartJS/BarChart";
+import LineChart from "../ChartJS/LineChart";
+import PieChart from "../ChartJS/PieChart";
+// import BasicChart from "../ChartJS/BasicChart";
 import Split from "grommet/components/Split";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
@@ -56,53 +49,31 @@ class TestContainer extends Component {
         <Grid fluid>
           <h2>Dashboard</h2>
           <Row center="lg" center="xs" around="lg" className="row">
+            <Col xs={12} sm={6} md={6} lg={3} className="green_bg">
+              LineChart
+              <LineChart />
+            </Col>
             <Col xs={12} sm={6} md={6} lg={12}>
-              Green
-              <Chartjs />
+              LineChart
+              <LineChart />
+            </Col>
+            <Col xs={12} sm={6} md={6} lg={12}>
+              BarChart
+              <PieChart />
             </Col>
             <Col xs={12} sm={6} md={6} lg={3} className="red_bg">
-              <div className="left-align">
+              <BarChart />
+              {/* <BasicChart /> */}
+              {/* <div className="left-align">
                 <span className="header">4,121</span>
                 <span className="subheader">Page Views</span>
-              </div>
-              <VictoryArea
-                interpolation="natural"
-                animate={{
-                  duration: 2000,
-                  onLoad: { duration: 1000 }
-                }}
-                style={{
-                  data: {
-                    fill: "#fff",
-                    strokeWidth: 15,
-                    strokeLinecap: "round"
-                  }
-                }}
-                data={dataPV}
-                y0={d => d.y - 1}
-              />
+              </div> */}
             </Col>
             <Col xs={12} sm={6} md={6} lg={3} className="blue_bg">
               <div className="left-align">
                 <span className="header">2,194</span>
                 <span className="subheader">New Users</span>
               </div>
-              <VictoryArea
-                interpolation="natural"
-                animate={{
-                  duration: 2000,
-                  onLoad: { duration: 1000 }
-                }}
-                style={{
-                  data: {
-                    fill: "#fff",
-                    strokeWidth: 15,
-                    strokeLinecap: "round"
-                  }
-                }}
-                data={dataNU}
-                y0={d => d.y - 1}
-              />
             </Col>
           </Row>
         </Grid>
