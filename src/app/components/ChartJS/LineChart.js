@@ -39,9 +39,30 @@ class LineChart extends React.Component {
         Bar Component
         <Line
           options={{
+            title: {
+              display: true,
+              text: "Test",
+              fontSize: 25
+            },
+            scales: {
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false,
+                    scaleShowLabels: false
+                  }
+                }
+              ],
+              yAxes: [
+                {
+                  gridLines: {
+                    display: false
+                  }
+                }
+              ]
+            },
             legend: false,
-            maintainAspectRatio: false,
-            scaleShowGridLines: false
+            maintainAspectRatio: false
           }}
           data={this.state.chartData}
         />

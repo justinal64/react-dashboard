@@ -53,8 +53,8 @@ class TestContainer extends Component {
               LineChart
               <LineChart />
             </Col>
-            <Col xs={12} sm={6} md={6} lg={3}>
-              BarChart
+            <Col xs={12} sm={6} md={6} lg={12}>
+              LineChart
               <LineChart />
             </Col>
             <Col xs={12} sm={6} md={6} lg={12}>
