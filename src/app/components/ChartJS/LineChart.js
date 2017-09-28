@@ -39,25 +39,15 @@ class LineChart extends React.Component {
         Bar Component
         <Line
           options={{
-            title: {
-              display: true,
-              text: "Test",
-              fontSize: 25
-            },
             scales: {
               xAxes: [
                 {
-                  gridLines: {
-                    display: false,
-                    scaleShowLabels: false
-                  }
+                  display: false
                 }
               ],
               yAxes: [
                 {
-                  gridLines: {
-                    display: false
-                  }
+                  display: false
                 }
               ]
             },
