@@ -50,12 +50,23 @@ class TestContainer extends Component {
           <h2>Dashboard</h2>
           <Row center="lg" center="xs" around="lg" className="row">
             <Col xs={12} sm={6} md={6} lg={3} className="green_bg">
-              LineChart
+              <div className="left-align">
+                <span className="header">2,194</span>
+                <span className="subheader">New Users</span>
+              </div>
               <LineChart />
             </Col>
-            <Col xs={12} sm={6} md={6} lg={12}>
-              LineChart
-              <LineChart />
+            <Col xs={12} sm={6} md={6} lg={3} className="lightblue_bg">
+              BarChart
+              <BarChart />
+            </Col>
+            <Col xs={12} sm={6} md={6} lg={3} className="blue_bg">
+              BarChart
+              <BarChart />
+            </Col>
+            <Col xs={12} sm={6} md={6} lg={3} className="green_bg">
+              BarChart
+              <BarChart />
             </Col>
             <Col xs={12} sm={6} md={6} lg={12}>
               BarChart
