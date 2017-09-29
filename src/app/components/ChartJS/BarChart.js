@@ -17,7 +17,7 @@ class BarChart extends React.Component {
         datasets: [
           {
             label: "Population",
-            data: [6478364, 433333434, 43434535, 32324242, 23243434, 123454544],
+            data: [6478364, 43434535, 43434535, 32324242, 23243434, 123454544],
             backgroundColor: "white"
           }
         ]
@@ -28,6 +28,7 @@ class BarChart extends React.Component {
     return (
       <div className="chart">
         <Bar
+          height={100}
           options={{
             scales: {
               xAxes: [
