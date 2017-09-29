@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
 import BarChart from "../ChartJS/BarChart";
 import LineChart from "../ChartJS/LineChart";
+import HorizontalBarChart from "../ChartJS/HorizontalBarChart";
 import PieChart from "../ChartJS/PieChart";
 // import BasicChart from "../ChartJS/BasicChart";
 import Split from "grommet/components/Split";
@@ -48,15 +49,46 @@ class TestContainer extends Component {
         <SideNavigation />
         <Grid fluid>
           <h2>Dashboard</h2>
-          <Row center="lg" center="xs" around="lg" className="row">
-            <Col xs={12} sm={6} md={6} lg={3} className="green_bg">
-              LineChart
-              <LineChart />
+          <Row className="row">
+            <Col xs={12} sm={6} md={6} lg={3} className="green_bg  border">
+              <div className="left-align">
+                <span className="header">3,194</span>
+                <span className="subheader">New Users</span>
+              </div>
+              <div className="chart-padding">
+                <LineChart />
+              </div>
             </Col>
-            <Col xs={12} sm={6} md={6} lg={12}>
-              LineChart
-              <LineChart />
+            <Col xs={13} sm={6} md={6} lg={3} className="lightblue_bg  border">
+              <div className="left-align">
+                <span className="header">350</span>
+                <span className="subheader">Registered Users</span>
+              </div>
+              <div className="chart-padding">
+                <BarChart />
+              </div>
             </Col>
+            <div className="flex-wrapper" />
+            <Col xs={13} sm={6} md={6} lg={3} className="blue_bg  border">
+              <div className="left-align">
+                <span className="header">3,250</span>
+                <span className="subheader">Page Views</span>
+              </div>
+              <div className="chart-padding">
+                <HorizontalBarChart />
+              </div>
+            </Col>
+            <Col xs={13} sm={6} md={6} lg={3} className="green_bg  border">
+              <div className="left-align">
+                <span className="header">2,194</span>
+                <span className="subheader">New Users</span>
+              </div>
+              <div className="chart-padding">
+                <BarChart />
+              </div>
+            </Col>
+          </Row>
+          <Row>
             <Col xs={12} sm={6} md={6} lg={12}>
               BarChart
               <PieChart />
@@ -90,33 +122,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, { fetchData })(TestContainer);
-
-// events={[
-//   {
-//     target: "parent",
-//     eventHandlers: {
-//       onClick: () => {
-//         return [
-//           {
-//             target: "data",
-//             eventKey: "all",
-//             mutation: props => {
-//               const stroke =
-//                 props.style && props.style.stroke;
-//               return stroke === "black"
-//                 ? null
-//                 : { style: { stroke: "black" } };
-//             }
-//           },
-//           {
-//             target: "labels",
-//             eventKey: 2,
-//             mutation: props => {
-//               return props.text ? null : { text: "clicked" };
-//             }
-//           }
-//         ];
-//       }
-//     }
-//   }
-// ]}

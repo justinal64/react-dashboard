@@ -36,8 +36,8 @@ class LineChart extends React.Component {
   render() {
     return (
       <div className="chart">
-        Bar Component
         <Line
+          height={100}
           options={{
             scales: {
               xAxes: [
