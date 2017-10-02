@@ -48,79 +48,101 @@ class TestContainer extends Component {
     return (
       <Split flex="right">
         <SideNavigation />
-        <Grid fluid className="lightgrey_bg">
-          <h2>Dashboard</h2>
-          <Row>
-            <Col xs={12} sm={6} md={6} lg={3} className="blue_bg grid">
-              <div className="left-align">
-                <span className="header">3,194</span>
-                <span className="subheader">New Users</span>
-              </div>
-              <div className="chart-padding">
-                <SimpleLineChart />
-              </div>
-            </Col>
-            <Col xs={12} sm={6} md={6} lg={3} className="yellow_bg grid">
-              <div className="left-align">
-                <span className="header">350</span>
-                <span className="subheader">Registered Users</span>
-              </div>
-              <div className="chart-padding">
-                <BarChart />
-              </div>
-            </Col>
-            <Col xs={12} sm={6} md={6} lg={3} className="lightblue_bg grid">
-              <div className="left-align">
-                <span className="header">3,250</span>
-                <span className="subheader">Page Views</span>
-              </div>
-              <div className="chart-padding">
-                <HorizontalBarChart />
-              </div>
-            </Col>
-            <Col xs={12} sm={6} md={6} lg={3} className="red_bg grid">
-              <div className="left-align">
-                <span className="header">2,194</span>
-                <span className="subheader">New Users</span>
-              </div>
-              <div className="chart-padding">
-                <BarChart />
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col
-              xs={12}
-              sm={12}
-              md={12}
-              lg={12}
-              className="white_bg spacing-top"
-            >
-              <div className="left-align">
-                <span className="lb_header">Traffic</span>
-                <span className="lb_subheader">November 2017</span>
-              </div>
-              LineChart
-              <div>
-                <LineChart />
-              </div>
-            </Col>
-            <Col xs={12} sm={6} md={6} lg={3} className="red_bg">
-              <BarChart />
-              {/* <BasicChart /> */}
-              {/* <div className="left-align">
-                <span className="header">4,121</span>
-                <span className="subheader">Page Views</span>
-              </div> */}
-            </Col>
-            <Col xs={12} sm={6} md={6} lg={3} className="blue_bg">
-              <div className="left-align">
-                <span className="header">2,194</span>
-                <span className="subheader">New Users</span>
-              </div>
-            </Col>
-          </Row>
-        </Grid>
+        <div>
+          <div className="title-spacing">
+            <span className="title">Dashboard</span>
+          </div>
+          <Grid fluid className="lightgrey_bg">
+            <Row>
+              <Col xs={12} sm={6} md={6} lg={3} className="blue_bg grid">
+                <div className="left-align">
+                  <span className="header">3,194</span>
+                  <span className="subheader">New Users</span>
+                </div>
+                <div className="chart-padding">
+                  <SimpleLineChart />
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3} className="yellow_bg grid">
+                <div className="left-align">
+                  <span className="header">350</span>
+                  <span className="subheader">Registered Users</span>
+                </div>
+                <div className="chart-padding">
+                  <BarChart />
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3} className="lightblue_bg grid">
+                <div className="left-align">
+                  <span className="header">3,250</span>
+                  <span className="subheader">Page Views</span>
+                </div>
+                <div className="chart-padding">
+                  <HorizontalBarChart />
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3} className="red_bg grid">
+                <div className="left-align">
+                  <span className="header">2,194</span>
+                  <span className="subheader">New Users</span>
+                </div>
+                <div className="chart-padding">
+                  <BarChart />
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} sm={12} md={12} lg={12} className="white_bg grid">
+                <div className="left-align">
+                  <span className="lb_header">Traffic</span>
+                  <span className="lb_subheader">November 2017</span>
+                </div>
+                LineChart
+                <div>
+                  <LineChart />
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} sm={6} md={6} lg={3} className="blue_bg grid">
+                <div className="left-align">
+                  <span className="header">3,194</span>
+                  <span className="subheader">New Users</span>
+                </div>
+                <div className="chart-padding">
+                  <SimpleLineChart />
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3} className="yellow_bg grid">
+                <div className="left-align">
+                  <span className="header">350</span>
+                  <span className="subheader">Registered Users</span>
+                </div>
+                <div className="chart-padding">
+                  <BarChart />
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3} className="lightblue_bg grid">
+                <div className="left-align">
+                  <span className="header">3,250</span>
+                  <span className="subheader">Page Views</span>
+                </div>
+                <div className="chart-padding">
+                  <HorizontalBarChart />
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3} className="red_bg grid">
+                <div className="left-align">
+                  <span className="header">2,194</span>
+                  <span className="subheader">New Users</span>
+                </div>
+                <div className="chart-padding">
+                  <BarChart />
+                </div>
+              </Col>
+            </Row>
+          </Grid>
+        </div>
       </Split>
     );
   }
