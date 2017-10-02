@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
 
-class LineChart extends React.Component {
+class SimpleLineChart extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,8 +37,20 @@ class LineChart extends React.Component {
     return (
       <div className="chart">
         <Line
-          height={300}
+          height={100}
           options={{
+            scales: {
+              xAxes: [
+                {
+                  display: false
+                }
+              ],
+              yAxes: [
+                {
+                  display: false
+                }
+              ]
+            },
             legend: false,
             maintainAspectRatio: false
           }}
@@ -49,4 +61,4 @@ class LineChart extends React.Component {
   }
 }
 
-export default LineChart;
+export default SimpleLineChart;

@@ -1,5 +1,10 @@
-.row {
-    color: white;
+.title {
+    font-size: 2em;
+    text-align: center;
+}
+
+.title-spacing {
+    text-align: center;
 }
 
 .test span {
@@ -9,6 +14,10 @@
 
 .center {
     align-items: center;
+}
+
+.lightgrey_bg {
+    background-color: #e6e6e6;
 }
 
 .lightblue_bg {
@@ -27,18 +36,27 @@
     background-color: #fabb3d;
 }
 
+.white_bg {
+    background-color: white;
+}
+
 .left-align {
     text-align: left;
 }
 
 .header {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
-.header {
+.lb_header {
     display: block;
-    font-size: 1.25rem;
+    font-size: 1.5em;
+    color: black;
+}
+
+.lb_subheader {
+    color: black;
 }
 
 .chart-padding {
@@ -47,5 +65,9 @@
 }
 
 .grid {
-    border: solid white 10px;
+    border: solid #e6e6e6 10px;
+}
+
+.spacing-top {
+    margin-top: 1em;
 }
