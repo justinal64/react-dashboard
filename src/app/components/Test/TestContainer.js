@@ -7,6 +7,7 @@ import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
 import BarChart from "../ChartJS/BarChart";
+import SimpleLineChart from "../ChartJS/SimpleLineChart";
 import LineChart from "../ChartJS/LineChart";
 import HorizontalBarChart from "../ChartJS/HorizontalBarChart";
 import PieChart from "../ChartJS/PieChart";
@@ -47,7 +48,7 @@ class TestContainer extends Component {
     return (
       <Split flex="right">
         <SideNavigation />
-        <Grid fluid>
+        <Grid fluid className="lightgrey_bg">
           <h2>Dashboard</h2>
           <Row>
             <Col xs={12} sm={6} md={6} lg={3} className="blue_bg grid">
@@ -56,7 +57,7 @@ class TestContainer extends Component {
                 <span className="subheader">New Users</span>
               </div>
               <div className="chart-padding">
-                <LineChart />
+                <SimpleLineChart />
               </div>
             </Col>
             <Col xs={12} sm={6} md={6} lg={3} className="yellow_bg grid">
@@ -88,9 +89,21 @@ class TestContainer extends Component {
             </Col>
           </Row>
           <Row>
-            <Col xs={12} sm={6} md={6} lg={12}>
-              BarChart
-              <PieChart />
+            <Col
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              className="white_bg spacing-top"
+            >
+              <div className="left-align">
+                <span className="lb_header">Traffic</span>
+                <span className="lb_subheader">November 2017</span>
+              </div>
+              LineChart
+              <div>
+                <LineChart />
+              </div>
             </Col>
             <Col xs={12} sm={6} md={6} lg={3} className="red_bg">
               <BarChart />
