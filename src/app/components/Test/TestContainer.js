@@ -49,8 +49,8 @@ class TestContainer extends Component {
         <SideNavigation />
         <Grid fluid>
           <h2>Dashboard</h2>
-          <Row className="row">
-            <Col xs={12} sm={6} md={6} lg={3} className="green_bg  border">
+          <Row>
+            <Col xs={12} sm={6} md={6} lg={3} className="blue_bg grid">
               <div className="left-align">
                 <span className="header">3,194</span>
                 <span className="subheader">New Users</span>
@@ -59,7 +59,7 @@ class TestContainer extends Component {
                 <LineChart />
               </div>
             </Col>
-            <Col xs={13} sm={6} md={6} lg={3} className="lightblue_bg  border">
+            <Col xs={12} sm={6} md={6} lg={3} className="yellow_bg grid">
               <div className="left-align">
                 <span className="header">350</span>
                 <span className="subheader">Registered Users</span>
@@ -68,8 +68,7 @@ class TestContainer extends Component {
                 <BarChart />
               </div>
             </Col>
-            <div className="flex-wrapper" />
-            <Col xs={13} sm={6} md={6} lg={3} className="blue_bg  border">
+            <Col xs={12} sm={6} md={6} lg={3} className="lightblue_bg grid">
               <div className="left-align">
                 <span className="header">3,250</span>
                 <span className="subheader">Page Views</span>
@@ -78,7 +77,7 @@ class TestContainer extends Component {
                 <HorizontalBarChart />
               </div>
             </Col>
-            <Col xs={13} sm={6} md={6} lg={3} className="green_bg  border">
+            <Col xs={12} sm={6} md={6} lg={3} className="red_bg grid">
               <div className="left-align">
                 <span className="header">2,194</span>
                 <span className="subheader">New Users</span>
