@@ -12,6 +12,7 @@ import LineChart from "../ChartJS/LineChart";
 import HorizontalBarChart from "../ChartJS/HorizontalBarChart";
 import PieChart from "../ChartJS/PieChart";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import SocialMediaChart from "../ChartJS/SocialMediaChart";
 import Split from "grommet/components/Split";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
@@ -86,7 +87,7 @@ class TestContainer extends Component {
                 <ProgressBar
                   header="Visits"
                   subheader="24,000 Users (40%)"
-                  value={35}
+                  value={40}
                   backgroundColor="Green"
                 />
               </Col>
@@ -94,7 +95,7 @@ class TestContainer extends Component {
                 <ProgressBar
                   header="Unique"
                   subheader="24,093 Users (20%)"
-                  value={35}
+                  value={20}
                   backgroundColor="lightblue"
                 />
               </Col>
@@ -102,7 +103,7 @@ class TestContainer extends Component {
                 <ProgressBar
                   header="Page Views"
                   subheader="78,706 Views (60%)"
-                  value={35}
+                  value={60}
                   backgroundColor="yellow"
                 />
               </Col>
@@ -110,7 +111,7 @@ class TestContainer extends Component {
                 <ProgressBar
                   header="New Users"
                   subheader="22,123 Users (80%)"
-                  value={35}
+                  value={80}
                   backgroundColor="red"
                 />
               </Col>
@@ -118,9 +119,47 @@ class TestContainer extends Component {
                 <ProgressBar
                   header="Bounce Rate"
                   subheader="Average 40.5%"
-                  value={35}
+                  value={40}
                   backgroundColor="blue"
                 />
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} sm={6} md={6} lg={3}>
+                <div className="chart-padding facebook_bg grid">
+                  <SocialMediaChart />
+                </div>
+                <div className="left-align">
+                  <span className="sm_header">3,194</span>
+                  <span className="sm_subheader">45,000</span>
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3} className="yellow_bg grid">
+                <div className="chart-padding">
+                  <BarChart />
+                </div>
+                <div className="left-align">
+                  <span className="header">350</span>
+                  <span className="subheader">Registered Users</span>
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3} className="lightblue_bg grid">
+                <div className="left-align">
+                  <span className="header">3,250</span>
+                  <span className="subheader">Page Views</span>
+                </div>
+                <div className="chart-padding">
+                  <HorizontalBarChart />
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3} className="red_bg grid">
+                <div className="left-align">
+                  <span className="header">2,194</span>
+                  <span className="subheader">New Users</span>
+                </div>
+                <div className="chart-padding">
+                  <BarChart />
+                </div>
               </Col>
             </Row>
           </Grid>
