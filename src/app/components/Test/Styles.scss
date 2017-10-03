@@ -88,29 +88,6 @@ progress {
     border-radius: 9px;
 }
 
-// Styling for Safari and Chrome
-progress::-webkit-progress-bar {
-    background-color: #f3f3f3;
-    border: 0;
-    height: 5px;
-    border-radius: 9px;
-}
-
-progress::-webkit-progress-value {
-    background-color: green;
-    border: 0;
-    height: 5px;
-    border-radius: 9px;
-}
-
-// Styling for Firefox
-progress::-moz-progress-bar {
-    background-color: green;
-    border: 0;
-    height: 5px;
-    border-radius: 9px;
-}
-
 .black-border {
     border: 1px solid black;
 }

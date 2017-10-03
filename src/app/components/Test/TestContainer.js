@@ -83,47 +83,43 @@ class TestContainer extends Component {
             </Row>
             <Row className="between-lg grid">
               <Col xs={12} sm={6} md={6} lg={2}>
-                <div className="center-align">
-                  <span className="lb_header">2,194</span>
-                  <span className="lb_subheader">
-                    <strong>New Users</strong>
-                  </span>
-                </div>
-                <progress max="100" value="50" />
+                <ProgressBar
+                  header="Visits"
+                  subheader="24,000 Users (40%)"
+                  value={35}
+                  backgroundColor="Green"
+                />
               </Col>
               <Col xs={12} sm={6} md={6} lg={2}>
-                <div className="center-align">
-                  <span className="lb_header">2,194</span>
-                  <span className="lb_subheader">
-                    <strong>New Users</strong>
-                  </span>
-                </div>
-                <progress max="100" value="50" />
+                <ProgressBar
+                  header="Unique"
+                  subheader="24,093 Users (20%)"
+                  value={35}
+                  backgroundColor="lightblue"
+                />
               </Col>
               <Col xs={12} sm={6} md={6} lg={2}>
-                <div className="center-align">
-                  <span className="lb_header">2,194</span>
-                  <span className="lb_subheader">
-                    <strong>New Users</strong>
-                  </span>
-                </div>
-                <progress max="100" value="50" />
+                <ProgressBar
+                  header="Page Views"
+                  subheader="78,706 Views (60%)"
+                  value={35}
+                  backgroundColor="yellow"
+                />
               </Col>
               <Col xs={12} sm={6} md={6} lg={2}>
-                <div className="center-align">
-                  <span className="lb_header">2,194</span>
-                  <span className="lb_subheader">
-                    <strong>New Users</strong>
-                  </span>
-                </div>
-                <progress max="100" value="50" />
+                <ProgressBar
+                  header="New Users"
+                  subheader="22,123 Users (80%)"
+                  value={35}
+                  backgroundColor="red"
+                />
               </Col>
               <Col xs={12} sm={6} md={6} lg={2}>
                 <ProgressBar
                   header="Bounce Rate"
                   subheader="Average 40.5%"
                   value={35}
-                  backgroundColor="pink"
+                  backgroundColor="blue"
                 />
               </Col>
             </Row>

@@ -36,7 +36,7 @@ export const ProgressBarHeader = styled.span`
 
 export const ProgressBarSubheader = styled.span`
   display: block;
-  font-size: 1.25em;
+  font-size: 1.1em;
   color: black;
   font-weight: 600;
 `;
