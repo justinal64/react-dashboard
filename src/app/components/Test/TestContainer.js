@@ -147,30 +147,42 @@ class TestContainer extends Component {
                 <div className="left-align">
                   <Row>
                     <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                      <span className="sm_header">21K</span>
+                    </Col>
+                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                      <span className="sm_subheader">16K</span>
+                    </Col>
+                  </Row>
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3}>
+                <div className="chart-padding linkedin_bg grid">
+                  <SocialMediaChart />
+                </div>
+                <div className="left-align">
+                  <Row>
+                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                      <span className="sm_header">21K</span>
+                    </Col>
+                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                      <span className="sm_subheader">16K</span>
+                    </Col>
+                  </Row>
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3}>
+                <div className="chart-padding googleplus_bg grid">
+                  <SocialMediaChart />
+                </div>
+                <div className="left-align">
+                  <Row>
+                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
                       <span className="sm_header">45K</span>
                     </Col>
                     <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
                       <span className="sm_subheader">61K</span>
                     </Col>
                   </Row>
-                </div>
-              </Col>
-              <Col xs={12} sm={6} md={6} lg={3} className="lightblue_bg grid">
-                <div className="left-align">
-                  <span className="header">3,250</span>
-                  <span className="subheader">Page Views</span>
-                </div>
-                <div className="chart-padding">
-                  <HorizontalBarChart />
-                </div>
-              </Col>
-              <Col xs={12} sm={6} md={6} lg={3} className="red_bg grid">
-                <div className="left-align">
-                  <span className="header">2,194</span>
-                  <span className="subheader">New Users</span>
-                </div>
-                <div className="chart-padding">
-                  <BarChart />
                 </div>
               </Col>
             </Row>
