@@ -126,63 +126,95 @@ class TestContainer extends Component {
             </Row>
             <Row>
               <Col xs={12} sm={6} md={6} lg={3}>
-                <div className="chart-padding facebook_bg grid">
-                  <SocialMediaChart />
-                </div>
-                <div className="left-align">
-                  <Row>
-                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
-                      <span className="sm_header">45K</span>
-                    </Col>
-                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
-                      <span className="sm_subheader">61K</span>
-                    </Col>
-                  </Row>
-                </div>
-              </Col>
-              <Col xs={12} sm={6} md={6} lg={3}>
-                <div className="chart-padding twitter_bg grid">
-                  <SocialMediaChart />
-                </div>
-                <div className="left-align">
-                  <Row>
-                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
-                      <span className="sm_header">21K</span>
-                    </Col>
-                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
-                      <span className="sm_subheader">16K</span>
-                    </Col>
-                  </Row>
+                <div className="white_bg">
+                  <div className="facebook_bg">
+                    <SocialMediaChart />
+                  </div>
+                  <div>
+                    <Row>
+                      <Col
+                        className="center-lg divider"
+                        xs={12}
+                        sm={6}
+                        md={6}
+                        lg={6}
+                      >
+                        <span className="sm_header">45K</span>
+                      </Col>
+                      <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                        <span className="sm_subheader">61K</span>
+                      </Col>
+                    </Row>
+                  </div>
                 </div>
               </Col>
               <Col xs={12} sm={6} md={6} lg={3}>
-                <div className="chart-padding linkedin_bg grid">
-                  <SocialMediaChart />
-                </div>
-                <div className="left-align">
-                  <Row>
-                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
-                      <span className="sm_header">21K</span>
-                    </Col>
-                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
-                      <span className="sm_subheader">16K</span>
-                    </Col>
-                  </Row>
+                <div className="white_bg">
+                  <div className="twitter_bg">
+                    <SocialMediaChart />
+                  </div>
+                  <div>
+                    <Row>
+                      <Col
+                        className="center-lg divider"
+                        xs={12}
+                        sm={6}
+                        md={6}
+                        lg={6}
+                      >
+                        <span className="sm_header">21K</span>
+                      </Col>
+                      <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                        <span className="sm_subheader">16K</span>
+                      </Col>
+                    </Row>
+                  </div>
                 </div>
               </Col>
               <Col xs={12} sm={6} md={6} lg={3}>
-                <div className="chart-padding googleplus_bg grid">
-                  <SocialMediaChart />
+                <div className="white_bg">
+                  <div className="linkedin_bg">
+                    <SocialMediaChart />
+                  </div>
+                  <div>
+                    <Row>
+                      <Col
+                        className="center-lg divider"
+                        xs={12}
+                        sm={6}
+                        md={6}
+                        lg={6}
+                      >
+                        <span className="sm_header">32K</span>
+                      </Col>
+                      <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                        <span className="sm_subheader">12K</span>
+                      </Col>
+                    </Row>
+                  </div>
                 </div>
-                <div className="left-align">
-                  <Row>
-                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
-                      <span className="sm_header">45K</span>
-                    </Col>
-                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
-                      <span className="sm_subheader">61K</span>
-                    </Col>
-                  </Row>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3}>
+                <div className="white_bg">
+                  <div className="googleplus_bg">
+                    <SocialMediaChart />
+                  </div>
+                  <div>
+                    <Row>
+                      <Col
+                        className="center-lg divider"
+                        xs={12}
+                        sm={6}
+                        md={6}
+                        lg={6}
+                      >
+                        <span className="sm_header">-1K</span>
+                      </Col>
+                      <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                        <span className="sm_subheader">-2K</span>
+                      </Col>
+                    </Row>
+                  </div>
                 </div>
               </Col>
             </Row>
