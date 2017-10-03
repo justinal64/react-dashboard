@@ -6,28 +6,21 @@ class LineChart extends React.Component {
     super(props);
     this.state = {
       chartData: {
-        labels: [
-          "Boston",
-          "Worcester",
-          "Springfield",
-          "Lowell",
-          "Cambridge",
-          "New Bedford"
-        ],
+        labels: ["January", "February", "March", "April", "May", "June"],
         datasets: [
           {
             pointHitRadius: 25,
             fill: false,
-            label: "Population",
-            data: [6478364, 433333434, 43434535, 32324242, 23243434, 123454544],
-            backgroundColor: [
-              "green",
-              "red",
-              "pink",
-              "blue",
-              "orange",
-              "lightblue"
-            ]
+            label: "New Website Traffic",
+            data: [12300, 15000, 14000, 17000, 500, 12500],
+            backgroundColor: "lightblue"
+          },
+          {
+            pointHitRadius: 25,
+            fill: false,
+            label: "Old Website Traffic",
+            data: [500, 750, 900, 500, 1500, 50],
+            backgroundColor: "blue"
           }
         ]
       }
