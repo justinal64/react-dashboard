@@ -4,6 +4,7 @@ import {
   SegmentWrapper,
   SegmentPadding
 } from "./Styles";
+
 const Segment = props => {
   return (
     <SegmentPadding>
