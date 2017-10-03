@@ -128,20 +128,31 @@ class TestContainer extends Component {
               <Col xs={12} sm={6} md={6} lg={3}>
                 <div className="chart-padding facebook_bg grid">
                   <SocialMediaChart />
-                  <div className="image" />
                 </div>
                 <div className="left-align">
-                  <span className="sm_header">3,194</span>
-                  <span className="sm_subheader">45,000</span>
+                  <Row>
+                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                      <span className="sm_header">45K</span>
+                    </Col>
+                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                      <span className="sm_subheader">61K</span>
+                    </Col>
+                  </Row>
                 </div>
               </Col>
-              <Col xs={12} sm={6} md={6} lg={3} className="yellow_bg grid">
-                <div className="chart-padding">
-                  <BarChart />
+              <Col xs={12} sm={6} md={6} lg={3}>
+                <div className="chart-padding twitter_bg grid">
+                  <SocialMediaChart />
                 </div>
                 <div className="left-align">
-                  <span className="header">350</span>
-                  <span className="subheader">Registered Users</span>
+                  <Row>
+                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                      <span className="sm_header">45K</span>
+                    </Col>
+                    <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                      <span className="sm_subheader">61K</span>
+                    </Col>
+                  </Row>
                 </div>
               </Col>
               <Col xs={12} sm={6} md={6} lg={3} className="lightblue_bg grid">

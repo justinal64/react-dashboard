@@ -22,6 +22,12 @@
     background-position: center 0;
 }
 
+.twitter_bg canvas {
+    background: url("http://www.norwoodlibrary.org/wp-content/uploads/2017/05/TWITTER-1.jpg");
+    background-size: cover;
+    background-position: center 0;
+}
+
 .lightgrey_bg {
     background-color: #e6e6e6;
 }
@@ -75,14 +81,11 @@
 }
 
 .sm_header {
-    text-align: left;
     font-size: 1.5em;
     color: black;
 }
 
 .sm_subheader {
-    float: right;
-    text-align: right;
     font-size: 1.5em;
     color: black;
 }

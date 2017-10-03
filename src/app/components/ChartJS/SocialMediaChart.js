@@ -20,7 +20,7 @@ class SocialMediaChart extends React.Component {
             fill: true,
             label: "Population",
             data: [21, 55, 76, 2, 89, 25],
-            backgroundColor: "rgba(255, 255, 255, 0.6)"
+            backgroundColor: "rgba(255, 255, 255, 0.4)"
           }
         ]
       }
