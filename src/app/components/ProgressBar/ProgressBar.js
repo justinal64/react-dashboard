@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {
   ProgressBarHeader,
   ProgressBarSubheader,
-  ProgressBarColor
+  ProgressBarStyled
 } from "./Styles";
 
 class ProgressBar extends React.Component {
@@ -16,7 +16,7 @@ class ProgressBar extends React.Component {
           <ProgressBarHeader>{this.props.header}</ProgressBarHeader>
           <ProgressBarSubheader>{this.props.subheader}</ProgressBarSubheader>
         </div>
-        <ProgressBarColor
+        <ProgressBarStyled
           max="100"
           value={this.props.value}
           backgroundColor={this.props.backgroundColor}
