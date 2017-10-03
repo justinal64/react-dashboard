@@ -4,11 +4,16 @@ import { getBackgroundColor } from "../Styles/Styles";
 // styling for Chrome/Safari
 // styling for firefox
 export const ProgressBarColor = styled.progress`
+   {
+    width: 100%;
+  }
+
   ::-webkit-progress-bar {
     background-color: #f3f3f3;
     border: 0;
     height: 5px;
     border-radius: 9px;
+    width: 100%;
   }
   ::-webkit-progress-value {
     ${getBackgroundColor};
