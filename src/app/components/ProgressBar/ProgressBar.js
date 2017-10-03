@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-import { ProgressBarHeader, ProgressBarSubheader } from "./Styles";
+import {
+  ProgressBarHeader,
+  ProgressBarSubheader,
+  ProgressBarColor
+} from "./Styles";
 
 class ProgressBar extends React.Component {
   constructor(props) {
@@ -12,7 +16,11 @@ class ProgressBar extends React.Component {
           <ProgressBarHeader>{this.props.header}</ProgressBarHeader>
           <ProgressBarSubheader>{this.props.subheader}</ProgressBarSubheader>
         </div>
-        <progress max="100" value={this.props.value} />
+        <ProgressBarColor
+          max="100"
+          value={this.props.value}
+          backgroundColor={this.props.backgroundColor}
+        />
       </div>
     );
   }

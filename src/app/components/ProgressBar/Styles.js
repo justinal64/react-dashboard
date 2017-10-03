@@ -1,33 +1,27 @@
 import styled from "styled-components";
-import { getAlignment, getFont } from "../Styles/Styles";
+import { getBackgroundColor } from "../Styles/Styles";
 
-// progress {
-//     background-color: #f3f3f3;
-//     border: 0;
-//     height: 5px;
-//     border-radius: 9px;
-// }
-
-// // Styling for Safari and Chrome
-// progress::-webkit-progress-bar {
-//     background-color: #f3f3f3;
-//     border: 0;
-//     height: 5px;
-//     border-radius: 9px;
-// }
-
-// progress::-webkit-progress-value {
-//     background-color: green;
-//     border: 0;
-//     height: 5px;
-//     border-radius: 9px;
-// }
-
+// styling for Chrome/Safari
+// styling for firefox
 export const ProgressBarColor = styled.progress`
-  background-color: green;
-  border: 0;
-  height: 5px;
-  border-radius: 9px;
+  ::-webkit-progress-bar {
+    background-color: #f3f3f3;
+    border: 0;
+    height: 5px;
+    border-radius: 9px;
+  }
+  ::-webkit-progress-value {
+    ${getBackgroundColor};
+    border: 0;
+    height: 5px;
+    border-radius: 9px;
+  }
+  ::-moz-progress-bar {
+    ${getBackgroundColor};
+    border: 0;
+    height: 5px;
+    border-radius: 9px;
+  }
 `;
 
 export const ProgressBarHeader = styled.span`
@@ -42,6 +36,3 @@ export const ProgressBarSubheader = styled.span`
   color: black;
   font-weight: 600;
 `;
-
-// export const GraphWrapper = styled.div`${getAlignment};`;
-// export const GraphHeader = styled.span`${getFont};`;

@@ -123,6 +123,7 @@ class TestContainer extends Component {
                   header="Bounce Rate"
                   subheader="Average 40.5%"
                   value={35}
+                  backgroundColor="pink"
                 />
               </Col>
             </Row>
