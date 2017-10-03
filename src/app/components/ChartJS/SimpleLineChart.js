@@ -19,7 +19,7 @@ class SimpleLineChart extends React.Component {
             pointHitRadius: 25,
             fill: false,
             label: "Population",
-            data: [6478364, 433333434, 43434535, 32324242, 23243434, 123454544],
+            data: [27, 41, 29, 76, 45, 12],
             backgroundColor: [
               "green",
               "red",

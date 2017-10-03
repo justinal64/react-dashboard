@@ -19,8 +19,8 @@ class SocialMediaChart extends React.Component {
             pointHitRadius: 25,
             fill: true,
             label: "Population",
-            data: [6478364, 433333434, 43434535, 32324242, 23243434, 123454544],
-            backgroundColor: "transparent"
+            data: [21, 55, 76, 2, 89, 25],
+            backgroundColor: "rgba(255, 255, 255, 0.6)"
           }
         ]
       }

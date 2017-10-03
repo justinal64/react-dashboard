@@ -128,6 +128,7 @@ class TestContainer extends Component {
               <Col xs={12} sm={6} md={6} lg={3}>
                 <div className="chart-padding facebook_bg grid">
                   <SocialMediaChart />
+                  <div className="image" />
                 </div>
                 <div className="left-align">
                   <span className="sm_header">3,194</span>
