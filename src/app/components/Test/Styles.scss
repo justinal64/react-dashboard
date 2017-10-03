@@ -16,6 +16,38 @@
     align-items: center;
 }
 
+.facebook_bg canvas {
+    background: url("https://www.helpnetsecurity.com/wp-content/uploads/2015/12/facebook-wide.jpg");
+    background-size: cover;
+    background-position: center 0;
+}
+
+.twitter_bg canvas {
+    background: url("http://www.norwoodlibrary.org/wp-content/uploads/2017/05/TWITTER-1.jpg");
+    background-size: cover;
+    background-position: center 0;
+}
+
+.linkedin_bg canvas {
+    background: url("https://media.wired.com/photos/592681fc8d4ebc5ab806a856/master/pass/LinkedIn_HP.jpg");
+    background-size: cover;
+    background-position: center 0;
+}
+
+.googleplus_bg canvas {
+    background: url("https://d3fg6yblgqhjyn.cloudfront.net/additional-assets/google-plus.jpg");
+    background-size: cover;
+    background-position: center 0;
+}
+
+.divider {
+    border-right: 1px solid black;
+}
+
+.white_bg {
+    background-color: white;
+}
+
 .lightgrey_bg {
     background-color: #e6e6e6;
 }
@@ -65,6 +97,16 @@
 }
 
 .lb_subheader {
+    color: black;
+}
+
+.sm_header {
+    font-size: 1.5em;
+    color: black;
+}
+
+.sm_subheader {
+    font-size: 1.5em;
     color: black;
 }
 

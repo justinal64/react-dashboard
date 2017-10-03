@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
 
-class SimpleLineChart extends React.Component {
+class SocialMediaChart extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,17 +17,10 @@ class SimpleLineChart extends React.Component {
         datasets: [
           {
             pointHitRadius: 25,
-            fill: false,
+            fill: true,
             label: "Population",
-            data: [27, 41, 29, 76, 45, 12],
-            backgroundColor: [
-              "green",
-              "red",
-              "pink",
-              "blue",
-              "orange",
-              "lightblue"
-            ]
+            data: [21, 55, 76, 2, 89, 25],
+            backgroundColor: "rgba(255, 255, 255, 0.4)"
           }
         ]
       }
@@ -61,4 +54,4 @@ class SimpleLineChart extends React.Component {
   }
 }
 
-export default SimpleLineChart;
+export default SocialMediaChart;

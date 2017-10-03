@@ -12,6 +12,7 @@ import LineChart from "../ChartJS/LineChart";
 import HorizontalBarChart from "../ChartJS/HorizontalBarChart";
 import PieChart from "../ChartJS/PieChart";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import SocialMediaChart from "../ChartJS/SocialMediaChart";
 import Split from "grommet/components/Split";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
@@ -86,7 +87,7 @@ class TestContainer extends Component {
                 <ProgressBar
                   header="Visits"
                   subheader="24,000 Users (40%)"
-                  value={35}
+                  value={40}
                   backgroundColor="Green"
                 />
               </Col>
@@ -94,7 +95,7 @@ class TestContainer extends Component {
                 <ProgressBar
                   header="Unique"
                   subheader="24,093 Users (20%)"
-                  value={35}
+                  value={20}
                   backgroundColor="lightblue"
                 />
               </Col>
@@ -102,7 +103,7 @@ class TestContainer extends Component {
                 <ProgressBar
                   header="Page Views"
                   subheader="78,706 Views (60%)"
-                  value={35}
+                  value={60}
                   backgroundColor="yellow"
                 />
               </Col>
@@ -110,7 +111,7 @@ class TestContainer extends Component {
                 <ProgressBar
                   header="New Users"
                   subheader="22,123 Users (80%)"
-                  value={35}
+                  value={80}
                   backgroundColor="red"
                 />
               </Col>
@@ -118,9 +119,103 @@ class TestContainer extends Component {
                 <ProgressBar
                   header="Bounce Rate"
                   subheader="Average 40.5%"
-                  value={35}
+                  value={40}
                   backgroundColor="blue"
                 />
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} sm={6} md={6} lg={3}>
+                <div className="white_bg">
+                  <div className="facebook_bg">
+                    <SocialMediaChart />
+                  </div>
+                  <div>
+                    <Row>
+                      <Col
+                        className="center-lg divider"
+                        xs={12}
+                        sm={6}
+                        md={6}
+                        lg={6}
+                      >
+                        <span className="sm_header">45K</span>
+                      </Col>
+                      <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                        <span className="sm_subheader">61K</span>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3}>
+                <div className="white_bg">
+                  <div className="twitter_bg">
+                    <SocialMediaChart />
+                  </div>
+                  <div>
+                    <Row>
+                      <Col
+                        className="center-lg divider"
+                        xs={12}
+                        sm={6}
+                        md={6}
+                        lg={6}
+                      >
+                        <span className="sm_header">21K</span>
+                      </Col>
+                      <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                        <span className="sm_subheader">16K</span>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3}>
+                <div className="white_bg">
+                  <div className="linkedin_bg">
+                    <SocialMediaChart />
+                  </div>
+                  <div>
+                    <Row>
+                      <Col
+                        className="center-lg divider"
+                        xs={12}
+                        sm={6}
+                        md={6}
+                        lg={6}
+                      >
+                        <span className="sm_header">32K</span>
+                      </Col>
+                      <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                        <span className="sm_subheader">12K</span>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3}>
+                <div className="white_bg">
+                  <div className="googleplus_bg">
+                    <SocialMediaChart />
+                  </div>
+                  <div>
+                    <Row>
+                      <Col
+                        className="center-lg divider"
+                        xs={12}
+                        sm={6}
+                        md={6}
+                        lg={6}
+                      >
+                        <span className="sm_header">-1K</span>
+                      </Col>
+                      <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                        <span className="sm_subheader">-2K</span>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
               </Col>
             </Row>
           </Grid>
