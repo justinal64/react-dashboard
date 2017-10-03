@@ -44,6 +44,10 @@
     text-align: left;
 }
 
+.center-align {
+    text-align: center;
+}
+
 .header {
     display: block;
     font-size: 1.5em;
@@ -75,4 +79,15 @@
 
 .spacing-top {
     margin-top: 1em;
+}
+
+progress {
+    background-color: #f3f3f3;
+    border: 0;
+    height: 5px;
+    border-radius: 9px;
+}
+
+.black-border {
+    border: 1px solid black;
 }

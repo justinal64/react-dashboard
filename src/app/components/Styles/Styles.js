@@ -8,3 +8,6 @@ export const getFont = props =>
 
 export const getPaddingBottom = props =>
   props.paddingBottom ? `padding-bottom: ${props.paddingBottom}rem;` : "";
+
+export const getBackgroundColor = props =>
+  props.backgroundColor ? `background-color: ${props.backgroundColor};` : "";

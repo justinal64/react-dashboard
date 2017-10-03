@@ -11,7 +11,7 @@ import SimpleLineChart from "../ChartJS/SimpleLineChart";
 import LineChart from "../ChartJS/LineChart";
 import HorizontalBarChart from "../ChartJS/HorizontalBarChart";
 import PieChart from "../ChartJS/PieChart";
-// import BasicChart from "../ChartJS/BasicChart";
+import ProgressBar from "../ProgressBar/ProgressBar";
 import Split from "grommet/components/Split";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
@@ -81,51 +81,46 @@ class TestContainer extends Component {
                 </div>
               </Col>
             </Row>
-            <Row className="around-lg">
-              <Col xs={12} sm={6} md={6} lg={2} className="blue_bg grid">
-                <div className="left-align">
-                  <span className="header">3,194</span>
-                  <span className="subheader">New Users</span>
-                </div>
-                <div className="chart-padding">
-                  <SimpleLineChart />
-                </div>
+            <Row className="between-lg grid">
+              <Col xs={12} sm={6} md={6} lg={2}>
+                <ProgressBar
+                  header="Visits"
+                  subheader="24,000 Users (40%)"
+                  value={35}
+                  backgroundColor="Green"
+                />
               </Col>
-              <Col xs={12} sm={6} md={6} lg={2} className="yellow_bg grid">
-                <div className="left-align">
-                  <span className="header">350</span>
-                  <span className="subheader">Registered Users</span>
-                </div>
-                <div className="chart-padding">
-                  <BarChart />
-                </div>
+              <Col xs={12} sm={6} md={6} lg={2}>
+                <ProgressBar
+                  header="Unique"
+                  subheader="24,093 Users (20%)"
+                  value={35}
+                  backgroundColor="lightblue"
+                />
               </Col>
-              <Col xs={12} sm={6} md={6} lg={2} className="lightblue_bg grid">
-                <div className="left-align">
-                  <span className="header">3,250</span>
-                  <span className="subheader">Page Views</span>
-                </div>
-                <div className="chart-padding">
-                  <HorizontalBarChart />
-                </div>
+              <Col xs={12} sm={6} md={6} lg={2}>
+                <ProgressBar
+                  header="Page Views"
+                  subheader="78,706 Views (60%)"
+                  value={35}
+                  backgroundColor="yellow"
+                />
               </Col>
-              <Col xs={12} sm={6} md={6} lg={2} className="red_bg grid">
-                <div className="left-align">
-                  <span className="header">2,194</span>
-                  <span className="subheader">New Users</span>
-                </div>
-                <div className="chart-padding">
-                  <BarChart />
-                </div>
+              <Col xs={12} sm={6} md={6} lg={2}>
+                <ProgressBar
+                  header="New Users"
+                  subheader="22,123 Users (80%)"
+                  value={35}
+                  backgroundColor="red"
+                />
               </Col>
-              <Col xs={12} sm={6} md={6} lg={2} className="red_bg grid">
-                <div className="left-align">
-                  <span className="header">2,194</span>
-                  <span className="subheader">New Users</span>
-                </div>
-                <div className="chart-padding">
-                  <BarChart />
-                </div>
+              <Col xs={12} sm={6} md={6} lg={2}>
+                <ProgressBar
+                  header="Bounce Rate"
+                  subheader="Average 40.5%"
+                  value={35}
+                  backgroundColor="blue"
+                />
               </Col>
             </Row>
           </Grid>
