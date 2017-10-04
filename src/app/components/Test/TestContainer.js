@@ -33,6 +33,11 @@ class TestContainer extends Component {
             <span className="title">Dashboard</span>
           </div>
           <Grid fluid className="lightgrey_bg">
+            <div>
+              <span>
+                <a href="dashboard">Home</a> / Dashboard
+              </span>
+            </div>
             <Row>
               <Col xs={12} sm={6} md={6} lg={3} className="blue_bg grid">
                 <div className="left-align">
@@ -134,14 +139,14 @@ class TestContainer extends Component {
                     <Row>
                       <Col
                         className="center-lg divider"
-                        xs={12}
+                        xs={6}
                         sm={6}
                         md={6}
                         lg={6}
                       >
                         <span className="sm_header">45K</span>
                       </Col>
-                      <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                      <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
                         <span className="sm_subheader">61K</span>
                       </Col>
                     </Row>
@@ -157,14 +162,14 @@ class TestContainer extends Component {
                     <Row>
                       <Col
                         className="center-lg divider"
-                        xs={12}
+                        xs={6}
                         sm={6}
                         md={6}
                         lg={6}
                       >
                         <span className="sm_header">21K</span>
                       </Col>
-                      <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                      <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
                         <span className="sm_subheader">16K</span>
                       </Col>
                     </Row>
@@ -180,14 +185,14 @@ class TestContainer extends Component {
                     <Row>
                       <Col
                         className="center-lg divider"
-                        xs={12}
+                        xs={6}
                         sm={6}
                         md={6}
                         lg={6}
                       >
                         <span className="sm_header">32K</span>
                       </Col>
-                      <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                      <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
                         <span className="sm_subheader">12K</span>
                       </Col>
                     </Row>
@@ -203,14 +208,14 @@ class TestContainer extends Component {
                     <Row>
                       <Col
                         className="center-lg divider"
-                        xs={12}
+                        xs={6}
                         sm={6}
                         md={6}
                         lg={6}
                       >
                         <span className="sm_header">-1K</span>
                       </Col>
-                      <Col className="center-lg" xs={12} sm={6} md={6} lg={6}>
+                      <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
                         <span className="sm_subheader">-2K</span>
                       </Col>
                     </Row>
