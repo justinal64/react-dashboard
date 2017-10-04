@@ -2,12 +2,6 @@ import React, { Component } from "react";
 import DashboardCard from "./DashboardCard";
 import "./Dashboard.scss";
 
-import LineChart from "../../components/Charts/LineChart/LineChart";
-import GaugeChart from "../../components/Charts/GaugeChart/GaugeChart";
-import BarChart from "../../components/Charts/BarChart/BarChart";
-import PieChart from "../../components/Charts/PieChart/PieChart";
-import PolarChart from "../../components/Charts/PolarChart/PolarChart";
-import DonutChart from "../../components/Charts/DonutChart/DonutChart";
 import SideNavigation from "../../../app/components/Navigation/SideNavigation";
 import Segment from "../../components/Typography/Segment/Segment";
 import GraphFooter from "../../components/Typography/GraphFooter/GraphFooter";
@@ -36,101 +30,7 @@ class DashboardContainer extends Component {
       <Split flex="right">
         <SideNavigation />
 
-        <Section colorIndex="grey-1">
-          <Segment title={"Overview"} />
-          <Box
-            className="stacked-row"
-            direction="row"
-            pad={{ vertical: "medium" }}
-          >
-            <Box
-              className="meter-box col__span-25 equal-spacing"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-            >
-              <GraphHeader title={"CPU Usage"} />
-              <Box align="center">
-                <GaugeChart
-                  percentTotal={SampleData.GaugeChart0[0].value}
-                  color={SampleData.GaugeChart0[0].color}
-                />
-              </Box>
-              <GraphFooter updatetime={2} />
-            </Box>
-            <Box
-              className="area-box col__span-25 equal-spacing"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-            >
-              <GraphHeader title={"Memory Usage"} />
-              <Box align="center">
-                <GaugeChart
-                  percentTotal={SampleData.GaugeChart1[0].value}
-                  color={SampleData.GaugeChart1[0].color}
-                />
-              </Box>
-              <GraphFooter updatetime={0} />
-            </Box>
-            <Box
-              className="meter-box col__span-25 equal-spacing"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-            >
-              <GraphHeader title={"Hard Drive Usage"} />
-              <Box align="center">
-                <GaugeChart
-                  percentTotal={SampleData.GaugeChart2[0].value}
-                  color={SampleData.GaugeChart2[0].color}
-                />
-              </Box>
-              <GraphFooter updatetime={1} />
-            </Box>
-          </Box>
-          <Box
-            className="stacked-row"
-            direction="row"
-            pad={{ vertical: "medium" }}
-          >
-            <Box
-              className="meter-box col__span-25 equal-spacing"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-            >
-              <Box align="center">
-                <LineChart />
-              </Box>
-              <GraphFooter updatetime={2} />
-            </Box>
-            <Box
-              className="area-box col__span-25 equal-spacing"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-            >
-              <GraphHeader title={"Memory Usage"} />
-              <Box align="center">
-                <GaugeChart
-                  percentTotal={SampleData.GaugeChart1[0].value}
-                  color={SampleData.GaugeChart1[0].color}
-                />
-              </Box>
-              <GraphFooter updatetime={0} />
-            </Box>
-            <Box
-              className="meter-box col__span-25 equal-spacing"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-            >
-              <GraphHeader title={"Hard Drive Usage"} />
-              <Box align="center">
-                <GaugeChart
-                  percentTotal={SampleData.GaugeChart2[0].value}
-                  color={SampleData.GaugeChart2[0].color}
-                />
-              </Box>
-              <GraphFooter updatetime={1} />
-            </Box>
-          </Box>
-        </Section>
+        <Section colorIndex="grey-1">Dashboard Container</Section>
       </Split>
     );
   }
