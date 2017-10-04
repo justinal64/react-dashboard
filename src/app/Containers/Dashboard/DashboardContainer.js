@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import DashboardCard from "./DashboardCard";
 import "./Dashboard.scss";
 
-import LineChart from "../Charts/LineChart/LineChart";
-import GaugeChart from "../Charts/GaugeChart/GaugeChart";
-import BarChart from "../Charts/BarChart/BarChart";
-import PieChart from "../Charts/PieChart/PieChart";
-import PolarChart from "../Charts/PolarChart/PolarChart";
-import DonutChart from "../Charts/DonutChart/DonutChart";
-import SideNavigation from "../Navigation/SideNavigation";
-import Segment from "../Typography/Segment/Segment";
-import GraphFooter from "../Typography/GraphFooter/GraphFooter";
-import GraphHeader from "../Typography/GraphHeader/GraphHeader";
+import LineChart from "../../components/Charts/LineChart/LineChart";
+import GaugeChart from "../../components/Charts/GaugeChart/GaugeChart";
+import BarChart from "../../components/Charts/BarChart/BarChart";
+import PieChart from "../../components/Charts/PieChart/PieChart";
+import PolarChart from "../../components/Charts/PolarChart/PolarChart";
+import DonutChart from "../../components/Charts/DonutChart/DonutChart";
+import SideNavigation from "../../../app/components/Navigation/SideNavigation";
+import Segment from "../../components/Typography/Segment/Segment";
+import GraphFooter from "../../components/Typography/GraphFooter/GraphFooter";
+import GraphHeader from "../../components/Typography/GraphHeader/GraphHeader";
 
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
