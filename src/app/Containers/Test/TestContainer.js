@@ -30,14 +30,9 @@ class TestContainer extends Component {
         <SideNavigation />
         <div>
           <div className="title-spacing">
-            <span className="title">Dashboard</span>
+            <span className="title">Testing Area</span>
           </div>
           <Grid fluid className="lightgrey_bg">
-            <div>
-              <span>
-                <a href="dashboard">Home</a> / Dashboard
-              </span>
-            </div>
             <Row>
               <Col xs={12} sm={6} md={6} lg={3} className="blue_bg grid">
                 <div className="left-align">
