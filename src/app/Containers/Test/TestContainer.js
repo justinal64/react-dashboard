@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import "./Styles.scss";
-import SideNavigation from "../Navigation/SideNavigation";
-import GraphHeader from "../Typography/GraphHeader/GraphHeader";
+import SideNavigation from "../../components/Navigation/SideNavigation";
+import GraphHeader from "../../components/Typography/GraphHeader/GraphHeader";
 
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
-import BarChart from "../ChartJS/BarChart";
-import SimpleLineChart from "../ChartJS/SimpleLineChart";
-import LineChart from "../ChartJS/LineChart";
-import HorizontalBarChart from "../ChartJS/HorizontalBarChart";
-import PieChart from "../ChartJS/PieChart";
-import ProgressBar from "../ProgressBar/ProgressBar";
-import SocialMediaChart from "../ChartJS/SocialMediaChart";
+import BarChart from "../../components/ChartJS/BarChart";
+import SimpleLineChart from "../../components/ChartJS/SimpleLineChart";
+import LineChart from "../../components/ChartJS/LineChart";
+import HorizontalBarChart from "../../components/ChartJS/HorizontalBarChart";
+import PieChart from "../../components/ChartJS/PieChart";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import SocialMediaChart from "../../components/ChartJS/SocialMediaChart";
 import Split from "grommet/components/Split";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
