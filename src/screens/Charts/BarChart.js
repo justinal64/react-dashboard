@@ -1,5 +1,5 @@
 import React from "react";
-import BarChartContainer from "../../app/components/Containers/BarChart/BarChartContainer";
+import BarChartContainer from "../../app/Containers/BarChart/BarChartContainer";
 
 const BarChart = props => {
   return <BarChartContainer />;

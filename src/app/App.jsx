@@ -10,8 +10,10 @@ import Test from "../screens/Test.js";
 import BarChart from "../screens/Charts/BarChart.js";
 import BasicChart from "../screens/Charts/BasicChart.js";
 import HorizontalBarChart from "../screens/Charts/HorizontalBarChart.js";
-
-import * as V from "victory"; // temp until we know what charts we are using
+import PieChart from "../screens/Charts/PieChart.js";
+import LineChart from "../screens/Charts/LineChart.js";
+import SimpleLineChart from "../screens/Charts/SimpleLineChart.js";
+import SocialMediaChart from "../screens/Charts/SocialMediaChart.js";
 
 const App = () => {
   return (
@@ -24,6 +26,10 @@ const App = () => {
         <Route path="/barChart" component={BarChart} />
         <Route path="/basicchart" component={BasicChart} />
         <Route path="/horizontalbarchart" component={HorizontalBarChart} />
+        <Route path="/piechart" component={PieChart} />
+        <Route path="/linechart" component={LineChart} />
+        <Route path="/simplelinechart" component={SimpleLineChart} />
+        <Route path="/socialmediachart" component={SocialMediaChart} />
         <Route path="*" component={NotFound} />
       </Switch>
     </main>
