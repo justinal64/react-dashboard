@@ -78,9 +78,10 @@ class SideNavigation extends Component {
                 <Anchor href="/barchart">Bar Chart</Anchor>
                 <Anchor href="/basicchart">Basic Chart</Anchor>
                 <Anchor href="/horizontalbarchart">Horizontal Bar Chart</Anchor>
-                <Anchor href="#">Email</Anchor>
-                <Anchor href="/forms">Forms</Anchor>
-                <Anchor href="/test">Test</Anchor>
+                <Anchor href="/piechart">Pie Chart</Anchor>
+                <Anchor href="/linechart">Line Chart</Anchor>
+                <Anchor href="/simplelinechart">Simple Line Chart</Anchor>
+                <Anchor href="/socialmediachart">Social Media Chart</Anchor>
               </AccordionPanel>
             </Accordion>
           </Box>
