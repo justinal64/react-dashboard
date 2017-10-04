@@ -75,14 +75,15 @@ class SideNavigation extends Component {
                 <Anchor href="/test">Test</Anchor>
               </AccordionPanel>
               <AccordionPanel heading="Charts">
-                <Anchor href="/dashboard">Dashboard</Anchor>
+                <Anchor href="/Barchart">BarChart</Anchor>
+                <Anchor href="/Basicchart">BasicChart</Anchor>
                 <Anchor href="#">Email</Anchor>
                 <Anchor href="/forms">Forms</Anchor>
                 <Anchor href="/test">Test</Anchor>
               </AccordionPanel>
             </Accordion>
           </Box>
-          <Footer pad="medium" />
+          {/* <Footer pad="medium" /> */}
         </Sidebar>
       </Box>
     );

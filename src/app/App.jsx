@@ -7,6 +7,9 @@ import Dashboard from "../screens/Dashboard.js";
 import NotFound from "../screens/NotFound.js";
 import Forms from "../screens/Forms.js";
 import Test from "../screens/Test.js";
+import BarChart from "../screens/Charts/BarChart.js";
+import BasicChart from "../screens/Charts/BasicChart.js";
+
 import * as V from "victory"; // temp until we know what charts we are using
 
 const App = () => {
@@ -17,6 +20,8 @@ const App = () => {
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/forms" component={Forms} />
         <Route path="/Test" component={Test} />
+        <Route path="/BarChart" component={BarChart} />
+        <Route path="/Basicchart" component={BasicChart} />
         <Route path="*" component={NotFound} />
       </Switch>
     </main>
