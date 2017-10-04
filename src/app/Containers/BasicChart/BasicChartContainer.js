@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
-import SideNavigation from "../../Navigation/SideNavigation";
+import SideNavigation from "../../components/Navigation/SideNavigation";
 
-import SampleData from "../../../../sample-data";
+import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
-import fetchData from "../../../../actions/fetch_data";
+import fetchData from "../../../actions/fetch_data";
 
 import Split from "grommet/components/Split";
 import Section from "grommet/components/Section";
 
-class DashboardContainer extends Component {
+class BasicChartContainer extends Component {
   componentWillMount() {
     // this.props.fetchData();
   }
@@ -35,4 +35,4 @@ function mapStateToProps(state) {
   return { astronomy: state.astronomy };
 }
 
-export default connect(mapStateToProps, { fetchData })(DashboardContainer);
+export default connect(mapStateToProps, { fetchData })(BasicChartContainer);
