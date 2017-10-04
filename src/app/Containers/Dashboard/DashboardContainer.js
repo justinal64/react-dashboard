@@ -1,27 +1,20 @@
 import React, { Component } from "react";
-import DashboardCard from "./DashboardCard";
-import "./Dashboard.scss";
-
-import LineChart from "../Charts/LineChart/LineChart";
-import GaugeChart from "../Charts/GaugeChart/GaugeChart";
-import BarChart from "../Charts/BarChart/BarChart";
-import PieChart from "../Charts/PieChart/PieChart";
-import PolarChart from "../Charts/PolarChart/PolarChart";
-import DonutChart from "../Charts/DonutChart/DonutChart";
-import SideNavigation from "../Navigation/SideNavigation";
-import Segment from "../Typography/Segment/Segment";
-import GraphFooter from "../Typography/GraphFooter/GraphFooter";
-import GraphHeader from "../Typography/GraphHeader/GraphHeader";
+import "./Styles.scss";
+import SideNavigation from "../../components/Navigation/SideNavigation";
+import GraphHeader from "../../components/Typography/GraphHeader/GraphHeader";
 
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
-
+import BarChart from "../../components/ChartJS/BarChart";
+import SimpleLineChart from "../../components/ChartJS/SimpleLineChart";
+import LineChart from "../../components/ChartJS/LineChart";
+import HorizontalBarChart from "../../components/ChartJS/HorizontalBarChart";
+import PieChart from "../../components/ChartJS/PieChart";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import SocialMediaChart from "../../components/ChartJS/SocialMediaChart";
 import Split from "grommet/components/Split";
-import Section from "grommet/components/Section";
-import Heading from "grommet/components/Heading";
-import Box from "grommet/components/Box";
-import Headline from "grommet/components/Headline";
+import { Row, Col, Grid } from "react-flexbox-grid";
 
 class DashboardContainer extends Component {
   componentWillMount() {
@@ -35,102 +28,203 @@ class DashboardContainer extends Component {
     return (
       <Split flex="right">
         <SideNavigation />
-
-        <Section colorIndex="grey-1">
-          <Segment title={"Overview"} />
-          <Box
-            className="stacked-row"
-            direction="row"
-            pad={{ vertical: "medium" }}
-          >
-            <Box
-              className="meter-box col__span-25 equal-spacing"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-            >
-              <GraphHeader title={"CPU Usage"} />
-              <Box align="center">
-                <GaugeChart
-                  percentTotal={SampleData.GaugeChart0[0].value}
-                  color={SampleData.GaugeChart0[0].color}
+        <div>
+          <div className="title-spacing">
+            <span className="title">Dashboard</span>
+          </div>
+          <Grid fluid className="lightgrey_bg">
+            <div>
+              <span>
+                <a href="dashboard">Home</a> / Dashboard
+              </span>
+            </div>
+            <Row>
+              <Col xs={12} sm={6} md={6} lg={3} className="blue_bg grid">
+                <div className="left-align">
+                  <span className="header">3,194</span>
+                  <span className="subheader">New Users</span>
+                </div>
+                <div className="chart-padding">
+                  <SimpleLineChart />
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3} className="yellow_bg grid">
+                <div className="left-align">
+                  <span className="header">350</span>
+                  <span className="subheader">Registered Users</span>
+                </div>
+                <div className="chart-padding">
+                  <BarChart />
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3} className="lightblue_bg grid">
+                <div className="left-align">
+                  <span className="header">3,250</span>
+                  <span className="subheader">Page Views</span>
+                </div>
+                <div className="chart-padding">
+                  <HorizontalBarChart />
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3} className="red_bg grid">
+                <div className="left-align">
+                  <span className="header">2,194</span>
+                  <span className="subheader">New Users</span>
+                </div>
+                <div className="chart-padding">
+                  <BarChart />
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} sm={12} md={12} lg={12} className="white_bg grid">
+                <div className="left-align">
+                  <span className="lb_header">Traffic</span>
+                  <span className="lb_subheader">January - June</span>
+                </div>
+                <div>
+                  <LineChart />
+                </div>
+              </Col>
+            </Row>
+            <Row className="between-lg grid">
+              <Col xs={12} sm={6} md={6} lg={2}>
+                <ProgressBar
+                  header="Visits"
+                  subheader="24,000 Users (40%)"
+                  value={40}
+                  backgroundColor="Green"
                 />
-              </Box>
-              <GraphFooter updatetime={2} />
-            </Box>
-            <Box
-              className="area-box col__span-25 equal-spacing"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-            >
-              <GraphHeader title={"Memory Usage"} />
-              <Box align="center">
-                <GaugeChart
-                  percentTotal={SampleData.GaugeChart1[0].value}
-                  color={SampleData.GaugeChart1[0].color}
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={2}>
+                <ProgressBar
+                  header="Unique"
+                  subheader="24,093 Users (20%)"
+                  value={20}
+                  backgroundColor="lightblue"
                 />
-              </Box>
-              <GraphFooter updatetime={0} />
-            </Box>
-            <Box
-              className="meter-box col__span-25 equal-spacing"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-            >
-              <GraphHeader title={"Hard Drive Usage"} />
-              <Box align="center">
-                <GaugeChart
-                  percentTotal={SampleData.GaugeChart2[0].value}
-                  color={SampleData.GaugeChart2[0].color}
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={2}>
+                <ProgressBar
+                  header="Page Views"
+                  subheader="78,706 Views (60%)"
+                  value={60}
+                  backgroundColor="yellow"
                 />
-              </Box>
-              <GraphFooter updatetime={1} />
-            </Box>
-          </Box>
-          <Box
-            className="stacked-row"
-            direction="row"
-            pad={{ vertical: "medium" }}
-          >
-            <Box
-              className="meter-box col__span-25 equal-spacing"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-            >
-              <Box align="center">
-                <LineChart />
-              </Box>
-              <GraphFooter updatetime={2} />
-            </Box>
-            <Box
-              className="area-box col__span-25 equal-spacing"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-            >
-              <GraphHeader title={"Memory Usage"} />
-              <Box align="center">
-                <GaugeChart
-                  percentTotal={SampleData.GaugeChart1[0].value}
-                  color={SampleData.GaugeChart1[0].color}
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={2}>
+                <ProgressBar
+                  header="New Users"
+                  subheader="22,123 Users (80%)"
+                  value={80}
+                  backgroundColor="red"
                 />
-              </Box>
-              <GraphFooter updatetime={0} />
-            </Box>
-            <Box
-              className="meter-box col__span-25 equal-spacing"
-              justify="start"
-              pad={{ horizontal: "medium" }}
-            >
-              <GraphHeader title={"Hard Drive Usage"} />
-              <Box align="center">
-                <GaugeChart
-                  percentTotal={SampleData.GaugeChart2[0].value}
-                  color={SampleData.GaugeChart2[0].color}
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={2}>
+                <ProgressBar
+                  header="Bounce Rate"
+                  subheader="Average 40.5%"
+                  value={40}
+                  backgroundColor="blue"
                 />
-              </Box>
-              <GraphFooter updatetime={1} />
-            </Box>
-          </Box>
-        </Section>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} sm={6} md={6} lg={3}>
+                <div className="white_bg">
+                  <div className="facebook_bg">
+                    <SocialMediaChart />
+                  </div>
+                  <div>
+                    <Row>
+                      <Col
+                        className="center-lg divider"
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={6}
+                      >
+                        <span className="sm_header">45K</span>
+                      </Col>
+                      <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
+                        <span className="sm_subheader">61K</span>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3}>
+                <div className="white_bg">
+                  <div className="twitter_bg">
+                    <SocialMediaChart />
+                  </div>
+                  <div>
+                    <Row>
+                      <Col
+                        className="center-lg divider"
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={6}
+                      >
+                        <span className="sm_header">21K</span>
+                      </Col>
+                      <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
+                        <span className="sm_subheader">16K</span>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3}>
+                <div className="white_bg">
+                  <div className="linkedin_bg">
+                    <SocialMediaChart />
+                  </div>
+                  <div>
+                    <Row>
+                      <Col
+                        className="center-lg divider"
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={6}
+                      >
+                        <span className="sm_header">32K</span>
+                      </Col>
+                      <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
+                        <span className="sm_subheader">12K</span>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
+              </Col>
+              <Col xs={12} sm={6} md={6} lg={3}>
+                <div className="white_bg">
+                  <div className="googleplus_bg">
+                    <SocialMediaChart />
+                  </div>
+                  <div>
+                    <Row>
+                      <Col
+                        className="center-lg divider"
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={6}
+                      >
+                        <span className="sm_header">-1K</span>
+                      </Col>
+                      <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
+                        <span className="sm_subheader">-2K</span>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Grid>
+        </div>
       </Split>
     );
   }

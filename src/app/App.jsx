@@ -23,7 +23,7 @@ const App = () => {
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/forms" component={Forms} />
         <Route path="/Test" component={Test} />
-        <Route path="/barChart" component={BarChart} />
+        <Route path="/barchart" component={BarChart} />
         <Route path="/basicchart" component={BasicChart} />
         <Route path="/horizontalbarchart" component={HorizontalBarChart} />
         <Route path="/piechart" component={PieChart} />

@@ -1,8 +1,8 @@
 import React from "react";
-import TestContainer from "../app/components/Test/TestContainer";
+import TestContainer from "../app/Containers/Test/TestContainer";
 
-const Forms = props => {
+const Test = props => {
   return <TestContainer />;
 };
 
-export default Forms;
+export default Test;
