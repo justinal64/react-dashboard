@@ -24,7 +24,6 @@ $defaultspace: $smallspace;
 * ==== IMPORTS ====
 */
 
-// @import "scss/_vars.scss";
 
 /*
 * ==== STYLING ====
@@ -87,12 +86,8 @@ ul {
     & ul.nav li a {
         text-decoration: none;
     }
-    & ul.nav li:last-child {
-        // TBD
-    }
-    & ul.nav li:last-child a {
-        // TBD
-    }
+    & ul.nav li:last-child {}
+    & ul.nav li:last-child a {}
     & div {
         align-self: flex-end;
     }

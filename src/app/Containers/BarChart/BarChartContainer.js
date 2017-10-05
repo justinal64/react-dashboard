@@ -6,9 +6,6 @@ import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
 
-import Split from "grommet/components/Split";
-import Section from "grommet/components/Section";
-
 class BarChartContainer extends Component {
   componentWillMount() {
     // this.props.fetchData();

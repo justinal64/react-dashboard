@@ -3,7 +3,6 @@ import AstronomyCard from "./AstronomyCard";
 import { connect } from "react-redux";
 import randomData from "../../actions/random_data";
 import UserCard from "./UserCard";
-import LoginForm from "grommet/components/LoginForm";
 
 class UserContainer extends Component {
   componentWillMount() {
@@ -13,8 +12,6 @@ class UserContainer extends Component {
   render() {
     return (
       <div>
-        <LoginForm />
-        <UserCard data={this.props.data} />
         <button onClick={this.props.randomData}>Update randomData</button>
       </div>
     );

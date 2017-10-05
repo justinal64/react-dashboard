@@ -13,7 +13,6 @@ import HorizontalBarChart from "../../components/ChartJS/HorizontalBarChart";
 import PieChart from "../../components/ChartJS/PieChart";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import SocialMediaChart from "../../components/ChartJS/SocialMediaChart";
-import Split from "grommet/components/Split";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
 class DashboardContainer extends Component {
@@ -26,7 +25,7 @@ class DashboardContainer extends Component {
   }
   render() {
     return (
-      <Split flex="right">
+      <div>
         <SideNavigation />
         <div>
           <div className="title-spacing">
@@ -225,7 +224,7 @@ class DashboardContainer extends Component {
             </Row>
           </Grid>
         </div>
-      </Split>
+      </div>
     );
   }
 }

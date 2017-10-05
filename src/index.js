@@ -1,5 +1,3 @@
-// import "./assets/stylesheets/index.scss";
-import "./assets/stylesheets/styles.scss";
 import React from "react"; // import the main react dependency
 import ReactDOM from "react-dom"; // import reactDOM
 import App from "./app/App.jsx"; // import the main app component

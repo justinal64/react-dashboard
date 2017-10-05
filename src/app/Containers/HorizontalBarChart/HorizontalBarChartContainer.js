@@ -6,8 +6,6 @@ import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
 
-import Split from "grommet/components/Split";
-import Section from "grommet/components/Section";
 
 class HorizontalBarChartContainer extends Component {
   componentWillMount() {
@@ -19,11 +17,11 @@ class HorizontalBarChartContainer extends Component {
   }
   render() {
     return (
-      <Split flex="right">
-        <SideNavigation />
+      // <Split flex="right">
+      //   <SideNavigation />
 
-        <Section colorIndex="grey-1">HorizontalBarChartContainer</Section>
-      </Split>
+      //   <Section colorIndex="grey-1">HorizontalBarChartContainer</Section>
+      // </Split>
     );
   }
 }
