@@ -26,7 +26,28 @@ class SideNavigationTest extends Component {
       <div>
         <ul className="nav">
           <li>
-            <a href="/barchart">barchart</a>
+            <a href="/chart">Chart</a>
+          </li>
+          <li>
+            <a href="/barchart">Bar Chart</a>
+          </li>
+          <li>
+            <a href="/basicchart">Basic Chart</a>
+          </li>
+          <li>
+            <a href="/horizontalbarchart">Horizontal Bar Chart</a>
+          </li>
+          <li>
+            <a href="/linechart">Line Chart</a>
+          </li>
+          <li>
+            <a href="/piechart">Pie Chart</a>
+          </li>
+          <li>
+            <a href="/simplelinechart">Simple Line Chart</a>
+          </li>
+          <li>
+            <a href="/socialmediachart">Social Media Chart</a>
           </li>
           <li>
             <a href="/">Login</a>
