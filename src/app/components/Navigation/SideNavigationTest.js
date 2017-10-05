@@ -26,10 +26,10 @@ class SideNavigationTest extends Component {
       <div>
         <ul className="nav">
           <li>
-            <a href="#">Home</a>
+            <a href="/barchart">barchart</a>
           </li>
           <li>
-            <a href="#">Experience</a>
+            <a href="/">Login</a>
           </li>
           <li>
             <a href="#">Services</a>
