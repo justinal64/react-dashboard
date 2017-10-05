@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import randomData from "../../../actions/random_data";
 import "./SideNavigationTest.scss";
+import { Row, Col, Grid } from "react-flexbox-grid";
 
 class SideNavigationTest extends Component {
   constructor(props) {
@@ -23,7 +24,39 @@ class SideNavigationTest extends Component {
   render() {
     return (
       <div>
-        {/* <Box colorIndex="neutral-1" justify="center" align="center" pad="none">
+        <ul className="nav">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Experience</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Bio</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    );
+  }
+}
+
+// connect react with redux
+// @params mapStateToProps (necessity)
+// @params mapDispatchToProps (optional)
+function mapStateToProps(state) {
+  return { data: state.randomData };
+}
+
+export default connect(mapStateToProps, { randomData })(SideNavigationTest);
+
+{
+  /* <Box colorIndex="neutral-1" justify="center" align="center" pad="none">
           <Sidebar colorIndex="neutral-1" fixed={true} size="small">
             <Header pad="medium" justify="between">
               <Title>Dashboard</Title>
@@ -79,40 +112,11 @@ class SideNavigationTest extends Component {
                 </AccordionPanel>
               </Accordion>
             </Box>
-            {/* <Footer pad="medium" /> */}
-        {/* </Sidebar> */}
-        {/* </Box> */}
-        <div id="wrapper" className="wrapper">
-          <div id="aside" className="sidebar">
-            <ul className="nav">
-              <li>
-                <a href="#">Charts</a>
-              </li>
-              <li>
-                <a href="#">Experience</a>
-              </li>
-              <li>
-                <a href="#">Services</a>
-              </li>
-              <li>
-                <a href="#">Bio</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    );
-  }
+            {/* <Footer pad="medium" /> */
 }
-
-// connect react with redux
-// @params mapStateToProps (necessity)
-// @params mapDispatchToProps (optional)
-function mapStateToProps(state) {
-  return { data: state.randomData };
+{
+  /* </Sidebar> */
 }
-
-export default connect(mapStateToProps, { randomData })(SideNavigationTest);
+{
+  /* </Box> */
+}
