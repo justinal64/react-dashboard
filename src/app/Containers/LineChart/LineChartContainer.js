@@ -6,9 +6,6 @@ import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
 
-import Split from "grommet/components/Split";
-import Section from "grommet/components/Section";
-
 class LineChartContainer extends Component {
   componentWillMount() {
     // this.props.fetchData();
@@ -19,11 +16,12 @@ class LineChartContainer extends Component {
   }
   render() {
     return (
-      <Split flex="right">
-        <SideNavigation />
+      <div>LineChartContainer</div>
+      // <Split flex="right">
+      //   <SideNavigation />
 
-        <Section colorIndex="grey-1">LineChartContainer</Section>
-      </Split>
+      //   <Section colorIndex="grey-1">LineChartContainer</Section>
+      // </Split>
     );
   }
 }

@@ -1,0 +1,45 @@
+body,
+html,
+#root,
+.root,
+main,
+.container {
+    height: 100%;
+}
+
+.grid2x2 {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.grid2x2>.sidebar {
+    display: flex;
+    flex-basis: calc(20% - 40px);
+    flex-direction: column;
+}
+
+.grid2x2>.barchart {
+    display: flex;
+    flex-basis: calc(80% - 40px);
+    flex-direction: column;
+}
+
+.box {
+    margin: 20px;
+}
+
+.grid2x2>div>div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.sidebar {
+    background-color: red;
+}
+
+.barchart {
+    background-color: orange;
+}
