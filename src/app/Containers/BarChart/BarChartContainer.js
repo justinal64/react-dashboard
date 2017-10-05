@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
-import SideNavigation from "../../components/Navigation/SideNavigation";
+import "./Styles.scss";
+import SideNavigationTest from "../../components/Navigation/SideNavigationTest";
 
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
@@ -19,11 +19,13 @@ class BarChartContainer extends Component {
   }
   render() {
     return (
-      <Split flex="right">
-        <SideNavigation />
-
-        <Section colorIndex="grey-1">BarChartContainer</Section>
-      </Split>
+      <div>
+        <SideNavigationTest />
+        <div id="content" className="content">
+          <h1>Flexbox Off-Canvas Side Menu</h1>
+          <h2>Easy to use</h2>
+        </div>
+      </div>
     );
   }
 }
