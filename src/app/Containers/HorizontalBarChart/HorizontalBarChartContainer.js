@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 
-import SideNavigation from "../../components/Navigation/SideNavigation";
+import SideNavigationTest from "../../components/Navigation/SideNavigationTest";
 
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
-
 
 class HorizontalBarChartContainer extends Component {
   componentWillMount() {
@@ -17,11 +16,12 @@ class HorizontalBarChartContainer extends Component {
   }
   render() {
     return (
-      // <Split flex="right">
-      //   <SideNavigation />
-
-      //   <Section colorIndex="grey-1">HorizontalBarChartContainer</Section>
-      // </Split>
+      <div className="grid2x2">
+        <div className="sidebar box">
+          <SideNavigationTest />
+        </div>
+        <div className="barchart box">HorizontalBarChartContainer</div>
+      </div>
     );
   }
 }

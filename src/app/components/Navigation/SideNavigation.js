@@ -1,15 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import randomData from "../../../actions/random_data";
-import Sidebar from "grommet/components/Sidebar";
-import Header from "grommet/components/Header";
-import Anchor from "grommet/components/Anchor";
-import Box from "grommet/components/Box";
-import Menu from "grommet/components/Menu";
-import Footer from "grommet/components/Footer";
-import Title from "grommet/components/Title";
-import Accordion from "grommet/components/Accordion";
-import AccordionPanel from "grommet/components/AccordionPanel";
 
 class SideNavigation extends Component {
   constructor(props) {
@@ -30,63 +21,64 @@ class SideNavigation extends Component {
 
   render() {
     return (
-      <Box colorIndex="neutral-1" justify="center" align="center" pad="none">
-        <Sidebar colorIndex="neutral-1" fixed={true} size="small">
-          <Header pad="medium" justify="between">
-            <Title>Dashboard</Title>
-          </Header>
-          <Box flex="grow" justify="start">
-            <Menu primary={true}>
-              <Anchor href="/dashboard">Dashboard</Anchor>
-              <Anchor href="#">Email</Anchor>
-              <Anchor href="/forms">Forms</Anchor>
-              <Anchor href="/test">Test</Anchor>
-            </Menu>
-            <Accordion openMulti={true}>
-              <AccordionPanel heading="Components">
-                <Anchor href="/dashboard">Dashboard</Anchor>
-                <Anchor href="#">Email</Anchor>
-                <Anchor href="/forms">Forms</Anchor>
-                <Anchor href="/test">Test</Anchor>
-              </AccordionPanel>
-              <AccordionPanel heading="Forms">
-                <Anchor href="/dashboard">Dashboard</Anchor>
-                <Anchor href="#">Email</Anchor>
-                <Anchor href="/forms">Forms</Anchor>
-                <Anchor href="/test">Test</Anchor>
-              </AccordionPanel>
-              <AccordionPanel heading="Plugins">
-                <Anchor href="/dashboard">Dashboard</Anchor>
-                <Anchor href="#">Email</Anchor>
-                <Anchor href="/forms">Forms</Anchor>
-                <Anchor href="/test">Test</Anchor>
-              </AccordionPanel>
-              <AccordionPanel heading="Icons">
-                <Anchor href="/dashboard">Dashboard</Anchor>
-                <Anchor href="#">Email</Anchor>
-                <Anchor href="/forms">Forms</Anchor>
-                <Anchor href="/test">Test</Anchor>
-              </AccordionPanel>
-              <AccordionPanel heading="Widgets">
-                <Anchor href="/dashboard">Dashboard</Anchor>
-                <Anchor href="#">Email</Anchor>
-                <Anchor href="/forms">Forms</Anchor>
-                <Anchor href="/test">Test</Anchor>
-              </AccordionPanel>
-              <AccordionPanel heading="Charts">
-                <Anchor href="/barchart">Bar Chart</Anchor>
-                <Anchor href="/basicchart">Basic Chart</Anchor>
-                <Anchor href="/horizontalbarchart">Horizontal Bar Chart</Anchor>
-                <Anchor href="/piechart">Pie Chart</Anchor>
-                <Anchor href="/linechart">Line Chart</Anchor>
-                <Anchor href="/simplelinechart">Simple Line Chart</Anchor>
-                <Anchor href="/socialmediachart">Social Media Chart</Anchor>
-              </AccordionPanel>
-            </Accordion>
-          </Box>
-          {/* <Footer pad="medium" /> */}
-        </Sidebar>
-      </Box>
+      <div>SideNavigation</div>
+      // <Box colorIndex="neutral-1" justify="center" align="center" pad="none">
+      //   <Sidebar colorIndex="neutral-1" fixed={true} size="small">
+      //     <Header pad="medium" justify="between">
+      //       <Title>Dashboard</Title>
+      //     </Header>
+      //     <Box flex="grow" justify="start">
+      //       <Menu primary={true}>
+      //         <Anchor href="/dashboard">Dashboard</Anchor>
+      //         <Anchor href="#">Email</Anchor>
+      //         <Anchor href="/forms">Forms</Anchor>
+      //         <Anchor href="/test">Test</Anchor>
+      //       </Menu>
+      //       <Accordion openMulti={true}>
+      //         <AccordionPanel heading="Components">
+      //           <Anchor href="/dashboard">Dashboard</Anchor>
+      //           <Anchor href="#">Email</Anchor>
+      //           <Anchor href="/forms">Forms</Anchor>
+      //           <Anchor href="/test">Test</Anchor>
+      //         </AccordionPanel>
+      //         <AccordionPanel heading="Forms">
+      //           <Anchor href="/dashboard">Dashboard</Anchor>
+      //           <Anchor href="#">Email</Anchor>
+      //           <Anchor href="/forms">Forms</Anchor>
+      //           <Anchor href="/test">Test</Anchor>
+      //         </AccordionPanel>
+      //         <AccordionPanel heading="Plugins">
+      //           <Anchor href="/dashboard">Dashboard</Anchor>
+      //           <Anchor href="#">Email</Anchor>
+      //           <Anchor href="/forms">Forms</Anchor>
+      //           <Anchor href="/test">Test</Anchor>
+      //         </AccordionPanel>
+      //         <AccordionPanel heading="Icons">
+      //           <Anchor href="/dashboard">Dashboard</Anchor>
+      //           <Anchor href="#">Email</Anchor>
+      //           <Anchor href="/forms">Forms</Anchor>
+      //           <Anchor href="/test">Test</Anchor>
+      //         </AccordionPanel>
+      //         <AccordionPanel heading="Widgets">
+      //           <Anchor href="/dashboard">Dashboard</Anchor>
+      //           <Anchor href="#">Email</Anchor>
+      //           <Anchor href="/forms">Forms</Anchor>
+      //           <Anchor href="/test">Test</Anchor>
+      //         </AccordionPanel>
+      //         <AccordionPanel heading="Charts">
+      //           <Anchor href="/barchart">Bar Chart</Anchor>
+      //           <Anchor href="/basicchart">Basic Chart</Anchor>
+      //           <Anchor href="/horizontalbarchart">Horizontal Bar Chart</Anchor>
+      //           <Anchor href="/piechart">Pie Chart</Anchor>
+      //           <Anchor href="/linechart">Line Chart</Anchor>
+      //           <Anchor href="/simplelinechart">Simple Line Chart</Anchor>
+      //           <Anchor href="/socialmediachart">Social Media Chart</Anchor>
+      //         </AccordionPanel>
+      //       </Accordion>
+      //     </Box>
+      //     {/* <Footer pad="medium" /> */}
+      //   </Sidebar>
+      // </Box>
     );
   }
 }

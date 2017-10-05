@@ -21,7 +21,7 @@ class BarChartContainer extends Component {
         <div className="sidebar box">
           <SideNavigationTest />
         </div>
-        <div className="barchart box">Content</div>
+        <div className="barchart box">BarChartContainer</div>
 
         {/* <Row className="between-lg grid">
           <Col xs={12} sm={6} md={6} lg={2}>

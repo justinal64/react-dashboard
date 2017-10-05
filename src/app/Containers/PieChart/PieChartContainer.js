@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import SideNavigation from "../../components/Navigation/SideNavigation";
+import SideNavigationTest from "../../components/Navigation/SideNavigationTest";
 
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
@@ -15,7 +15,14 @@ class PieChartContainer extends Component {
     // setInterval(this.props.fetchData.bind(this), 100000); // 300000 = 5 minutes
   }
   render() {
-    return <div>PieChartContainer</div>;
+    return (
+      <div className="grid2x2">
+        <div className="sidebar box">
+          <SideNavigationTest />
+        </div>
+        <div className="barchart box">PieChartContainer</div>
+      </div>
+    );
   }
 }
 
