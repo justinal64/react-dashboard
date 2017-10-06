@@ -5,6 +5,7 @@ html,
 main,
 .container {
     height: 100%;
+    background-color: #d3d3d3;
 }
 
 .grid2x2 {
@@ -20,7 +21,7 @@ main,
     flex-direction: column;
 }
 
-.grid2x2>.barchart {
+.grid2x2>.chart-content {
     display: flex;
     flex-basis: calc(80% - 40px);
     flex-direction: column;
@@ -50,7 +51,7 @@ li {
     background-color: red;
 }
 
-.barchart {
+.chart-content {
     background-color: orange;
 }
 

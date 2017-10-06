@@ -22,7 +22,12 @@ class LoginContainer extends Component {
   }
 
   render() {
-    return <div>Login</div>;
+    return (
+      <div className="grid2x2">
+        <div className="sidebar box">cool graphic</div>
+        <div className="barchart box">Login Section</div>
+      </div>
+    );
   }
 }
 
