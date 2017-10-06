@@ -7,7 +7,7 @@ import Charts from "../screens/Charts/Charts.js";
 // import Dashboard from "../screens/Dashboard.js";
 import NotFound from "../screens/NotFound.js";
 // import Forms from "../screens/Forms.js";
-// import Test from "../screens/Test.js";
+import Test from "../screens/Test.js";
 import BarChart from "../screens/Charts/BarChart.js";
 import BasicChart from "../screens/Charts/BasicChart.js";
 import HorizontalBarChart from "../screens/Charts/HorizontalBarChart.js";
@@ -22,10 +22,10 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Login} />
         {/* <Route path="/dashboard" component={Dashboard} />
-        <Route path="/forms" component={Forms} />
-        <Route path="/Test" component={Test} /> */}
+        <Route path="/forms" component={Forms} /> */}
+        <Route path="/test" component={Test} />
         <Route path="/barchart" component={BarChart} />
-        <Route path="/chart" component={Charts} />
+        <Route path="/charts" component={Charts} />
 
         <Route path="/basicchart" component={BasicChart} />
         <Route path="/horizontalbarchart" component={HorizontalBarChart} />

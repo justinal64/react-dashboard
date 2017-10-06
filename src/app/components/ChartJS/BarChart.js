@@ -28,17 +28,17 @@ class BarChart extends React.Component {
     return (
       <div className="chart">
         <Bar
-          height={100}
+          height={this.props.height}
           options={{
             scales: {
               xAxes: [
                 {
-                  display: false
+                  display: this.props.xAxes
                 }
               ],
               yAxes: [
                 {
-                  display: false
+                  display: this.props.yAxes
                 }
               ]
             },
@@ -53,3 +53,16 @@ class BarChart extends React.Component {
 }
 
 export default BarChart;
+
+// scales: {
+//   xAxes: [
+//     {
+//       display: false
+//     }
+//   ],
+//   yAxes: [
+//     {
+//       display: false
+//     }
+//   ]
+// },

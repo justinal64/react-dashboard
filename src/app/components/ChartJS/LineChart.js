@@ -30,7 +30,7 @@ class LineChart extends React.Component {
     return (
       <div className="chart">
         <Line
-          height={300}
+          height={this.props.height}
           options={{
             legend: false,
             maintainAspectRatio: false

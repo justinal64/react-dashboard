@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import SideNavigationTest from "../../components/Navigation/SideNavigationTest";
 import BarChart from "../../components/ChartJS/BarChart";
-
+import LineChart from "../../components/ChartJS/LineChart";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
 
-class BarChartContainer extends Component {
+class ChartsContainer extends Component {
   componentWillMount() {
     // this.props.fetchData();
   }
@@ -23,19 +23,55 @@ class BarChartContainer extends Component {
           <SideNavigationTest />
         </div>
         <div className="chart-content box">
-          <Row className="center-lg center-md center-sm center-xs">
-            <Col xs={12} sm={10} md={10} lg={10}>
-              <h2>Bar Chart</h2>
+          <div>
+            <span>Home / Charts</span>
+          </div>
+          <Row className="center-lg center-md center-sm center-xs bottom-lg bottom-md">
+            <Col xs={12} sm={12} md={5} lg={5}>
+              <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
+                <div className="border">
+                  <span>Line Chart</span>
+                </div>
+              </Col>
+              <LineChart height={300} />
+            </Col>
+            <Col xs={12} sm={12} md={5} lg={5}>
+              <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
+                <h2>Bar Chart</h2>
+              </Col>
+              <BarChart height={300} xAxes={true} yAxes={true} />
             </Col>
           </Row>
-          <Row className="around-lg around-md around-sm">
-            <Col xs={12} sm={10} md={10} lg={10}>
-              <BarChart />
+          <Row className="center-lg center-md center-sm center-xs bottom-lg bottom-md">
+            <Col xs={12} sm={12} md={5} lg={5}>
+              <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
+                <div className="border">
+                  <span>Line Chart</span>
+                </div>
+              </Col>
+              <LineChart height={300} />
             </Col>
-          </Row>
-          <Row className="around-lg around-md around-sm">
-            <Col xs={12} sm={10} md={10} lg={10}>
-              Properties Available Are
+            <Col xs={12} sm={12} md={5} lg={5}>
+              <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
+                <h2>Bar Chart</h2>
+              </Col>
+              <BarChart height={300} xAxes={true} yAxes={true} />
+            </Col>
+          </Row>{" "}
+          <Row className="center-lg center-md center-sm center-xs bottom-lg bottom-md">
+            <Col xs={12} sm={12} md={5} lg={5}>
+              <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
+                <div className="border">
+                  <span>Line Chart</span>
+                </div>
+              </Col>
+              <LineChart height={300} />
+            </Col>
+            <Col xs={12} sm={12} md={5} lg={5}>
+              <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
+                <h2>Bar Chart</h2>
+              </Col>
+              <BarChart height={300} xAxes={true} yAxes={true} />
             </Col>
           </Row>
         </div>
@@ -188,4 +224,4 @@ function mapStateToProps(state) {
   return { astronomy: state.astronomy };
 }
 
-export default connect(mapStateToProps, { fetchData })(BarChartContainer);
+export default connect(mapStateToProps, { fetchData })(ChartsContainer);
