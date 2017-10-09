@@ -33,82 +33,68 @@ class TestContainer extends Component {
         <div id="right" className="column">
           <div className="top-right">Top Right Header</div>
           <div className="bottom">
-            <Grid>
+            <Grid fluid>
               <Row className="center-lg center-md center-sm center-xs bottom-lg bottom-md">
-                <Col xs={12} sm={12} md={5} lg={5}>
-                  <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
-                    <div className="border">
+                <Col xs={12} sm={12} md={6} lg={6}>
+                  <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
+                    <div className="start-lg">
                       <span>Line Chart</span>
                     </div>
                   </Col>
                   <LineChart height={300} />
                 </Col>
-                <Col xs={12} sm={12} md={5} lg={5}>
-                  <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
+                <Col xs={12} sm={12} md={6} lg={6}>
+                  <Col
+                    xs={12}
+                    sm={12}
+                    md={12}
+                    lg={12}
+                    className="top-lg start-lg"
+                  >
                     <h2>Bar Chart</h2>
                   </Col>
                   <BarChart height={300} xAxes={true} yAxes={true} />
                 </Col>
               </Row>
               <Row className="center-lg center-md center-sm center-xs bottom-lg bottom-md">
-                <Col xs={12} sm={12} md={5} lg={5}>
-                  <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
-                    <div className="border">
+                <Col xs={12} sm={12} md={6} lg={6}>
+                  <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
+                    <div className="start-lg">
                       <span>Line Chart</span>
                     </div>
                   </Col>
                   <LineChart height={300} />
                 </Col>
-                <Col xs={12} sm={12} md={5} lg={5}>
-                  <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
+                <Col xs={12} sm={12} md={6} lg={6}>
+                  <Col
+                    xs={12}
+                    sm={12}
+                    md={12}
+                    lg={12}
+                    className="top-lg start-lg"
+                  >
                     <h2>Bar Chart</h2>
                   </Col>
                   <BarChart height={300} xAxes={true} yAxes={true} />
                 </Col>
               </Row>
               <Row className="center-lg center-md center-sm center-xs bottom-lg bottom-md">
-                <Col xs={12} sm={12} md={5} lg={5}>
-                  <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
-                    <div className="border">
+                <Col xs={12} sm={12} md={6} lg={6}>
+                  <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
+                    <div className="start-lg">
                       <span>Line Chart</span>
                     </div>
                   </Col>
                   <LineChart height={300} />
                 </Col>
-                <Col xs={12} sm={12} md={5} lg={5}>
-                  <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
-                    <h2>Bar Chart</h2>
-                  </Col>
-                  <BarChart height={300} xAxes={true} yAxes={true} />
-                </Col>
-              </Row>
-              <Row className="center-lg center-md center-sm center-xs bottom-lg bottom-md">
-                <Col xs={12} sm={12} md={5} lg={5}>
-                  <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
-                    <div className="border">
-                      <span>Line Chart</span>
-                    </div>
-                  </Col>
-                  <LineChart height={300} />
-                </Col>
-                <Col xs={12} sm={12} md={5} lg={5}>
-                  <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
-                    <h2>Bar Chart</h2>
-                  </Col>
-                  <BarChart height={300} xAxes={true} yAxes={true} />
-                </Col>
-              </Row>
-              <Row className="center-lg center-md center-sm center-xs bottom-lg bottom-md">
-                <Col xs={12} sm={12} md={5} lg={5}>
-                  <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
-                    <div className="border">
-                      <span>Line Chart</span>
-                    </div>
-                  </Col>
-                  <LineChart height={300} />
-                </Col>
-                <Col xs={12} sm={12} md={5} lg={5}>
-                  <Col xs={12} sm={12} md={5} lg={5} className="top-lg">
+                <Col xs={12} sm={12} md={6} lg={6}>
+                  <Col
+                    xs={12}
+                    sm={12}
+                    md={12}
+                    lg={12}
+                    className="top-lg start-lg"
+                  >
                     <h2>Bar Chart</h2>
                   </Col>
                   <BarChart height={300} xAxes={true} yAxes={true} />

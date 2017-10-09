@@ -28,7 +28,7 @@ class LineChart extends React.Component {
   }
   render() {
     return (
-      <div className="chart">
+      <div className="line-chart">
         <Line
           height={this.props.height}
           options={{
