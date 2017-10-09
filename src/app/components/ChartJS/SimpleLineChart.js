@@ -35,7 +35,7 @@ class SimpleLineChart extends React.Component {
   }
   render() {
     return (
-      <div className="chart">
+      <div className="simple_chart">
         <Line
           height={100}
           options={{

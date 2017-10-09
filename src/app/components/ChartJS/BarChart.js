@@ -18,7 +18,14 @@ class BarChart extends React.Component {
           {
             label: "Population",
             data: [6478364, 43434535, 43434535, 32324242, 23243434, 123454544],
-            backgroundColor: "white"
+            backgroundColor: [
+              "blue",
+              "grey",
+              "pink",
+              "lightblue",
+              "green",
+              "red"
+            ]
           }
         ]
       }
@@ -26,7 +33,7 @@ class BarChart extends React.Component {
   }
   render() {
     return (
-      <div className="chart">
+      <div className="bar_chart">
         <Bar
           height={this.props.height}
           options={{
@@ -53,16 +60,3 @@ class BarChart extends React.Component {
 }
 
 export default BarChart;
-
-// scales: {
-//   xAxes: [
-//     {
-//       display: false
-//     }
-//   ],
-//   yAxes: [
-//     {
-//       display: false
-//     }
-//   ]
-// },

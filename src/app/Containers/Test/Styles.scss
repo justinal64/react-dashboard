@@ -54,15 +54,29 @@ ul {
 }
 
 .top-left {
-    background-color: pink;
+    background-color: #20a8d8;
 }
 
 #left .bottom {
-    background-color: yellow;
+    background-color: #4f4a4a;
 }
 
-#right .container {
-    background-color: lightblue;
+.chart_styling {
+    background: #ededed;
+    border: 1px solid grey;
+}
+
+.line_chart,
+.bar_chart,
+.pie_chart,
+.simple_chart,
+.horizontal_chart {
+    border-top: 1px solid grey;
+    background: white;
+}
+
+#right .container-fluid {
+    background-color: #dddddd;
 }
 
 .top-right {
@@ -71,4 +85,23 @@ ul {
 
 #right {
     width: 100%;
+}
+
+.col {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.nav a {
+    color: white;
+}
+
+.nav {
+    padding-right: 1em;
+    display: block;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0;
 }
