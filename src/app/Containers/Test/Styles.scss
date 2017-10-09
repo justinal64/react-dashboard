@@ -66,10 +66,9 @@ ul {
     border: 1px solid grey;
 }
 
-.line-chart {
+.line_chart,
+.bar_chart {
     border-top: 1px solid grey;
-    padding-right: 0;
-    padding-left: 0;
 }
 
 #right .container-fluid {

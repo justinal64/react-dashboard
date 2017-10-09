@@ -35,7 +35,7 @@ class TestContainer extends Component {
           <div className="bottom">
             <Grid fluid>
               <Row className="around-lg around-md">
-                <Col xs={12} sm={12} md={6} lg={5}>
+                <Col xs={12} sm={12} md={6} lg={6}>
                   <div className="chart_styling">
                     <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
                       <GraphStyling title="Line Chart" />
@@ -46,17 +46,16 @@ class TestContainer extends Component {
                     <LineChart height={300} />
                   </div>
                 </Col>
-                <Col xs={12} sm={12} md={6} lg={5}>
-                  <Col
-                    xs={12}
-                    sm={12}
-                    md={12}
-                    lg={12}
-                    className="top-lg start-lg"
-                  >
-                    <h2>Bar Chart</h2>
-                  </Col>
-                  <BarChart height={300} xAxes={true} yAxes={true} />
+                <Col xs={12} sm={12} md={6} lg={6}>
+                  <div className="chart_styling">
+                    <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
+                      <GraphStyling title="Bar Chart" />
+                      {/* <div className="start-lg">
+                    <span>Line Chart</span>
+                  </div> */}
+                    </Col>
+                    <BarChart height={300} xAxes={true} yAxes={true} />
+                  </div>
                 </Col>
               </Row>
               <Row className="center-lg center-md center-sm center-xs bottom-lg bottom-md">
