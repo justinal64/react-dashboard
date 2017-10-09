@@ -48,7 +48,7 @@ class TestContainer extends Component {
                 </Col>
                 <Col xs={12} sm={12} md={6} lg={6}>
                   <div className="chart_styling">
-                    <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
+                    <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Bar Chart" />
                       {/* <div className="start-lg">
                     <span>Line Chart</span>

@@ -54,25 +54,26 @@ ul {
 }
 
 .top-left {
-    background-color: pink;
+    background-color: #20a8d8;
 }
 
 #left .bottom {
-    background-color: yellow;
+    background-color: #4f4a4a;
 }
 
 .chart_styling {
-    background: white;
+    background: #ededed;
     border: 1px solid grey;
 }
 
 .line_chart,
 .bar_chart {
     border-top: 1px solid grey;
+    background: white;
 }
 
 #right .container-fluid {
-    background-color: #ededed;
+    background-color: ##dddddd;
 }
 
 .top-right {
@@ -86,4 +87,8 @@ ul {
 .row {
     padding-top: 1em;
     padding-bottom: 1em;
+}
+
+.nav a {
+    color: white;
 }
