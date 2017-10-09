@@ -2,10 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const ChartTitle = styled.div`
-  font-size: 1.25em;
-  line-height: 1.5em;
-  background: #ededed;
-  width: 100%;
+  font-weight: 700;
+  line-height: 2em;
 `;
 
 const GraphStyling = props => {

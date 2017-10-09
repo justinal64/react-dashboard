@@ -3,6 +3,7 @@ import "./Styles.scss";
 import SideNavigation from "../../components/Navigation/SideNavigation";
 import LineChart from "../../components/ChartJS/LineChart";
 import BarChart from "../../components/ChartJS/BarChart";
+import ChartContainer from "../../components/ChartContainer/ChartContainer";
 import GraphStyling from "../../components/GraphStyling/GraphStyling";
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
@@ -35,7 +36,54 @@ class TestContainer extends Component {
           <div className="bottom">
             <Grid fluid>
               <Row className="around-lg around-md">
-                <Col xs={12} sm={12} md={6} lg={6}>
+                <Col xs={12} sm={12} md={6} lg={6} className="col">
+                  <div className="chart_styling">
+                    <Col xs={12} sm={12} md={12} lg={12}>
+                      <GraphStyling title="Line Chart" />
+                    </Col>
+                    <ChartContainer chart={<LineChart height={300} />} />
+                  </div>
+                </Col>
+                <Col xs={12} sm={12} md={6} lg={6} className="col">
+                  <div className="chart_styling">
+                    <Col xs={12} sm={12} md={12} lg={12}>
+                      <GraphStyling title="Bar Chart" />
+                    </Col>
+                    <ChartContainer
+                      chart={
+                        <BarChart height={300} xAxes={true} yAxes={true} />
+                      }
+                    />
+                  </div>
+                </Col>
+              </Row>
+              <Row className="around-lg around-md">
+                <Col xs={12} sm={12} md={6} lg={6} className="col">
+                  <div className="chart_styling">
+                    <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
+                      <GraphStyling title="Line Chart" />
+                    </Col>
+                    <LineChart height={300} />
+                  </div>
+                </Col>
+                <Col xs={12} sm={12} md={6} lg={6} className="col">
+                  <div className="chart_styling">
+                    <Col xs={12} sm={12} md={12} lg={12}>
+                      <GraphStyling title="Bar Chart" />
+                      {/* <div className="start-lg">
+                  <span>Line Chart</span>
+                </div> */}
+                    </Col>
+                    <ChartContainer
+                      chart={
+                        <BarChart height={300} xAxes={true} yAxes={true} />
+                      }
+                    />
+                  </div>
+                </Col>
+              </Row>
+              <Row className="around-lg around-md">
+                <Col xs={12} sm={12} md={6} lg={6} className="col">
                   <div className="chart_styling">
                     <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
                       <GraphStyling title="Line Chart" />
@@ -46,7 +94,7 @@ class TestContainer extends Component {
                     <LineChart height={300} />
                   </div>
                 </Col>
-                <Col xs={12} sm={12} md={6} lg={6}>
+                <Col xs={12} sm={12} md={6} lg={6} className="col">
                   <div className="chart_styling">
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Bar Chart" />
@@ -56,50 +104,6 @@ class TestContainer extends Component {
                     </Col>
                     <BarChart height={300} xAxes={true} yAxes={true} />
                   </div>
-                </Col>
-              </Row>
-              <Row className="center-lg center-md center-sm center-xs bottom-lg bottom-md">
-                <Col xs={12} sm={12} md={6} lg={6}>
-                  <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
-                    <div className="start-lg">
-                      <span>Line Chart</span>
-                    </div>
-                  </Col>
-                  <LineChart height={300} />
-                </Col>
-                <Col xs={12} sm={12} md={6} lg={6}>
-                  <Col
-                    xs={12}
-                    sm={12}
-                    md={12}
-                    lg={12}
-                    className="top-lg start-lg"
-                  >
-                    <h2>Bar Chart</h2>
-                  </Col>
-                  <BarChart height={300} xAxes={true} yAxes={true} />
-                </Col>
-              </Row>
-              <Row className="center-lg center-md center-sm center-xs bottom-lg bottom-md">
-                <Col xs={12} sm={12} md={6} lg={6}>
-                  <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
-                    <div className="start-lg">
-                      <span>Line Chart</span>
-                    </div>
-                  </Col>
-                  <LineChart height={300} />
-                </Col>
-                <Col xs={12} sm={12} md={6} lg={6}>
-                  <Col
-                    xs={12}
-                    sm={12}
-                    md={12}
-                    lg={12}
-                    className="top-lg start-lg"
-                  >
-                    <h2>Bar Chart</h2>
-                  </Col>
-                  <BarChart height={300} xAxes={true} yAxes={true} />
                 </Col>
               </Row>
             </Grid>
