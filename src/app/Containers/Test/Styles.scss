@@ -61,8 +61,19 @@ ul {
     background-color: yellow;
 }
 
+.chart_styling {
+    background: white;
+    border: 1px solid grey;
+}
+
+.line-chart {
+    border-top: 1px solid grey;
+    padding-right: 0;
+    padding-left: 0;
+}
+
 #right .container-fluid {
-    background-color: lightblue;
+    background-color: #ededed;
 }
 
 .top-right {
@@ -71,4 +82,9 @@ ul {
 
 #right {
     width: 100%;
+}
+
+.row {
+    padding-top: 1em;
+    padding-bottom: 1em;
 }

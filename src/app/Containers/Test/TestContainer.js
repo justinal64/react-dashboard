@@ -3,7 +3,7 @@ import "./Styles.scss";
 import SideNavigation from "../../components/Navigation/SideNavigation";
 import LineChart from "../../components/ChartJS/LineChart";
 import BarChart from "../../components/ChartJS/BarChart";
-
+import GraphStyling from "../../components/GraphStyling/GraphStyling";
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
@@ -34,16 +34,19 @@ class TestContainer extends Component {
           <div className="top-right">Top Right Header</div>
           <div className="bottom">
             <Grid fluid>
-              <Row className="center-lg center-md center-sm center-xs bottom-lg bottom-md">
-                <Col xs={12} sm={12} md={6} lg={6}>
-                  <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
-                    <div className="start-lg">
+              <Row className="around-lg around-md">
+                <Col xs={12} sm={12} md={6} lg={5}>
+                  <div className="chart_styling">
+                    <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
+                      <GraphStyling title="Line Chart" />
+                      {/* <div className="start-lg">
                       <span>Line Chart</span>
-                    </div>
-                  </Col>
-                  <LineChart height={300} />
+                    </div> */}
+                    </Col>
+                    <LineChart height={300} />
+                  </div>
                 </Col>
-                <Col xs={12} sm={12} md={6} lg={6}>
+                <Col xs={12} sm={12} md={6} lg={5}>
                   <Col
                     xs={12}
                     sm={12}
