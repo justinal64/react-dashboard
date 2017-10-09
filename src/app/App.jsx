@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import AstronomyContainer from "./components/AstronomyContainer.js";
 import UserContainer from "./components/UserContainer.js";
 import { Switch, Route } from "react-router-dom";
 import Login from "../screens/Login.js";

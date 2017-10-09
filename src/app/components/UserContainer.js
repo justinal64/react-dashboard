@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import AstronomyCard from "./AstronomyCard";
 import { connect } from "react-redux";
 import randomData from "../../actions/random_data";
 import UserCard from "./UserCard";
