@@ -67,13 +67,16 @@ ul {
 }
 
 .line_chart,
-.bar_chart {
+.bar_chart,
+.pie_chart,
+.simple_chart,
+.horizontal_chart {
     border-top: 1px solid grey;
     background: white;
 }
 
 #right .container-fluid {
-    background-color: ##dddddd;
+    background-color: #dddddd;
 }
 
 .top-right {

@@ -35,7 +35,7 @@ class HorizontalBarChart extends React.Component {
   }
   render() {
     return (
-      <div className="chart">
+      <div className="horizontal_chart">
         <HorizontalBar
           height={100}
           options={{

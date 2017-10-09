@@ -3,6 +3,9 @@ import "./Styles.scss";
 import SideNavigation from "../../components/Navigation/SideNavigation";
 import LineChart from "../../components/ChartJS/LineChart";
 import BarChart from "../../components/ChartJS/BarChart";
+import PieChart from "../../components/ChartJS/PieChart";
+import SimpleLineChart from "../../components/ChartJS/SimpleLineChart";
+import HorizontalBarChart from "../../components/ChartJS/HorizontalBarChart";
 import ChartContainer from "../../components/ChartContainer/ChartContainer";
 import GraphStyling from "../../components/GraphStyling/GraphStyling";
 import SampleData from "../../../sample-data";
@@ -60,51 +63,40 @@ class TestContainer extends Component {
               <Row className="around-lg around-md">
                 <Col xs={12} sm={12} md={6} lg={6} className="col">
                   <div className="chart_styling">
-                    <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
-                      <GraphStyling title="Line Chart" />
+                    <Col xs={12} sm={12} md={12} lg={12}>
+                      <GraphStyling title="Pie Chart" />
                     </Col>
-                    <LineChart height={300} />
+                    <ChartContainer chart={<PieChart height={300} />} />
                   </div>
                 </Col>
                 <Col xs={12} sm={12} md={6} lg={6} className="col">
                   <div className="chart_styling">
                     <Col xs={12} sm={12} md={12} lg={12}>
-                      <GraphStyling title="Bar Chart" />
-                      {/* <div className="start-lg">
-                  <span>Line Chart</span>
-                </div> */}
+                      <GraphStyling title="Simple Line Chart" />
                     </Col>
-                    <ChartContainer
-                      chart={
-                        <BarChart height={300} xAxes={true} yAxes={true} />
-                      }
-                    />
+                    <ChartContainer chart={<SimpleLineChart height={300} />} />
                   </div>
                 </Col>
               </Row>
               <Row className="around-lg around-md">
                 <Col xs={12} sm={12} md={6} lg={6} className="col">
                   <div className="chart_styling">
-                    <Col xs={12} sm={12} md={12} lg={12} className="top-lg">
-                      <GraphStyling title="Line Chart" />
-                      {/* <div className="start-lg">
-                      <span>Line Chart</span>
-                    </div> */}
+                    <Col xs={12} sm={12} md={12} lg={12}>
+                      <GraphStyling title="Horizontal Bar Chart" />
                     </Col>
-                    <LineChart height={300} />
+                    <ChartContainer
+                      chart={<HorizontalBarChart height={300} />}
+                    />
                   </div>
                 </Col>
-                <Col xs={12} sm={12} md={6} lg={6} className="col">
+                {/* <Col xs={12} sm={12} md={6} lg={6} className="col">
                   <div className="chart_styling">
                     <Col xs={12} sm={12} md={12} lg={12}>
-                      <GraphStyling title="Bar Chart" />
-                      {/* <div className="start-lg">
-                    <span>Line Chart</span>
-                  </div> */}
+                      <GraphStyling title="Simple Line Chart" />
                     </Col>
-                    <BarChart height={300} xAxes={true} yAxes={true} />
+                    <ChartContainer chart={<SimpleLineChart height={300} />} />
                   </div>
-                </Col>
+                </Col> */}
               </Row>
             </Grid>
           </div>

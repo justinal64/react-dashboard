@@ -60,16 +60,3 @@ class BarChart extends React.Component {
 }
 
 export default BarChart;
-
-// scales: {
-//   xAxes: [
-//     {
-//       display: false
-//     }
-//   ],
-//   yAxes: [
-//     {
-//       display: false
-//     }
-//   ]
-// },
