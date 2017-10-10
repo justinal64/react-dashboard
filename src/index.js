@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import Store from "./Store";
 import { render } from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-// import "./assets/Styles.scss";
+import "./assets/Styles.scss";
 // import GrommetApp from "grommet/components/App"; Not working......
 ReactDOM.render(
   <BrowserRouter>

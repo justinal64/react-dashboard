@@ -34,7 +34,6 @@ class BasicChart extends React.Component {
   render() {
     return (
       <div className="chart">
-        Bar Component
         <Basic
           data={this.state.chartData}
           options={{
