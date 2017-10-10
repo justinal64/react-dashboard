@@ -27,8 +27,8 @@ class SideNavigationTest extends Component {
     return (
       <div>
         <ul className="nav">
-          <span className="fa-stack fa-lg">
-            <FontAwesome name="square-o" stack="2x" />
+          <span className="fa-stack">
+            {/* <FontAwesome name="square-o" stack="2x" /> */}
             <FontAwesome name="twitter" stack="1x" />
           </span>
           <Collapsible trigger="Charts">
