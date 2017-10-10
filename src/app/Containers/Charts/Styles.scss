@@ -41,8 +41,22 @@ main,
     display: inline-flex;
 }
 
-ul {
+// Navigation
+ul,
+li {
     list-style: none;
+}
+
+a {
+    color: white;
+}
+
+.nav {
+    font-size: 1.25em;
+}
+
+.Collapsible {
+    display: inline;
 }
 
 .bottom {
@@ -88,10 +102,6 @@ ul {
 .col {
     padding-top: 1em;
     padding-bottom: 1em;
-}
-
-.nav a {
-    color: white;
 }
 
 .nav {
