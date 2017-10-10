@@ -68,9 +68,8 @@ li {
     background-color: blue;
 }
 
-@media screen and (max-width: 1200px) {
-    #left .bottom {
-        background-color: pink;
+@media screen and (max-width: 600px) {
+    #body {
+        display: table-cell;
     }
-    #left {}
 }
