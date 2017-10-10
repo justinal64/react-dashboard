@@ -25,51 +25,35 @@ class SideNavigationTest extends Component {
   render() {
     return (
       <div>
-        <Collapsible trigger="Charts">
-          <li>
-            <a href="/chart">Chart</a>
-          </li>
-          <li>
-            <a href="/barchart">Bar Chart</a>
-          </li>
-          <li>
-            <a href="/basicchart">Basic Chart</a>
-          </li>
-          <li>
-            <a href="/horizontalbarchart">Horizontal Bar Chart</a>
-          </li>
-          <li>
-            <a href="/linechart">Line Chart</a>
-          </li>
-          <li>
-            <a href="/piechart">Pie Chart</a>
-          </li>
-        </Collapsible>
         <ul className="nav">
-          <li>
-            <a href="/chart">Chart</a>
-          </li>
-          <li>
-            <a href="/barchart">Bar Chart</a>
-          </li>
-          <li>
-            <a href="/basicchart">Basic Chart</a>
-          </li>
-          <li>
-            <a href="/horizontalbarchart">Horizontal Bar Chart</a>
-          </li>
-          <li>
-            <a href="/linechart">Line Chart</a>
-          </li>
-          <li>
-            <a href="/piechart">Pie Chart</a>
-          </li>
-          <li>
-            <a href="/simplelinechart">Simple Line Chart</a>
-          </li>
-          <li>
-            <a href="/socialmediachart">Social Media Chart</a>
-          </li>
+          <span>Icon</span>
+          <Collapsible trigger="Charts">
+            <li>
+              <a href="/chart">Chart</a>
+            </li>
+            <li>
+              <a href="/barchart">Bar Chart</a>
+            </li>
+            <li>
+              <a href="/basicchart">Basic Chart</a>
+            </li>
+            <li>
+              <a href="/horizontalbarchart">Horizontal Bar Chart</a>
+            </li>
+            <li>
+              <a href="/linechart">Line Chart</a>
+            </li>
+            <li>
+              <a href="/piechart">Pie Chart</a>
+            </li>
+            <li>
+              <a href="/simplelinechart">Simple Line Chart</a>
+            </li>
+            <li>
+              <a href="/socialmediachart">Social Media Chart</a>
+            </li>
+          </Collapsible>
+          <h3>None Collapsing</h3>
           <li>
             <a href="/">Login</a>
           </li>
