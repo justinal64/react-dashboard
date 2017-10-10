@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import "./SideNavigationTest.scss";
 import { Row, Col, Grid } from "react-flexbox-grid";
 import Collapsible from "react-collapsible";
+import FontAwesome from "react-fontawesome";
 
 class SideNavigationTest extends Component {
   constructor(props) {
@@ -26,7 +27,10 @@ class SideNavigationTest extends Component {
     return (
       <div>
         <ul className="nav">
-          <span>Icon</span>
+          <span className="fa-stack fa-lg">
+            <FontAwesome name="square-o" stack="2x" />
+            <FontAwesome name="twitter" stack="1x" />
+          </span>
           <Collapsible trigger="Charts">
             <li>
               <a href="/chart">Chart</a>
