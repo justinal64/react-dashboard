@@ -33,7 +33,7 @@ class BasicChart extends React.Component {
   }
   render() {
     return (
-      <div className="basic_chart">
+      <div className="chart">
         <Basic
           data={this.state.chartData}
           options={{

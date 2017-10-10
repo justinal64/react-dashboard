@@ -63,3 +63,14 @@ li {
     margin-left: 0;
     margin-right: 0;
 }
+
+#left .bottom {
+    background-color: blue;
+}
+
+@media screen and (max-width: 1200px) {
+    #left .bottom {
+        background-color: pink;
+    }
+    #left {}
+}
