@@ -5,6 +5,7 @@ import "./SideNavigationTest.scss";
 import { Row, Col, Grid } from "react-flexbox-grid";
 import Collapsible from "react-collapsible";
 import FontAwesome from "react-fontawesome";
+import Segment from "../Typography/Segment/Segment";
 
 class SideNavigationTest extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class SideNavigationTest extends Component {
     return (
       <div>
         <ul className="nav">
+          <Segment title="Dashboard" />
           <span>
             <FontAwesome name="puzzle-piece" rotate={270} inverse={true} />
           </span>
