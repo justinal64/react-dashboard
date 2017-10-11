@@ -1,20 +1,32 @@
 import styled from "styled-components";
-import { getPaddingBottom } from "../../Styles/Styles";
+import { getFontSize } from "../../Styles/Styles";
 
-export const Segment = styled.span`
-  font-size: 2.5rem;
-  background-color: black;
-  padding: 0 1rem;
-  text-transform: uppercase;
+export const Subtitle = styled.span`
+  display: inline-block;
+  position: relative;
+  :after,
+  :before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid white;
+    top: 0;
+    width: 1.5em;
+  }
+
+  :before {
+    right: 100%;
+    margin-right: 0.25em;
+  }
+
+  :after {
+    left: 100%;
+    margin-left: 0.25em;
+  }
 `;
 
-export const SegmentWrapper = styled.div`
-  ${getPaddingBottom};
-  width: 90%;
-  height: 30px;
-  border-bottom: 1px solid white;
+export const SegmentWrapper = styled.p`
+  line-height: 0.5;
   text-align: center;
-  margin: 0 auto;
+  ${getFontSize};
 `;
-
-export const SegmentPadding = styled.div`padding-bottom: 1rem;`;

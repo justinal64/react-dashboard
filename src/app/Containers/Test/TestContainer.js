@@ -11,7 +11,6 @@ import GraphStyling from "../../components/GraphStyling/GraphStyling";
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
-import SideNavigationTest from "../../components/Navigation/SideNavigationTest";
 
 import { Row, Col, Grid } from "react-flexbox-grid";
 
@@ -31,7 +30,7 @@ class TestContainer extends Component {
             <h4>JL Designs</h4>
           </div>
           <div className="bottom">
-            <SideNavigationTest />
+            <SideNavigation />
           </div>
         </div>
         <div id="right" className="column">
