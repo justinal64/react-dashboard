@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import SideNavigationTest from "../../components/Navigation/SideNavigationTest";
+import SideNavigation from "../../components/Navigation/SideNavigation";
 
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
@@ -18,7 +18,7 @@ class SocialMediaChartContainer extends Component {
     return (
       <div className="grid2x2">
         <div className="sidebar box">
-          <SideNavigationTest />
+          <SideNavigation />
         </div>
         <div className="barchart box">SocialMediaChartContainer</div>
       </div>

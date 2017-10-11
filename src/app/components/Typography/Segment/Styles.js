@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { getFontSize } from "../../Styles/Styles";
 
 export const Subtitle = styled.span`
   display: inline-block;
@@ -10,21 +11,22 @@ export const Subtitle = styled.span`
     height: 5px;
     border-bottom: 1px solid white;
     top: 0;
-    width: 1em;
+    width: 1.5em;
   }
 
   :before {
     right: 100%;
-    margin-right: 15px;
+    margin-right: 0.25em;
   }
 
   :after {
     left: 100%;
-    margin-left: 15px;
+    margin-left: 0.25em;
   }
 `;
 
 export const SegmentWrapper = styled.p`
   line-height: 0.5;
   text-align: center;
+  ${getFontSize};
 `;

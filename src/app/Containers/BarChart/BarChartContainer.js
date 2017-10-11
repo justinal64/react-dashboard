@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SideNavigationTest from "../../components/Navigation/SideNavigationTest";
+import SideNavigation from "../../components/Navigation/SideNavigation";
 import BarChart from "../../components/ChartJS/BarChart";
 
 import { Row, Col, Grid } from "react-flexbox-grid";
@@ -20,7 +20,7 @@ class BarChartContainer extends Component {
     return (
       <div className="grid2x2">
         <div className="sidebar box">
-          <SideNavigationTest />
+          <SideNavigation />
         </div>
         <div className="chart-content box">
           <Row className="center-lg center-md center-sm center-xs">

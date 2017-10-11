@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import randomData from "../../../actions/random_data";
+// import randomData from "../../../actions/random_data";
+import "./SideNavigation.scss";
+import { Row, Col, Grid } from "react-flexbox-grid";
+import Collapsible from "react-collapsible";
+import FontAwesome from "react-fontawesome";
+import Segment from "../Typography/Segment/Segment";
 
 class SideNavigation extends Component {
   constructor(props) {
@@ -9,7 +14,7 @@ class SideNavigation extends Component {
   }
 
   componentWillMount() {
-    this.props.randomData();
+    // this.props.randomData();
   }
 
   redirect(login) {
@@ -21,64 +26,53 @@ class SideNavigation extends Component {
 
   render() {
     return (
-      <div>SideNavigation</div>
-      // <Box colorIndex="neutral-1" justify="center" align="center" pad="none">
-      //   <Sidebar colorIndex="neutral-1" fixed={true} size="small">
-      //     <Header pad="medium" justify="between">
-      //       <Title>Dashboard</Title>
-      //     </Header>
-      //     <Box flex="grow" justify="start">
-      //       <Menu primary={true}>
-      //         <Anchor href="/dashboard">Dashboard</Anchor>
-      //         <Anchor href="#">Email</Anchor>
-      //         <Anchor href="/forms">Forms</Anchor>
-      //         <Anchor href="/test">Test</Anchor>
-      //       </Menu>
-      //       <Accordion openMulti={true}>
-      //         <AccordionPanel heading="Components">
-      //           <Anchor href="/dashboard">Dashboard</Anchor>
-      //           <Anchor href="#">Email</Anchor>
-      //           <Anchor href="/forms">Forms</Anchor>
-      //           <Anchor href="/test">Test</Anchor>
-      //         </AccordionPanel>
-      //         <AccordionPanel heading="Forms">
-      //           <Anchor href="/dashboard">Dashboard</Anchor>
-      //           <Anchor href="#">Email</Anchor>
-      //           <Anchor href="/forms">Forms</Anchor>
-      //           <Anchor href="/test">Test</Anchor>
-      //         </AccordionPanel>
-      //         <AccordionPanel heading="Plugins">
-      //           <Anchor href="/dashboard">Dashboard</Anchor>
-      //           <Anchor href="#">Email</Anchor>
-      //           <Anchor href="/forms">Forms</Anchor>
-      //           <Anchor href="/test">Test</Anchor>
-      //         </AccordionPanel>
-      //         <AccordionPanel heading="Icons">
-      //           <Anchor href="/dashboard">Dashboard</Anchor>
-      //           <Anchor href="#">Email</Anchor>
-      //           <Anchor href="/forms">Forms</Anchor>
-      //           <Anchor href="/test">Test</Anchor>
-      //         </AccordionPanel>
-      //         <AccordionPanel heading="Widgets">
-      //           <Anchor href="/dashboard">Dashboard</Anchor>
-      //           <Anchor href="#">Email</Anchor>
-      //           <Anchor href="/forms">Forms</Anchor>
-      //           <Anchor href="/test">Test</Anchor>
-      //         </AccordionPanel>
-      //         <AccordionPanel heading="Charts">
-      //           <Anchor href="/barchart">Bar Chart</Anchor>
-      //           <Anchor href="/basicchart">Basic Chart</Anchor>
-      //           <Anchor href="/horizontalbarchart">Horizontal Bar Chart</Anchor>
-      //           <Anchor href="/piechart">Pie Chart</Anchor>
-      //           <Anchor href="/linechart">Line Chart</Anchor>
-      //           <Anchor href="/simplelinechart">Simple Line Chart</Anchor>
-      //           <Anchor href="/socialmediachart">Social Media Chart</Anchor>
-      //         </AccordionPanel>
-      //       </Accordion>
-      //     </Box>
-      //     {/* <Footer pad="medium" /> */}
-      //   </Sidebar>
-      // </Box>
+      <div>
+        <ul className="nav">
+          <Segment title="Dashboard" font={0.75} />
+          <span>
+            <FontAwesome name="puzzle-piece" rotate={270} inverse={true} />
+          </span>
+          <Collapsible trigger="Charts">
+            <li>
+              <a href="/chart">Chart</a>
+            </li>
+            <li>
+              <a href="/barchart">Bar Chart</a>
+            </li>
+            <li>
+              <a href="/basicchart">Basic Chart</a>
+            </li>
+            <li>
+              <a href="/horizontalbarchart">Horizontal Bar Chart</a>
+            </li>
+            <li>
+              <a href="/linechart">Line Chart</a>
+            </li>
+            <li>
+              <a href="/piechart">Pie Chart</a>
+            </li>
+            <li>
+              <a href="/simplelinechart">Simple Line Chart</a>
+            </li>
+            <li>
+              <a href="/socialmediachart">Social Media Chart</a>
+            </li>
+          </Collapsible>
+          <h3>None Collapsing</h3>
+          <li>
+            <a href="/">Login</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Bio</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
     );
   }
 }
@@ -86,8 +80,6 @@ class SideNavigation extends Component {
 // connect react with redux
 // @params mapStateToProps (necessity)
 // @params mapDispatchToProps (optional)
-function mapStateToProps(state) {
-  return { data: state.randomData };
-}
+// function mapStateToProps(state) {}
 
-export default connect(mapStateToProps, { randomData })(SideNavigation);
+export default SideNavigation;

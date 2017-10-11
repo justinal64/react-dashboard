@@ -3,7 +3,7 @@ import { Subtitle, SegmentWrapper } from "./Styles";
 
 const Segment = props => {
   return (
-    <SegmentWrapper>
+    <SegmentWrapper font={props.font}>
       <Subtitle>{props.title}</Subtitle>
     </SegmentWrapper>
   );
