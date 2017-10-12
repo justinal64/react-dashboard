@@ -26,53 +26,122 @@ class SideNavigation extends Component {
 
   render() {
     return (
-      <div>
-        <ul className="nav">
-          <Segment title="Dashboard" font={0.75} />
-          <span>
-            <FontAwesome name="puzzle-piece" rotate={270} inverse={true} />
-          </span>
-          <Collapsible trigger="Charts">
-            <li>
-              <a href="/chart">Chart</a>
-            </li>
-            <li>
-              <a href="/barchart">Bar Chart</a>
-            </li>
-            <li>
-              <a href="/basicchart">Basic Chart</a>
-            </li>
-            <li>
-              <a href="/horizontalbarchart">Horizontal Bar Chart</a>
-            </li>
-            <li>
-              <a href="/linechart">Line Chart</a>
-            </li>
-            <li>
-              <a href="/piechart">Pie Chart</a>
-            </li>
-            <li>
-              <a href="/simplelinechart">Simple Line Chart</a>
-            </li>
-            <li>
-              <a href="/socialmediachart">Social Media Chart</a>
-            </li>
-          </Collapsible>
-          <h3>None Collapsing</h3>
+      <ul className="nav">
+        <Segment title="Dashboard" font={0.75} />
+        <li>
+          <a href="/dashboard">Dashboard</a>
+        </li>
+        <Segment title="UI Elements" font={0.75} />
+        <FontAwesome name="puzzle-piece" rotate={270} inverse={true} />
+        <Collapsible trigger="Components">
           <li>
-            <a href="/">Login</a>
+            <a href="/buttons">Buttons</a>
           </li>
           <li>
-            <a href="#">Services</a>
+            <a href="/socialbuttons">Social Buttons</a>
           </li>
           <li>
-            <a href="#">Bio</a>
+            <a href="/Cards">Cards</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="/modals">Modals</a>
           </li>
-        </ul>
-      </div>
+          <li>
+            <a href="/switches">Switches</a>
+          </li>
+          <li>
+            <a href="/tables">Tables</a>
+          </li>
+          <li>
+            <a href="/tabs">Tabs</a>
+          </li>
+        </Collapsible>
+        <FontAwesome name="check-square-o" inverse={true} />
+        <Collapsible trigger="Forms">
+          <li>
+            <a href="/basicforms">Basic Forms</a>
+          </li>
+          <li>
+            <a href="/advancedforms">Advanced Forms</a>
+          </li>
+          <li>
+            <a href="/texteditors">Text Editors</a>
+          </li>
+        </Collapsible>
+        <FontAwesome name="bolt" inverse={true} />
+        <Collapsible trigger="Plugins">
+          <li>
+            <a href="/loadingbuttons">Loading Buttons</a>
+          </li>
+          <li>
+            <a href="/spinners">Spinners</a>
+          </li>
+        </Collapsible>
+        <FontAwesome name="star" inverse={true} />
+        <Collapsible trigger="Icons">
+          <li>
+            <a href="/fontawesome">Font Awesome</a>
+          </li>
+          <li>
+            <a href="/simplelineicons">Simple Line Icons</a>
+          </li>
+        </Collapsible>
+        <FontAwesome name="pie-chart" inverse={true} />
+        <Collapsible trigger="Charts">
+          <li>
+            <a href="/barchart">Bar Chart</a>
+          </li>
+          <li>
+            <a href="/basicchart">Basic Chart</a>
+          </li>
+          <li>
+            <a href="/horizontalchart">Horizontal Chart</a>
+          </li>
+          <li>
+            <a href="/linechart">Line Chart</a>
+          </li>
+          <li>
+            <a href="/piechart">Pie Chart</a>
+          </li>
+          <li>
+            <a href="/simplelinechart">Simple Line Chart</a>
+          </li>
+          <li>
+            <a href="/socialmediachart">Social Media Chart</a>
+          </li>
+        </Collapsible>
+        <Segment title="Extras" font={0.75} />
+        <FontAwesome name="star" inverse={true} />
+        <Collapsible trigger="Pages">
+          <li>
+            <a href="/login">Login</a>
+          </li>
+          <li>
+            <a href="/basicchart">Basic Chart</a>
+          </li>
+          <li>
+            <a href="/register">Register</a>
+          </li>
+          <li>
+            <a href="/error404">Error 404</a>
+          </li>
+          <li>
+            <a href="/error500">Error 500</a>
+          </li>
+        </Collapsible>
+        <FontAwesome name="window-close" rotate={270} inverse={true} />
+        <Collapsible trigger="UI Kits">
+          <li>
+            <a href="/invoicing">Invoicing</a>
+          </li>
+          <li>
+            <a href="/email">Email</a>
+          </li>
+        </Collapsible>
+        <li>
+          <a href="/widgets">Widgets</a>
+        </li>
+      </ul>
     );
   }
 }

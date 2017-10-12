@@ -33,7 +33,6 @@ main,
 
 .grid2x2>div>div {
     display: flex;
-    // justify-content: center;
     flex-direction: row;
 }
 
@@ -67,6 +66,18 @@ li {
 
 #left .bottom {
     background-color: #30444b;
+}
+
+.Collapsible__trigger:after {
+    font-family: "FontAwesome";
+    content: "\F107";
+    transition: transform 300ms;
+    float: right;
+    transform: rotate(90deg);
+}
+
+.is-open:after {
+    transform: rotateZ(0deg);
 }
 
 @media screen and (max-width: 600px) {

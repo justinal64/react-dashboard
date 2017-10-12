@@ -1,5 +1,6 @@
 import React from "react";
 import { Subtitle, SegmentWrapper } from "./Styles";
+import FontAwesome from "react-fontawesome";
 
 const Segment = props => {
   return (
