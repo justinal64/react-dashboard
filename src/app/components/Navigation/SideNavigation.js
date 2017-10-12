@@ -29,7 +29,11 @@ class SideNavigation extends Component {
       <div>
         <ul className="nav">
           <Segment title="Dashboard" font={0.75} />
+          <li>
+            <a href="/dashboard">Dashboard</a>
+          </li>
           <Segment title="UI Elements" font={0.75} />
+
           <span>
             <FontAwesome name="puzzle-piece" rotate={270} inverse={true} />
           </span>
@@ -109,15 +113,32 @@ class SideNavigation extends Component {
           <li>
             <a href="/widgets">Widgets</a>
           </li>
-          <li>
-            <a href="#">Services</a>
-          </li>
-          <li>
-            <a href="#">Bio</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
+          <Segment title="Extras" font={0.75} />
+          <Collapsible trigger="Pages">
+            <li>
+              <a href="/login">Login</a>
+            </li>
+            <li>
+              <a href="/basicchart">Basic Chart</a>
+            </li>
+            <li>
+              <a href="/register">Register</a>
+            </li>
+            <li>
+              <a href="/error404">Error 404</a>
+            </li>
+            <li>
+              <a href="/error500">Error 500</a>
+            </li>
+          </Collapsible>
+          <Collapsible trigger="UI Kits">
+            <li>
+              <a href="/invoicing">Invoicing</a>
+            </li>
+            <li>
+              <a href="/email">Email</a>
+            </li>
+          </Collapsible>
         </ul>
       </div>
     );
