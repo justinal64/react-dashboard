@@ -32,10 +32,7 @@ class SideNavigation extends Component {
           <a href="/dashboard">Dashboard</a>
         </li>
         <Segment title="UI Elements" font={0.75} />
-
-        <span>
-          <FontAwesome name="puzzle-piece" rotate={270} inverse={true} />
-        </span>
+        <FontAwesome name="puzzle-piece" rotate={270} inverse={true} />
         <Collapsible trigger="Components">
           <li>
             <a href="/buttons">Buttons</a>
@@ -59,6 +56,7 @@ class SideNavigation extends Component {
             <a href="/tabs">Tabs</a>
           </li>
         </Collapsible>
+        <FontAwesome name="check-square-o" inverse={true} />
         <Collapsible trigger="Forms">
           <li>
             <a href="/basicforms">Basic Forms</a>
@@ -70,6 +68,7 @@ class SideNavigation extends Component {
             <a href="/texteditors">Text Editors</a>
           </li>
         </Collapsible>
+        <FontAwesome name="bolt" inverse={true} />
         <Collapsible trigger="Plugins">
           <li>
             <a href="/loadingbuttons">Loading Buttons</a>
@@ -78,6 +77,7 @@ class SideNavigation extends Component {
             <a href="/spinners">Spinners</a>
           </li>
         </Collapsible>
+        <FontAwesome name="star" inverse={true} />
         <Collapsible trigger="Icons">
           <li>
             <a href="/fontawesome">Font Awesome</a>
@@ -86,6 +86,7 @@ class SideNavigation extends Component {
             <a href="/simplelineicons">Simple Line Icons</a>
           </li>
         </Collapsible>
+        <FontAwesome name="pie-chart" inverse={true} />
         <Collapsible trigger="Charts">
           <li>
             <a href="/barchart">Bar Chart</a>
@@ -109,10 +110,8 @@ class SideNavigation extends Component {
             <a href="/socialmediachart">Social Media Chart</a>
           </li>
         </Collapsible>
-        <li>
-          <a href="/widgets">Widgets</a>
-        </li>
         <Segment title="Extras" font={0.75} />
+        <FontAwesome name="star" inverse={true} />
         <Collapsible trigger="Pages">
           <li>
             <a href="/login">Login</a>
@@ -130,6 +129,7 @@ class SideNavigation extends Component {
             <a href="/error500">Error 500</a>
           </li>
         </Collapsible>
+        <FontAwesome name="window-close" rotate={270} inverse={true} />
         <Collapsible trigger="UI Kits">
           <li>
             <a href="/invoicing">Invoicing</a>
@@ -138,6 +138,9 @@ class SideNavigation extends Component {
             <a href="/email">Email</a>
           </li>
         </Collapsible>
+        <li>
+          <a href="/widgets">Widgets</a>
+        </li>
       </ul>
     );
   }
