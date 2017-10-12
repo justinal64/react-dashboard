@@ -29,13 +29,61 @@ class SideNavigation extends Component {
       <div>
         <ul className="nav">
           <Segment title="Dashboard" font={0.75} />
+          <Segment title="UI Elements" font={0.75} />
           <span>
             <FontAwesome name="puzzle-piece" rotate={270} inverse={true} />
           </span>
-          <Collapsible trigger="Charts">
+          <Collapsible trigger="Components">
             <li>
-              <a href="/chart">Chart</a>
+              <a href="/buttons">Buttons</a>
             </li>
+            <li>
+              <a href="/socialbuttons">Social Buttons</a>
+            </li>
+            <li>
+              <a href="/Cards">Cards</a>
+            </li>
+            <li>
+              <a href="/modals">Modals</a>
+            </li>
+            <li>
+              <a href="/switches">Switches</a>
+            </li>
+            <li>
+              <a href="/tables">Tables</a>
+            </li>
+            <li>
+              <a href="/tabs">Tabs</a>
+            </li>
+          </Collapsible>
+          <Collapsible trigger="Forms">
+            <li>
+              <a href="/basicforms">Basic Forms</a>
+            </li>
+            <li>
+              <a href="/advancedforms">Advanced Forms</a>
+            </li>
+            <li>
+              <a href="/texteditors">Text Editors</a>
+            </li>
+          </Collapsible>
+          <Collapsible trigger="Plugins">
+            <li>
+              <a href="/loadingbuttons">Loading Buttons</a>
+            </li>
+            <li>
+              <a href="/spinners">Spinners</a>
+            </li>
+          </Collapsible>
+          <Collapsible trigger="Icons">
+            <li>
+              <a href="/fontawesome">Font Awesome</a>
+            </li>
+            <li>
+              <a href="/simplelineicons">Simple Line Icons</a>
+            </li>
+          </Collapsible>
+          <Collapsible trigger="Charts">
             <li>
               <a href="/barchart">Bar Chart</a>
             </li>
@@ -43,7 +91,7 @@ class SideNavigation extends Component {
               <a href="/basicchart">Basic Chart</a>
             </li>
             <li>
-              <a href="/horizontalbarchart">Horizontal Bar Chart</a>
+              <a href="/horizontalchart">Horizontal Chart</a>
             </li>
             <li>
               <a href="/linechart">Line Chart</a>
@@ -58,9 +106,8 @@ class SideNavigation extends Component {
               <a href="/socialmediachart">Social Media Chart</a>
             </li>
           </Collapsible>
-          <h3>None Collapsing</h3>
           <li>
-            <a href="/">Login</a>
+            <a href="/widgets">Widgets</a>
           </li>
           <li>
             <a href="#">Services</a>
