@@ -6,6 +6,17 @@ import FontAwesome from "react-fontawesome";
 import Segment from "../Typography/Segment/Segment";
 import { Navigation } from "./Styles";
 
+const getIcon = font => {
+  return (
+    <FontAwesome
+      name={font}
+      style={navColorScheme}
+      rotate={270}
+      inverse={true}
+    />
+  );
+};
+
 class SideNavigation extends Component {
   constructor(props) {
     super(props);
@@ -31,12 +42,7 @@ class SideNavigation extends Component {
           <a href="/dashboard">Dashboard</a>
         </li>
         <Segment title="UI Elements" font={0.75} />
-        <FontAwesome
-          name="puzzle-piece"
-          style={navColorScheme}
-          rotate={270}
-          inverse={true}
-        />
+        {getIcon("puzzle-piece")}
         <Collapsible trigger="Components">
           <FontAwesome
             name="puzzle-piece"
@@ -47,66 +53,32 @@ class SideNavigation extends Component {
           <li>
             <a href="/buttons">Buttons</a>
           </li>
-          <FontAwesome
-            name="puzzle-piece"
-            style={navColorScheme}
-            rotate={270}
-            inverse={true}
-          />
+          {getIcon("puzzle-piece")}
           <li>
             <a href="/socialbuttons">Social Buttons</a>
           </li>
-          <FontAwesome
-            name="puzzle-piece"
-            style={navColorScheme}
-            rotate={270}
-            inverse={true}
-          />
+          {getIcon("puzzle-piece")}
           <li>
             <a href="/Cards">Cards</a>
           </li>
-          <FontAwesome
-            name="puzzle-piece"
-            style={navColorScheme}
-            rotate={270}
-            inverse={true}
-          />
+          {getIcon("puzzle-piece")}
           <li>
             <a href="/modals">Modals</a>
           </li>
-          <FontAwesome
-            name="puzzle-piece"
-            style={navColorScheme}
-            rotate={270}
-            inverse={true}
-          />
+          {getIcon("puzzle-piece")}
           <li>
             <a href="/switches">Switches</a>
           </li>
-          <FontAwesome
-            name="puzzle-piece"
-            style={navColorScheme}
-            rotate={270}
-            inverse={true}
-          />
+          {getIcon("puzzle-piece")}
           <li>
             <a href="/tables">Tables</a>
           </li>
-          <FontAwesome
-            name="puzzle-piece"
-            style={navColorScheme}
-            rotate={270}
-            inverse={true}
-          />
+          {getIcon("puzzle-piece")}
           <li>
             <a href="/tabs">Tabs</a>
           </li>
         </Collapsible>
-        <FontAwesome
-          name="check-square-o"
-          style={navColorScheme}
-          inverse={true}
-        />
+        {getIcon("check-square-o")}
         <Collapsible trigger="Forms">
           <li>
             <a href="/basicforms">Basic Forms</a>
