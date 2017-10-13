@@ -1,21 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import randomData from "../../../actions/random_data";
-import Collapsible from "react-collapsible";
 import FontAwesome from "react-fontawesome";
+
+import Collapsible from "react-collapsible";
 import Segment from "../Typography/Segment/Segment";
 import { Navigation } from "./Styles";
-
-const getIcon = font => {
-  return (
-    <FontAwesome
-      name={font}
-      style={navColorScheme}
-      rotate={270}
-      inverse={true}
-    />
-  );
-};
+import { getIcon } from "../Helper/Icon";
 
 class SideNavigation extends Component {
   constructor(props) {
