@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Styles.scss";
 import SideNavigation from "../../components/Navigation/SideNavigation";
 import LineChart from "../../components/ChartJS/LineChart";
 import BarChart from "../../components/ChartJS/BarChart";

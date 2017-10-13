@@ -7,14 +7,7 @@ import Segment from "../Typography/Segment/Segment";
 import { Navigation } from "./Styles";
 
 const getIcon = font => {
-  return (
-    <FontAwesome
-      name={font}
-      style={navColorScheme}
-      rotate={270}
-      inverse={true}
-    />
-  );
+  return <FontAwesome name={font} style={navColorScheme} inverse={true} />;
 };
 
 class SideNavigation extends Component {
