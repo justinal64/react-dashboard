@@ -7,14 +7,7 @@ import Segment from "../Typography/Segment/Segment";
 import { Navigation } from "./Styles";
 
 const getIcon = font => {
-  return (
-    <FontAwesome
-      name={font}
-      style={navColorScheme}
-      rotate={270}
-      inverse={true}
-    />
-  );
+  return <FontAwesome name={font} style={navColorScheme} inverse={true} />;
 };
 
 class SideNavigation extends Component {
@@ -91,42 +84,53 @@ class SideNavigation extends Component {
         </Collapsible>
         {getIcon("bolt")}
         <Collapsible trigger="Plugins">
+          {getIcon("bolt")}
           <li>
             <a href="/loadingbuttons">Loading Buttons</a>
           </li>
+          {getIcon("bolt")}
           <li>
             <a href="/spinners">Spinners</a>
           </li>
         </Collapsible>
         {getIcon("star")}
         <Collapsible trigger="Icons">
+          {getIcon("star")}
           <li>
             <a href="/fontawesome">Font Awesome</a>
           </li>
+          {getIcon("star")}
           <li>
             <a href="/simplelineicons">Simple Line Icons</a>
           </li>
         </Collapsible>
         {getIcon("pie-chart")}
         <Collapsible trigger="Charts">
+          {getIcon("pie-chart")}
           <li>
             <a href="/barchart">Bar Chart</a>
           </li>
+          {getIcon("pie-chart")}
           <li>
             <a href="/basicchart">Basic Chart</a>
           </li>
+          {getIcon("pie-chart")}
           <li>
             <a href="/horizontalchart">Horizontal Chart</a>
           </li>
+          {getIcon("pie-chart")}
           <li>
             <a href="/linechart">Line Chart</a>
           </li>
+          {getIcon("pie-chart")}
           <li>
             <a href="/piechart">Pie Chart</a>
           </li>
+          {getIcon("pie-chart")}
           <li>
             <a href="/simplelinechart">Simple Line Chart</a>
           </li>
+          {getIcon("pie-chart")}
           <li>
             <a href="/socialmediachart">Social Media Chart</a>
           </li>
@@ -134,31 +138,39 @@ class SideNavigation extends Component {
         <Segment title="Extras" font={0.75} />
         {getIcon("star")}
         <Collapsible trigger="Pages">
+          {getIcon("star")}
           <li>
             <a href="/login">Login</a>
           </li>
+          {getIcon("star")}
           <li>
             <a href="/basicchart">Basic Chart</a>
           </li>
+          {getIcon("star")}
           <li>
             <a href="/register">Register</a>
           </li>
+          {getIcon("star")}
           <li>
             <a href="/error404">Error 404</a>
           </li>
+          {getIcon("star")}
           <li>
             <a href="/error500">Error 500</a>
           </li>
         </Collapsible>
         {getIcon("window-close")}
         <Collapsible trigger="UI Kits">
+          {getIcon("window-close")}
           <li>
             <a href="/invoicing">Invoicing</a>
           </li>
+          {getIcon("window-close")}
           <li>
             <a href="/email">Email</a>
           </li>
         </Collapsible>
+        {getIcon("calculator")}
         <li>
           <a href="/widgets">Widgets</a>
         </li>
@@ -172,7 +184,8 @@ let navColorScheme = {
   float: "left",
   marginLeft: ".25em",
   width: "20px",
-  height: "20px"
+  height: "20px",
+  paddingRight: ".5em"
 };
 
 // connect react with redux
