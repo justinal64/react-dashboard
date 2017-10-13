@@ -152,6 +152,7 @@ class SideNavigation extends Component {
             <a href="/email">Email</a>
           </li>
         </Collapsible>
+        {getIcon("calculator")}
         <li>
           <a href="/widgets">Widgets</a>
         </li>
@@ -165,7 +166,8 @@ let navColorScheme = {
   float: "left",
   marginLeft: ".25em",
   width: "20px",
-  height: "20px"
+  height: "20px",
+  paddingRight: ".5em"
 };
 
 // connect react with redux
