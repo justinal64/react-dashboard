@@ -10,5 +10,5 @@ export const Navigation = styled.ul`
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
   -webkit-padding-start: 0;
-  font-size: 1.25em;
+  font-size: 1.15em;
 `;

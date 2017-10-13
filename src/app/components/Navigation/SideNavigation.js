@@ -76,12 +76,15 @@ class SideNavigation extends Component {
         </Collapsible>
         {getIcon("check-square-o")}
         <Collapsible trigger="Forms">
+          {getIcon("check-square-o")}
           <li>
             <a href="/basicforms">Basic Forms</a>
           </li>
+          {getIcon("check-square-o")}
           <li>
             <a href="/advancedforms">Advanced Forms</a>
           </li>
+          {getIcon("check-square-o")}
           <li>
             <a href="/texteditors">Text Editors</a>
           </li>
