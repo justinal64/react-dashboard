@@ -38,18 +38,14 @@ class SideNavigation extends Component {
     return (
       <Navigation>
         <Segment title="Dashboard" font={0.75} />
+        {getIcon("puzzle-piece")}
         <li>
           <a href="/dashboard">Dashboard</a>
         </li>
         <Segment title="UI Elements" font={0.75} />
         {getIcon("puzzle-piece")}
         <Collapsible trigger="Components">
-          <FontAwesome
-            name="puzzle-piece"
-            style={navColorScheme}
-            rotate={270}
-            inverse={true}
-          />
+          {getIcon("puzzle-piece")}
           <li>
             <a href="/buttons">Buttons</a>
           </li>
