@@ -31,31 +31,82 @@ class SideNavigation extends Component {
           <a href="/dashboard">Dashboard</a>
         </li>
         <Segment title="UI Elements" font={0.75} />
-        <FontAwesome name="puzzle-piece" rotate={270} inverse={true} />
+        <FontAwesome
+          name="puzzle-piece"
+          style={navColorScheme}
+          rotate={270}
+          inverse={true}
+        />
         <Collapsible trigger="Components">
+          <FontAwesome
+            name="puzzle-piece"
+            style={navColorScheme}
+            rotate={270}
+            inverse={true}
+          />
           <li>
             <a href="/buttons">Buttons</a>
           </li>
+          <FontAwesome
+            name="puzzle-piece"
+            style={navColorScheme}
+            rotate={270}
+            inverse={true}
+          />
           <li>
             <a href="/socialbuttons">Social Buttons</a>
           </li>
+          <FontAwesome
+            name="puzzle-piece"
+            style={navColorScheme}
+            rotate={270}
+            inverse={true}
+          />
           <li>
             <a href="/Cards">Cards</a>
           </li>
+          <FontAwesome
+            name="puzzle-piece"
+            style={navColorScheme}
+            rotate={270}
+            inverse={true}
+          />
           <li>
             <a href="/modals">Modals</a>
           </li>
+          <FontAwesome
+            name="puzzle-piece"
+            style={navColorScheme}
+            rotate={270}
+            inverse={true}
+          />
           <li>
             <a href="/switches">Switches</a>
           </li>
+          <FontAwesome
+            name="puzzle-piece"
+            style={navColorScheme}
+            rotate={270}
+            inverse={true}
+          />
           <li>
             <a href="/tables">Tables</a>
           </li>
+          <FontAwesome
+            name="puzzle-piece"
+            style={navColorScheme}
+            rotate={270}
+            inverse={true}
+          />
           <li>
             <a href="/tabs">Tabs</a>
           </li>
         </Collapsible>
-        <FontAwesome name="check-square-o" inverse={true} />
+        <FontAwesome
+          name="check-square-o"
+          style={navColorScheme}
+          inverse={true}
+        />
         <Collapsible trigger="Forms">
           <li>
             <a href="/basicforms">Basic Forms</a>
@@ -67,7 +118,7 @@ class SideNavigation extends Component {
             <a href="/texteditors">Text Editors</a>
           </li>
         </Collapsible>
-        <FontAwesome name="bolt" inverse={true} />
+        <FontAwesome name="bolt" style={navColorScheme} inverse={true} />
         <Collapsible trigger="Plugins">
           <li>
             <a href="/loadingbuttons">Loading Buttons</a>
@@ -76,7 +127,7 @@ class SideNavigation extends Component {
             <a href="/spinners">Spinners</a>
           </li>
         </Collapsible>
-        <FontAwesome name="star" inverse={true} />
+        <FontAwesome name="star" style={navColorScheme} inverse={true} />
         <Collapsible trigger="Icons">
           <li>
             <a href="/fontawesome">Font Awesome</a>
@@ -85,7 +136,7 @@ class SideNavigation extends Component {
             <a href="/simplelineicons">Simple Line Icons</a>
           </li>
         </Collapsible>
-        <FontAwesome name="pie-chart" inverse={true} />
+        <FontAwesome name="pie-chart" style={navColorScheme} inverse={true} />
         <Collapsible trigger="Charts">
           <li>
             <a href="/barchart">Bar Chart</a>
@@ -110,7 +161,7 @@ class SideNavigation extends Component {
           </li>
         </Collapsible>
         <Segment title="Extras" font={0.75} />
-        <FontAwesome name="star" inverse={true} />
+        <FontAwesome name="star" style={navColorScheme} inverse={true} />
         <Collapsible trigger="Pages">
           <li>
             <a href="/login">Login</a>
@@ -128,7 +179,12 @@ class SideNavigation extends Component {
             <a href="/error500">Error 500</a>
           </li>
         </Collapsible>
-        <FontAwesome name="window-close" rotate={270} inverse={true} />
+        <FontAwesome
+          name="window-close"
+          style={navColorScheme}
+          rotate={270}
+          inverse={true}
+        />
         <Collapsible trigger="UI Kits">
           <li>
             <a href="/invoicing">Invoicing</a>
@@ -144,6 +200,14 @@ class SideNavigation extends Component {
     );
   }
 }
+
+let navColorScheme = {
+  color: "#9faecb",
+  float: "left",
+  marginLeft: ".25em",
+  width: "20px",
+  height: "20px"
+};
 
 // connect react with redux
 // @params mapStateToProps (necessity)

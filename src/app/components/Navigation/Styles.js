@@ -12,8 +12,3 @@ export const Navigation = styled.ul`
   -webkit-padding-start: 0;
   font-size: 1.25em;
 `;
-
-export const SegmentWrapper = styled.p`
-  line-height: 0.5;
-  text-align: center;
-`;

@@ -63,9 +63,15 @@ li {
     background-color: #30444b;
 }
 
+.Collapsible__trigger {
+    padding-left: 0.5em;
+    text-align: center;
+}
+
 .Collapsible__trigger:after {
     font-family: "FontAwesome";
     content: "\F107";
+    color: #9faecb;
     transition: transform 300ms;
     float: right;
     transform: rotate(90deg);
