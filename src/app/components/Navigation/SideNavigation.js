@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 // import randomData from "../../../actions/random_data";
-import "./SideNavigation.scss";
-import { Row, Col, Grid } from "react-flexbox-grid";
 import Collapsible from "react-collapsible";
 import FontAwesome from "react-fontawesome";
 import Segment from "../Typography/Segment/Segment";
+import { Navigation } from "./Styles";
 
 class SideNavigation extends Component {
   constructor(props) {
@@ -26,7 +25,7 @@ class SideNavigation extends Component {
 
   render() {
     return (
-      <ul className="nav">
+      <Navigation>
         <Segment title="Dashboard" font={0.75} />
         <li>
           <a href="/dashboard">Dashboard</a>
@@ -141,7 +140,7 @@ class SideNavigation extends Component {
         <li>
           <a href="/widgets">Widgets</a>
         </li>
-      </ul>
+      </Navigation>
     );
   }
 }
