@@ -5,7 +5,17 @@ import FontAwesome from "react-fontawesome";
 import Collapsible from "react-collapsible";
 import Segment from "../Typography/Segment/Segment";
 import { Navigation } from "./Styles";
-import { getIcon } from "../Helper/Icon";
+
+const getIcon = font => {
+  return (
+    <FontAwesome
+      name={font}
+      style={navColorScheme}
+      rotate={270}
+      inverse={true}
+    />
+  );
+};
 
 class SideNavigation extends Component {
   constructor(props) {
@@ -80,7 +90,7 @@ class SideNavigation extends Component {
             <a href="/texteditors">Text Editors</a>
           </li>
         </Collapsible>
-        <FontAwesome name="bolt" style={navColorScheme} inverse={true} />
+        {getIcon("bolt")}
         <Collapsible trigger="Plugins">
           <li>
             <a href="/loadingbuttons">Loading Buttons</a>
@@ -89,7 +99,7 @@ class SideNavigation extends Component {
             <a href="/spinners">Spinners</a>
           </li>
         </Collapsible>
-        <FontAwesome name="star" style={navColorScheme} inverse={true} />
+        {getIcon("star")}
         <Collapsible trigger="Icons">
           <li>
             <a href="/fontawesome">Font Awesome</a>
@@ -98,7 +108,7 @@ class SideNavigation extends Component {
             <a href="/simplelineicons">Simple Line Icons</a>
           </li>
         </Collapsible>
-        <FontAwesome name="pie-chart" style={navColorScheme} inverse={true} />
+        {getIcon("pie-chart")}
         <Collapsible trigger="Charts">
           <li>
             <a href="/barchart">Bar Chart</a>
@@ -123,7 +133,7 @@ class SideNavigation extends Component {
           </li>
         </Collapsible>
         <Segment title="Extras" font={0.75} />
-        <FontAwesome name="star" style={navColorScheme} inverse={true} />
+        {getIcon("star")}
         <Collapsible trigger="Pages">
           <li>
             <a href="/login">Login</a>
@@ -141,12 +151,7 @@ class SideNavigation extends Component {
             <a href="/error500">Error 500</a>
           </li>
         </Collapsible>
-        <FontAwesome
-          name="window-close"
-          style={navColorScheme}
-          rotate={270}
-          inverse={true}
-        />
+        {getIcon("window-close")}
         <Collapsible trigger="UI Kits">
           <li>
             <a href="/invoicing">Invoicing</a>

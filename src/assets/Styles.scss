@@ -63,9 +63,11 @@ li {
     background-color: #30444b;
 }
 
-.Collapsible__trigger {
+.Collapsible__trigger,
+.Collapsible a {
     padding-left: 0.5em;
     text-align: center;
+    line-height: 1.5em;
 }
 
 .Collapsible__trigger:after {
