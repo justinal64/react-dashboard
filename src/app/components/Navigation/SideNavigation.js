@@ -4,7 +4,7 @@ import FontAwesome from "react-fontawesome";
 
 import Collapsible from "react-collapsible";
 import Segment from "../Typography/Segment/Segment";
-import { Navigation } from "./Styles";
+import { Navigation, Li } from "./Styles";
 
 const getIcon = font => {
   return <FontAwesome name={font} style={navColorScheme} inverse={true} />;
@@ -38,140 +38,140 @@ class SideNavigation extends Component {
         <Segment title="UI Elements" font={0.75} />
         {getIcon("puzzle-piece")}
         <Collapsible trigger="Components">
-          {getIcon("puzzle-piece")}
-          <li>
+          <Li>
+            {getIcon("puzzle-piece")}
             <a href="/buttons">Buttons</a>
-          </li>
-          {getIcon("puzzle-piece")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("puzzle-piece")}
             <a href="/socialbuttons">Social Buttons</a>
-          </li>
-          {getIcon("puzzle-piece")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("puzzle-piece")}
             <a href="/Cards">Cards</a>
-          </li>
-          {getIcon("puzzle-piece")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("puzzle-piece")}
             <a href="/modals">Modals</a>
-          </li>
-          {getIcon("puzzle-piece")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("puzzle-piece")}
             <a href="/switches">Switches</a>
-          </li>
-          {getIcon("puzzle-piece")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("puzzle-piece")}
             <a href="/tables">Tables</a>
-          </li>
-          {getIcon("puzzle-piece")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("puzzle-piece")}
             <a href="/tabs">Tabs</a>
-          </li>
+          </Li>
         </Collapsible>
         {getIcon("check-square-o")}
         <Collapsible trigger="Forms">
-          {getIcon("check-square-o")}
-          <li>
+          <Li>
+            {getIcon("check-square-o")}
             <a href="/basicforms">Basic Forms</a>
-          </li>
-          {getIcon("check-square-o")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("check-square-o")}
             <a href="/advancedforms">Advanced Forms</a>
-          </li>
-          {getIcon("check-square-o")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("check-square-o")}
             <a href="/texteditors">Text Editors</a>
-          </li>
+          </Li>
         </Collapsible>
         {getIcon("bolt")}
         <Collapsible trigger="Plugins">
-          {getIcon("bolt")}
-          <li>
+          <Li>
+            {getIcon("bolt")}
             <a href="/loadingbuttons">Loading Buttons</a>
-          </li>
-          {getIcon("bolt")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("bolt")}
             <a href="/spinners">Spinners</a>
-          </li>
+          </Li>
         </Collapsible>
         {getIcon("star")}
         <Collapsible trigger="Icons">
-          {getIcon("star")}
-          <li>
+          <Li>
+            {getIcon("star")}
             <a href="/fontawesome">Font Awesome</a>
-          </li>
-          {getIcon("star")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("star")}
             <a href="/simplelineicons">Simple Line Icons</a>
-          </li>
+          </Li>
         </Collapsible>
         {getIcon("pie-chart")}
         <Collapsible trigger="Charts">
-          {getIcon("pie-chart")}
-          <li>
+          <Li>
+            {getIcon("pie-chart")}
             <a href="/barchart">Bar Chart</a>
-          </li>
-          {getIcon("pie-chart")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("pie-chart")}
             <a href="/basicchart">Basic Chart</a>
-          </li>
-          {getIcon("pie-chart")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("pie-chart")}
             <a href="/horizontalchart">Horizontal Chart</a>
-          </li>
-          {getIcon("pie-chart")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("pie-chart")}
             <a href="/linechart">Line Chart</a>
-          </li>
-          {getIcon("pie-chart")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("pie-chart")}
             <a href="/piechart">Pie Chart</a>
-          </li>
-          {getIcon("pie-chart")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("pie-chart")}
             <a href="/simplelinechart">Simple Line Chart</a>
-          </li>
-          {getIcon("pie-chart")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("pie-chart")}
             <a href="/socialmediachart">Social Media Chart</a>
-          </li>
+          </Li>
         </Collapsible>
         <Segment title="Extras" font={0.75} />
         {getIcon("star")}
         <Collapsible trigger="Pages">
-          {getIcon("star")}
-          <li>
+          <Li>
+            {getIcon("star")}
             <a href="/login">Login</a>
-          </li>
-          {getIcon("star")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("star")}
             <a href="/basicchart">Basic Chart</a>
-          </li>
-          {getIcon("star")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("star")}
             <a href="/register">Register</a>
-          </li>
-          {getIcon("star")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("star")}
             <a href="/error404">Error 404</a>
-          </li>
-          {getIcon("star")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("star")}
             <a href="/error500">Error 500</a>
-          </li>
+          </Li>
         </Collapsible>
         {getIcon("window-close")}
         <Collapsible trigger="UI Kits">
-          {getIcon("window-close")}
-          <li>
+          <Li>
+            {getIcon("window-close")}
             <a href="/invoicing">Invoicing</a>
-          </li>
-          {getIcon("window-close")}
-          <li>
+          </Li>
+          <Li>
+            {getIcon("window-close")}
             <a href="/email">Email</a>
-          </li>
+          </Li>
         </Collapsible>
-        {getIcon("calculator")}
         <li>
+          {getIcon("calculator")}
           <a href="/widgets">Widgets</a>
         </li>
       </Navigation>
@@ -181,7 +181,6 @@ class SideNavigation extends Component {
 
 let navColorScheme = {
   color: "#9faecb",
-  float: "left",
   marginLeft: ".25em",
   width: "20px",
   height: "20px",

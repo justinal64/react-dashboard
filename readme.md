@@ -8,13 +8,17 @@
 ## How to run
 
 <!-- From the root directory of the project run the following command to install the project dependencies -->
+
 ```
+
 npm install
+
 ```
 Next type the following:
 ```
 npm run start
 ```
+
 <!-- Then navigate to [http://localhost:8080](http://localhost:8080) in your browser to view the output. -->
 
 ## Built With
