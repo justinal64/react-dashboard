@@ -21,6 +21,8 @@ npm run start
 
 * [React](https://facebook.github.io/react/) - Web Framework
 * [React-Collapsible](https://github.com/glennflanagan/react-collapsible) - React Collapsible
+* [React-Fontawesome](https://github.com/danawoodman/react-fontawesome) - React Fontawesome
+* [Styled Components](https://www.styled-components.com/) - Styled Components
 
 ## Contributors
 
