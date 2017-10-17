@@ -33,28 +33,26 @@ class BarChart extends React.Component {
   }
   render() {
     return (
-      <div className="bar_chart">
-        <Bar
-          height={this.props.height}
-          options={{
-            scales: {
-              xAxes: [
-                {
-                  display: this.props.xAxes
-                }
-              ],
-              yAxes: [
-                {
-                  display: this.props.yAxes
-                }
-              ]
-            },
-            legend: false,
-            maintainAspectRatio: false
-          }}
-          data={this.state.chartData}
-        />
-      </div>
+      <Bar
+        height={this.props.height}
+        options={{
+          scales: {
+            xAxes: [
+              {
+                display: this.props.xAxes
+              }
+            ],
+            yAxes: [
+              {
+                display: this.props.yAxes
+              }
+            ]
+          },
+          legend: false,
+          maintainAspectRatio: this.props.aspectratio
+        }}
+        data={this.state.chartData}
+      />
     );
   }
 }

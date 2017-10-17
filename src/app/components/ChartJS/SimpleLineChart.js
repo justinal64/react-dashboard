@@ -35,28 +35,26 @@ class SimpleLineChart extends React.Component {
   }
   render() {
     return (
-      <div className="simple_chart">
-        <Line
-          height={100}
-          options={{
-            scales: {
-              xAxes: [
-                {
-                  display: false
-                }
-              ],
-              yAxes: [
-                {
-                  display: false
-                }
-              ]
-            },
-            legend: false,
-            maintainAspectRatio: false
-          }}
-          data={this.state.chartData}
-        />
-      </div>
+      <Line
+        height={100}
+        options={{
+          scales: {
+            xAxes: [
+              {
+                display: false
+              }
+            ],
+            yAxes: [
+              {
+                display: false
+              }
+            ]
+          },
+          legend: false,
+          maintainAspectRatio: this.props.aspectratio
+        }}
+        data={this.state.chartData}
+      />
     );
   }
 }

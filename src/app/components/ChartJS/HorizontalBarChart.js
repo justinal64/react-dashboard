@@ -35,28 +35,26 @@ class HorizontalBarChart extends React.Component {
   }
   render() {
     return (
-      <div className="horizontal_chart">
-        <HorizontalBar
-          height={100}
-          options={{
-            scales: {
-              xAxes: [
-                {
-                  display: false
-                }
-              ],
-              yAxes: [
-                {
-                  display: false
-                }
-              ]
-            },
-            legend: false,
-            maintainAspectRatio: false
-          }}
-          data={this.state.chartData}
-        />
-      </div>
+      <HorizontalBar
+        height={100}
+        options={{
+          scales: {
+            xAxes: [
+              {
+                display: false
+              }
+            ],
+            yAxes: [
+              {
+                display: false
+              }
+            ]
+          },
+          legend: false,
+          maintainAspectRatio: this.props.aspectratio
+        }}
+        data={this.state.chartData}
+      />
     );
   }
 }

@@ -28,16 +28,14 @@ class LineChart extends React.Component {
   }
   render() {
     return (
-      <div className="line_chart">
-        <Line
-          height={this.props.height}
-          options={{
-            legend: false,
-            maintainAspectRatio: false
-          }}
-          data={this.state.chartData}
-        />
-      </div>
+      <Line
+        height={this.props.height}
+        options={{
+          legend: false,
+          maintainAspectRatio: this.props.aspectratio
+        }}
+        data={this.state.chartData}
+      />
     );
   }
 }

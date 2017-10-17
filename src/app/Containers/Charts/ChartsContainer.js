@@ -6,7 +6,6 @@ import PieChart from "../../components/ChartJS/PieChart";
 import SimpleLineChart from "../../components/ChartJS/SimpleLineChart";
 import HorizontalBarChart from "../../components/ChartJS/HorizontalBarChart";
 import BasicChart from "../../components/ChartJS/BasicChart";
-import ChartContainer from "../../components/ChartContainer/ChartContainer";
 import GraphStyling from "../../components/GraphStyling/GraphStyling";
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
@@ -43,7 +42,9 @@ class TestContainer extends Component {
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Line Chart" />
                     </Col>
-                    <ChartContainer chart={<LineChart height={300} />} />
+                    <div className="simple_chart">
+                      <LineChart height={300} aspectratio={false} />
+                    </div>
                   </div>
                 </Col>
                 <Col xs={12} sm={12} md={6} lg={6} className="col">
@@ -51,11 +52,14 @@ class TestContainer extends Component {
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Bar Chart" />
                     </Col>
-                    <ChartContainer
-                      chart={
-                        <BarChart height={300} xAxes={true} yAxes={true} />
-                      }
-                    />
+                    <div className="simple_chart">
+                      <BarChart
+                        height={300}
+                        aspectratio={false}
+                        xAxes={true}
+                        yAxes={true}
+                      />
+                    </div>
                   </div>
                 </Col>
               </Row>
@@ -65,7 +69,9 @@ class TestContainer extends Component {
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Pie Chart" />
                     </Col>
-                    <ChartContainer chart={<PieChart height={300} />} />
+                    <div className="simple_chart">
+                      <PieChart height={300} aspectratio={false} />
+                    </div>
                   </div>
                 </Col>
                 <Col xs={12} sm={12} md={6} lg={6} className="col">
@@ -73,7 +79,9 @@ class TestContainer extends Component {
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Line Chart" />
                     </Col>
-                    <ChartContainer chart={<LineChart />} />
+                    <div className="simple_chart">
+                      <LineChart aspectratio={false} />
+                    </div>
                   </div>
                 </Col>
               </Row>
@@ -83,9 +91,9 @@ class TestContainer extends Component {
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Horizontal Bar Chart" />
                     </Col>
-                    <ChartContainer
-                      chart={<HorizontalBarChart height={300} />}
-                    />
+                    <div className="simple_chart">
+                      <HorizontalBarChart height={300} aspectratio={false} />
+                    </div>
                   </div>
                 </Col>
                 <Col xs={12} sm={12} md={6} lg={6} className="col">
@@ -93,7 +101,9 @@ class TestContainer extends Component {
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Simple Line Chart" />
                     </Col>
-                    <ChartContainer chart={<SimpleLineChart height={300} />} />
+                    <div className="simple_chart">
+                      <SimpleLineChart height={300} aspectratio={false} />
+                    </div>
                   </div>
                 </Col>
               </Row>

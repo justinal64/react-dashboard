@@ -3,7 +3,7 @@ import UserContainer from "./components/UserContainer.js";
 import { Switch, Route } from "react-router-dom";
 import Login from "../screens/Login.js";
 import Charts from "../screens/Charts/Charts.js";
-// import Dashboard from "../screens/Dashboard.js";
+import Dashboard from "../screens/Dashboard.js";
 import NotFound from "../screens/NotFound.js";
 // import Forms from "../screens/Forms.js";
 import Test from "../screens/Test.js";
@@ -20,8 +20,8 @@ const App = () => {
     <main>
       <Switch>
         <Route exact path="/" component={Login} />
-        {/* <Route path="/dashboard" component={Dashboard} />
-        <Route path="/forms" component={Forms} /> */}
+        <Route path="/dashboard" component={Dashboard} />
+        {/* <Route path="/forms" component={Forms} /> */}
         <Route path="/test" component={Test} />
         <Route path="/barchart" component={BarChart} />
         <Route path="/charts" component={Charts} />
