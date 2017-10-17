@@ -4,7 +4,9 @@ import { GraphHeader as StyledGraphHeader, GraphWrapper } from "./Styles";
 const GraphHeader = props => {
   return (
     <GraphWrapper alignment={props.alignment}>
-      <StyledGraphHeader font={props.font}>{props.title}</StyledGraphHeader>
+      <StyledGraphHeader font={props.font} color={props.color}>
+        {props.title}
+      </StyledGraphHeader>
     </GraphWrapper>
   );
 };

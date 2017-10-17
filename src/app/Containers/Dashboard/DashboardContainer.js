@@ -46,36 +46,40 @@ class DashboardContainer extends Component {
               </div>
               <Row>
                 <Col xs={12} sm={6} md={6} lg={3} className="blue_bg grid">
-                  <div className="left-align">
-                    <span className="header">3,194</span>
-                    <span className="subheader">New Users</span>
+                  <div>
+                    <GraphHeader font={1.5} color="white" title="3,194" />
+                    <GraphHeader font={1} color="white" title="New Users" />
                   </div>
                   <div className="chart-padding">
                     <SimpleLineChart />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={3} className="yellow_bg grid">
-                  <div className="left-align">
-                    <span className="header">350</span>
-                    <span className="subheader">Registered Users</span>
+                  <div>
+                    <GraphHeader font={1.5} color="white" title="350" />
+                    <GraphHeader
+                      font={1}
+                      color="white"
+                      title="Registered Users"
+                    />
                   </div>
                   <div className="chart-padding">
                     <BarChart height={100} />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={3} className="lightblue_bg grid">
-                  <div className="left-align">
-                    <span className="header">3,250</span>
-                    <span className="subheader">Page Views</span>
+                  <div>
+                    <GraphHeader font={1.5} color="white" title="3,250" />
+                    <GraphHeader font={1} color="white" title="Page Views" />
                   </div>
                   <div className="chart-padding">
                     <HorizontalBarChart />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={3} className="red_bg grid">
-                  <div className="left-align">
-                    <span className="header">2,194</span>
-                    <span className="subheader">New Users</span>
+                  <div>
+                    <GraphHeader font={1.5} color="white" title="2,194" />
+                    <GraphHeader font={1} color="white" title="Current Users" />
                   </div>
                   <div className="chart-padding">
                     <BarChart height={100} />
@@ -85,8 +89,8 @@ class DashboardContainer extends Component {
               <Row>
                 <Col xs={12} sm={12} md={12} lg={12} className="white_bg grid">
                   <div className="left-align">
-                    <span className="lb_header">Traffic</span>
-                    <span className="lb_subheader">January - June</span>
+                    <GraphHeader font={1.5} title="Traffic" />
+                    <GraphHeader font={1} title="January - June" />
                   </div>
                   <div>
                     <LineChart />

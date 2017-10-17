@@ -11,3 +11,5 @@ export const getPaddingBottom = props =>
 
 export const getBackgroundColor = props =>
   props.backgroundColor ? `background-color: ${props.backgroundColor};` : "";
+
+export const getColor = props => (props.color ? `color: ${props.color};` : "");
