@@ -267,7 +267,9 @@ class DashboardContainer extends Component {
                 </Col>
               </Row>
               <Row className="grid">
-                <Table />
+                <div className="grey_bg">
+                  <Table />
+                </div>
               </Row>
             </Grid>
           </div>
