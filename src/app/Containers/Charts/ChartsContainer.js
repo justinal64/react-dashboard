@@ -6,7 +6,6 @@ import PieChart from "../../components/ChartJS/PieChart";
 import SimpleLineChart from "../../components/ChartJS/SimpleLineChart";
 import HorizontalBarChart from "../../components/ChartJS/HorizontalBarChart";
 import BasicChart from "../../components/ChartJS/BasicChart";
-import ChartContainer from "../../components/ChartContainer/ChartContainer";
 import GraphStyling from "../../components/GraphStyling/GraphStyling";
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";

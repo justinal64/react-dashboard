@@ -52,10 +52,7 @@ class DashboardContainer extends Component {
                     <span className="subheader">New Users</span>
                   </div>
                   <div className="chart-padding">
-                    {/* <SimpleLineChart /> */}
-                    <ChartContainer
-                      chart={<SimpleLineChart aspectratio={true} />}
-                    />
+                    <SimpleLineChart />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={3} className="yellow_bg grid">
@@ -64,8 +61,7 @@ class DashboardContainer extends Component {
                     <span className="subheader">Registered Users</span>
                   </div>
                   <div className="chart-padding">
-                    {/* <BarChart /> */}
-                    <ChartContainer chart={<BarChart aspectratio={true} />} />
+                    <BarChart height={100} />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={3} className="lightblue_bg grid">
@@ -74,10 +70,7 @@ class DashboardContainer extends Component {
                     <span className="subheader">Page Views</span>
                   </div>
                   <div className="chart-padding">
-                    {/* <HorizontalBarChart /> */}
-                    <ChartContainer
-                      chart={<HorizontalBarChart aspectratio={true} />}
-                    />
+                    <HorizontalBarChart />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={3} className="red_bg grid">
@@ -86,7 +79,7 @@ class DashboardContainer extends Component {
                     <span className="subheader">New Users</span>
                   </div>
                   <div className="chart-padding">
-                    <BarChart />
+                    <BarChart height={100} />
                   </div>
                 </Col>
               </Row>
