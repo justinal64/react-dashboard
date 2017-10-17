@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Table as StyledTable, TBody } from "./Styles";
+import { getIcon } from "../Helper/Helper";
 
 class Table extends React.Component {
   constructor(props) {
@@ -27,10 +28,10 @@ class Table extends React.Component {
                 className="src"
               />
             </th>
-            <th>Justinal64</th>
+            <th>Elizabeth</th>
             <th>USA</th>
             <th>ProgressBar</th>
-            <th>Visa</th>
+            <th>{getIcon("cc-visa fa-3x", navColorScheme)}</th>
             <th>5 minutes ago</th>
           </tr>
           <tr>
@@ -41,10 +42,10 @@ class Table extends React.Component {
                 className="src"
               />
             </th>
-            <th>Justinal64</th>
+            <th>Mozzy</th>
             <th>USA</th>
             <th>ProgressBar</th>
-            <th>Visa</th>
+            <th>{getIcon("cc-mastercard fa-3x", navColorScheme)}</th>
             <th>5 minutes ago</th>
           </tr>
           <tr>
@@ -55,10 +56,10 @@ class Table extends React.Component {
                 className="src"
               />
             </th>
-            <th>Justinal64</th>
+            <th>Peter</th>
             <th>USA</th>
             <th>ProgressBar</th>
-            <th>Visa</th>
+            <th>{getIcon("cc-stripe fa-3x", navColorScheme)}</th>
             <th>5 minutes ago</th>
           </tr>
           <tr>
@@ -69,15 +70,18 @@ class Table extends React.Component {
                 className="src"
               />
             </th>
-            <th>Justinal64</th>
+            <th>Neil</th>
             <th>USA</th>
             <th>ProgressBar</th>
-            <th>Visa</th>
+            <th>{getIcon("cc-paypal fa-3x", navColorScheme)}</th>
             <th>5 minutes ago</th>
           </tr>
         </TBody>
       </table>
     );
+    let navColorScheme = {
+      color: "grey"
+    };
   }
 }
 
