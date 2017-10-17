@@ -15,6 +15,7 @@ import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import SocialMediaChart from "../../components/ChartJS/SocialMediaChart";
 import ChartContainer from "../../components/ChartContainer/ChartContainer";
 import { Row, Col, Grid } from "react-flexbox-grid";
+import Table from "../../components/Table/Table";
 
 class DashboardContainer extends Component {
   componentWillMount() {
@@ -264,6 +265,9 @@ class DashboardContainer extends Component {
                     </div>
                   </div>
                 </Col>
+              </Row>
+              <Row className="grid">
+                <Table />
               </Row>
             </Grid>
           </div>
