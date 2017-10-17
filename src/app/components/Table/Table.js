@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import {
-  ProgressBarHeader,
-  ProgressBarSubheader,
-  ProgressBarStyled
-} from "./Styles";
+import { Table as StyledTable, TBody } from "./Styles";
 
 class Table extends React.Component {
   constructor(props) {
@@ -22,9 +18,15 @@ class Table extends React.Component {
             <th>Activity</th>
           </tr>
         </thead>
-        <tbody>
+        <TBody>
           <tr>
-            <th>Cool icon</th>
+            <th>
+              <img
+                src="https://randomuser.me/api/portraits/thumb/men/83.jpg"
+                alt=""
+                className="src"
+              />
+            </th>
             <th>Justinal64</th>
             <th>USA</th>
             <th>ProgressBar</th>
@@ -32,7 +34,13 @@ class Table extends React.Component {
             <th>5 minutes ago</th>
           </tr>
           <tr>
-            <th>Cool icon</th>
+            <th>
+              <img
+                src="https://randomuser.me/api/portraits/thumb/men/83.jpg"
+                alt=""
+                className="src"
+              />
+            </th>
             <th>Justinal64</th>
             <th>USA</th>
             <th>ProgressBar</th>
@@ -40,7 +48,13 @@ class Table extends React.Component {
             <th>5 minutes ago</th>
           </tr>
           <tr>
-            <th>Cool icon</th>
+            <th>
+              <img
+                src="https://randomuser.me/api/portraits/thumb/men/83.jpg"
+                alt=""
+                className="src"
+              />
+            </th>
             <th>Justinal64</th>
             <th>USA</th>
             <th>ProgressBar</th>
@@ -48,14 +62,20 @@ class Table extends React.Component {
             <th>5 minutes ago</th>
           </tr>
           <tr>
-            <th>Cool icon</th>
+            <th>
+              <img
+                src="https://randomuser.me/api/portraits/thumb/men/83.jpg"
+                alt=""
+                className="src"
+              />
+            </th>
             <th>Justinal64</th>
             <th>USA</th>
             <th>ProgressBar</th>
             <th>Visa</th>
             <th>5 minutes ago</th>
           </tr>
-        </tbody>
+        </TBody>
       </table>
     );
   }
