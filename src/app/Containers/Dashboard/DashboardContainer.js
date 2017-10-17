@@ -14,7 +14,6 @@ import PieChart from "../../components/ChartJS/PieChart";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import SocialMediaChart from "../../components/ChartJS/SocialMediaChart";
 import ChartContainer from "../../components/ChartContainer/ChartContainer";
-
 import { Row, Col, Grid } from "react-flexbox-grid";
 
 class DashboardContainer extends Component {
@@ -94,7 +93,7 @@ class DashboardContainer extends Component {
                   </div>
                 </Col>
               </Row>
-              <Row className="between-lg grid">
+              <Row className="between-lg grid progress">
                 <Col xs={12} sm={6} md={6} lg={2}>
                   <ProgressBar
                     header="Visits"
@@ -136,7 +135,7 @@ class DashboardContainer extends Component {
                   />
                 </Col>
               </Row>
-              <Row>
+              <Row className="grid">
                 <Col xs={12} sm={6} md={6} lg={3}>
                   <div className="white_bg">
                     <div className="facebook_bg">
@@ -151,10 +150,10 @@ class DashboardContainer extends Component {
                           md={6}
                           lg={6}
                         >
-                          <span className="sm_header">45K</span>
+                          <GraphHeader font={1.5} title="45K" />
                         </Col>
                         <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
-                          <span className="sm_subheader">61K</span>
+                          <GraphHeader font={1.5} title="61K" />
                         </Col>
                       </Row>
                     </div>
@@ -174,10 +173,10 @@ class DashboardContainer extends Component {
                           md={6}
                           lg={6}
                         >
-                          <span className="sm_header">21K</span>
+                          <GraphHeader font={1.5} title="21K" />
                         </Col>
                         <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
-                          <span className="sm_subheader">16K</span>
+                          <GraphHeader font={1.5} title="416K" />
                         </Col>
                       </Row>
                     </div>
@@ -197,10 +196,10 @@ class DashboardContainer extends Component {
                           md={6}
                           lg={6}
                         >
-                          <span className="sm_header">32K</span>
+                          <GraphHeader font={1.5} title="32K" />
                         </Col>
                         <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
-                          <span className="sm_subheader">12K</span>
+                          <GraphHeader font={1.5} title="12K" />
                         </Col>
                       </Row>
                     </div>
@@ -220,10 +219,10 @@ class DashboardContainer extends Component {
                           md={6}
                           lg={6}
                         >
-                          <span className="sm_header">-1K</span>
+                          <GraphHeader font={1.5} title="-1K" />
                         </Col>
                         <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
-                          <span className="sm_subheader">-2K</span>
+                          <GraphHeader font={1.5} title="-2K" />
                         </Col>
                       </Row>
                     </div>
