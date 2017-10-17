@@ -37,7 +37,7 @@ class BasicChart extends React.Component {
         <Basic
           data={this.state.chartData}
           options={{
-            maintainAspectRation: false
+            maintainAspectRation: this.props.aspectratio
           }}
         />
       </div>

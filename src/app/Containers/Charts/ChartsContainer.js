@@ -43,7 +43,7 @@ class TestContainer extends Component {
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Line Chart" />
                     </Col>
-                    <ChartContainer chart={<LineChart height={300} />} />
+                    <LineChart height={300} aspectratio={false} />
                   </div>
                 </Col>
                 <Col xs={12} sm={12} md={6} lg={6} className="col">
@@ -51,10 +51,11 @@ class TestContainer extends Component {
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Bar Chart" />
                     </Col>
-                    <ChartContainer
-                      chart={
-                        <BarChart height={300} xAxes={true} yAxes={true} />
-                      }
+                    <BarChart
+                      height={300}
+                      aspectratio={false}
+                      xAxes={true}
+                      yAxes={true}
                     />
                   </div>
                 </Col>
@@ -65,7 +66,7 @@ class TestContainer extends Component {
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Pie Chart" />
                     </Col>
-                    <ChartContainer chart={<PieChart height={300} />} />
+                    <PieChart height={300} aspectratio={false} />
                   </div>
                 </Col>
                 <Col xs={12} sm={12} md={6} lg={6} className="col">
@@ -73,7 +74,7 @@ class TestContainer extends Component {
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Line Chart" />
                     </Col>
-                    <ChartContainer chart={<LineChart />} />
+                    <LineChart aspectratio={false} />
                   </div>
                 </Col>
               </Row>
@@ -83,9 +84,7 @@ class TestContainer extends Component {
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Horizontal Bar Chart" />
                     </Col>
-                    <ChartContainer
-                      chart={<HorizontalBarChart height={300} />}
-                    />
+                    <HorizontalBarChart height={300} aspectratio={false} />
                   </div>
                 </Col>
                 <Col xs={12} sm={12} md={6} lg={6} className="col">
@@ -93,7 +92,7 @@ class TestContainer extends Component {
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <GraphStyling title="Simple Line Chart" />
                     </Col>
-                    <ChartContainer chart={<SimpleLineChart height={300} />} />
+                    <SimpleLineChart height={300} aspectratio={false} />
                   </div>
                 </Col>
               </Row>

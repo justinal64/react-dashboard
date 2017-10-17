@@ -38,7 +38,7 @@ class PieChart extends React.Component {
           height={this.props.height}
           data={this.state.chartData}
           options={{
-            maintainAspectRatio: false
+            maintainAspectRatio: this.props.aspectratio
           }}
         />
       </div>

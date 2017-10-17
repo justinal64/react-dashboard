@@ -33,7 +33,7 @@ class LineChart extends React.Component {
           height={this.props.height}
           options={{
             legend: false,
-            maintainAspectRatio: false
+            maintainAspectRatio: this.props.aspectratio
           }}
           data={this.state.chartData}
         />

@@ -45,7 +45,7 @@ class SocialMediaChart extends React.Component {
               ]
             },
             legend: false,
-            maintainAspectRatio: false
+            maintainAspectRatio: this.props.aspectratio
           }}
           data={this.state.chartData}
         />
