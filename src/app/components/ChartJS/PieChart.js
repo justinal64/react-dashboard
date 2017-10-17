@@ -33,15 +33,13 @@ class PieChart extends React.Component {
   }
   render() {
     return (
-      <div className="pie_chart">
-        <Pie
-          height={this.props.height}
-          data={this.state.chartData}
-          options={{
-            maintainAspectRatio: this.props.aspectratio
-          }}
-        />
-      </div>
+      <Pie
+        height={this.props.height}
+        data={this.state.chartData}
+        options={{
+          maintainAspectRatio: this.props.aspectratio
+        }}
+      />
     );
   }
 }

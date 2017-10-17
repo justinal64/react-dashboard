@@ -33,14 +33,12 @@ class BasicChart extends React.Component {
   }
   render() {
     return (
-      <div className="chart">
-        <Basic
-          data={this.state.chartData}
-          options={{
-            maintainAspectRation: this.props.aspectratio
-          }}
-        />
-      </div>
+      <Basic
+        data={this.state.chartData}
+        options={{
+          maintainAspectRation: this.props.aspectratio
+        }}
+      />
     );
   }
 }

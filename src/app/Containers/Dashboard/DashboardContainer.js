@@ -19,11 +19,11 @@ import { Row, Col, Grid } from "react-flexbox-grid";
 
 class DashboardContainer extends Component {
   componentWillMount() {
-    this.props.fetchData();
+    // this.props.fetchData();
   }
 
   componentDidMount() {
-    setInterval(this.props.fetchData.bind(this), 100000); // 300000 = 5 minutes
+    // setInterval(this.props.fetchData.bind(this), 100000); // 300000 = 5 minutes
   }
   render() {
     return (
@@ -39,7 +39,7 @@ class DashboardContainer extends Component {
         <div id="right" className="column">
           <div className="top-right">Top Right Header</div>
           <div className="bottom">
-            <Grid fluid className="lightgrey_bg">
+            <Grid fluid>
               <div>
                 <span>
                   <a href="dashboard">Home</a> / Dashboard
