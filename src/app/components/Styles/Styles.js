@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const getAlignment = props =>
-  props.alignment ? `align-items: ${props.alignment};` : "";
+  props.alignment ? `text-align: ${props.alignment};` : "";
 
 export const getFontSize = props =>
   props.font ? `font-size: ${props.font}em;` : "";

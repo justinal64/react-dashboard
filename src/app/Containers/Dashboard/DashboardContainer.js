@@ -154,10 +154,18 @@ class DashboardContainer extends Component {
                           md={6}
                           lg={6}
                         >
-                          <GraphHeader font={1.5} title="45K" />
+                          <GraphHeader
+                            font={1.5}
+                            title="45K"
+                            alignment="center"
+                          />
                         </Col>
                         <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
-                          <GraphHeader font={1.5} title="61K" />
+                          <GraphHeader
+                            font={1.5}
+                            title="61K"
+                            alignment="center"
+                          />
                         </Col>
                       </Row>
                     </div>
@@ -177,10 +185,18 @@ class DashboardContainer extends Component {
                           md={6}
                           lg={6}
                         >
-                          <GraphHeader font={1.5} title="21K" />
+                          <GraphHeader
+                            font={1.5}
+                            title="21K"
+                            alignment="center"
+                          />
                         </Col>
                         <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
-                          <GraphHeader font={1.5} title="416K" />
+                          <GraphHeader
+                            font={1.5}
+                            title="41K"
+                            alignment="center"
+                          />
                         </Col>
                       </Row>
                     </div>
@@ -200,10 +216,18 @@ class DashboardContainer extends Component {
                           md={6}
                           lg={6}
                         >
-                          <GraphHeader font={1.5} title="32K" />
+                          <GraphHeader
+                            font={1.5}
+                            title="32K"
+                            alignment="center"
+                          />
                         </Col>
                         <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
-                          <GraphHeader font={1.5} title="12K" />
+                          <GraphHeader
+                            font={1.5}
+                            title="12K"
+                            alignment="center"
+                          />
                         </Col>
                       </Row>
                     </div>
@@ -223,10 +247,18 @@ class DashboardContainer extends Component {
                           md={6}
                           lg={6}
                         >
-                          <GraphHeader font={1.5} title="-1K" />
+                          <GraphHeader
+                            font={1.5}
+                            title="-1K"
+                            alignment="center"
+                          />
                         </Col>
                         <Col className="center-lg" xs={6} sm={6} md={6} lg={6}>
-                          <GraphHeader font={1.5} title="-2K" />
+                          <GraphHeader
+                            font={1.5}
+                            title="-2K"
+                            alignment="center"
+                          />
                         </Col>
                       </Row>
                     </div>
