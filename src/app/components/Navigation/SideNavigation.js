@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import FontAwesome from "react-fontawesome";
 
 import Collapsible from "react-collapsible";
@@ -31,8 +30,8 @@ class SideNavigation extends Component {
     return (
       <Navigation>
         <Segment title="Dashboard" font={0.75} />
-        {getIcon("puzzle-piece")}
         <li>
+          {getIcon("puzzle-piece")}
           <a href="/dashboard">Dashboard</a>
         </li>
         <Segment title="UI Elements" font={0.75} />
@@ -40,7 +39,9 @@ class SideNavigation extends Component {
         <Collapsible trigger="Components">
           <Li>
             {getIcon("puzzle-piece")}
-            <a href="/buttons">Buttons</a>
+            <a href="/buttons" className="test">
+              Buttons
+            </a>
           </Li>
           <Li>
             {getIcon("puzzle-piece")}
@@ -181,15 +182,10 @@ class SideNavigation extends Component {
 
 let navColorScheme = {
   color: "#9faecb",
-  marginLeft: ".25em",
+  marginLeft: ".50em",
   width: "20px",
   height: "20px",
   paddingRight: ".5em"
 };
-
-// connect react with redux
-// @params mapStateToProps (necessity)
-// @params mapDispatchToProps (optional)
-// function mapStateToProps(state) {}
 
 export default SideNavigation;

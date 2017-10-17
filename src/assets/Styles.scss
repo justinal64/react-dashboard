@@ -10,7 +10,7 @@ main,
 
 #body {
     height: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
     margin: 0px;
     /*removes default style*/
@@ -99,6 +99,7 @@ li {
     color: #9faecb;
     transition: transform 300ms;
     float: right;
+    margin-right: 0.5em;
     transform: rotate(90deg);
 }
 
@@ -179,11 +180,15 @@ a {
     padding-bottom: 1em;
 }
 
-@media screen and (max-width: 600px) {
+
+/* 675 */
+
+@media screen and (max-width: 675px) {
     #body {
-        display: table-cell;
+        display: inline-grid;
+        width: 100%;
     }
     .column {
-        width: 18%;
+        width: 100%;
     }
 }
