@@ -117,7 +117,7 @@ class DashboardContainer extends Component {
                 <Col xs={12} sm={6} md={6} lg={2}>
                   <ProgressBar
                     header="Page Views"
-                    subheader="78,706 Views (60%)"
+                    subheader="78,706 Views(60%)"
                     value={60}
                     backgroundColor="yellow"
                   />
