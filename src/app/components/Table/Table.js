@@ -23,6 +23,7 @@ class Table extends React.Component {
         <TBody>
           <tr>
             <th>
+              {/* Make a rounded Image Component */}
               <img
                 src="https://randomuser.me/api/portraits/thumb/men/83.jpg"
                 alt="Elizabeth Burk Image"
@@ -39,7 +40,10 @@ class Table extends React.Component {
             </th>
             <th>USA</th>
             <th>
-              <span>50%</span>
+              <div className="table_usage">
+                <span>50%</span>
+                <span>Jun 11, 2015 - Jul 10, 2015</span>
+              </div>
               <ProgressBar value={50} backgroundColor="green" />
             </th>
             <th>{getIcon("cc-visa fa-3x", navColorScheme)}</th>
@@ -63,7 +67,10 @@ class Table extends React.Component {
             </th>
             <th>USA</th>
             <th>
-              <span>10%</span>
+              <div className="table_usage">
+                <span>10%</span>
+                <span>Jun 11, 2015 - Jul 10, 2015</span>
+              </div>
               <ProgressBar value={10} backgroundColor="blue" />
             </th>
             <th>{getIcon("cc-mastercard fa-3x", navColorScheme)}</th>
@@ -87,7 +94,10 @@ class Table extends React.Component {
             </th>
             <th>USA</th>
             <th>
-              <span>74%</span>
+              <div className="table_usage">
+                <span>74%</span>
+                <span>Jun 11, 2015 - Jul 10, 2015</span>
+              </div>
               <ProgressBar value={74} backgroundColor="yellow" />
             </th>
             <th>{getIcon("cc-stripe fa-3x", navColorScheme)}</th>
@@ -111,7 +121,10 @@ class Table extends React.Component {
             </th>
             <th>USA</th>
             <th>
-              <span>98%</span>
+              <div className="table_usage">
+                <span>98%</span>
+                <span>Jun 11, 2015 - Jul 10, 2015</span>
+              </div>
               <ProgressBar value={98} backgroundColor="red" />
             </th>
             <th>{getIcon("cc-paypal fa-3x", navColorScheme)}</th>

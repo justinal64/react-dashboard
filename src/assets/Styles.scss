@@ -181,6 +181,16 @@ a {
 }
 
 
+/* Target the 2nd span inside the div
+ with className table_usage */
+
+.table_usage span:nth-of-type(2) {
+    float: right;
+    font-size: 0.75em;
+    color: lightgrey;
+}
+
+
 /* 675 */
 
 @media screen and (max-width: 675px) {

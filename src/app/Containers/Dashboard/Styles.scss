@@ -130,6 +130,14 @@ table tr td:last-child {
     border-right: 0;
 }
 
+table tr {
+    border-bottom: 1px solid #c4c4c4;
+}
+
+table tr img {
+    border-radius: 50%;
+}
+
 table tr th:nth-child(even) {
     text-align: left;
 }
