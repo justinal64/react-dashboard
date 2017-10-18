@@ -36,13 +36,15 @@ class ButtonsContainer extends Component {
               <Row>
                 <Col xs={12} sm={6} md={6} lg={6} className="grid">
                   <Button
+                    hoverBGC="#1b8eb7"
+                    hoverBC="#1985ac"
                     icon="user"
                     title="Primary"
                     backgroundColor="#20a8d8"
+                    borderColor="#20a8d8"
                     color="white"
                     font={1}
                     lineHeight={2}
-                    borderColor="#20a8d8"
                   />
                   <Button
                     title="Secondary"

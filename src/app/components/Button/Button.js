@@ -5,7 +5,9 @@ import {
   getColor,
   getFontSize,
   getLineHeight,
-  getBorderColor
+  getBorderColor,
+  getHoverBackgroundColor,
+  getHoverBorderColor
 } from "../Styles/Styles";
 
 import { getIcon } from "../Helper/Helper";
@@ -16,6 +18,10 @@ const StyledButton = styled.button`
   ${getFontSize};
   ${getLineHeight};
   ${getBorderColor};
+  :hover {
+    ${getHoverBackgroundColor};
+    ${getHoverBorderColor};
+  }
 `;
 
 const Button = props => {
@@ -27,12 +33,16 @@ const Button = props => {
     lineHeight,
     borderColor,
     title,
-    icon
+    icon,
+    hoverBGC,
+    hoverBC
   } = props;
 
   let needIcon = icon ? getIcon(icon, navColorScheme) : "";
   return (
     <StyledButton
+      hoverBGC={hoverBGC}
+      hoverBC="#1985ac"
       backgroundColor={backgroundColor}
       color={color}
       font={font}
