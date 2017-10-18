@@ -12,4 +12,16 @@ export const getPaddingBottom = props =>
 export const getBackgroundColor = props =>
   props.backgroundColor ? `background-color: ${props.backgroundColor};` : "";
 
+export const getHoverBackgroundColor = props =>
+  props.hoverBGC ? `background-color: ${props.hoverBGC};` : "";
+
 export const getColor = props => (props.color ? `color: ${props.color};` : "");
+
+export const getLineHeight = props =>
+  props.lineHeight ? `line-height: ${props.lineHeight}em;` : "";
+
+export const getBorderColor = props =>
+  props.borderColor ? `border-color: ${props.borderColor};` : "";
+
+export const getHoverBorderColor = props =>
+  props.hoverBC ? `border-color: ${props.hoverBC};` : "";
