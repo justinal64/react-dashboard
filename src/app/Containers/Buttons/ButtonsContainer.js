@@ -38,10 +38,10 @@ class ButtonsContainer extends Component {
                   <Button
                     hoverBGC="#1b8eb7"
                     hoverBC="#1985ac"
-                    icon="user"
-                    title="Primary"
                     backgroundColor="#20a8d8"
                     borderColor="#20a8d8"
+                    icon="user"
+                    title="Primary"
                     color="white"
                     font={1}
                     lineHeight={2}
