@@ -35,7 +35,47 @@ class ButtonsContainer extends Component {
               </div>
               <Row>
                 <Col xs={12} sm={6} md={6} lg={6} className="grid">
-                  <Button backgroundColor="pink" color="blue" />
+                  <Button
+                    icon="user"
+                    title="Primary"
+                    backgroundColor="#20a8d8"
+                    color="white"
+                    font={1}
+                    lineHeight={2}
+                    borderColor="#20a8d8"
+                  />
+                  <Button
+                    title="Secondary"
+                    backgroundColor="#c0cadd"
+                    color="white"
+                    font={1}
+                    lineHeight={2}
+                    borderColor="#c0cadd"
+                  />
+                  <Button
+                    title="Success"
+                    backgroundColor="#79c447"
+                    color="white"
+                    font={1}
+                    lineHeight={2}
+                    borderColor="#79c447"
+                  />
+                  <Button
+                    title="Warning"
+                    backgroundColor="#fabb3d"
+                    color="white"
+                    font={1}
+                    lineHeight={2}
+                    borderColor="#fabb3d"
+                  />
+                  <Button
+                    title="Danger"
+                    backgroundColor="#ff5454"
+                    color="white"
+                    font={1}
+                    lineHeight={2}
+                    borderColor="#ff5454"
+                  />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6} className="grid">
                   Col

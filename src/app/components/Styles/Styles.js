@@ -13,3 +13,9 @@ export const getBackgroundColor = props =>
   props.backgroundColor ? `background-color: ${props.backgroundColor};` : "";
 
 export const getColor = props => (props.color ? `color: ${props.color};` : "");
+
+export const getLineHeight = props =>
+  props.lineHeight ? `line-height: ${props.lineHeight}em;` : "";
+
+export const getBorderColor = props =>
+  props.borderColor ? `border-color: ${props.borderColor};` : "";
