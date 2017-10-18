@@ -13,7 +13,6 @@ import HorizontalBarChart from "../../components/ChartJS/HorizontalBarChart";
 import PieChart from "../../components/ChartJS/PieChart";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import SocialMediaChart from "../../components/ChartJS/SocialMediaChart";
-import ChartContainer from "../../components/ChartContainer/ChartContainer";
 import { Row, Col, Grid } from "react-flexbox-grid";
 import Table from "../../components/Table/Table";
 
