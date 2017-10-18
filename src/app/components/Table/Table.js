@@ -9,7 +9,7 @@ class Table extends React.Component {
   }
   render(props) {
     return (
-      <table>
+      <table className="hoverTable">
         <thead>
           <tr>
             <th>User Icon</th>

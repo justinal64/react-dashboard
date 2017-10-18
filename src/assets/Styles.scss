@@ -181,6 +181,13 @@ a {
 }
 
 
+/* Define the hover highlight color for the table row */
+
+.hoverTable tr:hover {
+    background-color: #f4f2f2;
+}
+
+
 /* Target the 2nd span inside the div
  with className table_usage */
 
@@ -189,9 +196,6 @@ a {
     font-size: 0.75em;
     color: lightgrey;
 }
-
-
-/* 675 */
 
 @media screen and (max-width: 675px) {
     #body {
