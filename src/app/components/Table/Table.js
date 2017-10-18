@@ -3,6 +3,7 @@ import { Table as StyledTable, TBody } from "./Styles";
 import { getIcon } from "../Helper/Helper";
 import GraphHeader from "../Typography/GraphHeader/GraphHeader";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
+
 class Table extends React.Component {
   constructor(props) {
     super(props);
@@ -12,7 +13,7 @@ class Table extends React.Component {
       <table className="hoverTable">
         <thead>
           <tr>
-            <th>User Icon</th>
+            <th>{getIcon("user-o", navColorScheme)}</th>
             <th>User</th>
             <th>Country</th>
             <th>Usage</th>

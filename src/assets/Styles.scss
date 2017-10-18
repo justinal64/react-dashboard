@@ -197,6 +197,10 @@ a {
     color: lightgrey;
 }
 
+.hoverTable thead tr {
+    line-height: 2em;
+}
+
 @media screen and (max-width: 675px) {
     #body {
         display: inline-grid;
