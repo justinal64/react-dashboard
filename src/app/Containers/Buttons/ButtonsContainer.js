@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import "./Styles.scss";
 import SideNavigation from "../../components/Navigation/SideNavigation";
-import Button from "../../components/Button/Button";
+import StyledButton from "../../components/Button/Button";
 
 import { Row, Col, Grid } from "react-flexbox-grid";
 
@@ -35,18 +35,13 @@ class ButtonsContainer extends Component {
               </div>
               <Row>
                 <Col xs={12} sm={6} md={6} lg={6} className="grid">
-                  <Button
-                    hoverBGC="#1b8eb7"
-                    hoverBC="#1985ac"
-                    backgroundColor="#20a8d8"
-                    borderColor="#20a8d8"
-                    icon="user"
-                    title="Primary"
-                    color="white"
-                    font={1}
-                    lineHeight={2}
-                  />
-                  <Button
+                  <StyledButton theme="primary" title="Primary" />
+                  <StyledButton theme="secondary" title="Secondary" />
+                  <StyledButton theme="success" title="Success" />
+                  <StyledButton theme="warning" title="Warning" />
+                  <StyledButton theme="danger" title="Danger" />
+
+                  {/* <Button
                     title="Secondary"
                     backgroundColor="#c0cadd"
                     color="white"
@@ -77,7 +72,7 @@ class ButtonsContainer extends Component {
                     font={1}
                     lineHeight={2}
                     borderColor="#ff5454"
-                  />
+                  /> */}
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6} className="grid">
                   Col
