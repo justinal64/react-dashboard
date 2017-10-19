@@ -31,16 +31,19 @@ const primary = `
 `;
 
 const secondary = `
+  color: #111;
   background-color: #c0cadd;
   border-color: #c0cadd;
 `;
 
 const success = `
+  color: #111;
   background-color: #79c447;
   border-color: #79c447;
 `;
 
 const warning = `
+  color: #111;
   background-color: #fabb3d;
   border-color: #fabb3d;
 `;
@@ -61,8 +64,6 @@ let themePicker = theme => {
 };
 
 const StyledButton = styled.button`
-  /* ${props => (props.primary ? primary : "background: pink;")}; */
-  color: #111;
   ${props => themePicker(props.theme)};
   display: inline-block;
   font-weight: 400;
@@ -77,34 +78,12 @@ const StyledButton = styled.button`
   transition: all 0.15s ease-in-out;
 `;
 
-const Button = props => {
+const ButtonTest = props => {
   // This is an example of Destructuring
-  const {
-    backgroundColor,
-    color,
-    font,
-    lineHeight,
-    borderColor,
-    title,
-    icon,
-    hoverBGC,
-    hoverBC,
-    theme
-  } = props;
+  const { title, icon, theme } = props;
 
   let needIcon = icon ? getIcon(icon, navColorScheme) : "";
   return (
-    // <StyledButton
-    //   hoverBGC={hoverBGC}
-    //   hoverBC="#1985ac"
-    //   backgroundColor={backgroundColor}
-    //   color={color}
-    //   font={font}
-    //   lineHeight={lineHeight}
-    //   borderColor={borderColor}
-    // >
-    //   {needIcon} {title}
-    // </StyledButton>
     <StyledButton theme={theme}>
       {needIcon}
       {title}
@@ -115,4 +94,4 @@ let navColorScheme = {
   color: "white"
 };
 
-export default Button;
+export default ButtonTest;
