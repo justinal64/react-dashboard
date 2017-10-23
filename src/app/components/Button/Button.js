@@ -70,8 +70,7 @@ let themePicker = theme => {
   else if (theme === "danger") return danger;
 };
 
-const StyledButton = styled.button`
-  /* ${props => (props.primary ? primary : "background: pink;")}; */
+const Button = styled.button`
   ${props => themePicker(props.theme)};
   display: inline-block;
   font-weight: 400;
@@ -80,49 +79,27 @@ const StyledButton = styled.button`
   vertical-align: middle;
   user-select: none;
   border: 1px solid transparent;
-  padding: .5rem .75rem;
-  font-size: .875rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
   line-height: 1.25;
-  transition: all .15s ease-in-out;
-  margin: .15em;
+  transition: all 0.15s ease-in-out;
+  margin: 0.15em;
 `;
 
-const Button = props => {
+const StyledButton = props => {
   // This is an example of Destructuring
-  const {
-    backgroundColor,
-    color,
-    font,
-    lineHeight,
-    borderColor,
-    title,
-    icon,
-    hoverBGC,
-    hoverBC,
-    theme
-  } = props;
+  const { title, icon, theme } = props;
 
   let needIcon = icon ? getIcon(icon, navColorScheme) : "";
   return (
-    // <StyledButton
-    //   hoverBGC={hoverBGC}
-    //   hoverBC="#1985ac"
-    //   backgroundColor={backgroundColor}
-    //   color={color}
-    //   font={font}
-    //   lineHeight={lineHeight}
-    //   borderColor={borderColor}
-    // >
-    //   {needIcon} {title}
-    // </StyledButton>
-    <StyledButton theme={theme}>
+    <Button theme={theme}>
       {needIcon}
       {title}
-    </StyledButton>
+    </Button>
   );
 };
 let navColorScheme = {
   color: "white"
 };
 
-export default Button;
+export default StyledButton;
