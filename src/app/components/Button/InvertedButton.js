@@ -4,11 +4,18 @@ import styled from "styled-components";
 import { getIcon } from "../Helper/Helper";
 
 const Button = styled.button`
-  color: palevioletred;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.5rem 0.75rem;
   font-size: 0.75rem;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
+  line-height: 1.25;
+  transition: all 0.15s ease-in-out;
+  margin: 0.15em;
   background-color: transparent;
 `;
 
