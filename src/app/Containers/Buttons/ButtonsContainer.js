@@ -2,6 +2,8 @@ import React, { Component } from "react";
 // import "./Styles.scss";
 import SideNavigation from "../../components/Navigation/SideNavigation";
 import StyledButton from "../../components/Button/Button";
+import StyledLink from "../../components/Link/Link";
+import GraphHeader from "../../components/Typography/GraphHeader/GraphHeader";
 import Buttontest from "../../components/Button/ButtonTest";
 
 import { Row, Col, Grid } from "react-flexbox-grid";
@@ -35,16 +37,31 @@ class ButtonsContainer extends Component {
                 </span>
               </div>
               <Row>
-                <Col xs={12} sm={6} md={6} lg={6} className="grid">
-                  <StyledButton theme="primary" title="Primary" />
-                  <StyledButton theme="secondary" title="Secondary" />
-                  <StyledButton theme="success" title="Success" />
-                  <StyledButton theme="warning" title="Warning" />
-                  <StyledButton theme="danger" title="Danger" />
-                  <StyledButton theme="default" title="Default" />
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <GraphHeader title="Options" font={1.25} />
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledButton theme="primary" title="Primary" />
+                    <StyledButton theme="secondary" title="Secondary" />
+                    <StyledButton theme="success" title="Success" />
+                    <StyledButton theme="warning" title="Warning" />
+                    <StyledButton theme="danger" title="Danger" />
+                    <StyledLink title="Danger" />
+                  </div>
                 </Col>
-                <Col xs={12} sm={6} md={6} lg={6} className="grid">
-                  <Buttontest title="test" theme="danger" />
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <GraphHeader title="Options" font={1.25} />
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledButton theme="primary" title="Primary" />
+                    <StyledButton theme="secondary" title="Secondary" />
+                    <StyledButton theme="success" title="Success" />
+                    <StyledButton theme="warning" title="Warning" />
+                    <StyledButton theme="danger" title="Danger" />
+                    <StyledLink title="Danger" />
+                  </div>
                 </Col>
               </Row>
             </Grid>

@@ -12,18 +12,6 @@ import {
 
 import { getIcon } from "../Helper/Helper";
 
-// const StyledButton = styled.button`
-//   ${getBackgroundColor};
-//   ${getColor};
-//   ${getFontSize};
-//   ${getLineHeight};
-//   ${getBorderColor};
-//   :hover {
-//     ${getHoverBackgroundColor};
-//     ${getHoverBorderColor};
-//   }
-// `;
-
 const primary = `
   color: #fff;
   background-color: #20a8d8;
@@ -31,16 +19,19 @@ const primary = `
 `;
 
 const secondary = `
+  color: #111;
   background-color: #c0cadd;
   border-color: #c0cadd;
 `;
 
 const success = `
+  color: #111;
   background-color: #79c447;
   border-color: #79c447;
 `;
 
 const warning = `
+  color: #111;
   background-color: #fabb3d;
   border-color: #fabb3d;
 `;
@@ -52,7 +43,6 @@ const danger = `
 `;
 
 let themePicker = theme => {
-  console.log(theme);
   if (theme === "primary") return primary;
   else if (theme === "secondary") return secondary;
   else if (theme === "success") return success;
@@ -62,7 +52,6 @@ let themePicker = theme => {
 
 const StyledButton = styled.button`
   /* ${props => (props.primary ? primary : "background: pink;")}; */
-  color: #111;
   ${props => themePicker(props.theme)};
   display: inline-block;
   font-weight: 400;
@@ -71,10 +60,11 @@ const StyledButton = styled.button`
   vertical-align: middle;
   user-select: none;
   border: 1px solid transparent;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
+  padding: .5rem .75rem;
+  font-size: .875rem;
   line-height: 1.25;
-  transition: all 0.15s ease-in-out;
+  transition: all .15s ease-in-out;
+  margin: .15em;
 `;
 
 const Button = props => {
