@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
+import { getIcon } from "../Helper/Helper";
+
 const Button = styled.button`
   color: palevioletred;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   padding: 0.25em 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
@@ -61,18 +63,55 @@ const WarningButton = Button.extend`
   }
 `;
 
-let buttonPicker = title => {
-  if (title === "Danger") return <DangerButton>{title}</DangerButton>;
-  else if (title === "Primary") return <PrimaryButton>{title}</PrimaryButton>;
+let buttonPicker = (title, icon) => {
+  if (title === "Danger")
+    return (
+      <DangerButton>
+        {icon}
+        {title}
+      </DangerButton>
+    );
+  else if (title === "Primary")
+    return (
+      <PrimaryButton>
+        {icon}
+        {title}
+      </PrimaryButton>
+    );
   else if (title === "Secondary")
-    return <SecondaryButton>{title}</SecondaryButton>;
-  else if (title === "Success") return <SuccessButton>{title}</SuccessButton>;
-  else if (title === "Warning") return <WarningButton>{title}</WarningButton>;
-  else return <Button>{title}</Button>;
+    return (
+      <SecondaryButton>
+        {icon}
+        {title}
+      </SecondaryButton>
+    );
+  else if (title === "Success")
+    return (
+      <SuccessButton>
+        {icon}
+        {title}
+      </SuccessButton>
+    );
+  else if (title === "Warning")
+    return (
+      <WarningButton>
+        {icon}
+        {title}
+      </WarningButton>
+    );
+  else
+    return (
+      <Button>
+        {icon}
+        {title}
+      </Button>
+    );
 };
 
 const InvertedButton = props => {
-  return buttonPicker(props.title);
+  let needIcon = props.icon ? getIcon(props.icon) : "";
+
+  return buttonPicker(props.title, needIcon);
 };
 
 export default InvertedButton;

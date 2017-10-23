@@ -82,11 +82,14 @@ class ButtonsContainer extends Component {
                     <GraphHeader title="Options" font={1.25} />
                   </div>
                   <div className="card_body card_bg">
-                    <InvertedButton title="Primary" button="danger" />
-                    <InvertedButton title="Primary" button="primary" />
-                    <InvertedButton title="Primary" button="danger" />
-                    <InvertedButton title="Primary" button="danger" />
-                    <InvertedButton title="Primary" button="danger" />
+                    <InvertedButton title="Primary" icon="star" />
+                    <InvertedButton title="Secondary" icon="lightbulb-o" />
+                    <InvertedButton title="Success" icon="magic" />
+                    <InvertedButton
+                      title="Warning"
+                      icon="exclamation-triangle"
+                    />
+                    <InvertedButton title="Danger" icon="feed" />
 
                     <StyledLink title="Link" />
                   </div>
