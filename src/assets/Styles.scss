@@ -201,6 +201,29 @@ a {
     line-height: 2em;
 }
 
+button {
+    cursor: pointer;
+}
+
+.card_bg {
+    background-color: #f9f9fa;
+    border-bottom: 1px solid #e1e6ef;
+}
+
+.card_header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+}
+
+.card_body {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.card_body .fa {
+    padding-right: 0.25rem;
+}
+
 @media screen and (max-width: 675px) {
     #body {
         display: inline-grid;

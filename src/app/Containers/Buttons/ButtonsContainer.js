@@ -2,8 +2,9 @@ import React, { Component } from "react";
 // import "./Styles.scss";
 import SideNavigation from "../../components/Navigation/SideNavigation";
 import StyledButton from "../../components/Button/Button";
-import Buttontest from "../../components/Button/ButtonTest";
-
+import StyledLink from "../../components/Link/Link";
+import GraphHeader from "../../components/Typography/GraphHeader/GraphHeader";
+import InvertedButton from "../../components/Button/InvertedButton";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
 class ButtonsContainer extends Component {
@@ -35,16 +36,60 @@ class ButtonsContainer extends Component {
                 </span>
               </div>
               <Row>
-                <Col xs={12} sm={6} md={6} lg={6} className="grid">
-                  <StyledButton theme="primary" title="Primary" />
-                  <StyledButton theme="secondary" title="Secondary" />
-                  <StyledButton theme="success" title="Success" />
-                  <StyledButton theme="warning" title="Warning" />
-                  <StyledButton theme="danger" title="Danger" />
-                  <StyledButton theme="default" title="Default" />
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <GraphHeader title="Options" font={1.25} />
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledButton title="Primary" />
+                    <StyledButton title="Secondary" />
+                    <StyledButton title="Success" />
+                    <StyledButton title="Warning" />
+                    <StyledButton title="Danger" />
+                    <StyledLink title="Link" />
+                  </div>
                 </Col>
-                <Col xs={12} sm={6} md={6} lg={6} className="grid">
-                  <Buttontest title="test" theme="danger" />
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <GraphHeader title="Options" font={1.25} />
+                  </div>
+                  <div className="card_body card_bg">
+                    <InvertedButton title="Primary" />
+                    <InvertedButton title="Secondary" />
+                    <InvertedButton title="Success" />
+                    <InvertedButton title="Warning" />
+                    <InvertedButton title="Danger" />
+
+                    <StyledLink title="Link" />
+                  </div>
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <GraphHeader title="With Icons" font={1.25} />
+                    {/* Add Example of how to add icon here */}
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledButton title="Primary" icon="star" />
+                    <StyledButton title="Secondary" icon="lightbulb-o" />
+                    <StyledButton title="Success" icon="magic" />
+                    <StyledButton title="Warning" icon="exclamation-triangle" />
+                    <StyledButton title="Danger" icon="feed" />
+                    <StyledLink title="Link" />
+                  </div>
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <GraphHeader title="Options" font={1.25} />
+                  </div>
+                  <div className="card_body card_bg">
+                    <InvertedButton title="Primary" button="danger" />
+                    <InvertedButton title="Primary" button="primary" />
+                    <InvertedButton title="Primary" button="danger" />
+                    <InvertedButton title="Primary" button="danger" />
+                    <InvertedButton title="Primary" button="danger" />
+
+                    <StyledLink title="Link" />
+                  </div>
                 </Col>
               </Row>
             </Grid>
