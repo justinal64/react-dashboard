@@ -4,7 +4,7 @@ import SideNavigation from "../../components/Navigation/SideNavigation";
 import StyledButton from "../../components/Button/Button";
 import StyledLink from "../../components/Link/Link";
 import GraphHeader from "../../components/Typography/GraphHeader/GraphHeader";
-import ButtonTest from "../../components/Button/ButtonTest";
+import InvertedButton from "../../components/Button/InvertedButton";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
 class ButtonsContainer extends Component {
@@ -54,6 +54,20 @@ class ButtonsContainer extends Component {
                     <GraphHeader title="Options" font={1.25} />
                   </div>
                   <div className="card_body card_bg">
+                    <InvertedButton title="Primary" />
+                    <InvertedButton title="Secondary" />
+                    <InvertedButton title="Success" />
+                    <InvertedButton title="Warning" />
+                    <InvertedButton title="Danger" />
+
+                    <StyledLink title="Link" />
+                  </div>
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <GraphHeader title="With Icons" font={1.25} />
+                  </div>
+                  <div className="card_body card_bg">
                     <StyledButton theme="primary" title="Primary" />
                     <StyledButton theme="secondary" title="Secondary" />
                     <StyledButton theme="success" title="Success" />
@@ -67,25 +81,11 @@ class ButtonsContainer extends Component {
                     <GraphHeader title="Options" font={1.25} />
                   </div>
                   <div className="card_body card_bg">
-                    <ButtonTest title="Primary" />
-                    <ButtonTest title="Secondary" />
-                    <ButtonTest title="Success" />
-                    <ButtonTest title="Warning" />
-                    <ButtonTest title="Danger" />
-
-                    <StyledLink title="Link" />
-                  </div>
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={6}>
-                  <div className="card_header card_bg">
-                    <GraphHeader title="Options" font={1.25} />
-                  </div>
-                  <div className="card_body card_bg">
-                    <ButtonTest title="Primary" button="danger" />
-                    <ButtonTest title="Primary" button="primary" />
-                    <ButtonTest title="Primary" button="danger" />
-                    <ButtonTest title="Primary" button="danger" />
-                    <ButtonTest title="Primary" button="danger" />
+                    <InvertedButton title="Primary" button="danger" />
+                    <InvertedButton title="Primary" button="primary" />
+                    <InvertedButton title="Primary" button="danger" />
+                    <InvertedButton title="Primary" button="danger" />
+                    <InvertedButton title="Primary" button="danger" />
 
                     <StyledLink title="Link" />
                   </div>

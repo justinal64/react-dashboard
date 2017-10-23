@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 const Button = styled.button`
   color: palevioletred;
-  font-size: 1em;
+  font-size: 0.875rem;
   padding: 0.25em 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
   background-color: transparent;
 `;
 
-// We're extending Button with some extra styles
+// Extending Button with extra styles
 const DangerButton = Button.extend`
   color: tomato;
   border-color: tomato;
@@ -75,8 +75,8 @@ let buttonPicker = title => {
   // else if (theme === "danger") return danger;
 };
 
-const ButtonTest = props => {
+const InvertedButton = props => {
   return buttonPicker(props.title);
 };
 
-export default ButtonTest;
+export default InvertedButton;
