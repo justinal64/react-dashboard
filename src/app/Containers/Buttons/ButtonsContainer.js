@@ -41,11 +41,11 @@ class ButtonsContainer extends Component {
                     <GraphHeader title="Options" font={1.25} />
                   </div>
                   <div className="card_body card_bg">
-                    <StyledButton theme="primary" title="Primary" />
-                    <StyledButton theme="secondary" title="Secondary" />
-                    <StyledButton theme="success" title="Success" />
-                    <StyledButton theme="warning" title="Warning" />
-                    <StyledButton theme="danger" title="Danger" />
+                    <StyledButton title="Primary" />
+                    <StyledButton title="Secondary" />
+                    <StyledButton title="Success" />
+                    <StyledButton title="Warning" />
+                    <StyledButton title="Danger" />
                     <StyledLink title="Link" />
                   </div>
                 </Col>
@@ -68,11 +68,11 @@ class ButtonsContainer extends Component {
                     <GraphHeader title="With Icons" font={1.25} />
                   </div>
                   <div className="card_body card_bg">
-                    <StyledButton theme="primary" title="Primary" />
-                    <StyledButton theme="secondary" title="Secondary" />
-                    <StyledButton theme="success" title="Success" />
-                    <StyledButton theme="warning" title="Warning" />
-                    <StyledButton theme="danger" title="Danger" />
+                    <StyledButton title="Primary" icon="star" />
+                    <StyledButton title="Secondary" icon="lightbulb-o" />
+                    <StyledButton title="Success" icon="magic" />
+                    <StyledButton title="Warning" icon="exclamation-triangle" />
+                    <StyledButton title="Danger" icon="feed" />
                     <StyledLink title="Link" />
                   </div>
                 </Col>

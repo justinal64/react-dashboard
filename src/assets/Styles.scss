@@ -220,6 +220,10 @@ button {
     margin-bottom: 1rem;
 }
 
+.card_body .fa {
+    padding-right: 0.25rem;
+}
+
 @media screen and (max-width: 675px) {
     #body {
         display: inline-grid;

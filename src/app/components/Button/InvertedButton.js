@@ -69,10 +69,6 @@ let buttonPicker = title => {
   else if (title === "Success") return <SuccessButton>{title}</SuccessButton>;
   else if (title === "Warning") return <WarningButton>{title}</WarningButton>;
   else return <Button>{title}</Button>;
-  // else if (theme === "secondary") return secondary;
-  // else if (theme === "success") return success;
-  // else if (theme === "warning") return warning;
-  // else if (theme === "danger") return danger;
 };
 
 const InvertedButton = props => {
