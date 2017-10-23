@@ -56,24 +56,14 @@ const StyledLink = styled.button`
   border-color: transparent;
   box-shadow: none;
   color: #20a8d8;
+  :hover {
+    color: #167495;
+    text-decoration: underline;
+  }
 `;
 
 const Link = props => {
-  // This is an example of Destructuring
-  const {
-    backgroundColor,
-    color,
-    font,
-    lineHeight,
-    borderColor,
-    title,
-    icon,
-    hoverBGC,
-    hoverBC,
-    theme
-  } = props;
-
-  return <StyledLink>Link</StyledLink>;
+  return <StyledLink>{props.title}</StyledLink>;
 };
 
 export default Link;

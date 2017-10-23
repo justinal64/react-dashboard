@@ -16,30 +16,50 @@ const primary = `
   color: #fff;
   background-color: #20a8d8;
   border-color: #20a8d8;
+  :hover {
+    background-color: #1b8eb7;
+    border-color: #1985ac;
+  }
 `;
 
 const secondary = `
   color: #111;
   background-color: #c0cadd;
   border-color: #c0cadd;
+  :hover {
+    background-color: #a7b5d0;
+    border-color: #9faecb;
+  }
 `;
 
 const success = `
   color: #111;
   background-color: #79c447;
   border-color: #79c447;
+  :hover {
+    background-color: #67ad38;
+    border-color: #61a434;
+  }
 `;
 
 const warning = `
   color: #111;
   background-color: #fabb3d;
   border-color: #fabb3d;
+  :hover {
+    background-color: #f9ae18;
+    border-color: #f9aa0b;
+  }
 `;
 
 const danger = `
   color: #fff;
   background-color: #ff5454;
   border-color: #ff5454;
+  :hover {
+    background-color: #ff2e2e;
+    border-color: #ff2121;
+  }
 `;
 
 let themePicker = theme => {

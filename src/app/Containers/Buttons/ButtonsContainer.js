@@ -4,7 +4,6 @@ import SideNavigation from "../../components/Navigation/SideNavigation";
 import StyledButton from "../../components/Button/Button";
 import StyledLink from "../../components/Link/Link";
 import GraphHeader from "../../components/Typography/GraphHeader/GraphHeader";
-import Buttontest from "../../components/Button/ButtonTest";
 
 import { Row, Col, Grid } from "react-flexbox-grid";
 
@@ -47,7 +46,7 @@ class ButtonsContainer extends Component {
                     <StyledButton theme="success" title="Success" />
                     <StyledButton theme="warning" title="Warning" />
                     <StyledButton theme="danger" title="Danger" />
-                    <StyledLink title="Danger" />
+                    <StyledLink title="Link" />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
@@ -60,7 +59,7 @@ class ButtonsContainer extends Component {
                     <StyledButton theme="success" title="Success" />
                     <StyledButton theme="warning" title="Warning" />
                     <StyledButton theme="danger" title="Danger" />
-                    <StyledLink title="Danger" />
+                    <StyledLink title="Link" />
                   </div>
                 </Col>
               </Row>
