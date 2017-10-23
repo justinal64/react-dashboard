@@ -66,6 +66,7 @@ class ButtonsContainer extends Component {
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
                     <GraphHeader title="With Icons" font={1.25} />
+                    {/* Add Example of how to add icon here */}
                   </div>
                   <div className="card_body card_bg">
                     <StyledButton title="Primary" icon="star" />
