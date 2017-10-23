@@ -12,7 +12,7 @@ const Button = styled.button`
   user-select: none;
   border: 1px solid transparent;
   padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.25;
   transition: all 0.15s ease-in-out;
   margin: 0.15em;

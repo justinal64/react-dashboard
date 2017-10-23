@@ -1,12 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
+import { getIcon } from "../Helper/Helper";
+
 const Button = styled.button`
-  color: palevioletred;
-  font-size: 0.875rem;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  transition: all 0.15s ease-in-out;
+  margin: 0.15em;
   background-color: transparent;
 `;
 
@@ -61,18 +70,55 @@ const WarningButton = Button.extend`
   }
 `;
 
-let buttonPicker = title => {
-  if (title === "Danger") return <DangerButton>{title}</DangerButton>;
-  else if (title === "Primary") return <PrimaryButton>{title}</PrimaryButton>;
+let buttonPicker = (title, icon) => {
+  if (title === "Danger")
+    return (
+      <DangerButton>
+        {icon}
+        {title}
+      </DangerButton>
+    );
+  else if (title === "Primary")
+    return (
+      <PrimaryButton>
+        {icon}
+        {title}
+      </PrimaryButton>
+    );
   else if (title === "Secondary")
-    return <SecondaryButton>{title}</SecondaryButton>;
-  else if (title === "Success") return <SuccessButton>{title}</SuccessButton>;
-  else if (title === "Warning") return <WarningButton>{title}</WarningButton>;
-  else return <Button>{title}</Button>;
+    return (
+      <SecondaryButton>
+        {icon}
+        {title}
+      </SecondaryButton>
+    );
+  else if (title === "Success")
+    return (
+      <SuccessButton>
+        {icon}
+        {title}
+      </SuccessButton>
+    );
+  else if (title === "Warning")
+    return (
+      <WarningButton>
+        {icon}
+        {title}
+      </WarningButton>
+    );
+  else
+    return (
+      <Button>
+        {icon}
+        {title}
+      </Button>
+    );
 };
 
 const InvertedButton = props => {
-  return buttonPicker(props.title);
+  let needIcon = props.icon ? getIcon(props.icon) : "";
+
+  return buttonPicker(props.title, needIcon);
 };
 
 export default InvertedButton;
