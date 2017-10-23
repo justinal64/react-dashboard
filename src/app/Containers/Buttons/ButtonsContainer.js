@@ -67,11 +67,11 @@ class ButtonsContainer extends Component {
                     <GraphHeader title="Options" font={1.25} />
                   </div>
                   <div className="card_body card_bg">
-                    <ButtonTest title="Primary" button="danger" />
-                    <ButtonTest title="Primary" button="danger" />
-                    <ButtonTest title="Primary" button="danger" />
-                    <ButtonTest title="Primary" button="danger" />
                     <ButtonTest title="Primary" />
+                    <ButtonTest title="Secondary" />
+                    <ButtonTest title="Success" />
+                    <ButtonTest title="Warning" />
+                    <ButtonTest title="Danger" />
 
                     <StyledLink title="Link" />
                   </div>
@@ -82,7 +82,7 @@ class ButtonsContainer extends Component {
                   </div>
                   <div className="card_body card_bg">
                     <ButtonTest title="Primary" button="danger" />
-                    <ButtonTest title="Primary" button="danger" />
+                    <ButtonTest title="Primary" button="primary" />
                     <ButtonTest title="Primary" button="danger" />
                     <ButtonTest title="Primary" button="danger" />
                     <ButtonTest title="Primary" button="danger" />
