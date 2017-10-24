@@ -4,7 +4,6 @@ import SideNavigation from "../../components/Navigation/SideNavigation";
 import StyledButton from "../../components/Button/Button";
 import StyledLink from "../../components/Link/Link";
 import GraphHeader from "../../components/Typography/GraphHeader/GraphHeader";
-import InvertedButton from "../../components/Button/InvertedButton";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
 class ButtonsContainer extends Component {
@@ -52,14 +51,14 @@ class ButtonsContainer extends Component {
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
                     <GraphHeader title="Options" font={1.25} />
+                    {/* Add Example of how to add icon here */}
                   </div>
                   <div className="card_body card_bg">
-                    <InvertedButton title="Primary" />
-                    <InvertedButton title="Secondary" />
-                    <InvertedButton title="Success" />
-                    <InvertedButton title="Warning" />
-                    <InvertedButton title="Danger" />
-
+                    <StyledButton title="Primary" inverted />
+                    <StyledButton title="Secondary" inverted />
+                    <StyledButton title="Success" inverted />
+                    <StyledButton title="Warning" inverted />
+                    <StyledButton title="Danger" inverted />
                     <StyledLink title="Link" />
                   </div>
                 </Col>
@@ -79,18 +78,22 @@ class ButtonsContainer extends Component {
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
-                    <GraphHeader title="Options" font={1.25} />
+                    <GraphHeader title="With Icons" font={1.25} />
                   </div>
                   <div className="card_body card_bg">
-                    <InvertedButton title="Primary" icon="star" />
-                    <InvertedButton title="Secondary" icon="lightbulb-o" />
-                    <InvertedButton title="Success" icon="magic" />
-                    <InvertedButton
+                    <StyledButton title="Primary" icon="star" inverted />
+                    <StyledButton
+                      title="Secondary"
+                      icon="lightbulb-o"
+                      inverted
+                    />
+                    <StyledButton title="Success" icon="magic" inverted />
+                    <StyledButton
                       title="Warning"
                       icon="exclamation-triangle"
+                      inverted
                     />
-                    <InvertedButton title="Danger" icon="feed" />
-
+                    <StyledButton title="Danger" icon="feed" inverted />
                     <StyledLink title="Link" />
                   </div>
                 </Col>
