@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 import { getIcon } from "../Helper/Helper";
 
 const Button = styled.button`
@@ -12,10 +11,11 @@ const Button = styled.button`
   user-select: none;
   border: 1px solid transparent;
   padding: 0.5rem 0.75rem;
-  font-size: 0.75rem;
+  font-size: ${props => (props.font ? props.font : ".75")}rem;
   line-height: 1.25;
   transition: all 0.15s ease-in-out;
   margin: 0.15em;
+  background-color: transparent;
 `;
 
 const PrimaryButton = Button.extend`
@@ -25,6 +25,16 @@ const PrimaryButton = Button.extend`
   :hover {
     background-color: #1b8eb7;
     border-color: #1985ac;
+  }
+`;
+
+const InvertedPrimaryButton = Button.extend`
+  color: #20a8d8;
+  border-color: #20a8d8;
+  :hover {
+    color: #fff;
+    background-color: #20a8d8;
+    border-color: #20a8d8;
   }
 `;
 
@@ -38,6 +48,16 @@ const SecondaryButton = Button.extend`
   }
 `;
 
+const InvertedSecondaryButton = Button.extend`
+  color: #c0cadd;
+  border-color: #c0cadd;
+  :hover {
+    color: #fff;
+    background-color: #c0cadd;
+    border-color: #c0cadd;
+  }
+`;
+
 const SuccessButton = Button.extend`
   color: #111;
   background-color: #79c447;
@@ -45,6 +65,16 @@ const SuccessButton = Button.extend`
   :hover {
     background-color: #67ad38;
     border-color: #61a434;
+  }
+`;
+
+const InvertedSuccessButton = Button.extend`
+  color: #79c447;
+  border-color: #79c447;
+  :hover {
+    color: #fff;
+    background-color: #79c447;
+    border-color: #79c447;
   }
 `;
 
@@ -58,6 +88,16 @@ const WarningButton = Button.extend`
   }
 `;
 
+const InvertedWarningButton = Button.extend`
+  color: #fabb3d;
+  border-color: #fabb3d;
+  :hover {
+    color: #fff;
+    background-color: #fabb3d;
+    border-color: #fabb3d;
+  }
+`;
+
 const DangerButton = Button.extend`
   color: #fff;
   background-color: #ff5454;
@@ -68,10 +108,59 @@ const DangerButton = Button.extend`
   }
 `;
 
-let buttonPicker = (title, icon) => {
+const InvertedDangerButton = Button.extend`
+  color: tomato;
+  border-color: tomato;
+  :hover {
+    color: #fff;
+    background-color: #ff2e2e;
+    border-color: #ff2121;
+  }
+`;
+
+let invertedButtonPicker = (title, icon) => {
   if (title === "Primary")
     return (
-      <PrimaryButton>
+      <InvertedPrimaryButton>
+        {icon}
+        {title}
+      </InvertedPrimaryButton>
+    );
+  else if (title === "Secondary")
+    return (
+      <InvertedSecondaryButton>
+        {icon}
+        {title}
+      </InvertedSecondaryButton>
+    );
+  else if (title === "Success")
+    return (
+      <InvertedSuccessButton>
+        {icon}
+        {title}
+      </InvertedSuccessButton>
+    );
+  else if (title === "Warning")
+    return (
+      <InvertedWarningButton>
+        {icon}
+        {title}
+      </InvertedWarningButton>
+    );
+  else if (title === "Danger")
+    return (
+      <InvertedDangerButton>
+        {icon}
+        {title}
+      </InvertedDangerButton>
+    );
+  else return <Button>{title}</Button>;
+};
+
+let buttonPicker = (title, icon, font) => {
+  if (title === "Primary")
+    return (
+      <PrimaryButton font={font}>
         {icon}
         {title}
       </PrimaryButton>
@@ -109,8 +198,9 @@ let buttonPicker = (title, icon) => {
 
 const StyledButton = props => {
   let needIcon = props.icon ? getIcon(props.icon) : "";
-
-  return buttonPicker(props.title, needIcon);
+  if (props.inverted)
+    return invertedButtonPicker(props.title, needIcon, props.font);
+  else return buttonPicker(props.title, needIcon, props.font);
 };
 
 export default StyledButton;

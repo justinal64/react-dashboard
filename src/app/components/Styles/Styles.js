@@ -4,7 +4,7 @@ export const getAlignment = props =>
   props.alignment ? `text-align: ${props.alignment};` : "";
 
 export const getFontSize = props =>
-  props.font ? `font-size: ${props.font}em;` : "";
+  props.font ? `font-size: ${props.font}rem;` : "";
 
 export const getPaddingBottom = props =>
   props.paddingBottom ? `padding-bottom: ${props.paddingBottom}rem;` : "";
