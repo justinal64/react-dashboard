@@ -4,6 +4,7 @@ import SideNavigation from "../../components/Navigation/SideNavigation";
 import StyledButton from "../../components/Button/Button";
 import StyledLink from "../../components/Link/Link";
 import GraphHeader from "../../components/Typography/GraphHeader/GraphHeader";
+import Header from "../../components/Typography/Header/Header";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
 class ButtonsContainer extends Component {
@@ -103,18 +104,26 @@ class ButtonsContainer extends Component {
               <Row>
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
-                    <GraphHeader
-                      title="Size Large add this class"
-                      font={1.25}
+                    <Header
+                      title="Size Large"
+                      subtitle="add this class"
+                      font={1.5}
                     />
-                    {/* Add Example of how to add icon here */}
                   </div>
                   <div className="card_body card_bg">
                     <StyledButton title="Primary" font={1.25} />
-                    <StyledButton title="Secondary" icon="lightbulb-o" />
-                    <StyledButton title="Success" icon="magic" />
-                    <StyledButton title="Warning" icon="exclamation-triangle" />
-                    <StyledButton title="Danger" icon="feed" />
+                    <StyledButton
+                      title="Secondary"
+                      icon="lightbulb-o"
+                      font={1.25}
+                    />
+                    <StyledButton title="Success" icon="magic" font={1.25} />
+                    <StyledButton
+                      title="Warning"
+                      icon="exclamation-triangle"
+                      font={1.25}
+                    />
+                    <StyledButton title="Danger" icon="feed" font={1.25} />
                     <StyledLink title="Link" />
                   </div>
                 </Col>
@@ -126,19 +135,36 @@ class ButtonsContainer extends Component {
                     />
                   </div>
                   <div className="card_body card_bg">
-                    <StyledButton title="Primary" icon="star" inverted />
+                    <StyledButton
+                      title="Primary"
+                      icon="star"
+                      inverted
+                      font={1.25}
+                    />
                     <StyledButton
                       title="Secondary"
                       icon="lightbulb-o"
                       inverted
+                      font={1.25}
                     />
-                    <StyledButton title="Success" icon="magic" inverted />
+                    <StyledButton
+                      title="Success"
+                      icon="magic"
+                      inverted
+                      font={1.25}
+                    />
                     <StyledButton
                       title="Warning"
                       icon="exclamation-triangle"
                       inverted
+                      font={1.25}
                     />
-                    <StyledButton title="Danger" icon="feed" inverted />
+                    <StyledButton
+                      title="Danger"
+                      icon="feed"
+                      inverted
+                      font={1.25}
+                    />
                     <StyledLink title="Link" />
                   </div>
                 </Col>

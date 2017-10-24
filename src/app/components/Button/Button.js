@@ -118,43 +118,43 @@ const InvertedDangerButton = Button.extend`
   }
 `;
 
-let invertedButtonPicker = (title, icon) => {
+let invertedButtonPicker = (title, icon, font) => {
   if (title === "Primary")
     return (
-      <InvertedPrimaryButton>
+      <InvertedPrimaryButton font={font}>
         {icon}
         {title}
       </InvertedPrimaryButton>
     );
   else if (title === "Secondary")
     return (
-      <InvertedSecondaryButton>
+      <InvertedSecondaryButton font={font}>
         {icon}
         {title}
       </InvertedSecondaryButton>
     );
   else if (title === "Success")
     return (
-      <InvertedSuccessButton>
+      <InvertedSuccessButton font={font}>
         {icon}
         {title}
       </InvertedSuccessButton>
     );
   else if (title === "Warning")
     return (
-      <InvertedWarningButton>
+      <InvertedWarningButton font={font}>
         {icon}
         {title}
       </InvertedWarningButton>
     );
   else if (title === "Danger")
     return (
-      <InvertedDangerButton>
+      <InvertedDangerButton font={font}>
         {icon}
         {title}
       </InvertedDangerButton>
     );
-  else return <Button>{title}</Button>;
+  else return <Button font={font}>{title}</Button>;
 };
 
 let buttonPicker = (title, icon, font) => {
@@ -167,33 +167,33 @@ let buttonPicker = (title, icon, font) => {
     );
   else if (title === "Secondary")
     return (
-      <SecondaryButton>
+      <SecondaryButton font={font}>
         {icon}
         {title}
       </SecondaryButton>
     );
   else if (title === "Success")
     return (
-      <SuccessButton>
+      <SuccessButton font={font}>
         {icon}
         {title}
       </SuccessButton>
     );
   else if (title === "Warning")
     return (
-      <WarningButton>
+      <WarningButton font={font}>
         {icon}
         {title}
       </WarningButton>
     );
   else if (title === "Danger")
     return (
-      <DangerButton>
+      <DangerButton font={font}>
         {icon}
         {title}
       </DangerButton>
     );
-  else return <Button>{title}</Button>;
+  else return <Button font={font}>{title}</Button>;
 };
 
 const StyledButton = props => {
