@@ -104,7 +104,11 @@ class ButtonsContainer extends Component {
               <Row>
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
-                    <Header title="Size Large" subtitle="add this class" />
+                    <Header
+                      title="Size Large"
+                      subtitle="add this class"
+                      font={1.5}
+                    />
                   </div>
                   <div className="card_body card_bg">
                     <StyledButton title="Primary" font={1.25} />
