@@ -62,6 +62,8 @@ class ButtonsContainer extends Component {
                     <StyledLink title="Link" />
                   </div>
                 </Col>
+              </Row>
+              <Row>
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
                     <GraphHeader title="With Icons" font={1.25} />
@@ -79,6 +81,49 @@ class ButtonsContainer extends Component {
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
                     <GraphHeader title="With Icons" font={1.25} />
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledButton title="Primary" icon="star" inverted />
+                    <StyledButton
+                      title="Secondary"
+                      icon="lightbulb-o"
+                      inverted
+                    />
+                    <StyledButton title="Success" icon="magic" inverted />
+                    <StyledButton
+                      title="Warning"
+                      icon="exclamation-triangle"
+                      inverted
+                    />
+                    <StyledButton title="Danger" icon="feed" inverted />
+                    <StyledLink title="Link" />
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <GraphHeader
+                      title="Size Large add this class"
+                      font={1.25}
+                    />
+                    {/* Add Example of how to add icon here */}
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledButton title="Primary" font={1.25} />
+                    <StyledButton title="Secondary" icon="lightbulb-o" />
+                    <StyledButton title="Success" icon="magic" />
+                    <StyledButton title="Warning" icon="exclamation-triangle" />
+                    <StyledButton title="Danger" icon="feed" />
+                    <StyledLink title="Link" />
+                  </div>
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <GraphHeader
+                      title="Size Large add this class"
+                      font={1.25}
+                    />
                   </div>
                   <div className="card_body card_bg">
                     <StyledButton title="Primary" icon="star" inverted />

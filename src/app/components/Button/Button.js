@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 import { getIcon } from "../Helper/Helper";
 
 const Button = styled.button`
@@ -12,7 +11,7 @@ const Button = styled.button`
   user-select: none;
   border: 1px solid transparent;
   padding: 0.5rem 0.75rem;
-  font-size: 0.75rem;
+  font-size: ${props => (props.font ? props.font : ".75")}rem;
   line-height: 1.25;
   transition: all 0.15s ease-in-out;
   margin: 0.15em;
@@ -158,10 +157,10 @@ let invertedButtonPicker = (title, icon) => {
   else return <Button>{title}</Button>;
 };
 
-let buttonPicker = (title, icon) => {
+let buttonPicker = (title, icon, font) => {
   if (title === "Primary")
     return (
-      <PrimaryButton>
+      <PrimaryButton font={font}>
         {icon}
         {title}
       </PrimaryButton>
@@ -199,8 +198,9 @@ let buttonPicker = (title, icon) => {
 
 const StyledButton = props => {
   let needIcon = props.icon ? getIcon(props.icon) : "";
-  if (props.inverted) return invertedButtonPicker(props.title, needIcon);
-  else return buttonPicker(props.title, needIcon);
+  if (props.inverted)
+    return invertedButtonPicker(props.title, needIcon, props.font);
+  else return buttonPicker(props.title, needIcon, props.font);
 };
 
 export default StyledButton;
