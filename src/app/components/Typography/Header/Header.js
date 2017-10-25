@@ -2,15 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { getFontSize, getColor } from "../../Styles/Styles";
 
-// Convert this into a styled component
-const Title = styled.span`
-  ${getFontSize};
-  ${getColor};
-`;
-
+const Title = styled.span`${getFontSize};`;
 const SubTitle = styled.span`
   ${getFontSize};
-  ${getColor};
+  padding-left: 0.25rem;
+`;
+const Code = styled.span`
+  ${getFontSize};
+  padding-left: 0.25rem;
+  color: red;
 `;
 
 const addTitle = (title, font) => {
@@ -21,13 +21,19 @@ const addSubTitle = (subtitle, font) => {
   if (subtitle) return <SubTitle font={font / 2}>{subtitle}</SubTitle>;
 };
 
+const addCode = (codetext, font) => {
+  if (codetext) return <Code font={font / 2}>{codetext}</Code>;
+};
+
 const Header = props => {
-  const { title, subtitle, font } = props;
+  // example of deconstruction
+  const { title, subtitle, font, codetext } = props;
 
   return (
-    <div>
+    <div className="header">
       {addTitle(title, font)}
       {addSubTitle(subtitle, font)}
+      {addCode(codetext, font)}
     </div>
   );
 };
