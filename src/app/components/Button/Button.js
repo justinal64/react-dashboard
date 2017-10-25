@@ -7,6 +7,7 @@ const themePicker = (inverted, title) => {
   if (inverted) return invertedButtonPicker(title);
   else return buttonPicker(title);
 };
+
 const Button = styled.button`
   display: inline-block;
   font-weight: 400;
@@ -22,6 +23,12 @@ const Button = styled.button`
   font-size: ${props => (props.font ? props.font : ".75")}rem;
   background-color: transparent;
   ${props => themePicker(props.inverted, props.title)};
+  ${props => (props.disabled ? disabledButton : "")};
+`;
+
+const disabledButton = `
+  opacity: .65; 
+  pointer-events: none; 
 `;
 
 const PrimaryButton = `
@@ -141,11 +148,12 @@ let buttonPicker = (title, icon, font) => {
 };
 
 const StyledButton = props => {
-  let needIcon = props.icon ? getIcon(props.icon) : "";
+  const { icon, title, font, inverted, disabled } = props;
+  let needIcon = icon ? getIcon(icon) : "";
   return (
-    <Button title={props.title} font={props.font} inverted={props.inverted}>
+    <Button title={title} font={font} inverted={inverted} disabled={disabled}>
       {needIcon}
-      {props.title}
+      {title}
     </Button>
   );
   // if (props.inverted)
