@@ -106,7 +106,8 @@ class ButtonsContainer extends Component {
                   <div className="card_header card_bg">
                     <Header
                       title="Size Large"
-                      subtitle="add this class"
+                      subtitle="add this parameter"
+                      codetext="font={1.5}"
                       font={1.5}
                     />
                   </div>
@@ -129,9 +130,11 @@ class ButtonsContainer extends Component {
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
-                    <GraphHeader
-                      title="Size Large add this class"
-                      font={1.25}
+                    <Header
+                      title="Size Large"
+                      subtitle="add this parameter"
+                      codetext="font={1.5}"
+                      font={1.5}
                     />
                   </div>
                   <div className="card_body card_bg">
