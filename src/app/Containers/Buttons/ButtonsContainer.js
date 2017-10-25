@@ -240,6 +240,82 @@ class ButtonsContainer extends Component {
                   </div>
                 </Col>
               </Row>
+              <Row>
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Active State"
+                      subtitle="add this parameter"
+                      codetext="nothing..."
+                      font={1.5}
+                    />
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledButton title="Primary" font={0.875} />
+                    <StyledButton title="Secondary" font={0.875} />
+                    <StyledButton title="Success" font={0.875} />
+                    <StyledButton title="Warning" font={0.875} />
+                    <StyledButton title="Danger" font={0.875} />
+                    <StyledLink title="Link" />
+                  </div>
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Active State"
+                      subtitle="add this parameter"
+                      codetext="nothing..."
+                      font={1.5}
+                    />
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledButton title="Primary" inverted font={0.875} />
+                    <StyledButton title="Secondary" inverted font={0.875} />
+                    <StyledButton title="Success" inverted font={0.875} />
+                    <StyledButton title="Warning" inverted font={0.875} />
+                    <StyledButton title="Danger" inverted font={0.875} />
+                    <StyledLink title="Link" />
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Active State"
+                      subtitle="add this parameter"
+                      codetext="block"
+                      font={1.5}
+                    />
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledButton title="Primary" block />
+                    <StyledButton title="Secondary" block />
+                    <StyledButton title="Success" block />
+                    <StyledButton title="Warning" block />
+                    <StyledButton title="Danger" block />
+                    <StyledLink title="Link" />
+                  </div>
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Active State"
+                      subtitle="add this parameter"
+                      codetext="block"
+                      font={1.5}
+                    />
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledButton title="Primary" inverted block />
+                    <StyledButton title="Secondary" inverted block />
+                    <StyledButton title="Success" inverted block />
+                    <StyledButton title="Warning" inverted block />
+                    <StyledButton title="Danger" inverted block />
+                    <StyledLink title="Link" />
+                  </div>
+                </Col>
+              </Row>
             </Grid>
           </div>
         </div>

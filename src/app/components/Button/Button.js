@@ -9,7 +9,6 @@ const themePicker = (inverted, title) => {
 };
 
 const Button = styled.button`
-  display: inline-block;
   font-weight: 400;
   text-align: center;
   white-space: nowrap;
@@ -22,13 +21,24 @@ const Button = styled.button`
   margin: 0.15em;
   font-size: ${props => (props.font ? props.font : ".75")}rem;
   background-color: transparent;
+  display: ${props => (props.display ? displayBlock : "inline-block")};
   ${props => themePicker(props.inverted, props.title)};
   ${props => (props.disabled ? disabledButton : "")};
+`;
+
+const displayBlock = `
+  display: block; 
+  width: 100%; 
 `;
 
 const disabledButton = `
   opacity: .65; 
   pointer-events: none; 
+`;
+
+const activeButton = `
+  opacity: 0; 
+  pointer-events: auto; 
 `;
 
 const PrimaryButton = `
@@ -148,10 +158,16 @@ let buttonPicker = (title, icon, font) => {
 };
 
 const StyledButton = props => {
-  const { icon, title, font, inverted, disabled } = props;
+  const { icon, title, font, inverted, disabled, block } = props;
   let needIcon = icon ? getIcon(icon) : "";
   return (
-    <Button title={title} font={font} inverted={inverted} disabled={disabled}>
+    <Button
+      title={title}
+      font={font}
+      inverted={inverted}
+      disabled={disabled}
+      display={block}
+    >
       {needIcon}
       {title}
     </Button>
