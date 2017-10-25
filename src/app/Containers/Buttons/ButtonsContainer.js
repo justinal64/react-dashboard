@@ -107,24 +107,16 @@ class ButtonsContainer extends Component {
                     <Header
                       title="Size Large"
                       subtitle="add this parameter"
-                      codetext="font={1.5}"
+                      codetext="font={1.25}"
                       font={1.5}
                     />
                   </div>
                   <div className="card_body card_bg">
                     <StyledButton title="Primary" font={1.25} />
-                    <StyledButton
-                      title="Secondary"
-                      icon="lightbulb-o"
-                      font={1.25}
-                    />
-                    <StyledButton title="Success" icon="magic" font={1.25} />
-                    <StyledButton
-                      title="Warning"
-                      icon="exclamation-triangle"
-                      font={1.25}
-                    />
-                    <StyledButton title="Danger" icon="feed" font={1.25} />
+                    <StyledButton title="Secondary" font={1.25} />
+                    <StyledButton title="Success" font={1.25} />
+                    <StyledButton title="Warning" font={1.25} />
+                    <StyledButton title="Danger" font={1.25} />
                     <StyledLink title="Link" />
                   </div>
                 </Col>
@@ -133,41 +125,54 @@ class ButtonsContainer extends Component {
                     <Header
                       title="Size Large"
                       subtitle="add this parameter"
-                      codetext="font={1.5}"
+                      codetext="font={1.25}"
                       font={1.5}
                     />
                   </div>
                   <div className="card_body card_bg">
-                    <StyledButton
-                      title="Primary"
-                      icon="star"
-                      inverted
-                      font={1.25}
+                    <StyledButton title="Primary" inverted font={1.25} />
+                    <StyledButton title="Secondary" inverted font={1.25} />
+                    <StyledButton title="Success" inverted font={1.25} />
+                    <StyledButton title="Warning" inverted font={1.25} />
+                    <StyledButton title="Danger" inverted font={1.25} />
+                    <StyledLink title="Link" />
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Size Small"
+                      subtitle="add this parameter"
+                      codetext="font={.875}"
+                      font={1.5}
                     />
-                    <StyledButton
-                      title="Secondary"
-                      icon="lightbulb-o"
-                      inverted
-                      font={1.25}
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledButton title="Primary" font={0.875} />
+                    <StyledButton title="Secondary" font={0.875} />
+                    <StyledButton title="Success" font={0.875} />
+                    <StyledButton title="Warning" font={0.875} />
+                    <StyledButton title="Danger" font={0.875} />
+                    <StyledLink title="Link" />
+                  </div>
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Size Small"
+                      subtitle="add this parameter"
+                      codetext="font={.875}"
+                      font={1.5}
                     />
-                    <StyledButton
-                      title="Success"
-                      icon="magic"
-                      inverted
-                      font={1.25}
-                    />
-                    <StyledButton
-                      title="Warning"
-                      icon="exclamation-triangle"
-                      inverted
-                      font={1.25}
-                    />
-                    <StyledButton
-                      title="Danger"
-                      icon="feed"
-                      inverted
-                      font={1.25}
-                    />
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledButton title="Primary" inverted font={0.875} />
+                    <StyledButton title="Secondary" inverted font={0.875} />
+                    <StyledButton title="Success" inverted font={0.875} />
+                    <StyledButton title="Warning" inverted font={0.875} />
+                    <StyledButton title="Danger" inverted font={0.875} />
                     <StyledLink title="Link" />
                   </div>
                 </Col>
