@@ -46,6 +46,7 @@ class SocialButtonsContainer extends Component {
                   </div>
                   <div className="card_body card_bg">
                     <StyledSocialButton title="Facebook" icon="facebook" />
+                    <StyledSocialButton title="Twitter" icon="twitter" />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
