@@ -5,9 +5,8 @@ import Login from "../screens/Login.js";
 import Charts from "../screens/Charts/Charts.js";
 import Dashboard from "../screens/Dashboard.js";
 import NotFound from "../screens/NotFound.js";
-import Buttons from "../screens/Buttons";
-
-// import Forms from "../screens/Forms.js";
+import Buttons from "../screens/Buttons/Buttons";
+import SocialButtons from "../screens/Buttons/SocialButtons";
 import Test from "../screens/Test.js";
 import BarChart from "../screens/Charts/BarChart.js";
 import BasicChart from "../screens/Charts/BasicChart.js";
@@ -24,6 +23,7 @@ const App = () => {
         <Route exact path="/" component={Login} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/buttons" component={Buttons} />
+        {<Route path="/socialmediabuttons" component={SocialButtons} />}
         <Route path="/test" component={Test} />
         <Route path="/barchart" component={BarChart} />
         <Route path="/charts" component={Charts} />
