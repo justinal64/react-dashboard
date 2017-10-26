@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 // import "./Styles.scss";
 import SideNavigation from "../../components/Navigation/SideNavigation";
-
-import GraphHeader from "../../components/Typography/GraphHeader/GraphHeader";
+import StyledSocialButton from "../../components/Button/SocialButton";
 import Header from "../../components/Typography/Header/Header";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
@@ -36,8 +35,18 @@ class SocialButtonsContainer extends Component {
                 </span>
               </div>
               <Row>
-                <Col xs={12} sm={6} md={6} lg={6}>
-                  Test
+                <Col xs={12} sm={12} md={12} lg={12}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Size Small"
+                      subtitle="add this parameter"
+                      codetext="font={1.25}"
+                      font={1.5}
+                    />
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledSocialButton title="Facebook" icon="facebook" />
+                  </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
                   Test
