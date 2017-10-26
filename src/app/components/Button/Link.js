@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { displayBlock, disabledButton } from "./Styles";
 
 const Link = styled.button`
   font-size: ${props => (props.font ? props.font : ".75")}rem;
@@ -13,16 +14,6 @@ const Link = styled.button`
     color: #167495;
     text-decoration: underline;
   }
-`;
-
-const displayBlock = `
-display: block; 
-width: 100%; 
-`;
-
-const disabledButton = `
-opacity: .65; 
-pointer-events: none; 
 `;
 
 const StyledLink = props => {

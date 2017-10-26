@@ -18,12 +18,12 @@ export const Button = styled.button`
   ${props => (props.disabled ? disabledButton : "")};
 `;
 
-const displayBlock = `
+export const displayBlock = `
 display: block; 
 width: 100%; 
 `;
 
-const disabledButton = `
+export const disabledButton = `
 opacity: .65; 
 pointer-events: none; 
 `;
