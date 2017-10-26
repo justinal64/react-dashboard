@@ -170,7 +170,7 @@ class ButtonsContainer extends Component {
                       font={1.25}
                     />
                     <StyledButton title="Danger" button="Danger" font={1.25} />
-                    <StyledLink title="Link" />
+                    <StyledLink title="Link" font={1.25} />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
@@ -213,7 +213,7 @@ class ButtonsContainer extends Component {
                       inverted
                       font={1.25}
                     />
-                    <StyledLink title="Link" />
+                    <StyledLink title="Link" font={1.25} />
                   </div>
                 </Col>
               </Row>
@@ -249,7 +249,7 @@ class ButtonsContainer extends Component {
                       font={0.875}
                     />
                     <StyledButton title="Danger" button="Danger" font={0.875} />
-                    <StyledLink title="Link" />
+                    <StyledLink title="Link" font={0.875} />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
@@ -292,7 +292,7 @@ class ButtonsContainer extends Component {
                       inverted
                       font={0.875}
                     />
-                    <StyledLink title="Link" />
+                    <StyledLink title="Link" font={0.875} />
                   </div>
                 </Col>
               </Row>
@@ -307,37 +307,16 @@ class ButtonsContainer extends Component {
                     />
                   </div>
                   <div className="card_body card_bg">
-                    <StyledButton
-                      title="Primary"
-                      button="Primary"
-                      font={0.875}
-                      disabled
-                    />
+                    <StyledButton title="Primary" button="Primary" disabled />
                     <StyledButton
                       title="Secondary"
                       button="Secondary"
-                      font={0.875}
                       disabled
                     />
-                    <StyledButton
-                      title="Success"
-                      button="Success"
-                      font={0.875}
-                      disabled
-                    />
-                    <StyledButton
-                      title="Warning"
-                      button="Warning"
-                      font={0.875}
-                      disabled
-                    />
-                    <StyledButton
-                      title="Danger"
-                      button="Danger"
-                      font={0.875}
-                      disabled
-                    />
-                    <StyledLink title="Link" />
+                    <StyledButton title="Success" button="Success" disabled />
+                    <StyledButton title="Warning" button="Warning" disabled />
+                    <StyledButton title="Danger" button="Danger" disabled />
+                    <StyledLink title="Link" disabled />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
@@ -355,37 +334,32 @@ class ButtonsContainer extends Component {
                       button="Primary"
                       inverted
                       disabled
-                      font={0.875}
                     />
                     <StyledButton
                       title="Secondary"
                       button="Secondary"
                       inverted
-                      font={0.875}
                       disabled
                     />
                     <StyledButton
                       title="Success"
                       button="Success"
                       inverted
-                      font={0.875}
                       disabled
                     />
                     <StyledButton
                       title="Warning"
                       button="Warning"
                       inverted
-                      font={0.875}
                       disabled
                     />
                     <StyledButton
                       title="Danger"
                       button="Danger"
                       inverted
-                      font={0.875}
                       disabled
                     />
-                    <StyledLink title="Link" />
+                    <StyledLink title="Link" disabled />
                   </div>
                 </Col>
               </Row>
@@ -400,27 +374,11 @@ class ButtonsContainer extends Component {
                     />
                   </div>
                   <div className="card_body card_bg">
-                    <StyledButton
-                      title="Primary"
-                      button="Primary"
-                      font={0.875}
-                    />
-                    <StyledButton
-                      title="Secondary"
-                      button="Secondary"
-                      font={0.875}
-                    />
-                    <StyledButton
-                      title="Success"
-                      button="Success"
-                      font={0.875}
-                    />
-                    <StyledButton
-                      title="Warning"
-                      button="Warning"
-                      font={0.875}
-                    />
-                    <StyledButton title="Danger" button="Danger" font={0.875} />
+                    <StyledButton title="Primary" button="Primary" />
+                    <StyledButton title="Secondary" button="Secondary" />
+                    <StyledButton title="Success" button="Success" />
+                    <StyledButton title="Warning" button="Warning" />
+                    <StyledButton title="Danger" button="Danger" />
                     <StyledLink title="Link" />
                   </div>
                 </Col>
@@ -434,36 +392,15 @@ class ButtonsContainer extends Component {
                     />
                   </div>
                   <div className="card_body card_bg">
-                    <StyledButton
-                      title="Primary"
-                      button="Primary"
-                      inverted
-                      font={0.875}
-                    />
+                    <StyledButton title="Primary" button="Primary" inverted />
                     <StyledButton
                       title="Secondary"
                       button="Secondary"
                       inverted
-                      font={0.875}
                     />
-                    <StyledButton
-                      title="Success"
-                      button="Success"
-                      inverted
-                      font={0.875}
-                    />
-                    <StyledButton
-                      title="Warning"
-                      button="Warning"
-                      inverted
-                      font={0.875}
-                    />
-                    <StyledButton
-                      title="Danger"
-                      button="Danger"
-                      inverted
-                      font={0.875}
-                    />
+                    <StyledButton title="Success" button="Success" inverted />
+                    <StyledButton title="Warning" button="Warning" inverted />
+                    <StyledButton title="Danger" button="Danger" inverted />
                     <StyledLink title="Link" />
                   </div>
                 </Col>
@@ -504,7 +441,7 @@ class ButtonsContainer extends Component {
                       button="Danger"
                       block
                     />
-                    <StyledLink title="Link" />
+                    <StyledLink title="Link" block />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
@@ -547,7 +484,7 @@ class ButtonsContainer extends Component {
                       inverted
                       block
                     />
-                    <StyledLink title="Link" />
+                    <StyledLink title="Link" block />
                   </div>
                 </Col>
               </Row>
