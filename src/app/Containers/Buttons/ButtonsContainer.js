@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import "./Styles.scss";
 import SideNavigation from "../../components/Navigation/SideNavigation";
 import StyledButton from "../../components/Button/Button";
-import StyledLink from "../../components/Link/Link";
+import StyledLink from "../../components/Button/Link";
 import GraphHeader from "../../components/Typography/GraphHeader/GraphHeader";
 import Header from "../../components/Typography/Header/Header";
 import { Row, Col, Grid } from "react-flexbox-grid";
