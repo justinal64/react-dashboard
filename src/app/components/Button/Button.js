@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { getIcon } from "../Helper/Helper";
 
 // Add certain properties if the user passes disabled...
-const themePicker = (inverted, title) => {
-  if (inverted) return invertedButtonPicker(title);
-  else return buttonPicker(title);
+const themePicker = (inverted, button) => {
+  if (inverted) return invertedButtonPicker(button);
+  else return buttonPicker(button);
 };
 
 const Button = styled.button`
@@ -22,7 +22,7 @@ const Button = styled.button`
   font-size: ${props => (props.font ? props.font : ".75")}rem;
   background-color: transparent;
   display: ${props => (props.display ? displayBlock : "inline-block")};
-  ${props => themePicker(props.inverted, props.title)};
+  ${props => themePicker(props.inverted, props.button)};
   ${props => (props.disabled ? disabledButton : "")};
 `;
 
@@ -141,27 +141,28 @@ const InvertedDangerButton = `
   }
 `;
 
-let invertedButtonPicker = (title, icon, font) => {
-  if (title === "Primary") return InvertedPrimaryButton;
-  else if (title === "Secondary") return InvertedSecondaryButton;
-  else if (title === "Success") return InvertedSuccessButton;
-  else if (title === "Warning") return InvertedWarningButton;
-  else if (title === "Danger") return InvertedDangerButton;
+let invertedButtonPicker = button => {
+  if (button === "Primary") return InvertedPrimaryButton;
+  else if (button === "Secondary") return InvertedSecondaryButton;
+  else if (button === "Success") return InvertedSuccessButton;
+  else if (button === "Warning") return InvertedWarningButton;
+  else if (button === "Danger") return InvertedDangerButton;
 };
 
-let buttonPicker = (title, icon, font) => {
-  if (title === "Primary") return PrimaryButton;
-  else if (title === "Secondary") return SecondaryButton;
-  else if (title === "Success") return SuccessButton;
-  else if (title === "Warning") return WarningButton;
-  else if (title === "Danger") return DangerButton;
+let buttonPicker = button => {
+  if (button === "Primary") return PrimaryButton;
+  else if (button === "Secondary") return SecondaryButton;
+  else if (button === "Success") return SuccessButton;
+  else if (button === "Warning") return WarningButton;
+  else if (button === "Danger") return DangerButton;
 };
 
 const StyledButton = props => {
-  const { icon, title, font, inverted, disabled, block } = props;
+  const { icon, title, font, inverted, disabled, block, button } = props;
   let needIcon = icon ? getIcon(icon) : "";
   return (
     <Button
+      button={button}
       title={title}
       font={font}
       inverted={inverted}
@@ -172,9 +173,6 @@ const StyledButton = props => {
       {title}
     </Button>
   );
-  // if (props.inverted)
-  //   return invertedButtonPicker(props.title, needIcon, props.font);
-  // else return buttonPicker(props.title, needIcon, props.font);
 };
 
 export default StyledButton;
