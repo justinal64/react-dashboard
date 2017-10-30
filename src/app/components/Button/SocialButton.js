@@ -8,12 +8,17 @@ const SocialButton = styled.button`
   font-size: 0.875rem;
   line-height: 1.5;
   border: 0;
-  background: fb.bg;
   padding-right: 0.25rem;
+  ${props => backgroundColor(props.social)};
 `;
 
+const backgroundColor = social => {
+  console.log(social);
+  if (social === "facebook") return facebook;
+  else if (social === "twitter") return twitter;
+};
+
 const small = {
-  background: "#344e86",
   width: "1.8125rem",
   padding: ".25rem 0",
   fontSize: ".875rem",
@@ -21,19 +26,28 @@ const small = {
   marginRight: ".25rem"
 };
 
-const fb = {
-  bg: "#3b5998",
-  icon_bg: "#344e86"
-};
+const facebook = `
+    background: #3b5998;
+    :hover {
+      background: #344e86;
+    }
+  `;
+
+const twitter = `
+  background: #00aced;
+  :hover {
+    background: #0099d4;
+  }
+`;
 
 const StyledSocialButton = props => {
-  const { icon, title, font, inverted, disabled, block, button } = props;
+  const { icon, title, font, social } = props;
   let needIcon = icon ? getIcon(icon, small) : "";
   // Work on a function to get the bg and icon_bg
   // let bg =  getIcon(icon, small) ? "grey";
 
   return (
-    <SocialButton>
+    <SocialButton social={social}>
       {needIcon}
       {title}
     </SocialButton>
