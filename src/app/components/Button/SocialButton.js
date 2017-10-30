@@ -5,12 +5,32 @@ import { Button } from "./Styles";
 
 const background = {
   twitter: "#00aced",
-  facebook: "#3b5998"
+  facebook: "#3b5998",
+  linkedin: "#4875b4",
+  flickr: "#ff0084",
+  tumblr: "#32506d",
+  xing: "#026466",
+  github: "#4183c4",
+  html5: "#e34f26",
+  openid: "#f78c40",
+  stackoverflow: "#fe7a15",
+  css3: "#0170ba",
+  youtube: "#b00"
 };
 
 const hover_background = {
   twitter: "#0099d4",
-  facebook: "#344e86"
+  facebook: "#344e86",
+  linkedin: "#4169a2",
+  flickr: "#e60077",
+  tumblr: "#2a435c",
+  xing: "#024b4d",
+  github: "#3876b4",
+  html5: "#d4431b",
+  openid: "#f67d28",
+  stackoverflow: "#f86c01",
+  css3: "#0161a1",
+  youtube: "#a20000"
 };
 
 const SocialButton = styled.button`

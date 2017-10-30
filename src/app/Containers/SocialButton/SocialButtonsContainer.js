@@ -47,7 +47,19 @@ class SocialButtonsContainer extends Component {
                   <div className="card_body card_bg">
                     <StyledSocialButton title="Facebook" icon="facebook" />
                     <StyledSocialButton title="Twitter" icon="twitter" />
-                    <StyledSocialButton title="Twitter" icon="twitter" />
+                    <StyledSocialButton title="Linkedin" icon="linkedin" />
+                    <StyledSocialButton title="Flickr" icon="flickr" />
+                    <StyledSocialButton title="Tumblr" icon="tumblr" />
+                    <StyledSocialButton title="Xing" icon="xing" />
+                    <StyledSocialButton title="Github" icon="github" />
+                    <StyledSocialButton title="Html5" icon="html5" />
+                    <StyledSocialButton title="OpenId" icon="openid" />
+                    <StyledSocialButton
+                      title="StackOverflow"
+                      icon="stack-overflow"
+                    />
+                    <StyledSocialButton title="Css3" icon="css3" />
+                    <StyledSocialButton title="Youtube" icon="youtube" />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
