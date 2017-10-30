@@ -62,7 +62,7 @@ const hover_background = {
 const SocialButton = styled.button`
   color: white;
   padding: 0;
-  font-size: 0.875rem;
+  font-size: ${props => (props.size === "large" ? "1.25rem" : ".875rem")};
   line-height: 1.5;
   border: 0;
   padding-right: ${props =>
@@ -78,7 +78,6 @@ const SocialButton = styled.button`
 const small = {
   width: "1.8125rem",
   padding: ".25rem 0rem",
-  fontSize: ".875rem",
   lineHeight: "1.5",
   marginRight: ".25rem"
 };
@@ -86,7 +85,6 @@ const small = {
 const medium = {
   width: "1.8125rem",
   padding: ".5rem .75rem",
-  fontSize: ".875rem",
   lineHeight: "1.5",
   marginRight: ".25rem"
 };
@@ -94,7 +92,6 @@ const medium = {
 const large = {
   width: "1.8125rem",
   padding: ".25rem 0",
-  fontSize: "1.25rem",
   lineHeight: "1.5",
   marginRight: ".25rem"
 };

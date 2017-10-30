@@ -156,6 +156,8 @@ class SocialButtonsContainer extends Component {
                     />
                   </div>
                 </Col>
+              </Row>
+              <Row>
                 <Col xs={12} sm={12} md={12} lg={12}>
                   <div className="card_header card_bg">
                     <Header title="Size Normal" font={1.5} />
@@ -193,11 +195,126 @@ class SocialButtonsContainer extends Component {
                 </Col>
               </Row>
               <Row>
-                <Col xs={12} sm={6} md={6} lg={6}>
-                  Test
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={6}>
-                  Test
+                <Col xs={12} sm={12} md={12} lg={12}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Size Large"
+                      subtitle="add this parameter"
+                      codetext="size=&quot;large&quot;"
+                      font={1.5}
+                    />
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledSocialButton
+                      title="Facebook"
+                      icon="facebook"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Twitter"
+                      icon="twitter"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Linkedin"
+                      icon="linkedin"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Flickr"
+                      icon="flickr"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Tumblr"
+                      icon="tumblr"
+                      size="large"
+                    />
+                    <StyledSocialButton title="Xing" icon="xing" size="large" />
+                    <StyledSocialButton
+                      title="Github"
+                      icon="github"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Html5"
+                      icon="html5"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="OpenId"
+                      icon="openid"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="StackOverflow"
+                      icon="stack-overflow"
+                      size="large"
+                    />
+                    <StyledSocialButton title="Css3" icon="css3" size="large" />
+                    <StyledSocialButton
+                      title="Youtube"
+                      icon="youtube"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Dribbble"
+                      icon="dribbble"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Google+"
+                      icon="google-plus"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Instagram"
+                      icon="instagram"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Pinterest"
+                      icon="pinterest"
+                      size="large"
+                    />
+                    <StyledSocialButton title="VK" icon="vk" size="large" />
+                    <StyledSocialButton
+                      title="Yahoo"
+                      icon="yahoo"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Behance"
+                      icon="behance"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Dropbox"
+                      icon="dropbox"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Reddit"
+                      icon="reddit"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Spotify"
+                      icon="spotify"
+                      size="large"
+                    />
+                    <StyledSocialButton title="Vine" icon="vine" size="large" />
+                    <StyledSocialButton
+                      title="Forsquare"
+                      icon="foursquare"
+                      size="large"
+                    />
+                    <StyledSocialButton
+                      title="Vimeo"
+                      icon="vimeo"
+                      size="large"
+                    />
+                  </div>
                 </Col>
               </Row>
             </Grid>
