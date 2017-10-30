@@ -60,6 +60,12 @@ class SocialButtonsContainer extends Component {
                     />
                     <StyledSocialButton title="Css3" icon="css3" />
                     <StyledSocialButton title="Youtube" icon="youtube" />
+                    <StyledSocialButton title="Dribbble" icon="dribbble" />
+                    <StyledSocialButton title="Google+" icon="google-plus" />
+                    <StyledSocialButton title="Instagram" icon="instagram" />
+                    <StyledSocialButton title="Pinterest" icon="pinterest" />
+                    <StyledSocialButton title="VK" icon="vk" />
+                    <StyledSocialButton title="Yahoo" icon="yahoo" />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>

@@ -15,7 +15,13 @@ const background = {
   openid: "#f78c40",
   stackoverflow: "#fe7a15",
   css3: "#0170ba",
-  youtube: "#b00"
+  youtube: "#b00",
+  dribbble: "#ea4c89",
+  "google+": "#d34836",
+  instagram: "#517fa4",
+  pinterest: "#cb2027",
+  vk: "#45668e",
+  yahoo: "#400191"
 };
 
 const hover_background = {
@@ -30,7 +36,13 @@ const hover_background = {
   openid: "#f67d28",
   stackoverflow: "#f86c01",
   css3: "#0161a1",
-  youtube: "#a20000"
+  youtube: "#a20000",
+  dribbble: "#e7357a",
+  "google+": "#c43d2b",
+  instagram: "#497293",
+  pinterest: "#b51d23",
+  vk: "#3d5a7d",
+  yahoo: "#350178"
 };
 
 const SocialButton = styled.button`
