@@ -27,7 +27,7 @@ const background = {
   reddit: "#ff4500",
   spotify: "#7ab800",
   vine: "#00bf8f",
-  foursquare: "#1073af",
+  forsquare: "#1073af",
   vimeo: "#aad450"
 };
 
@@ -55,7 +55,7 @@ const hover_background = {
   reddit: "#e63e00",
   spotify: "#699f00",
   vine: "#00a67c",
-  foursquare: "#0e6498",
+  forsquare: "#0e6498",
   vimeo: "#a0cf3c"
 };
 
@@ -84,17 +84,32 @@ const small = {
 
 const medium = {
   width: "1.8125rem",
+  padding: ".5rem .75rem",
+  fontSize: "1.875rem",
+  lineHeight: "1.5",
+  marginRight: ".25rem"
+};
+
+const large = {
+  width: "1.8125rem",
   padding: ".25rem 0",
   fontSize: ".875rem",
   lineHeight: "1.5",
   marginRight: ".25rem"
 };
 
+const getSize = size => {
+  if (size === "small") return small;
+  else if (size === "medium") return medium;
+  else if (size === "large") return large;
+  else return medium;
+};
+
 const StyledSocialButton = props => {
   const { icon, title, font, size } = props;
-  size = size ? size : medium;
+  let textSize = getSize(size);
   let social = title.toLowerCase();
-  let needIcon = icon ? getIcon(icon, small) : "";
+  let needIcon = icon ? getIcon(icon, textSize) : "";
 
   return (
     <SocialButton social={social}>
