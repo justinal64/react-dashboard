@@ -20,10 +20,11 @@ const SocialButton = styled.button`
   line-height: 1.5;
   border: 0;
   padding-right: 0.25rem;
-  background: ${props => (props.social ? background[props.social] : "grey")};
+  background: ${props =>
+    background[props.social] ? background[props.social] : "grey"};
   :hover {
     background: ${props =>
-      props.social ? hover_background[props.social] : "grey"};
+      hover_background[props.social] ? hover_background[props.social] : "grey"};
   }
 `;
 
@@ -36,10 +37,9 @@ const small = {
 };
 
 const StyledSocialButton = props => {
-  const { icon, title, font, social } = props;
+  const { icon, title, font } = props;
+  let social = title.toLowerCase();
   let needIcon = icon ? getIcon(icon, small) : "";
-  // Work on a function to get the bg and icon_bg
-  // let bg =  getIcon(icon, small) ? "grey";
 
   return (
     <SocialButton social={social}>
