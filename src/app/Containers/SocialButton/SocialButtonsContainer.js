@@ -156,8 +156,40 @@ class SocialButtonsContainer extends Component {
                     />
                   </div>
                 </Col>
-                <Col xs={12} sm={6} md={6} lg={6}>
-                  Test
+                <Col xs={12} sm={12} md={12} lg={12}>
+                  <div className="card_header card_bg">
+                    <Header title="Size Normal" font={1.5} />
+                  </div>
+                  <div className="card_body card_bg">
+                    <StyledSocialButton title="Facebook" icon="facebook" />
+                    <StyledSocialButton title="Twitter" icon="twitter" />
+                    <StyledSocialButton title="Linkedin" icon="linkedin" />
+                    <StyledSocialButton title="Flickr" icon="flickr" />
+                    <StyledSocialButton title="Tumblr" icon="tumblr" />
+                    <StyledSocialButton title="Xing" icon="xing" />
+                    <StyledSocialButton title="Github" icon="github" />
+                    <StyledSocialButton title="Html5" icon="html5" />
+                    <StyledSocialButton title="OpenId" icon="openid" />
+                    <StyledSocialButton
+                      title="StackOverflow"
+                      icon="stack-overflow"
+                    />
+                    <StyledSocialButton title="Css3" icon="css3" />
+                    <StyledSocialButton title="Youtube" icon="youtube" />
+                    <StyledSocialButton title="Dribbble" icon="dribbble" />
+                    <StyledSocialButton title="Google+" icon="google-plus" />
+                    <StyledSocialButton title="Instagram" icon="instagram" />
+                    <StyledSocialButton title="Pinterest" icon="pinterest" />
+                    <StyledSocialButton title="VK" icon="vk" />
+                    <StyledSocialButton title="Yahoo" icon="yahoo" />
+                    <StyledSocialButton title="Behance" icon="behance" />
+                    <StyledSocialButton title="Dropbox" icon="dropbox" />
+                    <StyledSocialButton title="Reddit" icon="reddit" />
+                    <StyledSocialButton title="Spotify" icon="spotify" />
+                    <StyledSocialButton title="Vine" icon="vine" />
+                    <StyledSocialButton title="Forsquare" icon="foursquare" />
+                    <StyledSocialButton title="Vimeo" icon="vimeo" />
+                  </div>
                 </Col>
               </Row>
               <Row>
