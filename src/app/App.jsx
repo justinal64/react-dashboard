@@ -23,7 +23,7 @@ const App = () => {
         <Route exact path="/" component={Login} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/buttons" component={Buttons} />
-        {<Route path="/socialmediabuttons" component={SocialButtons} />}
+        <Route path="/socialbuttons" component={SocialButtons} />
         <Route path="/test" component={Test} />
         <Route path="/barchart" component={BarChart} />
         <Route path="/charts" component={Charts} />
