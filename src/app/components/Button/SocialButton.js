@@ -21,7 +21,14 @@ const background = {
   instagram: "#517fa4",
   pinterest: "#cb2027",
   vk: "#45668e",
-  yahoo: "#400191"
+  yahoo: "#400191",
+  behance: "#1769ff",
+  dropbox: "#007ee5",
+  reddit: "#ff4500",
+  spotify: "#7ab800",
+  vine: "#00bf8f",
+  foursquare: "#1073af",
+  vimeo: "#aad450"
 };
 
 const hover_background = {
@@ -42,7 +49,14 @@ const hover_background = {
   instagram: "#497293",
   pinterest: "#b51d23",
   vk: "#3d5a7d",
-  yahoo: "#350178"
+  yahoo: "#350178",
+  behance: "#0059fd",
+  dropbox: "#0070cc",
+  reddit: "#e63e00",
+  spotify: "#699f00",
+  vine: "#00a67c",
+  foursquare: "#0e6498",
+  vimeo: "#a0cf3c"
 };
 
 const SocialButton = styled.button`
@@ -68,8 +82,17 @@ const small = {
   marginRight: ".25rem"
 };
 
+const medium = {
+  width: "1.8125rem",
+  padding: ".25rem 0",
+  fontSize: ".875rem",
+  lineHeight: "1.5",
+  marginRight: ".25rem"
+};
+
 const StyledSocialButton = props => {
-  const { icon, title, font } = props;
+  const { icon, title, font, size } = props;
+  size = size ? size : medium;
   let social = title.toLowerCase();
   let needIcon = icon ? getIcon(icon, small) : "";
 

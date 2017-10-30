@@ -58,7 +58,7 @@ class SocialButtonsContainer extends Component {
                       title="StackOverflow"
                       icon="stack-overflow"
                     />
-                    <StyledSocialButton title="Css3" icon="css3" />
+                    <StyledSocialButton title="Css3" icon="css3" size="small" />
                     <StyledSocialButton title="Youtube" icon="youtube" />
                     <StyledSocialButton title="Dribbble" icon="dribbble" />
                     <StyledSocialButton title="Google+" icon="google-plus" />
@@ -66,6 +66,13 @@ class SocialButtonsContainer extends Component {
                     <StyledSocialButton title="Pinterest" icon="pinterest" />
                     <StyledSocialButton title="VK" icon="vk" />
                     <StyledSocialButton title="Yahoo" icon="yahoo" />
+                    <StyledSocialButton title="Behance" icon="behance" />
+                    <StyledSocialButton title="Dropbox" icon="dropbox" />
+                    <StyledSocialButton title="Reddit" icon="reddit" />
+                    <StyledSocialButton title="Spotify" icon="spotify" />
+                    <StyledSocialButton title="Vine" icon="vine" />
+                    <StyledSocialButton title="Foursquare" icon="foursquare" />
+                    <StyledSocialButton title="Vimeo" icon="vimeo" />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
