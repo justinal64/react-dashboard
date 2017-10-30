@@ -2,6 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { getIcon } from "../Helper/Helper";
 import { Button } from "./Styles";
+
+const background = {
+  twitter: "#00aced",
+  facebook: "#3b5998"
+};
+
+const hover_background = {
+  twitter: "#0099d4",
+  facebook: "#344e86"
+};
+
 const SocialButton = styled.button`
   color: white;
   padding: 0;
@@ -9,14 +20,12 @@ const SocialButton = styled.button`
   line-height: 1.5;
   border: 0;
   padding-right: 0.25rem;
-  ${props => backgroundColor(props.social)};
+  background: ${props => (props.social ? background[props.social] : "grey")};
+  :hover {
+    background: ${props =>
+      props.social ? hover_background[props.social] : "grey"};
+  }
 `;
-
-const backgroundColor = social => {
-  console.log(social);
-  if (social === "facebook") return facebook;
-  else if (social === "twitter") return twitter;
-};
 
 const small = {
   width: "1.8125rem",
@@ -25,20 +34,6 @@ const small = {
   lineHeight: "1.5",
   marginRight: ".25rem"
 };
-
-const facebook = `
-    background: #3b5998;
-    :hover {
-      background: #344e86;
-    }
-  `;
-
-const twitter = `
-  background: #00aced;
-  :hover {
-    background: #0099d4;
-  }
-`;
 
 const StyledSocialButton = props => {
   const { icon, title, font, social } = props;
