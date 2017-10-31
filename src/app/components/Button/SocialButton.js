@@ -60,7 +60,6 @@ const hover_background = {
 
 const SocialButton = styled.button`
   color: white;
-  padding: 0;
   font-size: ${props => (props.size === "large" ? "1.25rem" : ".875rem")};
   line-height: 1.5;
   border: 0;

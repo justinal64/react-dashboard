@@ -246,6 +246,92 @@ class SocialButtonsContainer extends Component {
                   </div>
                 </Col>
               </Row>
+              <Row>
+                <Col xs={12} sm={12} md={12} lg={12}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Social Media Buttons"
+                      subtitle="Text Only"
+                      codetext="<StyledSocialButton title='Facebook'></StyledSocialButton>"
+                      font={1.5}
+                    />
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} sm={12} md={12} lg={12}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Size Small"
+                      subtitle="add this parameter"
+                      codetext="size=&quot;small&quot;"
+                      font={1.5}
+                    />
+                  </div>
+                  <div className="card_body card_bg">
+                    {Object.entries(sm).map(function(item) {
+                      let title = item[0];
+                      let social = item[1];
+                      return (
+                        <StyledSocialButton
+                          key={item}
+                          title={title}
+                          size="small"
+                          social={social}
+                        />
+                      );
+                    })}
+                  </div>
+                </Col>
+                <Col xs={12} sm={12} md={12} lg={12}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Size Medium"
+                      subtitle="add this parameter"
+                      codetext="size=&quot;medium&quot;"
+                      font={1.5}
+                    />
+                  </div>
+                  <div className="card_body card_bg">
+                    {Object.entries(sm).map(function(item) {
+                      let title = item[0];
+                      let social = item[1];
+                      return (
+                        <StyledSocialButton
+                          key={item}
+                          title={title}
+                          size="medium"
+                          social={social}
+                        />
+                      );
+                    })}
+                  </div>
+                </Col>
+                <Col xs={12} sm={12} md={12} lg={12}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Size Large"
+                      subtitle="add this parameter"
+                      codetext="size=&quot;large&quot;"
+                      font={1.5}
+                    />
+                  </div>
+                  <div className="card_body card_bg">
+                    {Object.entries(sm).map(function(item) {
+                      let title = item[0];
+                      let social = item[1];
+                      return (
+                        <StyledSocialButton
+                          key={item}
+                          title={title}
+                          size="large"
+                          social={social}
+                        />
+                      );
+                    })}
+                  </div>
+                </Col>
+              </Row>
             </Grid>
           </div>
         </div>
