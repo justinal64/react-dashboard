@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { getIcon } from "../Helper/Helper";
-import { Button } from "./Styles";
 
 const background = {
   twitter: "#00aced",
@@ -13,11 +12,11 @@ const background = {
   github: "#4183c4",
   html5: "#e34f26",
   openid: "#f78c40",
-  stackoverflow: "#fe7a15",
+  "stack-overflow": "#fe7a15",
   css3: "#0170ba",
   youtube: "#b00",
   dribbble: "#ea4c89",
-  "google+": "#d34836",
+  "google-plus": "#d34836",
   instagram: "#517fa4",
   pinterest: "#cb2027",
   vk: "#45668e",
@@ -27,7 +26,7 @@ const background = {
   reddit: "#ff4500",
   spotify: "#7ab800",
   vine: "#00bf8f",
-  forsquare: "#1073af",
+  foursquare: "#1073af",
   vimeo: "#aad450"
 };
 
@@ -41,11 +40,11 @@ const hover_background = {
   github: "#3876b4",
   html5: "#d4431b",
   openid: "#f67d28",
-  stackoverflow: "#f86c01",
+  "stack-overflow": "#f86c01",
   css3: "#0161a1",
   youtube: "#a20000",
   dribbble: "#e7357a",
-  "google+": "#c43d2b",
+  "google-plus": "#c43d2b",
   instagram: "#497293",
   pinterest: "#b51d23",
   vk: "#3d5a7d",
@@ -55,18 +54,17 @@ const hover_background = {
   reddit: "#e63e00",
   spotify: "#699f00",
   vine: "#00a67c",
-  forsquare: "#0e6498",
+  foursquare: "#0e6498",
   vimeo: "#a0cf3c"
 };
 
 const SocialButton = styled.button`
   color: white;
-  padding: 0;
   font-size: ${props => (props.size === "large" ? "1.25rem" : ".875rem")};
   line-height: 1.5;
   border: 0;
   padding-right: ${props =>
-    props.size ? getPaddingRight(props.size) : ".5rem"};
+    props.size ? getPaddingRight(props.size, props.title) : "0rem"};
   background: ${props =>
     background[props.social] ? background[props.social] : "grey"};
   :hover {
@@ -78,29 +76,26 @@ const SocialButton = styled.button`
 const small = {
   width: "1.8125rem",
   padding: ".25rem 0rem",
-  lineHeight: "1.5",
-  marginRight: ".25rem"
+  lineHeight: "1.5"
 };
 
 const medium = {
-  width: "1.8125rem",
   padding: ".5rem .75rem",
   lineHeight: "1.5",
-  marginRight: ".25rem"
+  fontSize: "1rem"
 };
 
 const large = {
-  width: "1.8125rem",
+  width: "2.8125rem",
   padding: ".25rem 0",
-  lineHeight: "1.5",
-  marginRight: ".25rem"
+  lineHeight: "1.5"
 };
 
-const getPaddingRight = size => {
-  console.log(size);
-  if (size === "small") return ".25rem";
-  else if (size === "large") return ".75rem";
-  else return ".5rem";
+const getPaddingRight = (size, title) => {
+  if (size === "small" && title !== undefined) return ".25rem";
+  else if (size === "large" && title !== undefined) return ".75rem";
+  else if (size === "medium" && title !== undefined) return ".5rem";
+  else return "0rem";
 };
 
 const getSize = size => {
@@ -111,13 +106,12 @@ const getSize = size => {
 };
 
 const StyledSocialButton = props => {
-  const { icon, title, font, size } = props;
+  const { icon, title, font, size, social } = props;
   let textSize = getSize(size);
-  let social = title.toLowerCase();
   let needIcon = icon ? getIcon(icon, textSize) : "";
 
   return (
-    <SocialButton social={social} size={size}>
+    <SocialButton social={social} size={size} title={title}>
       {needIcon}
       {title}
     </SocialButton>
