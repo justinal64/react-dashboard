@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { getIcon } from "../Helper/Helper";
-import { Button } from "./Styles";
 
 const background = {
   twitter: "#00aced",
@@ -66,7 +65,7 @@ const SocialButton = styled.button`
   line-height: 1.5;
   border: 0;
   padding-right: ${props =>
-    props.size ? getPaddingRight(props.size) : ".5rem"};
+    props.size ? getPaddingRight(props.size) : "0rem"};
   background: ${props =>
     background[props.social] ? background[props.social] : "grey"};
   :hover {
@@ -78,12 +77,11 @@ const SocialButton = styled.button`
 const small = {
   width: "1.8125rem",
   padding: ".25rem 0rem",
-  lineHeight: "1.5",
-  marginRight: ".25rem"
+  lineHeight: "1.5"
 };
 
 const medium = {
-  width: "1.8125rem",
+  // width: "1.8125rem",
   padding: ".5rem .75rem",
   lineHeight: "1.5",
   marginRight: ".25rem"
@@ -100,7 +98,8 @@ const getPaddingRight = size => {
   console.log(size);
   if (size === "small") return ".25rem";
   else if (size === "large") return ".75rem";
-  else return ".5rem";
+  else if (size === "medium") return ".5rem";
+  else return "0rem";
 };
 
 const getSize = size => {
@@ -111,9 +110,8 @@ const getSize = size => {
 };
 
 const StyledSocialButton = props => {
-  const { icon, title, font, size } = props;
+  const { icon, title, font, size, social } = props;
   let textSize = getSize(size);
-  let social = title.toLowerCase();
   let needIcon = icon ? getIcon(icon, textSize) : "";
 
   return (
