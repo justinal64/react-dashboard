@@ -5,6 +5,34 @@ import StyledSocialButton from "../../components/Button/SocialButton";
 import Header from "../../components/Typography/Header/Header";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
+const sm = {
+  twitter: "twitter",
+  facebook: "facebook",
+  linkedin: "linkedin",
+  flickr: "flickr",
+  tumblr: "tumblr",
+  xing: "xing",
+  github: "github",
+  html5: "html5",
+  openid: "openid",
+  stackoverflow: "stack-overflow",
+  css3: "css3",
+  youtube: "youtube",
+  dribbble: "dribbble",
+  "google+": "google-plus",
+  instagram: "instagram",
+  pinterest: "pinterest",
+  vk: "vk",
+  yahoo: "yahoo",
+  behance: "behance",
+  dropbox: "dropbox",
+  reddit: "reddit",
+  spotify: "spotify",
+  vine: "vine",
+  forsquare: "foursquare",
+  vimeo: "vimeo"
+};
+
 class SocialButtonsContainer extends Component {
   componentWillMount() {
     // this.props.fetchData();
@@ -13,6 +41,7 @@ class SocialButtonsContainer extends Component {
   componentDidMount() {
     // setInterval(this.props.fetchData.bind(this), 100000); // 300000 = 5 minutes
   }
+
   render() {
     return (
       <div id="body">
@@ -57,156 +86,19 @@ class SocialButtonsContainer extends Component {
                     />
                   </div>
                   <div className="card_body card_bg">
-                    <StyledSocialButton
-                      title="Facebook"
-                      icon="facebook"
-                      size="small"
-                      social="facebook"
-                    />
-                    <StyledSocialButton
-                      title="Twitter"
-                      icon="twitter"
-                      size="small"
-                      social="twitter"
-                    />
-                    <StyledSocialButton
-                      title="Linkedin"
-                      icon="linkedin"
-                      size="small"
-                      social="linkedin"
-                    />
-                    <StyledSocialButton
-                      title="Flickr"
-                      icon="flickr"
-                      size="small"
-                      social="flickr"
-                    />
-                    <StyledSocialButton
-                      title="Tumblr"
-                      icon="tumblr"
-                      size="small"
-                      social="tumblr"
-                    />
-                    <StyledSocialButton
-                      title="Xing"
-                      icon="xing"
-                      size="small"
-                      social="xing"
-                    />
-                    <StyledSocialButton
-                      title="Github"
-                      icon="github"
-                      size="small"
-                      social="github"
-                    />
-                    <StyledSocialButton
-                      title="Html5"
-                      icon="html5"
-                      size="small"
-                      social="html5"
-                    />
-                    <StyledSocialButton
-                      title="OpenId"
-                      icon="openid"
-                      size="small"
-                      social="openid"
-                    />
-                    <StyledSocialButton
-                      title="StackOverflow"
-                      icon="stack-overflow"
-                      size="small"
-                      social="stackoverflow"
-                    />
-                    <StyledSocialButton
-                      title="Css3"
-                      icon="css3"
-                      size="small"
-                      social="css3"
-                    />
-                    <StyledSocialButton
-                      title="Youtube"
-                      icon="youtube"
-                      size="small"
-                      social="youtube"
-                    />
-                    <StyledSocialButton
-                      title="Dribbble"
-                      icon="dribbble"
-                      size="small"
-                      social="dribbble"
-                    />
-                    <StyledSocialButton
-                      title="Google+"
-                      icon="google-plus"
-                      size="small"
-                      social="google+"
-                    />
-                    <StyledSocialButton
-                      title="Instagram"
-                      icon="instagram"
-                      size="small"
-                      social="instagram"
-                    />
-                    <StyledSocialButton
-                      title="Pinterest"
-                      icon="pinterest"
-                      size="small"
-                      social="pinterest"
-                    />
-                    <StyledSocialButton
-                      title="VK"
-                      icon="vk"
-                      size="small"
-                      social="vk"
-                    />
-                    <StyledSocialButton
-                      title="Yahoo"
-                      icon="yahoo"
-                      size="small"
-                      social="yahoo"
-                    />
-                    <StyledSocialButton
-                      title="Behance"
-                      icon="behance"
-                      size="small"
-                      social="behance"
-                    />
-                    <StyledSocialButton
-                      title="Dropbox"
-                      icon="dropbox"
-                      size="small"
-                      social="dropbox"
-                    />
-                    <StyledSocialButton
-                      title="Reddit"
-                      icon="reddit"
-                      size="small"
-                      social="reddit"
-                    />
-                    <StyledSocialButton
-                      title="Spotify"
-                      icon="spotify"
-                      size="small"
-                      social="spotify"
-                    />
-                    <StyledSocialButton
-                      title="Vine"
-                      icon="vine"
-                      size="small"
-                      social="vine"
-                    />
-                    <StyledSocialButton
-                      title="Forsquare"
-                      icon="foursquare"
-                      size="small"
-                      social="forsquare"
-                    />
-                    <StyledSocialButton
-                      title="Vimeo"
-                      icon="vimeo"
-                      size="small"
-                      social="vimeo"
-                    />
+                    {Object.entries(sm).map(function(item) {
+                      let title = item[0];
+                      let social = item[1];
+                      return (
+                        <StyledSocialButton
+                          key={item}
+                          title={title}
+                          icon={social}
+                          size="small"
+                          social={social}
+                        />
+                      );
+                    })}
                   </div>
                 </Col>
               </Row>
@@ -216,156 +108,19 @@ class SocialButtonsContainer extends Component {
                     <Header title="Size Normal" font={1.5} />
                   </div>
                   <div className="card_body card_bg">
-                    <StyledSocialButton
-                      title="Facebook"
-                      icon="facebook"
-                      size="medium"
-                      social="facebook"
-                    />
-                    <StyledSocialButton
-                      title="Twitter"
-                      icon="twitter"
-                      size="medium"
-                      social="twitter"
-                    />
-                    <StyledSocialButton
-                      title="Linkedin"
-                      icon="linkedin"
-                      size="medium"
-                      social="linkedin"
-                    />
-                    <StyledSocialButton
-                      title="Flickr"
-                      icon="flickr"
-                      size="medium"
-                      social="flickr"
-                    />
-                    <StyledSocialButton
-                      title="Tumblr"
-                      icon="tumblr"
-                      size="medium"
-                      social="tumblr"
-                    />
-                    <StyledSocialButton
-                      title="Xing"
-                      icon="xing"
-                      size="medium"
-                      social="xing"
-                    />
-                    <StyledSocialButton
-                      title="Github"
-                      icon="github"
-                      size="medium"
-                      social="github"
-                    />
-                    <StyledSocialButton
-                      title="Html5"
-                      icon="html5"
-                      size="medium"
-                      social="html5"
-                    />
-                    <StyledSocialButton
-                      title="OpenId"
-                      icon="openid"
-                      size="medium"
-                      social="openid"
-                    />
-                    <StyledSocialButton
-                      title="StackOverflow"
-                      icon="stack-overflow"
-                      size="medium"
-                      social="stackoverflow"
-                    />
-                    <StyledSocialButton
-                      title="Css3"
-                      icon="css3"
-                      size="medium"
-                      social="css3"
-                    />
-                    <StyledSocialButton
-                      title="Youtube"
-                      icon="youtube"
-                      size="medium"
-                      social="youtube"
-                    />
-                    <StyledSocialButton
-                      title="Dribbble"
-                      icon="dribbble"
-                      size="medium"
-                      social="dribbble"
-                    />
-                    <StyledSocialButton
-                      title="Google+"
-                      icon="google-plus"
-                      size="medium"
-                      social="google+"
-                    />
-                    <StyledSocialButton
-                      title="Instagram"
-                      icon="instagram"
-                      size="medium"
-                      social="instagram"
-                    />
-                    <StyledSocialButton
-                      title="Pinterest"
-                      icon="pinterest"
-                      size="medium"
-                      social="pinterest"
-                    />
-                    <StyledSocialButton
-                      title="VK"
-                      icon="vk"
-                      size="medium"
-                      social="vk"
-                    />
-                    <StyledSocialButton
-                      title="Yahoo"
-                      icon="yahoo"
-                      size="medium"
-                      social="yahoo"
-                    />
-                    <StyledSocialButton
-                      title="Behance"
-                      icon="behance"
-                      size="medium"
-                      social="behance"
-                    />
-                    <StyledSocialButton
-                      title="Dropbox"
-                      icon="dropbox"
-                      size="medium"
-                      social="dropbox"
-                    />
-                    <StyledSocialButton
-                      title="Reddit"
-                      icon="reddit"
-                      size="medium"
-                      social="reddit"
-                    />
-                    <StyledSocialButton
-                      title="Spotify"
-                      icon="spotify"
-                      size="medium"
-                      social="spotify"
-                    />
-                    <StyledSocialButton
-                      title="Vine"
-                      icon="vine"
-                      size="medium"
-                      social="vine"
-                    />
-                    <StyledSocialButton
-                      title="Forsquare"
-                      icon="foursquare"
-                      size="medium"
-                      social="forsquare"
-                    />
-                    <StyledSocialButton
-                      title="Vimeo"
-                      icon="vimeo"
-                      size="medium"
-                      social="vimeo"
-                    />
+                    {Object.entries(sm).map(function(item) {
+                      let title = item[0];
+                      let social = item[1];
+                      return (
+                        <StyledSocialButton
+                          key={item}
+                          title={title}
+                          icon={social}
+                          size="medium"
+                          social={social}
+                        />
+                      );
+                    })}
                   </div>
                 </Col>
               </Row>
@@ -380,156 +135,19 @@ class SocialButtonsContainer extends Component {
                     />
                   </div>
                   <div className="card_body card_bg">
-                    <StyledSocialButton
-                      title="Facebook"
-                      icon="facebook"
-                      size="large"
-                      social="facebook"
-                    />
-                    <StyledSocialButton
-                      title="Twitter"
-                      icon="twitter"
-                      size="large"
-                      social="twitter"
-                    />
-                    <StyledSocialButton
-                      title="Linkedin"
-                      icon="linkedin"
-                      size="large"
-                      social="linkedin"
-                    />
-                    <StyledSocialButton
-                      title="Flickr"
-                      icon="flickr"
-                      size="large"
-                      social="flickr"
-                    />
-                    <StyledSocialButton
-                      title="Tumblr"
-                      icon="tumblr"
-                      size="large"
-                      social="tumblr"
-                    />
-                    <StyledSocialButton
-                      title="Xing"
-                      icon="xing"
-                      size="large"
-                      social="xing"
-                    />
-                    <StyledSocialButton
-                      title="Github"
-                      icon="github"
-                      size="large"
-                      social="github"
-                    />
-                    <StyledSocialButton
-                      title="Html5"
-                      icon="html5"
-                      size="large"
-                      social="html5"
-                    />
-                    <StyledSocialButton
-                      title="OpenId"
-                      icon="openid"
-                      size="large"
-                      social="openid"
-                    />
-                    <StyledSocialButton
-                      title="StackOverflow"
-                      icon="stack-overflow"
-                      size="large"
-                      social="stackoverflow"
-                    />
-                    <StyledSocialButton
-                      title="Css3"
-                      icon="css3"
-                      size="large"
-                      social="css3"
-                    />
-                    <StyledSocialButton
-                      title="Youtube"
-                      icon="youtube"
-                      size="large"
-                      social="youtube"
-                    />
-                    <StyledSocialButton
-                      title="Dribbble"
-                      icon="dribbble"
-                      size="large"
-                      social="dribbble"
-                    />
-                    <StyledSocialButton
-                      title="Google+"
-                      icon="google-plus"
-                      size="large"
-                      social="google+"
-                    />
-                    <StyledSocialButton
-                      title="Instagram"
-                      icon="instagram"
-                      size="large"
-                      social="instagram"
-                    />
-                    <StyledSocialButton
-                      title="Pinterest"
-                      icon="pinterest"
-                      size="large"
-                      social="pinterest"
-                    />
-                    <StyledSocialButton
-                      title="VK"
-                      icon="vk"
-                      size="large"
-                      social="vk"
-                    />
-                    <StyledSocialButton
-                      title="Yahoo"
-                      icon="yahoo"
-                      size="large"
-                      social="yahoo"
-                    />
-                    <StyledSocialButton
-                      title="Behance"
-                      icon="behance"
-                      size="large"
-                      social="behance"
-                    />
-                    <StyledSocialButton
-                      title="Dropbox"
-                      icon="dropbox"
-                      size="large"
-                      social="dropbox"
-                    />
-                    <StyledSocialButton
-                      title="Reddit"
-                      icon="reddit"
-                      size="large"
-                      social="reddit"
-                    />
-                    <StyledSocialButton
-                      title="Spotify"
-                      icon="spotify"
-                      size="large"
-                      social="spotify"
-                    />
-                    <StyledSocialButton
-                      title="Vine"
-                      icon="vine"
-                      size="large"
-                      social="vine"
-                    />
-                    <StyledSocialButton
-                      title="Forsquare"
-                      icon="foursquare"
-                      size="large"
-                      social="forsquare"
-                    />
-                    <StyledSocialButton
-                      title="Vimeo"
-                      icon="vimeo"
-                      size="large"
-                      social="vimeo"
-                    />
+                    {Object.entries(sm).map(function(item) {
+                      let title = item[0];
+                      let social = item[1];
+                      return (
+                        <StyledSocialButton
+                          key={item}
+                          title={title}
+                          icon={social}
+                          size="large"
+                          social={social}
+                        />
+                      );
+                    })}
                   </div>
                 </Col>
               </Row>

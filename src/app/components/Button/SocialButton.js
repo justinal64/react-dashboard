@@ -12,11 +12,11 @@ const background = {
   github: "#4183c4",
   html5: "#e34f26",
   openid: "#f78c40",
-  stackoverflow: "#fe7a15",
+  "stack-overflow": "#fe7a15",
   css3: "#0170ba",
   youtube: "#b00",
   dribbble: "#ea4c89",
-  "google+": "#d34836",
+  "google-plus": "#d34836",
   instagram: "#517fa4",
   pinterest: "#cb2027",
   vk: "#45668e",
@@ -26,7 +26,7 @@ const background = {
   reddit: "#ff4500",
   spotify: "#7ab800",
   vine: "#00bf8f",
-  forsquare: "#1073af",
+  foursquare: "#1073af",
   vimeo: "#aad450"
 };
 
@@ -40,11 +40,11 @@ const hover_background = {
   github: "#3876b4",
   html5: "#d4431b",
   openid: "#f67d28",
-  stackoverflow: "#f86c01",
+  "stack-overflow": "#f86c01",
   css3: "#0161a1",
   youtube: "#a20000",
   dribbble: "#e7357a",
-  "google+": "#c43d2b",
+  "google-plus": "#c43d2b",
   instagram: "#497293",
   pinterest: "#b51d23",
   vk: "#3d5a7d",
@@ -54,7 +54,7 @@ const hover_background = {
   reddit: "#e63e00",
   spotify: "#699f00",
   vine: "#00a67c",
-  forsquare: "#0e6498",
+  foursquare: "#0e6498",
   vimeo: "#a0cf3c"
 };
 
