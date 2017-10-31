@@ -105,7 +105,12 @@ class SocialButtonsContainer extends Component {
               <Row>
                 <Col xs={12} sm={12} md={12} lg={12}>
                   <div className="card_header card_bg">
-                    <Header title="Size Normal" font={1.5} />
+                    <Header
+                      title="Size Medium"
+                      subtitle="add this parameter"
+                      codetext="size=&quot;medium&quot;"
+                      font={1.5}
+                    />
                   </div>
                   <div className="card_body card_bg">
                     {Object.entries(sm).map(function(item) {
@@ -166,130 +171,78 @@ class SocialButtonsContainer extends Component {
               <Row>
                 <Col xs={12} sm={12} md={12} lg={12}>
                   <div className="card_header card_bg">
-                    <Header title="Size Small" font={1.5} />
+                    <Header
+                      title="Size Small"
+                      subtitle="add this parameter"
+                      codetext="size=&quot;small&quot;"
+                      font={1.5}
+                    />
                   </div>
                   <div className="card_body card_bg">
-                    <StyledSocialButton
-                      icon="facebook"
-                      social="facebook"
-                      size="small"
+                    {Object.entries(sm).map(function(item) {
+                      let title = item[0];
+                      let social = item[1];
+                      return (
+                        <StyledSocialButton
+                          key={item}
+                          icon={social}
+                          size="small"
+                          social={social}
+                        />
+                      );
+                    })}
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} sm={12} md={12} lg={12}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Size Medium"
+                      subtitle="add this parameter"
+                      codetext="size=&quot;medium&quot;"
+                      font={1.5}
                     />
-                    <StyledSocialButton
-                      icon="twitter"
-                      social="twitter"
-                      size="small"
+                  </div>
+                  <div className="card_body card_bg">
+                    {Object.entries(sm).map(function(item) {
+                      let title = item[0];
+                      let social = item[1];
+                      return (
+                        <StyledSocialButton
+                          key={item}
+                          icon={social}
+                          size="medium"
+                          social={social}
+                        />
+                      );
+                    })}
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} sm={12} md={12} lg={12}>
+                  <div className="card_header card_bg">
+                    <Header
+                      title="Size Large"
+                      subtitle="add this parameter"
+                      codetext="size=&quot;large&quot;"
+                      font={1.5}
                     />
-                    <StyledSocialButton
-                      icon="linkedin"
-                      social="linkedin"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="flickr"
-                      social="flickr"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="tumblr"
-                      social="tumblr"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="xing"
-                      social="xing"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="github"
-                      social="github"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="html5"
-                      social="html5"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="openid"
-                      social="openid"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="stack-overflow"
-                      social="stackoverflow"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="css3"
-                      social="css3"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="youtube"
-                      social="youtube"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="dribbble"
-                      social="dribbble"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="google-plus"
-                      social="google+"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="instagram"
-                      social="instagram"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="pinterest"
-                      social="pinterest"
-                      size="small"
-                    />
-                    <StyledSocialButton icon="vk" social="vk" size="small" />
-                    <StyledSocialButton
-                      icon="yahoo"
-                      social="yahoo"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="behance"
-                      social="behance"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="dropbox"
-                      social="dropbox"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="reddit"
-                      social="reddit"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="spotify"
-                      social="spotify"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="vine"
-                      social="vine"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="foursquare"
-                      social="forsquare"
-                      size="small"
-                    />
-                    <StyledSocialButton
-                      icon="vimeo"
-                      social="vimeo"
-                      size="small"
-                    />
+                  </div>
+                  <div className="card_body card_bg">
+                    {Object.entries(sm).map(function(item) {
+                      let title = item[0];
+                      let social = item[1];
+                      return (
+                        <StyledSocialButton
+                          key={item}
+                          icon={social}
+                          size="large"
+                          social={social}
+                        />
+                      );
+                    })}
                   </div>
                 </Col>
               </Row>
