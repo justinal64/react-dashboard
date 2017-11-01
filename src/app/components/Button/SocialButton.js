@@ -60,55 +60,52 @@ const hover_background = {
 
 const SocialButton = styled.button`
   color: white;
-  font-size: ${props => (props.size === "large" ? "1.25rem" : ".875rem")};
+  font-size: ${props => getFontSize(props.size)};
   line-height: 1.5;
   border: 0;
-  padding-right: ${props =>
-    props.size ? getPaddingRight(props.size, props.title) : "0rem"};
-  background: ${props =>
-    background[props.social] ? background[props.social] : "grey"};
+  background: ${props => (props.social ? background[props.social] : "grey")};
   :hover {
     background: ${props =>
-      hover_background[props.social] ? hover_background[props.social] : "grey"};
+      props.social ? hover_background[props.social] : "grey"};
   }
 `;
 
 const small = {
-  width: "1.8125rem",
-  padding: ".25rem 0rem",
-  lineHeight: "1.5"
+  padding: ".25rem .25rem 0rem 0rem"
 };
 
 const medium = {
-  padding: ".5rem .75rem",
-  lineHeight: "1.5",
-  fontSize: "1rem"
+  padding: ".25rem .25rem 0rem 0rem"
 };
 
 const large = {
-  width: "2.8125rem",
-  padding: ".25rem 0",
-  lineHeight: "1.5"
+  padding: ".25rem .25rem 0rem 0rem"
 };
 
-const getPaddingRight = (size, title) => {
-  if (size === "small" && title !== undefined) return ".25rem";
-  else if (size === "large" && title !== undefined) return ".75rem";
-  else if (size === "medium" && title !== undefined) return ".5rem";
-  else return "0rem";
+const getFontSize = size => {
+  if (size === "small") return ".875rem";
+  else if (size === "medium") return "1rem";
+  else if (size === "large") return "1.25rem";
+  else return "1rem";
 };
 
-const getSize = size => {
-  if (size === "small") return small;
-  else if (size === "medium") return medium;
-  else if (size === "large") return large;
-  else return medium;
+// const getPaddingRight = (size, title) => {
+//   if (size === "small" && title !== undefined) return ".25rem";
+//   else if (size === "large" && title !== undefined) return ".75rem";
+//   else if (size === "medium" && title !== undefined) return ".5rem";
+//   else return "0rem";
+// };
+
+const iconStyling = (size, title) => {
+  if (size === "small" && title !== undefined) return small;
+  else if (size === "medium" && title !== undefined) return medium;
+  else if (size === "large" && title !== undefined) return large;
 };
 
 const StyledSocialButton = props => {
   const { icon, title, font, size, social } = props;
-  let textSize = getSize(size);
-  let needIcon = icon ? getIcon(icon, textSize) : "";
+  let styles = iconStyling(size, title);
+  let needIcon = icon ? getIcon(icon, styles) : "";
 
   return (
     <SocialButton social={social} size={size} title={title}>
