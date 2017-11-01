@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import "./Styles.scss";
+import Header from "../../components/Typography/Header/Header";
 import SideNavigation from "../../components/Navigation/SideNavigation";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
@@ -28,12 +28,18 @@ class CardConatiner extends Component {
             <Grid fluid>
               <div>
                 <span>
-                  <a href="dashboard">Home</a> / Cards / Buttons
+                  <a href="dashboard">Home</a> /
+                  <a href="dashboard">Components</a> / Cards
                 </span>
               </div>
               <Row>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  Test
+                  <div className="card_header card_bg_grey">
+                    <Header title="Card Title" />
+                  </div>
+                  <div className="card_body card_bg_body">
+                    This is the paragraph of thr card
+                  </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
                   Test
