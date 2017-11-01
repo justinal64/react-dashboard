@@ -63,8 +63,6 @@ const SocialButton = styled.button`
   font-size: ${props => (props.size === "large" ? "1.25rem" : ".875rem")};
   line-height: 1.5;
   border: 0;
-  padding-right: ${props =>
-    props.size ? getPaddingRight(props.size, props.title) : "0rem"};
   background: ${props =>
     background[props.social] ? background[props.social] : "grey"};
   :hover {
@@ -74,13 +72,13 @@ const SocialButton = styled.button`
 `;
 
 const small = {
-  width: "1.8125rem",
-  padding: ".25rem 0rem",
+  // width: "1.8125rem",
+  padding: ".25rem .25rem 0rem 0rem",
   lineHeight: "1.5"
 };
 
 const medium = {
-  padding: ".5rem .75rem",
+  padding: ".5rem .75rem 0rem 0rem",
   lineHeight: "1.5",
   fontSize: "1rem"
 };
