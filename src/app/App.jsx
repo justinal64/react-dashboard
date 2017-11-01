@@ -15,19 +15,20 @@ import PieChart from "../screens/Charts/PieChart.js";
 import LineChart from "../screens/Charts/LineChart.js";
 import SimpleLineChart from "../screens/Charts/SimpleLineChart.js";
 import SocialMediaChart from "../screens/Charts/SocialMediaChart.js";
-
+import Cards from "../screens/Cards";
 const App = () => {
   return (
     <main>
       <Switch>
         <Route exact path="/" component={Login} />
         <Route path="/dashboard" component={Dashboard} />
+        <Route path="/cards" component={Cards} />
+
         <Route path="/buttons" component={Buttons} />
         <Route path="/socialbuttons" component={SocialButtons} />
         <Route path="/test" component={Test} />
-        <Route path="/barchart" component={BarChart} />
         <Route path="/charts" component={Charts} />
-
+        <Route path="/barchart" component={BarChart} />
         <Route path="/basicchart" component={BasicChart} />
         <Route path="/horizontalbarchart" component={HorizontalBarChart} />
         <Route path="/piechart" component={PieChart} />

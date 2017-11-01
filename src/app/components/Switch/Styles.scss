@@ -1,0 +1,52 @@
+/* Example from codepen
+  https://codepen.io/AllThingsSmitty/pen/MmxxOz?q=toggle%20checkbox&order=popularity&depth=everything&show_forks=false
+*/
+
+.switch {
+    display: inline-block;
+    height: 1rem;
+    position: relative;
+    width: 3rem;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 2px;
+    content: "";
+    height: 0.75rem;
+    left: 2px;
+    position: absolute;
+    transition: 0.4s;
+    width: 0.75rem;
+}
+
+input:checked+.slider {
+    background-color: #67c2ef !important;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
