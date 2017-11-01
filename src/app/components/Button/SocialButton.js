@@ -70,15 +70,7 @@ const SocialButton = styled.button`
   }
 `;
 
-const small = {
-  padding: ".25rem .25rem 0rem 0rem"
-};
-
-const medium = {
-  padding: ".25rem .25rem 0rem 0rem"
-};
-
-const large = {
+const iconStyles = {
   padding: ".25rem .25rem 0rem 0rem"
 };
 
@@ -89,17 +81,8 @@ const getFontSize = size => {
   else return "1rem";
 };
 
-// const getPaddingRight = (size, title) => {
-//   if (size === "small" && title !== undefined) return ".25rem";
-//   else if (size === "large" && title !== undefined) return ".75rem";
-//   else if (size === "medium" && title !== undefined) return ".5rem";
-//   else return "0rem";
-// };
-
 const iconStyling = (size, title) => {
-  if (size === "small" && title !== undefined) return small;
-  else if (size === "medium" && title !== undefined) return medium;
-  else if (size === "large" && title !== undefined) return large;
+  if (size !== undefined && title !== undefined) return iconStyles;
 };
 
 const StyledSocialButton = props => {
