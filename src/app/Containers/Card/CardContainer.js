@@ -3,6 +3,7 @@ import Header from "../../components/Typography/Header/Header";
 import SideNavigation from "../../components/Navigation/SideNavigation";
 import { getIcon } from "../../components/Helper/Helper";
 import { Row, Col, Grid } from "react-flexbox-grid";
+import Switch from "../../components/Switch/Switch";
 
 const paragraph =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.";
@@ -66,13 +67,32 @@ class CardConatiner extends Component {
               </Row>
               <Row>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  Test
+                  <div className="card_header card_bg_grey">
+                    {/* <Header title="Card with Switch" subtitle={<Switch />} /> */}
+                    <Row>
+                      <Col xs={10} sm={10} md={10} lg={10}>
+                        <span className="padding_bottom">Card with Switch</span>
+                      </Col>
+                      <Col xs={2} sm={2} md={2} lg={2}>
+                        <Switch />
+                      </Col>
+                    </Row>
+                  </div>
+                  <div className="card_body card_bg_body">{paragraph}</div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  Test
+                  <div className="card_body_nomargin card_bg_body_reversed ">
+                    {paragraph}
+                  </div>
+                  <div className="card_header card_bg_grey">
+                    <Header title="Card Footer" />
+                  </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  Test
+                  <div className="card_header card_bg_grey">
+                    <Header title="Card with Icon" />
+                  </div>
+                  <div className="card_body card_bg_body">{paragraph}</div>
                 </Col>
               </Row>
             </Grid>
