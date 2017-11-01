@@ -96,16 +96,15 @@ const getFontSize = size => {
 //   else return "0rem";
 // };
 
-const iconStyling = size => {
-  if (size === "small") return small;
-  else if (size === "medium") return medium;
-  else if (size === "large") return large;
-  else return medium;
+const iconStyling = (size, title) => {
+  if (size === "small" && title !== undefined) return small;
+  else if (size === "medium" && title !== undefined) return medium;
+  else if (size === "large" && title !== undefined) return large;
 };
 
 const StyledSocialButton = props => {
   const { icon, title, font, size, social } = props;
-  let styles = iconStyling(size);
+  let styles = iconStyling(size, title);
   let needIcon = icon ? getIcon(icon, styles) : "";
 
   return (
