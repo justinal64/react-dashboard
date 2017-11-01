@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import Header from "../../components/Typography/Header/Header";
 import SideNavigation from "../../components/Navigation/SideNavigation";
+import { getIcon } from "../../components/Helper/Helper";
 import { Row, Col, Grid } from "react-flexbox-grid";
+
+const paragraph =
+  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.";
 
 class CardConatiner extends Component {
   componentWillMount() {
@@ -12,6 +16,9 @@ class CardConatiner extends Component {
     // setInterval(this.props.fetchData.bind(this), 100000); // 300000 = 5 minutes
   }
   render() {
+    const styles = {
+      float: "right"
+    };
     return (
       <div id="body">
         <div id="left" className="column">
@@ -37,15 +44,24 @@ class CardConatiner extends Component {
                   <div className="card_header card_bg_grey">
                     <Header title="Card Title" />
                   </div>
-                  <div className="card_body card_bg_body">
-                    This is the paragraph of thr card
+                  <div className="card_body card_bg_body">{paragraph}</div>
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <div className="card_body_nomargin card_bg_body_reversed ">
+                    {paragraph}
+                  </div>
+                  <div className="card_header card_bg_grey">
+                    <Header title="Card Footer" />
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  Test
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  Test
+                  <div className="card_header card_bg_grey">
+                    <Header
+                      title="Card with Icon"
+                      subtitle={getIcon("check", styles)}
+                    />
+                  </div>
+                  <div className="card_body card_bg_body">{paragraph}</div>
                 </Col>
               </Row>
               <Row>
