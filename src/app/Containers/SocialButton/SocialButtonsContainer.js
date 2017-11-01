@@ -268,7 +268,7 @@ class SocialButtonsContainer extends Component {
                       font={1.5}
                     />
                   </div>
-                  {/* <div className="card_body card_bg">
+                  <div className="card_body card_bg">
                     {Object.entries(sm).map(function(item) {
                       let title = item[0];
                       let social = item[1];
@@ -281,7 +281,7 @@ class SocialButtonsContainer extends Component {
                         />
                       );
                     })}
-                  </div> */}
+                  </div>
                 </Col>
                 <Col xs={12} sm={12} md={12} lg={12}>
                   <div className="card_header card_bg">
@@ -292,7 +292,7 @@ class SocialButtonsContainer extends Component {
                       font={1.5}
                     />
                   </div>
-                  {/* <div className="card_body card_bg">
+                  <div className="card_body card_bg">
                     {Object.entries(sm).map(function(item) {
                       let title = item[0];
                       let social = item[1];
@@ -305,7 +305,7 @@ class SocialButtonsContainer extends Component {
                         />
                       );
                     })}
-                  </div> */}
+                  </div>
                 </Col>
                 <Col xs={12} sm={12} md={12} lg={12}>
                   <div className="card_header card_bg">
@@ -316,7 +316,7 @@ class SocialButtonsContainer extends Component {
                       font={1.5}
                     />
                   </div>
-                  {/* <div className="card_body card_bg">
+                  <div className="card_body card_bg">
                     {Object.entries(sm).map(function(item) {
                       let title = item[0];
                       let social = item[1];
@@ -329,7 +329,7 @@ class SocialButtonsContainer extends Component {
                         />
                       );
                     })}
-                  </div> */}
+                  </div>
                 </Col>
               </Row>
             </Grid>
