@@ -44,10 +44,7 @@ class CardConatiner extends Component {
               </div>
               <Row>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_header card_bg_grey">
-                    <Header title="Card Title" />
-                  </div>
-                  <div className="card_body card_bg_body">{paragraph}</div>
+                  <Card paragraph={paragraph} title="Card Title" />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
                   <div className="card_body_nomargin card_bg_body_reversed ">

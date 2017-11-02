@@ -12,14 +12,15 @@ const colors = {
 };
 
 const getTheme = color => {
-  if (color) return colors[color];
-  else return "transparent";
+  if (color && color.length !== undefined) return colors[color];
+  return "transparent";
 };
 
 const StyledBorder = styled.div`
   border: 1px solid ${props => getTheme(props.theme)};
   margin-bottom: 1rem;
 `;
+
 const StyledHeader = styled.div`
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
