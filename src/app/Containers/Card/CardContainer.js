@@ -106,7 +106,46 @@ class CardConatiner extends Component {
                   <div className="card_body card_bg_body">{paragraph}</div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card paragraph={paragraph} title="test" />
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Outline Primary"
+                    theme="primary"
+                  />
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Outline Secondary"
+                    theme="secondary"
+                  />
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Outline Success"
+                    theme="success"
+                  />
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Outline Info"
+                    theme="info"
+                  />
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Outline Warning"
+                    theme="warning"
+                  />
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Outline Danger"
+                    theme="danger"
+                  />
                 </Col>
               </Row>
             </Grid>
