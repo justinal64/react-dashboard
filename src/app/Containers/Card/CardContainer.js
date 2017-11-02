@@ -123,6 +123,13 @@ class CardConatiner extends Component {
                     theme="danger"
                   />
                 </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card with Accent"
+                    theme="primary"
+                  />
+                </Col>
               </Row>
             </Grid>
           </div>
