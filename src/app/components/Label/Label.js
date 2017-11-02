@@ -1,11 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ColoredBG = styled.div`
-  text-align: center;
-  padding: 0 0.5rem;
-  width: 100%;
-`;
+const CenterText = styled.div`text-align: center;`;
 
 const StyledLabel = styled.label`
   color: white;
@@ -17,11 +13,11 @@ const StyledLabel = styled.label`
 
 const Label = props => {
   return (
-    <ColoredBG>
+    <CenterText>
       <StyledLabel round={props.round} color={props.color}>
         {props.title}
       </StyledLabel>
-    </ColoredBG>
+    </CenterText>
   );
 };
 

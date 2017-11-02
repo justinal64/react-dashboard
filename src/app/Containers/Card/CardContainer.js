@@ -5,6 +5,7 @@ import { getIcon } from "../../components/Helper/Helper";
 import { Row, Col, Grid } from "react-flexbox-grid";
 import Switch from "../../components/Switch/Switch";
 import StyledLabel from "../../components/Label/Label";
+import Card from "../../components/Card/Card";
 
 const paragraph =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.";
@@ -103,6 +104,9 @@ class CardConatiner extends Component {
                     </Row>
                   </div>
                   <div className="card_body card_bg_body">{paragraph}</div>
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card paragraph={paragraph} title="test" />
                 </Col>
               </Row>
             </Grid>
