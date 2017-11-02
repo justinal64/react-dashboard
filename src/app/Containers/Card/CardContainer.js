@@ -47,12 +47,7 @@ class CardConatiner extends Component {
                   <Card paragraph={paragraph} title="Card Title" />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_body_nomargin card_bg_body_reversed ">
-                    {paragraph}
-                  </div>
-                  <div className="card_header card_bg_grey">
-                    <Header title="Card Footer" />
-                  </div>
+                  <Card paragraph={paragraph} title="Card Footer" inverted />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
                   <div className="card_header card_bg_grey">

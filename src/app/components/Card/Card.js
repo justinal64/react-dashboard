@@ -16,6 +16,15 @@ const getTheme = color => {
   return "transparent";
 };
 
+const header = (title, label) => {
+  return (
+    <StyledHeader>
+      <span>{title}</span>
+      <span>{label}</span>
+    </StyledHeader>
+  );
+};
+
 const StyledBorder = styled.div`
   border: 1px solid ${props => getTheme(props.theme)};
   margin-bottom: 1rem;
@@ -37,13 +46,28 @@ const StyledCardBody = styled.div`
 `;
 
 const Card = props => {
-  return (
-    <StyledBorder theme={props.theme}>
+  let topHeader = null;
+  let bottomHeader = null;
+  if (!props.inverted)
+    topHeader = (
       <StyledHeader>
         <span>{props.title}</span>
         <span>{props.label}</span>
       </StyledHeader>
+    );
+  else
+    bottomHeader = (
+      <StyledHeader>
+        <span>{props.title}</span>
+        <span>{props.label}</span>
+      </StyledHeader>
+    );
+
+  return (
+    <StyledBorder theme={props.theme}>
+      {topHeader}
       <StyledCardBody>{props.paragraph}</StyledCardBody>
+      {bottomHeader}
     </StyledBorder>
   );
 };

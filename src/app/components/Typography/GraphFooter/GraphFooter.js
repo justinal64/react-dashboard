@@ -16,5 +16,3 @@ const GraphFooter = props => {
 };
 
 export default GraphFooter;
-
-/* <UpdateIcon size="xsmall" /> - Updated {dateFormat(props.updatetime)} */
