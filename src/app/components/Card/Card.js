@@ -16,15 +16,6 @@ const getTheme = color => {
   return "transparent";
 };
 
-const header = (title, label) => {
-  return (
-    <StyledHeader>
-      <span>{title}</span>
-      <span>{label}</span>
-    </StyledHeader>
-  );
-};
-
 const StyledBorder = styled.div`
   border: 1px solid ${props => getTheme(props.theme)};
   margin-bottom: 1rem;
@@ -41,33 +32,31 @@ const StyledCardBody = styled.div`
   padding: 0.75rem 1.25rem;
   background-color: #f9f9fa;
   border-right: 1px solid #c9ccd3;
-  border-bottom: 1px solid #c9ccd3;
+  border-bottom: ${props =>
+    props.BottomHeader ? "none" : "1px solid #c9ccd3"};
   border-left: 1px solid #c9ccd3;
 `;
 
+const Label = styled.span`float: right;`;
+
 const Card = props => {
-  let topHeader = null;
-  let bottomHeader = null;
-  if (!props.inverted)
-    topHeader = (
-      <StyledHeader>
-        <span>{props.title}</span>
-        <span>{props.label}</span>
-      </StyledHeader>
-    );
-  else
-    bottomHeader = (
-      <StyledHeader>
-        <span>{props.title}</span>
-        <span>{props.label}</span>
-      </StyledHeader>
-    );
+  const { title, label, bottomheader, theme, paragraph } = props;
+  let headerTop = null;
+  let headerBottom = null;
+  let header = (
+    <StyledHeader>
+      <span>{title}</span>
+      <Label>{label}</Label>
+    </StyledHeader>
+  );
+  if (!bottomheader) headerTop = header;
+  else headerBottom = header;
 
   return (
-    <StyledBorder theme={props.theme}>
-      {topHeader}
-      <StyledCardBody>{props.paragraph}</StyledCardBody>
-      {bottomHeader}
+    <StyledBorder theme={theme}>
+      {headerTop}
+      <StyledCardBody bottomheader={bottomheader}>{paragraph}</StyledCardBody>
+      {headerBottom}
     </StyledBorder>
   );
 };

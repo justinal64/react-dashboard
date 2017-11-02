@@ -47,16 +47,18 @@ class CardConatiner extends Component {
                   <Card paragraph={paragraph} title="Card Title" />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card paragraph={paragraph} title="Card Footer" inverted />
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Footer"
+                    bottomheader
+                  />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_header card_bg_grey">
-                    <Header
-                      title="Card with Icon"
-                      subtitle={getIcon("check", styles)}
-                    />
-                  </div>
-                  <div className="card_body card_bg_body">{paragraph}</div>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card with Icon"
+                    label={getIcon("check", styles)}
+                  />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
                   <div className="card_header card_bg_grey">
