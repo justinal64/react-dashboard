@@ -61,43 +61,25 @@ class CardConatiner extends Component {
                   />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_header card_bg_grey">
-                    <Row between="lg">
-                      <Col xs={9} sm={9} md={9} lg={9}>
-                        <span>Card with Switch</span>
-                      </Col>
-                      <Col xs={3} sm={3} md={3} lg={3}>
-                        <Switch />
-                      </Col>
-                    </Row>
-                  </div>
-                  <div className="card_body card_bg_body">{paragraph}</div>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card with Switch"
+                    label={<Switch />}
+                  />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_header card_bg_grey">
-                    <Row between="lg">
-                      <Col xs={9} sm={9} md={9} lg={9}>
-                        <span>Card with Label</span>
-                      </Col>
-                      <Col xs={3} sm={3} md={3} lg={3}>
-                        <StyledLabel color="#79c447" title="Success" />
-                      </Col>
-                    </Row>
-                  </div>
-                  <div className="card_body card_bg_body">{paragraph}</div>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card with Label"
+                    label={<StyledLabel color="#79c447" title="Success" />}
+                  />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_header card_bg_grey">
-                    <Row between="lg">
-                      <Col xs={9} sm={9} md={9} lg={9}>
-                        <span>Card with Label</span>
-                      </Col>
-                      <Col xs={3} sm={3} md={3} lg={3}>
-                        <StyledLabel color="red" title="32" round />
-                      </Col>
-                    </Row>
-                  </div>
-                  <div className="card_body card_bg_body">{paragraph}</div>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card with Label"
+                    label={<StyledLabel color="red" title="32" round />}
+                  />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
                   <Card
