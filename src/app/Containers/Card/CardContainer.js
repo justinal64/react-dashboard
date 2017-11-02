@@ -68,10 +68,9 @@ class CardConatiner extends Component {
               <Row>
                 <Col xs={12} sm={6} md={6} lg={4}>
                   <div className="card_header card_bg_grey">
-                    {/* <Header title="Card with Switch" subtitle={<Switch />} /> */}
                     <Row>
                       <Col xs={10} sm={10} md={10} lg={10}>
-                        <span className="padding_bottom">Card with Switch</span>
+                        <span>Card with Switch</span>
                       </Col>
                       <Col xs={2} sm={2} md={2} lg={2}>
                         <Switch />
@@ -81,16 +80,28 @@ class CardConatiner extends Component {
                   <div className="card_body card_bg_body">{paragraph}</div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_body_nomargin card_bg_body_reversed ">
-                    {paragraph}
-                  </div>
                   <div className="card_header card_bg_grey">
-                    <Header title="Card Footer" />
+                    <Row>
+                      <Col xs={10} sm={10} md={10} lg={10}>
+                        <span>Card with Label</span>
+                      </Col>
+                      <Col xs={2} sm={2} md={2} lg={2}>
+                        Label Here
+                      </Col>
+                    </Row>
                   </div>
+                  <div className="card_body card_bg_body">{paragraph}</div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
                   <div className="card_header card_bg_grey">
-                    <Header title="Card with Icon" />
+                    <Row>
+                      <Col xs={10} sm={10} md={10} lg={10}>
+                        <span>Card with Label</span>
+                      </Col>
+                      <Col xs={2} sm={2} md={2} lg={2}>
+                        Label here
+                      </Col>
+                    </Row>
                   </div>
                   <div className="card_body card_bg_body">{paragraph}</div>
                 </Col>
