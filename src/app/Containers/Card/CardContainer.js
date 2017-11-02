@@ -4,6 +4,8 @@ import SideNavigation from "../../components/Navigation/SideNavigation";
 import { getIcon } from "../../components/Helper/Helper";
 import { Row, Col, Grid } from "react-flexbox-grid";
 import Switch from "../../components/Switch/Switch";
+import StyledLabel from "../../components/Label/Label";
+import Card from "../../components/Card/Card";
 
 const paragraph =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.";
@@ -42,38 +44,29 @@ class CardConatiner extends Component {
               </div>
               <Row>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_header card_bg_grey">
-                    <Header title="Card Title" />
-                  </div>
-                  <div className="card_body card_bg_body">{paragraph}</div>
+                  <Card paragraph={paragraph} title="Card Title" />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_body_nomargin card_bg_body_reversed ">
-                    {paragraph}
-                  </div>
-                  <div className="card_header card_bg_grey">
-                    <Header title="Card Footer" />
-                  </div>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Footer"
+                    bottomheader
+                  />
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card with Icon"
+                    label={getIcon("check", styles)}
+                  />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
                   <div className="card_header card_bg_grey">
-                    <Header
-                      title="Card with Icon"
-                      subtitle={getIcon("check", styles)}
-                    />
-                  </div>
-                  <div className="card_body card_bg_body">{paragraph}</div>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_header card_bg_grey">
-                    {/* <Header title="Card with Switch" subtitle={<Switch />} /> */}
-                    <Row>
-                      <Col xs={10} sm={10} md={10} lg={10}>
-                        <span className="padding_bottom">Card with Switch</span>
+                    <Row between="lg">
+                      <Col xs={9} sm={9} md={9} lg={9}>
+                        <span>Card with Switch</span>
                       </Col>
-                      <Col xs={2} sm={2} md={2} lg={2}>
+                      <Col xs={3} sm={3} md={3} lg={3}>
                         <Switch />
                       </Col>
                     </Row>
@@ -81,18 +74,72 @@ class CardConatiner extends Component {
                   <div className="card_body card_bg_body">{paragraph}</div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_body_nomargin card_bg_body_reversed ">
-                    {paragraph}
-                  </div>
                   <div className="card_header card_bg_grey">
-                    <Header title="Card Footer" />
+                    <Row between="lg">
+                      <Col xs={9} sm={9} md={9} lg={9}>
+                        <span>Card with Label</span>
+                      </Col>
+                      <Col xs={3} sm={3} md={3} lg={3}>
+                        <StyledLabel color="#79c447" title="Success" />
+                      </Col>
+                    </Row>
                   </div>
+                  <div className="card_body card_bg_body">{paragraph}</div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
                   <div className="card_header card_bg_grey">
-                    <Header title="Card with Icon" />
+                    <Row between="lg">
+                      <Col xs={9} sm={9} md={9} lg={9}>
+                        <span>Card with Label</span>
+                      </Col>
+                      <Col xs={3} sm={3} md={3} lg={3}>
+                        <StyledLabel color="red" title="32" round />
+                      </Col>
+                    </Row>
                   </div>
                   <div className="card_body card_bg_body">{paragraph}</div>
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Outline Primary"
+                    theme="primary"
+                  />
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Outline Secondary"
+                    theme="secondary"
+                  />
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Outline Success"
+                    theme="success"
+                  />
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Outline Info"
+                    theme="info"
+                  />
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Outline Warning"
+                    theme="warning"
+                  />
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={4}>
+                  <Card
+                    paragraph={paragraph}
+                    title="Card Outline Danger"
+                    theme="danger"
+                  />
                 </Col>
               </Row>
             </Grid>
