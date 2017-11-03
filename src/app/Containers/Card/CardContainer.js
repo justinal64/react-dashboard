@@ -128,6 +128,7 @@ class CardConatiner extends Component {
                     paragraph={paragraph}
                     title="Card with Accent"
                     theme="primary"
+                    accent
                   />
                 </Col>
               </Row>
