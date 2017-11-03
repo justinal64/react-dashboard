@@ -119,7 +119,7 @@ class CardConatiner extends Component {
                 })}
 
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card paragraph={paragraph} />
+                  <Card paragraph={paragraph} bg="primary" />
                 </Col>
               </Row>
             </Grid>

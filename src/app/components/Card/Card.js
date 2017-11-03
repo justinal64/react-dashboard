@@ -59,19 +59,23 @@ const StyledHeader = styled.div`
 
 const StyledCardBody = styled.div`
   padding: 0.75rem 1.25rem;
-  background-color: #f9f9fa;
+  background-color: ${props =>
+    props.background ? getTheme(props.background) : "#f9f9fa"};
   border: 1px solid #c9ccd3;
+  color: ${props => (props.background ? "white" : "black")};
 `;
 
 const StyledLabel = styled.span`float: right;`;
 
 const Card = props => {
-  const { title, label, bottomheader, theme, paragraph, accent } = props;
+  const { title, label, bottomheader, theme, paragraph, accent, bg } = props;
 
   return (
     <StyledBorder theme={theme} accent={accent}>
       {headerTop(bottomheader, title, label)}
-      <StyledCardBody bottomheader={bottomheader}>{paragraph}</StyledCardBody>
+      <StyledCardBody bottomheader={bottomheader} background={bg}>
+        {paragraph}
+      </StyledCardBody>
       {headerBottom(bottomheader, title, label)}
     </StyledBorder>
   );
