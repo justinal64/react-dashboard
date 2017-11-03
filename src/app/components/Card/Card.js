@@ -23,10 +23,11 @@ const borderTheme = (theme, accent) => {
   else return "border: 1px solid transparent";
 };
 
-const headerTop = (bottomheader, title, label) => {
+const headerTop = (bottomheader, title, label, background) => {
+  console.log(background);
   if (!bottomheader && (title !== undefined || label !== undefined)) {
     return (
-      <StyledHeader>
+      <StyledHeader background={background}>
         <span>{title}</span>
         <StyledLabel>{label}</StyledLabel>
       </StyledHeader>
@@ -34,10 +35,10 @@ const headerTop = (bottomheader, title, label) => {
   }
 };
 
-const headerBottom = (bottomheader, title, label) => {
+const headerBottom = (bottomheader, title, label, background) => {
   if (bottomheader && (title !== undefined || label !== undefined)) {
     return (
-      <StyledHeader>
+      <StyledHeader background={background}>
         <span>{title}</span>
         <StyledLabel>{label}</StyledLabel>
       </StyledHeader>
@@ -53,8 +54,10 @@ const StyledBorder = styled.div`
 const StyledHeader = styled.div`
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: #e7e7eb;
   border: 1px solid #c9ccd3;
+  background-color: ${props =>
+    props.background ? getTheme(props.background) : "#e7e7eb"};
+  color: ${props => (props.background ? "white" : "black")};
 `;
 
 const StyledCardBody = styled.div`
@@ -80,11 +83,11 @@ const Card = props => {
 
   return (
     <StyledBorder theme={theme} accent={accent}>
-      {headerTop(bottomheader, title, label)}
+      {headerTop(bottomheader, title, label, background)}
       <StyledCardBody bottomheader={bottomheader} background={background}>
         {paragraph}
       </StyledCardBody>
-      {headerBottom(bottomheader, title, label)}
+      {headerBottom(bottomheader, title, label, background)}
     </StyledBorder>
   );
 };
