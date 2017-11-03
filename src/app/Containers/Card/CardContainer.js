@@ -10,6 +10,15 @@ import Card from "../../components/Card/Card";
 const paragraph =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.";
 
+const colors = {
+  primary: "Primary",
+  secondary: "Secondary",
+  success: "Success",
+  info: "Info",
+  warning: "Warning",
+  danger: "Danger"
+};
+
 class CardConatiner extends Component {
   componentWillMount() {
     // this.props.fetchData();
@@ -81,56 +90,33 @@ class CardConatiner extends Component {
                     label={<StyledLabel color="red" title="32" round />}
                   />
                 </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card
-                    paragraph={paragraph}
-                    title="Card Outline Primary"
-                    theme="primary"
-                  />
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card
-                    paragraph={paragraph}
-                    title="Card Outline Secondary"
-                    theme="secondary"
-                  />
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card
-                    paragraph={paragraph}
-                    title="Card Outline Success"
-                    theme="success"
-                  />
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card
-                    paragraph={paragraph}
-                    title="Card Outline Info"
-                    theme="info"
-                  />
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card
-                    paragraph={paragraph}
-                    title="Card Outline Warning"
-                    theme="warning"
-                  />
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card
-                    paragraph={paragraph}
-                    title="Card Outline Danger"
-                    theme="danger"
-                  />
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card
-                    paragraph={paragraph}
-                    title="Card with Accent"
-                    theme="primary"
-                    accent
-                  />
-                </Col>
+
+                {/* Card Outlines Section */}
+                {Object.entries(colors).map(function(item, index) {
+                  return (
+                    <Col xs={12} sm={6} md={6} lg={4} key={index}>
+                      <Card
+                        paragraph={paragraph}
+                        title={"Card Outline " + item[1]}
+                        theme={item[0]}
+                      />
+                    </Col>
+                  );
+                })}
+
+                {/* Card with Accent Section */}
+                {Object.entries(colors).map(function(item, index) {
+                  return (
+                    <Col xs={12} sm={6} md={6} lg={4} key={index}>
+                      <Card
+                        paragraph={paragraph}
+                        title={"Card with " + item[1] + " Accent"}
+                        theme={item[0]}
+                        accent
+                      />
+                    </Col>
+                  );
+                })}
               </Row>
             </Grid>
           </div>
