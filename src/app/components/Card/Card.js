@@ -16,47 +16,78 @@ const getTheme = color => {
   return "transparent";
 };
 
+const borderTheme = (theme, accent) => {
+  if (accent) return `border-top: 2px solid ${getTheme(theme)}`;
+  else if (theme && theme.length !== undefined)
+    return `border: 1px solid ${getTheme(theme)}`;
+  else return "border: 1px solid transparent";
+};
+
+const headerTop = (bottomheader, title, label, background) => {
+  console.log(background);
+  if (!bottomheader && (title !== undefined || label !== undefined)) {
+    return (
+      <StyledHeader background={background}>
+        <span>{title}</span>
+        <StyledLabel>{label}</StyledLabel>
+      </StyledHeader>
+    );
+  }
+};
+
+const headerBottom = (bottomheader, title, label, background) => {
+  if (bottomheader && (title !== undefined || label !== undefined)) {
+    return (
+      <StyledHeader background={background}>
+        <span>{title}</span>
+        <StyledLabel>{label}</StyledLabel>
+      </StyledHeader>
+    );
+  }
+};
+
 const StyledBorder = styled.div`
-  border: 1px solid ${props => getTheme(props.theme)};
+  ${props => borderTheme(props.theme, props.accent)};
   margin-bottom: 1rem;
 `;
 
 const StyledHeader = styled.div`
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: #e7e7eb;
   border: 1px solid #c9ccd3;
+  background-color: ${props =>
+    props.background ? getTheme(props.background) : "#e7e7eb"};
+  color: ${props => (props.background ? "white" : "black")};
 `;
 
 const StyledCardBody = styled.div`
   padding: 0.75rem 1.25rem;
-  background-color: #f9f9fa;
-  border-right: 1px solid #c9ccd3;
-  border-bottom: ${props =>
-    props.BottomHeader ? "none" : "1px solid #c9ccd3"};
-  border-left: 1px solid #c9ccd3;
+  background-color: ${props =>
+    props.background ? getTheme(props.background) : "#f9f9fa"};
+  border: 1px solid #c9ccd3;
+  color: ${props => (props.background ? "white" : "black")};
 `;
 
-const Label = styled.span`float: right;`;
+const StyledLabel = styled.span`float: right;`;
 
 const Card = props => {
-  const { title, label, bottomheader, theme, paragraph } = props;
-  let headerTop = null;
-  let headerBottom = null;
-  let header = (
-    <StyledHeader>
-      <span>{title}</span>
-      <Label>{label}</Label>
-    </StyledHeader>
-  );
-  if (!bottomheader) headerTop = header;
-  else headerBottom = header;
+  const {
+    title,
+    label,
+    bottomheader,
+    theme,
+    paragraph,
+    accent,
+    background
+  } = props;
 
   return (
-    <StyledBorder theme={theme}>
-      {headerTop}
-      <StyledCardBody bottomheader={bottomheader}>{paragraph}</StyledCardBody>
-      {headerBottom}
+    <StyledBorder theme={theme} accent={accent}>
+      {headerTop(bottomheader, title, label, background)}
+      <StyledCardBody bottomheader={bottomheader} background={background}>
+        {paragraph}
+      </StyledCardBody>
+      {headerBottom(bottomheader, title, label, background)}
     </StyledBorder>
   );
 };

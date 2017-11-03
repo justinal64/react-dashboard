@@ -10,6 +10,15 @@ import Card from "../../components/Card/Card";
 const paragraph =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.";
 
+const colors = {
+  primary: "Primary",
+  secondary: "Secondary",
+  success: "Success",
+  info: "Info",
+  warning: "Warning",
+  danger: "Danger"
+};
+
 class CardConatiner extends Component {
   componentWillMount() {
     // this.props.fetchData();
@@ -61,86 +70,75 @@ class CardConatiner extends Component {
                   />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_header card_bg_grey">
-                    <Row between="lg">
-                      <Col xs={9} sm={9} md={9} lg={9}>
-                        <span>Card with Switch</span>
-                      </Col>
-                      <Col xs={3} sm={3} md={3} lg={3}>
-                        <Switch />
-                      </Col>
-                    </Row>
-                  </div>
-                  <div className="card_body card_bg_body">{paragraph}</div>
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_header card_bg_grey">
-                    <Row between="lg">
-                      <Col xs={9} sm={9} md={9} lg={9}>
-                        <span>Card with Label</span>
-                      </Col>
-                      <Col xs={3} sm={3} md={3} lg={3}>
-                        <StyledLabel color="#79c447" title="Success" />
-                      </Col>
-                    </Row>
-                  </div>
-                  <div className="card_body card_bg_body">{paragraph}</div>
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <div className="card_header card_bg_grey">
-                    <Row between="lg">
-                      <Col xs={9} sm={9} md={9} lg={9}>
-                        <span>Card with Label</span>
-                      </Col>
-                      <Col xs={3} sm={3} md={3} lg={3}>
-                        <StyledLabel color="red" title="32" round />
-                      </Col>
-                    </Row>
-                  </div>
-                  <div className="card_body card_bg_body">{paragraph}</div>
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
                   <Card
                     paragraph={paragraph}
-                    title="Card Outline Primary"
-                    theme="primary"
+                    title="Card with Switch"
+                    label={<Switch />}
                   />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
                   <Card
                     paragraph={paragraph}
-                    title="Card Outline Secondary"
-                    theme="secondary"
+                    title="Card with Label"
+                    label={<StyledLabel color="#79c447" title="Success" />}
                   />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4}>
                   <Card
                     paragraph={paragraph}
-                    title="Card Outline Success"
-                    theme="success"
+                    title="Card with Label"
+                    label={<StyledLabel color="red" title="32" round />}
                   />
                 </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card
-                    paragraph={paragraph}
-                    title="Card Outline Info"
-                    theme="info"
-                  />
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card
-                    paragraph={paragraph}
-                    title="Card Outline Warning"
-                    theme="warning"
-                  />
-                </Col>
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card
-                    paragraph={paragraph}
-                    title="Card Outline Danger"
-                    theme="danger"
-                  />
-                </Col>
+
+                {/* Card Outlines Section */}
+                {Object.entries(colors).map(function(item, index) {
+                  return (
+                    <Col xs={12} sm={6} md={6} lg={4} key={index}>
+                      <Card
+                        paragraph={paragraph}
+                        title={"Card Outline " + item[1]}
+                        theme={item[0]}
+                      />
+                    </Col>
+                  );
+                })}
+
+                {/* Card with Accent Section */}
+                {Object.entries(colors).map(function(item, index) {
+                  return (
+                    <Col xs={12} sm={6} md={6} lg={4} key={index}>
+                      <Card
+                        paragraph={paragraph}
+                        title={"Card with " + item[1] + " Accent"}
+                        theme={item[0]}
+                        accent
+                      />
+                    </Col>
+                  );
+                })}
+
+                {/* Card with no title and colored background*/}
+                {Object.entries(colors).map(function(item, index) {
+                  return (
+                    <Col xs={12} sm={6} md={6} lg={4} key={index}>
+                      <Card paragraph={paragraph} background={item[0]} />
+                    </Col>
+                  );
+                })}
+
+                {/* Card with colored title and colored background*/}
+                {Object.entries(colors).map(function(item, index) {
+                  return (
+                    <Col xs={12} sm={6} md={6} lg={4} key={index}>
+                      <Card
+                        paragraph={paragraph}
+                        background={item[0]}
+                        title="Card Title"
+                      />
+                    </Col>
+                  );
+                })}
               </Row>
             </Grid>
           </div>
