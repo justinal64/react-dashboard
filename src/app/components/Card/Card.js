@@ -68,12 +68,20 @@ const StyledCardBody = styled.div`
 const StyledLabel = styled.span`float: right;`;
 
 const Card = props => {
-  const { title, label, bottomheader, theme, paragraph, accent, bg } = props;
+  const {
+    title,
+    label,
+    bottomheader,
+    theme,
+    paragraph,
+    accent,
+    background
+  } = props;
 
   return (
     <StyledBorder theme={theme} accent={accent}>
       {headerTop(bottomheader, title, label)}
-      <StyledCardBody bottomheader={bottomheader} background={bg}>
+      <StyledCardBody bottomheader={bottomheader} background={background}>
         {paragraph}
       </StyledCardBody>
       {headerBottom(bottomheader, title, label)}

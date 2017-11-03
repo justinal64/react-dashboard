@@ -118,9 +118,14 @@ class CardConatiner extends Component {
                   );
                 })}
 
-                <Col xs={12} sm={6} md={6} lg={4}>
-                  <Card paragraph={paragraph} bg="primary" />
-                </Col>
+                {/* Card with no title and colored background*/}
+                {Object.entries(colors).map(function(item, index) {
+                  return (
+                    <Col xs={12} sm={6} md={6} lg={4} key={index}>
+                      <Card paragraph={paragraph} background={item[0]} />
+                    </Col>
+                  );
+                })}
               </Row>
             </Grid>
           </div>
