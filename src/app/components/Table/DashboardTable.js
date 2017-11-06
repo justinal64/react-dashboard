@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Table as StyledTable, TBody } from "./Styles";
+import { TBody } from "./Styles";
 import { getIcon } from "../Helper/Helper";
 import GraphHeader from "../Typography/GraphHeader/GraphHeader";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";

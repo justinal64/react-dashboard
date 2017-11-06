@@ -4,6 +4,7 @@ import SideNavigation from "../../components/Navigation/SideNavigation";
 import Header from "../../components/Typography/Header/Header";
 import { Row, Col, Grid } from "react-flexbox-grid";
 import { getIcon } from "../../components/Helper/Helper";
+import DashboardTable from "../../components/Table/DashboardTable";
 import Table from "../../components/Table/Table";
 class TablesContainer extends Component {
   componentWillMount() {
@@ -42,7 +43,9 @@ class TablesContainer extends Component {
                       subtitle={getIcon("align-justify", styles)}
                     />
                   </div>
-                  <div className="card_body card_bg">TablesConatiner</div>
+                  <div className="card_body card_bg">
+                    <Table />
+                  </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
@@ -61,7 +64,7 @@ class TablesContainer extends Component {
                     />
                   </div>
                   <div className="card_body card_bg">
-                    <Table />
+                    <DashboardTable />
                   </div>
                 </Col>
               </Row>
