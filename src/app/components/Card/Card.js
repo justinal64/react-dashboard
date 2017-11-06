@@ -24,7 +24,6 @@ const borderTheme = (theme, accent) => {
 };
 
 const headerTop = (bottomheader, title, label, background) => {
-  console.log(background);
   if (!bottomheader && (title !== undefined || label !== undefined)) {
     return (
       <StyledHeader background={background}>

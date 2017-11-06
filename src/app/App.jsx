@@ -15,6 +15,7 @@ import PieChart from "../screens/Charts/PieChart.js";
 import LineChart from "../screens/Charts/LineChart.js";
 import SimpleLineChart from "../screens/Charts/SimpleLineChart.js";
 import SocialMediaChart from "../screens/Charts/SocialMediaChart.js";
+import Tables from "../screens/Tables";
 import Cards from "../screens/Cards";
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/linechart" component={LineChart} />
         <Route path="/simplelinechart" component={SimpleLineChart} />
         <Route path="/socialmediachart" component={SocialMediaChart} />
+        <Route path="/tables" component={Tables} />
         <Route path="*" component={NotFound} />
       </Switch>
     </main>
