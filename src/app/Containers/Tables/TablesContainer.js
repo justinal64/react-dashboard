@@ -39,7 +39,7 @@ class TablesContainer extends Component {
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
                     <Header
-                      title="Options"
+                      title="Simple Table"
                       subtitle={getIcon("align-justify", styles)}
                     />
                   </div>

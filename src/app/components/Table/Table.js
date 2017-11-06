@@ -3,7 +3,7 @@ import { TableLeftAligned, TBody } from "./Styles";
 import { getIcon } from "../Helper/Helper";
 import GraphHeader from "../Typography/GraphHeader/GraphHeader";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
-
+import Label from "../../components/Label/Label";
 class Table extends React.Component {
   constructor(props) {
     super(props);
@@ -21,22 +21,24 @@ class Table extends React.Component {
         </thead>
         <TBody>
           <tr>
-            <th>Elizabeth Burke</th>
-            <th>2012/01/01</th>
-            <th>Catering</th>
-            <th>Member</th>
+            <td>Elizabetd Burke</td>
+            <td>2012/01/01</td>
+            <td>Member</td>
+            <td>
+              <Label title="test" color="pink" />
+            </td>
           </tr>
           <tr>
-            <th>Theodore Winters</th>
-            <th>2012/01/01</th>
-            <th>ConMan</th>
-            <th>Administartor</th>
+            <td>Tdeodore Winters</td>
+            <td>2012/01/01</td>
+            <td>Administartor</td>
+            <td>Administartor</td>
           </tr>
           <tr>
-            <th>Peter Burke</th>
-            <th>2012/01/01</th>
-            <th>ConMan</th>
-            <th>Staff</th>
+            <td>Peter Burke</td>
+            <td>2012/01/01</td>
+            <td>Staff</td>
+            <td>Staff</td>
           </tr>
         </TBody>
       </TableLeftAligned>
