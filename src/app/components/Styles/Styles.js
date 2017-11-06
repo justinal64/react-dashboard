@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+export const colors = {
+  primary: "#20a8d8",
+  secondary: "#c0cadd",
+  success: "#79c447",
+  info: "#67c2ef",
+  warning: "#fabb3d",
+  danger: "#ff5454"
+};
+
 export const getAlignment = props =>
   props.alignment ? `text-align: ${props.alignment};` : "";
 

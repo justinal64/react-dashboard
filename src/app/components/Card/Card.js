@@ -1,15 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../Typography/Header/Header";
-
-const colors = {
-  primary: "#20a8d8",
-  secondary: "#c0cadd",
-  success: "#79c447",
-  info: "#67c2ef",
-  warning: "#fabb3d",
-  danger: "#ff5454"
-};
+import { colors } from "../Styles/Styles";
 
 const getTheme = color => {
   if (color && color.length !== undefined) return colors[color];

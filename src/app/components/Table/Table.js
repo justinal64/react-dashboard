@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { TableLeftAligned, TBody, TH } from "./Styles";
+import { TableLeftAligned, TBody, TH, TD } from "./Styles";
 import { getIcon } from "../Helper/Helper";
 import GraphHeader from "../Typography/GraphHeader/GraphHeader";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Label from "../../components/Label/Label";
+
 class Table extends React.Component {
   constructor(props) {
     super(props);
@@ -21,24 +22,28 @@ class Table extends React.Component {
         </thead>
         <TBody>
           <tr>
-            <td>Elizabetd Burke</td>
-            <td>2012/01/01</td>
-            <td>Member</td>
-            <td>
+            <TD>ElizabeTD Burke</TD>
+            <TD>2012/01/01</TD>
+            <TD>Member</TD>
+            <TD>
               <Label title="Success" color="Green" />
-            </td>
+            </TD>
           </tr>
           <tr>
-            <td>Tdeodore Winters</td>
-            <td>2012/01/01</td>
-            <td>Administartor</td>
-            <td>Administartor</td>
+            <TD>TDeodore Winters</TD>
+            <TD>2012/01/01</TD>
+            <TD>Administartor</TD>
+            <TD>
+              <Label title="Banned" color="Red" />
+            </TD>
           </tr>
           <tr>
-            <td>Peter Burke</td>
-            <td>2012/01/01</td>
-            <td>Staff</td>
-            <td>Staff</td>
+            <TD>Peter Burke</TD>
+            <TD>2012/01/01</TD>
+            <TD>Staff</TD>
+            <TD>
+              <Label title="Inactive" color="Grey" />
+            </TD>
           </tr>
         </TBody>
       </TableLeftAligned>
