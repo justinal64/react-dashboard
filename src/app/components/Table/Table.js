@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { TableLeftAligned, TBody } from "./Styles";
+import { TableLeftAligned, TBody, TH } from "./Styles";
 import { getIcon } from "../Helper/Helper";
 import GraphHeader from "../Typography/GraphHeader/GraphHeader";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
@@ -13,10 +13,10 @@ class Table extends React.Component {
       <TableLeftAligned>
         <thead>
           <tr>
-            <th>Username</th>
-            <th>Date Registered</th>
-            <th>Role</th>
-            <th>Status</th>
+            <TH>Username</TH>
+            <TH>Date Registered</TH>
+            <TH>Role</TH>
+            <TH>Status</TH>
           </tr>
         </thead>
         <TBody>
@@ -25,7 +25,7 @@ class Table extends React.Component {
             <td>2012/01/01</td>
             <td>Member</td>
             <td>
-              <Label title="test" color="pink" />
+              <Label title="Success" color="Green" />
             </td>
           </tr>
           <tr>
