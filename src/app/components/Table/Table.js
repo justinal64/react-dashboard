@@ -1,8 +1,15 @@
 import React, { Component } from "react";
-import { Table as StyledTable, TBody } from "./Styles";
+import { TableLeftAligned, TBody, TH, TD } from "./Styles";
 import { getIcon } from "../Helper/Helper";
 import GraphHeader from "../Typography/GraphHeader/GraphHeader";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import Label from "../../components/Label/Label";
+import { colors } from "../Styles/Styles";
+
+const getTheme = color => {
+  if (color && color.length !== undefined) return colors[color];
+  return "transparent";
+};
 
 class Table extends React.Component {
   constructor(props) {
@@ -10,129 +17,58 @@ class Table extends React.Component {
   }
   render(props) {
     return (
-      <table className="hoverTable">
+      <TableLeftAligned>
         <thead>
           <tr>
-            <th>{getIcon("user-o", navColorScheme)}</th>
-            <th>User</th>
-            <th>Country</th>
-            <th>Usage</th>
-            <th>Payment Method</th>
-            <th>Activity</th>
+            <TH>Username</TH>
+            <TH>Date Registered</TH>
+            <TH>Role</TH>
+            <TH>Status</TH>
           </tr>
         </thead>
         <TBody>
           <tr>
-            <th>
-              {/* Make a rounded Image Component */}
-              <img
-                src="https://randomuser.me/api/portraits/thumb/men/83.jpg"
-                alt="Elizabeth Burk Image"
-                className="src"
-              />
-            </th>
-            <th>
-              <GraphHeader title="Elizabeth Burk" />
-              <GraphHeader
-                title="New | Registered: Jan 1, 2015"
-                font={0.75}
-                color="grey"
-              />
-            </th>
-            <th>USA</th>
-            <th>
-              <div className="table_usage">
-                <span>50%</span>
-                <span>Jun 11, 2015 - Jul 10, 2015</span>
-              </div>
-              <ProgressBar value={50} backgroundColor="green" />
-            </th>
-            <th>{getIcon("cc-visa fa-3x", navColorScheme)}</th>
-            <th>5 minutes ago</th>
+            <TD>Elizabeth Burke</TD>
+            <TD>2012/01/01</TD>
+            <TD>Member</TD>
+            <TD>
+              <Label title="Success" color={getTheme("success")} />
+            </TD>
           </tr>
           <tr>
-            <th>
-              <img
-                src="https://randomuser.me/api/portraits/thumb/men/83.jpg"
-                alt="Theodore Winters Image"
-                className="src"
-              />
-            </th>
-            <th>
-              <GraphHeader title="Theodore Winters" />
-              <GraphHeader
-                title="Recurring | Registered: Jan 1, 2015"
-                font={0.75}
-                color="grey"
-              />
-            </th>
-            <th>USA</th>
-            <th>
-              <div className="table_usage">
-                <span>10%</span>
-                <span>Jun 11, 2015 - Jul 10, 2015</span>
-              </div>
-              <ProgressBar value={10} backgroundColor="blue" />
-            </th>
-            <th>{getIcon("cc-mastercard fa-3x", navColorScheme)}</th>
-            <th>5 minutes ago</th>
+            <TD>Theodore Winters</TD>
+            <TD>2012/01/01</TD>
+            <TD>Administartor</TD>
+            <TD>
+              <Label title="Banned" color={getTheme("danger")} />
+            </TD>
           </tr>
           <tr>
-            <th>
-              <img
-                src="https://randomuser.me/api/portraits/thumb/men/83.jpg"
-                alt="Peter Burk Image"
-                className="src"
-              />
-            </th>
-            <th>
-              <GraphHeader title="Peter Burk" />
-              <GraphHeader
-                title="New | Registered: Jan 1, 2015"
-                font={0.75}
-                color="grey"
-              />
-            </th>
-            <th>USA</th>
-            <th>
-              <div className="table_usage">
-                <span>74%</span>
-                <span>Jun 11, 2015 - Jul 10, 2015</span>
-              </div>
-              <ProgressBar value={74} backgroundColor="yellow" />
-            </th>
-            <th>{getIcon("cc-stripe fa-3x", navColorScheme)}</th>
-            <th>5 minutes ago</th>
+            <TD>Peter Burke</TD>
+            <TD>2012/01/01</TD>
+            <TD>Staff</TD>
+            <TD>
+              <Label title="Inactive" color={getTheme("secondary")} />
+            </TD>
           </tr>
           <tr>
-            <th>
-              <img
-                src="https://randomuser.me/api/portraits/thumb/men/83.jpg"
-                alt="Neil Caffery Image"
-                className="src"
-              />
-            </th>
-            <th>
-              <GraphHeader title="Neil Caffrey" />
-              <GraphHeader
-                title="New | Registered: Jan 1, 2015"
-                font={0.75}
-                color="grey"
-              />
-            </th>
-            <th>USA</th>
-            <th>
-              <div className="table_usage">
-                <span>98%</span>
-                <span>Jun 11, 2015 - Jul 10, 2015</span>
-              </div>
-              <ProgressBar value={98} backgroundColor="red" />
-            </th>
-            <th>{getIcon("cc-paypal fa-3x", navColorScheme)}</th>
-            <th>5 minutes ago</th>
+            <TD>Peter Burke</TD>
+            <TD>2012/01/01</TD>
+            <TD>Staff</TD>
+            <TD>
+              <Label title="Pending" color={getTheme("warning")} />
+            </TD>
+          </tr>
+          <tr>
+            <TD>Neal Caffery</TD>
+            <TD>2012/01/01</TD>
+            <TD>Staff</TD>
+            <TD>
+              <Label title="Active" color={getTheme("success")} />
+            </TD>
           </tr>
         </TBody>
-      </table>
+      </TableLeftAligned>
     );
     let navColorScheme = {
       color: "grey"

@@ -14,7 +14,7 @@ import PieChart from "../../components/ChartJS/PieChart";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import SocialMediaChart from "../../components/ChartJS/SocialMediaChart";
 import { Row, Col, Grid } from "react-flexbox-grid";
-import Table from "../../components/Table/Table";
+import DashboardTable from "../../components/Table/DashboardTable";
 
 class DashboardContainer extends Component {
   componentWillMount() {
@@ -266,8 +266,8 @@ class DashboardContainer extends Component {
                 </Col>
               </Row>
               <Row className="grid">
-                <div className="grey_bg">
-                  <Table />
+                <div className="grey_bg dashboard_table">
+                  <DashboardTable />
                 </div>
               </Row>
             </Grid>

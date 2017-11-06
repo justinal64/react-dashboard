@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const CenterText = styled.div`text-align: center;`;
-
 const StyledLabel = styled.label`
   color: white;
   padding-left: 0.5rem;
@@ -13,11 +11,9 @@ const StyledLabel = styled.label`
 
 const Label = props => {
   return (
-    <CenterText>
-      <StyledLabel round={props.round} color={props.color}>
-        {props.title}
-      </StyledLabel>
-    </CenterText>
+    <StyledLabel round={props.round} color={props.color}>
+      {props.title}
+    </StyledLabel>
   );
 };
 
