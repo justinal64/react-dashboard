@@ -23,23 +23,29 @@ const StyledHref = styled.a`
   }
   :hover {
     color: ${props => (props.active ? "white" : "#20a8d8")};
+    background-color: #e1e6ef;
+    border-color: #ddd;
   }
 `;
 
+const StyledDiv = styled.div`padding: 1.5rem 0;`;
+
 const Pagination = props => {
   return (
-    <StyledPageUL>
-      <StyledPageLI>
-        <StyledHref href="#">{getIcon("backward")}</StyledHref>
-        <StyledHref href="#" active>
-          1
-        </StyledHref>
-        <StyledHref href="#">2</StyledHref>
-        <StyledHref href="#">3</StyledHref>
-        <StyledHref href="#">4</StyledHref>
-        <StyledHref href="#">{getIcon("forward")}</StyledHref>
-      </StyledPageLI>
-    </StyledPageUL>
+    <StyledDiv>
+      <StyledPageUL>
+        <StyledPageLI>
+          <StyledHref href="#">{getIcon("backward")}</StyledHref>
+          <StyledHref href="#" active>
+            1
+          </StyledHref>
+          <StyledHref href="#">2</StyledHref>
+          <StyledHref href="#">3</StyledHref>
+          <StyledHref href="#">4</StyledHref>
+          <StyledHref href="#">{getIcon("forward")}</StyledHref>
+        </StyledPageLI>
+      </StyledPageUL>
+    </StyledDiv>
   );
 };
 

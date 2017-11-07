@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { TableLeftAligned, TBody, TH, TD } from "./Styles";
+import { TableLeftAligned } from "./Styles";
 import { getIcon } from "../Helper/Helper";
 import GraphHeader from "../Typography/GraphHeader/GraphHeader";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
@@ -11,69 +11,64 @@ const getTheme = color => {
   return "transparent";
 };
 
-class Table extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render(props) {
-    return (
-      <TableLeftAligned>
-        <thead>
-          <tr>
-            <TH>Username</TH>
-            <TH>Date Registered</TH>
-            <TH>Role</TH>
-            <TH>Status</TH>
-          </tr>
-        </thead>
-        <TBody>
-          <tr>
-            <TD>Elizabeth Burke</TD>
-            <TD>2012/01/01</TD>
-            <TD>Member</TD>
-            <TD>
-              <Label title="Success" color={getTheme("success")} />
-            </TD>
-          </tr>
-          <tr>
-            <TD>Theodore Winters</TD>
-            <TD>2012/01/01</TD>
-            <TD>Administartor</TD>
-            <TD>
-              <Label title="Banned" color={getTheme("danger")} />
-            </TD>
-          </tr>
-          <tr>
-            <TD>Peter Burke</TD>
-            <TD>2012/01/01</TD>
-            <TD>Staff</TD>
-            <TD>
-              <Label title="Inactive" color={getTheme("secondary")} />
-            </TD>
-          </tr>
-          <tr>
-            <TD>Peter Burke</TD>
-            <TD>2012/01/01</TD>
-            <TD>Staff</TD>
-            <TD>
-              <Label title="Pending" color={getTheme("warning")} />
-            </TD>
-          </tr>
-          <tr>
-            <TD>Neal Caffery</TD>
-            <TD>2012/01/01</TD>
-            <TD>Staff</TD>
-            <TD>
-              <Label title="Active" color={getTheme("success")} />
-            </TD>
-          </tr>
-        </TBody>
-      </TableLeftAligned>
-    );
-    let navColorScheme = {
-      color: "grey"
-    };
-  }
-}
+const Table = props => {
+  return (
+    <TableLeftAligned striped={props.striped}>
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Date Registered</th>
+          <th>Role</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Elizabeth Burke</td>
+          <td>2012/01/01</td>
+          <td>Member</td>
+          <td>
+            <Label title="Success" color={getTheme("success")} />
+          </td>
+        </tr>
+        <tr>
+          <td>Theodore Winters</td>
+          <td>2012/01/01</td>
+          <td>Administartor</td>
+          <td>
+            <Label title="Banned" color={getTheme("danger")} />
+          </td>
+        </tr>
+        <tr>
+          <td>Peter Burke</td>
+          <td>2012/01/01</td>
+          <td>Staff</td>
+          <td>
+            <Label title="Inactive" color={getTheme("secondary")} />
+          </td>
+        </tr>
+        <tr>
+          <td>Peter Burke</td>
+          <td>2012/01/01</td>
+          <td>Staff</td>
+          <td>
+            <Label title="Pending" color={getTheme("warning")} />
+          </td>
+        </tr>
+        <tr>
+          <td>Neal Caffery</td>
+          <td>2012/01/01</td>
+          <td>Staff</td>
+          <td>
+            <Label title="Active" color={getTheme("success")} />
+          </td>
+        </tr>
+      </tbody>
+    </TableLeftAligned>
+  );
+  let navColorScheme = {
+    color: "grey"
+  };
+};
 
 export default Table;

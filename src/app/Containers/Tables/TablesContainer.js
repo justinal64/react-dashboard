@@ -6,7 +6,7 @@ import { Row, Col, Grid } from "react-flexbox-grid";
 import { getIcon } from "../../components/Helper/Helper";
 import DashboardTable from "../../components/Table/DashboardTable";
 import Table from "../../components/Table/Table";
-import StyledPageUL from "../../components/Pagination/Pagination";
+import StyledPagination from "../../components/Pagination/Pagination";
 
 class TablesContainer extends Component {
   componentWillMount() {
@@ -48,18 +48,23 @@ class TablesContainer extends Component {
                   <div className="card_body card_bg">
                     <Table />
                     <div>
-                      <StyledPageUL />
+                      <StyledPagination />
                     </div>
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
                     <Header
-                      title="Options"
+                      title="Striped Table"
                       subtitle={getIcon("align-justify", styles)}
                     />
                   </div>
-                  <div className="card_body card_bg">TablesConatiner</div>
+                  <div className="card_body card_bg">
+                    <Table striped />
+                    <div>
+                      <StyledPagination />
+                    </div>
+                  </div>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
