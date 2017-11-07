@@ -4,6 +4,7 @@ import { getIcon } from "../Helper/Helper";
 const StyledPageUL = styled.ul`
   color: black;
   list-style-type: none;
+  padding: 0.5rem 0;
 `;
 
 const StyledPageLI = styled.li`color: black;`;
