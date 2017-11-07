@@ -23,6 +23,8 @@ const StyledHref = styled.a`
   }
   :hover {
     color: ${props => (props.active ? "white" : "#20a8d8")};
+    background-color: #e1e6ef;
+    border-color: #ddd;
   }
 `;
 
