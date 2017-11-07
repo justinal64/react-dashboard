@@ -18,7 +18,7 @@ export const TableLeftAligned = Table.extend`
   }
   tbody tr:nth-child(odd) {
     background-color: ${props =>
-      props.striped ? "rgba(0, 0, 0, 0.05)" : "white"};
+      props.striped ? "rgba(0, 0, 0, 0.05)" : "transparent"};
   }
   td {
     font-size: 1rem;

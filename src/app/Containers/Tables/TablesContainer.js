@@ -60,7 +60,7 @@ class TablesContainer extends Component {
                     />
                   </div>
                   <div className="card_body card_bg">
-                    <Table />
+                    <Table striped />
                     <div>
                       <StyledPageUL />
                     </div>
