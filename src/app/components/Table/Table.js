@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { TableLeftAligned, TBody, TH, TD } from "./Styles";
+import { TableLeftAligned } from "./Styles";
 import { getIcon } from "../Helper/Helper";
 import GraphHeader from "../Typography/GraphHeader/GraphHeader";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
@@ -12,62 +12,59 @@ const getTheme = color => {
 };
 
 class Table extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render(props) {
     return (
       <TableLeftAligned>
         <thead>
           <tr>
-            <TH>Username</TH>
-            <TH>Date Registered</TH>
-            <TH>Role</TH>
-            <TH>Status</TH>
+            <th>Username</th>
+            <th>Date Registered</th>
+            <th>Role</th>
+            <th>Status</th>
           </tr>
         </thead>
-        <TBody>
+        <tbody>
           <tr>
-            <TD>Elizabeth Burke</TD>
-            <TD>2012/01/01</TD>
-            <TD>Member</TD>
-            <TD>
+            <td>Elizabeth Burke</td>
+            <td>2012/01/01</td>
+            <td>Member</td>
+            <td>
               <Label title="Success" color={getTheme("success")} />
-            </TD>
+            </td>
           </tr>
           <tr>
-            <TD>Theodore Winters</TD>
-            <TD>2012/01/01</TD>
-            <TD>Administartor</TD>
-            <TD>
+            <td>Theodore Winters</td>
+            <td>2012/01/01</td>
+            <td>Administartor</td>
+            <td>
               <Label title="Banned" color={getTheme("danger")} />
-            </TD>
+            </td>
           </tr>
           <tr>
-            <TD>Peter Burke</TD>
-            <TD>2012/01/01</TD>
-            <TD>Staff</TD>
-            <TD>
+            <td>Peter Burke</td>
+            <td>2012/01/01</td>
+            <td>Staff</td>
+            <td>
               <Label title="Inactive" color={getTheme("secondary")} />
-            </TD>
+            </td>
           </tr>
           <tr>
-            <TD>Peter Burke</TD>
-            <TD>2012/01/01</TD>
-            <TD>Staff</TD>
-            <TD>
+            <td>Peter Burke</td>
+            <td>2012/01/01</td>
+            <td>Staff</td>
+            <td>
               <Label title="Pending" color={getTheme("warning")} />
-            </TD>
+            </td>
           </tr>
           <tr>
-            <TD>Neal Caffery</TD>
-            <TD>2012/01/01</TD>
-            <TD>Staff</TD>
-            <TD>
+            <td>Neal Caffery</td>
+            <td>2012/01/01</td>
+            <td>Staff</td>
+            <td>
               <Label title="Active" color={getTheme("success")} />
-            </TD>
+            </td>
           </tr>
-        </TBody>
+        </tbody>
       </TableLeftAligned>
     );
     let navColorScheme = {

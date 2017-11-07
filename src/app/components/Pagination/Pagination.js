@@ -4,7 +4,6 @@ import { getIcon } from "../Helper/Helper";
 const StyledPageUL = styled.ul`
   color: black;
   list-style-type: none;
-  padding: 0.5rem 0;
 `;
 
 const StyledPageLI = styled.li`color: black;`;
@@ -28,20 +27,24 @@ const StyledHref = styled.a`
   }
 `;
 
+const StyledDiv = styled.div`padding: 1.5rem 0;`;
+
 const Pagination = props => {
   return (
-    <StyledPageUL>
-      <StyledPageLI>
-        <StyledHref href="#">{getIcon("backward")}</StyledHref>
-        <StyledHref href="#" active>
-          1
-        </StyledHref>
-        <StyledHref href="#">2</StyledHref>
-        <StyledHref href="#">3</StyledHref>
-        <StyledHref href="#">4</StyledHref>
-        <StyledHref href="#">{getIcon("forward")}</StyledHref>
-      </StyledPageLI>
-    </StyledPageUL>
+    <StyledDiv>
+      <StyledPageUL>
+        <StyledPageLI>
+          <StyledHref href="#">{getIcon("backward")}</StyledHref>
+          <StyledHref href="#" active>
+            1
+          </StyledHref>
+          <StyledHref href="#">2</StyledHref>
+          <StyledHref href="#">3</StyledHref>
+          <StyledHref href="#">4</StyledHref>
+          <StyledHref href="#">{getIcon("forward")}</StyledHref>
+        </StyledPageLI>
+      </StyledPageUL>
+    </StyledDiv>
   );
 };
 
