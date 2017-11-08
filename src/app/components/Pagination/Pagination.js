@@ -28,6 +28,16 @@ const StyledHref = styled.a`
   }
 `;
 
+const next = arrow => {
+  if (arrow) return getIcon("forward");
+  else return "Next";
+};
+
+const previous = arrow => {
+  if (arrow) return getIcon("backward");
+  else return "Previous";
+};
+
 const StyledDiv = styled.div`padding: 1.5rem 0;`;
 
 const Pagination = props => {
@@ -35,14 +45,14 @@ const Pagination = props => {
     <StyledDiv>
       <StyledPageUL>
         <StyledPageLI>
-          <StyledHref href="#">{getIcon("backward")}</StyledHref>
+          <StyledHref href="#">{previous(props.arrow)}</StyledHref>
           <StyledHref href="#" active>
             1
           </StyledHref>
           <StyledHref href="#">2</StyledHref>
           <StyledHref href="#">3</StyledHref>
           <StyledHref href="#">4</StyledHref>
-          <StyledHref href="#">{getIcon("forward")}</StyledHref>
+          <StyledHref href="#">{next(props.arrow)}</StyledHref>
         </StyledPageLI>
       </StyledPageUL>
     </StyledDiv>

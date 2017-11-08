@@ -48,7 +48,7 @@ class TablesContainer extends Component {
                   <div className="card_body card_bg">
                     <Table />
                     <div>
-                      <StyledPagination />
+                      <StyledPagination arrow />
                     </div>
                   </div>
                 </Col>
