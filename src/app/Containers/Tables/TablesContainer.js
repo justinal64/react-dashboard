@@ -88,13 +88,13 @@ class TablesContainer extends Component {
                     />
                   </div>
                   <div className="card_body card_bg">
-                    <Table condensed />
+                    <Table border />
                     <div>
                       <StyledPagination />
                     </div>
                   </div>
                 </Col>
-                <Col xs={12} sm={6} md={6} lg={6}>
+                <Col xs={12} sm={12} md={12} lg={12}>
                   <div className="card_header card_bg">
                     <Header
                       title="Options"

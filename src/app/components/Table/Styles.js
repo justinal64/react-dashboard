@@ -24,6 +24,7 @@ export const TableLeftAligned = Table.extend`
     padding: ${props => (props.condensed ? "0" : "0.75rem")};
     font-size: 1rem;
     border-bottom: 1px solid #e1e6ef;
+    border: 1px solid ${props => (props.border ? "#e1e6ef" : "transparent")};
   }
 `;
 
