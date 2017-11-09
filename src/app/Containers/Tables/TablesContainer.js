@@ -69,6 +69,20 @@ class TablesContainer extends Component {
                 <Col xs={12} sm={6} md={6} lg={6}>
                   <div className="card_header card_bg">
                     <Header
+                      title="Condensed Table"
+                      subtitle={getIcon("align-justify", styles)}
+                    />
+                  </div>
+                  <div className="card_body card_bg">
+                    <Table condensed />
+                    <div>
+                      <StyledPagination />
+                    </div>
+                  </div>
+                </Col>
+                <Col xs={12} sm={6} md={6} lg={6}>
+                  <div className="card_header card_bg">
+                    <Header
                       title="Condesnsed Table"
                       subtitle={getIcon("align-justify", styles)}
                     />
