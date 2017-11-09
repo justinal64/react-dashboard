@@ -13,7 +13,11 @@ const getTheme = color => {
 
 const Table = props => {
   return (
-    <TableLeftAligned striped={props.striped}>
+    <TableLeftAligned
+      striped={props.striped}
+      condensed={props.condensed}
+      border={props.border}
+    >
       <thead>
         <tr>
           <th>Username</th>

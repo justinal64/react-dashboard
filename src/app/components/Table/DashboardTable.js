@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { TBody } from "./Styles";
+import { TBody, Table } from "./Styles";
+import Pagination from "../Pagination/Pagination";
 import { getIcon } from "../Helper/Helper";
 import GraphHeader from "../Typography/GraphHeader/GraphHeader";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
@@ -10,7 +11,7 @@ class DashboardTable extends React.Component {
   }
   render(props) {
     return (
-      <table className="hoverTable">
+      <Table className="hoverTable">
         <thead>
           <tr>
             <th>{getIcon("user-o", navColorScheme)}</th>
@@ -132,7 +133,7 @@ class DashboardTable extends React.Component {
             <th>5 minutes ago</th>
           </tr>
         </TBody>
-      </table>
+      </Table>
     );
     let navColorScheme = {
       color: "grey"
