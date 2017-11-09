@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { TBody, Table } from "./Styles";
+import Pagination from "../Pagination/Pagination";
 import { getIcon } from "../Helper/Helper";
 import GraphHeader from "../Typography/GraphHeader/GraphHeader";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
