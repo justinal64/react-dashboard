@@ -21,6 +21,7 @@ export const TableLeftAligned = Table.extend`
       props.striped ? "rgba(0, 0, 0, 0.05)" : "transparent"};
   }
   td {
+    padding: ${props => (props.condensed ? "0" : "0.75rem")};
     font-size: 1rem;
     border-bottom: 1px solid #e1e6ef;
   }

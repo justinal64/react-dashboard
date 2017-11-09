@@ -35,7 +35,7 @@ const next = arrow => {
 
 const previous = arrow => {
   if (arrow) return getIcon("backward");
-  else return "Previous";
+  else return "Prev";
 };
 
 const StyledDiv = styled.div`padding: 1.5rem 0;`;
