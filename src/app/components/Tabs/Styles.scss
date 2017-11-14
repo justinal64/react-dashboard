@@ -1,0 +1,8 @@
+.tabs .active {
+    background-color: white;
+    display: block;
+}
+
+.tabs div:not(.active) {
+    display: none;
+}
