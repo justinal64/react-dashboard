@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import SideNavigation from "../../components/Navigation/SideNavigation";
 import { Row, Col, Grid } from "react-flexbox-grid";
+import Tabs from "../../components/Tabs/Tabs";
 
 class TabsContainer extends Component {
   componentWillMount() {
@@ -33,7 +34,7 @@ class TabsContainer extends Component {
               </div>
               <Row>
                 <Col xs={12} sm={6} md={6} lg={6}>
-                  Tab 1
+                  <Tabs />
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={6}>
                   Tab2
