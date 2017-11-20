@@ -1,8 +1,12 @@
-.tabs .active {
-    background-color: white;
-    display: block;
-}
-
-.tabs div:not(.active) {
-    display: none;
+button {
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 0.75rem;
+    line-height: 1.25;
+    transition: all 0.15s ease-in-out;
+    margin: 0.15em;
 }

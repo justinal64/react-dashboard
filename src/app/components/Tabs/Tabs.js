@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import "./Styles.scss";
 const UL = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -25,38 +25,46 @@ const A = styled.a`
   border-bottom-color: #fff;
 `;
 
-const test = (e, test) => {
+const isActive = (e, anchor) => {
   e.preventDefault();
-  console.log(test);
+  console.log(e);
+  console.log(anchor);
   console.log("Test Working!!");
+  let tabs = document.getElementsByClassName("tabs");
+  console.log(tabs);
 };
 
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      color: props.initialColor
+      home: "active",
+      profile: "",
+      messages: ""
     };
   }
   render() {
     return (
       <UL className="tabs">
         <li>
-          <A href="#" role="button" onClick={test} active>
+          <A href="#" role="button" onClick={e => isActive(e, "Home")} active>
             Home
           </A>
+          <button title="Button" onClick={e => isActive(e, "Home")}>
+            Button
+          </button>
         </li>
         <li>
-          <A href="#" role="button" onClick={test}>
+          <A href="#" role="button" onClick={e => isActive(e, "Profile")}>
             Profile
           </A>
         </li>
         <li>
-          <A href="#" role="button" onClick={test}>
+          <A href="#" role="button" onClick={e => isActive(e, "Messages")}>
             Messages
           </A>
         </li>
-        <Div active>
+        <Div data="home" active>
           1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -65,7 +73,7 @@ class Tabs extends React.Component {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </Div>
-        <Div>
+        <Div data="profile">
           2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -74,7 +82,7 @@ class Tabs extends React.Component {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </Div>
-        <Div>
+        <Div data="messages">
           3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
