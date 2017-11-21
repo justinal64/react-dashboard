@@ -32,20 +32,15 @@ const A = styled.a`
 
 const isActive = (e, anchor) => {
   e.preventDefault();
-  let tabs = document.getElementsByClassName("tabs");
   let aElements = document.querySelectorAll(".tabs a");
   let divElements = document.querySelectorAll(".tabs div");
-  aElements.forEach(element => {
-    if (element.text === anchor) {
-      element.classList.add("active");
-    } else {
-      element.classList.remove("active");
-    }
-  });
 
-  divElements.forEach(element => {
-    console.log(element.getAttribute("data"));
-    console.log(anchor);
+  highlightA(anchor, aElements);
+  showDiv(anchor, divElements);
+};
+
+const showDiv = (anchor, elements) => {
+  elements.forEach(element => {
     if (element.getAttribute("data") === anchor) {
       element.classList.add("show");
       element.classList.remove("hide");
@@ -53,22 +48,16 @@ const isActive = (e, anchor) => {
       element.classList.add("hide");
     }
   });
-  // console.log(divElements);
-  // console.log(aElements);
-  // showDiv(anchor, divElements);
-  // highlightLi(anchor, aElements);
 };
 
-const showDiv = (anchor, elements) => {
+const highlightA = (anchor, elements) => {
   elements.forEach(element => {
-    console.log(element);
+    if (element.text === anchor) {
+      element.classList.add("active");
+    } else {
+      element.classList.remove("active");
+    }
   });
-  console.log("elements: ", elements);
-  console.log("anchor: ", anchor);
-};
-
-const highlightLi = (anchor, elements) => {
-  console.log("highlightLi working!!!");
 };
 
 class Tabs extends React.Component {
