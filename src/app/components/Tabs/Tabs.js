@@ -32,26 +32,43 @@ const A = styled.a`
 
 const isActive = (e, anchor) => {
   e.preventDefault();
-  console.log(e);
-  console.log(anchor);
   let tabs = document.getElementsByClassName("tabs");
-  let liElements = document.querySelectorAll(".tabs li");
+  let aElements = document.querySelectorAll(".tabs a");
   let divElements = document.querySelectorAll(".tabs div");
+  aElements.forEach(element => {
+    if (element.text === anchor) {
+      element.classList.add("active");
+    } else {
+      element.classList.remove("active");
+    }
+  });
 
-  console.log(divElements);
-  console.log(liElements);
-  showDiv(anchor, divElements);
-  showLi(anchor, liElements);
+  divElements.forEach(element => {
+    console.log(element.getAttribute("data"));
+    console.log(anchor);
+    if (element.getAttribute("data") === anchor) {
+      element.classList.add("show");
+      element.classList.remove("hide");
+    } else {
+      element.classList.add("hide");
+    }
+  });
+  // console.log(divElements);
+  // console.log(aElements);
+  // showDiv(anchor, divElements);
+  // highlightLi(anchor, aElements);
 };
 
 const showDiv = (anchor, elements) => {
-  elements.forEach(element => {});
+  elements.forEach(element => {
+    console.log(element);
+  });
   console.log("elements: ", elements);
   console.log("anchor: ", anchor);
 };
 
-const showLi = anchor => {
-  console.log("showLi working!!!");
+const highlightLi = (anchor, elements) => {
+  console.log("highlightLi working!!!");
 };
 
 class Tabs extends React.Component {
@@ -86,7 +103,7 @@ class Tabs extends React.Component {
             Messages
           </A>
         </li>
-        <Div data="home" className="show">
+        <Div data="Home" className="show">
           1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -95,7 +112,7 @@ class Tabs extends React.Component {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </Div>
-        <Div data="profile" className="hide">
+        <Div data="Profile" className="hide">
           2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -104,7 +121,7 @@ class Tabs extends React.Component {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </Div>
-        <Div data="messages" className="hide">
+        <Div data="Messages" className="hide">
           3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
