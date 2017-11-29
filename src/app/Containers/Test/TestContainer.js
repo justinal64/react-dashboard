@@ -39,57 +39,17 @@ class TestContainer extends Component {
                 <Col xs={12} sm={12} md={6} lg={6} className="col">
                   <div className="chart_styling">
                     <Col xs={12} sm={12} md={12} lg={12}>
-                      <GraphStyling title="Line Chart" />
+                      Test Container
                     </Col>
-                    <LineChart height={300} />
                   </div>
                 </Col>
                 <Col xs={12} sm={12} md={6} lg={6} className="col">
                   <div className="chart_styling">
                     <Col xs={12} sm={12} md={12} lg={12}>
-                      <GraphStyling title="Bar Chart" />
+                      Test Container 2
                     </Col>
-                    <BarChart height={300} xAxes={true} yAxes={true} />
-                    />
                   </div>
                 </Col>
-              </Row>
-              <Row className="around-lg around-md">
-                <Col xs={12} sm={12} md={6} lg={6} className="col">
-                  <div className="chart_styling">
-                    <Col xs={12} sm={12} md={12} lg={12}>
-                      <GraphStyling title="Pie Chart" />
-                    </Col>
-                    <PieChart height={300} />
-                  </div>
-                </Col>
-                <Col xs={12} sm={12} md={6} lg={6} className="col">
-                  <div className="chart_styling">
-                    <Col xs={12} sm={12} md={12} lg={12}>
-                      <GraphStyling title="Simple Line Chart" />
-                    </Col>
-                    <SimpleLineChart height={300} />
-                  </div>
-                </Col>
-              </Row>
-              <Row className="around-lg around-md">
-                <Col xs={12} sm={12} md={6} lg={6} className="col">
-                  <div className="chart_styling">
-                    <Col xs={12} sm={12} md={12} lg={12}>
-                      <GraphStyling title="Horizontal Bar Chart" />
-                    </Col>
-                    <HorizontalBarChart height={300} />
-                    />
-                  </div>
-                </Col>
-                {/* <Col xs={12} sm={12} md={6} lg={6} className="col">
-                  <div className="chart_styling">
-                    <Col xs={12} sm={12} md={12} lg={12}>
-                      <GraphStyling title="Simple Line Chart" />
-                    </Col>
-                      <SimpleLineChart height={300} />
-                  </div>
-                </Col> */}
               </Row>
             </Grid>
           </div>
