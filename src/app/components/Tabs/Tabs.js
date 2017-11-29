@@ -34,29 +34,38 @@ const isActive = (e, anchor) => {
   e.preventDefault();
   console.log(e);
   console.log(anchor);
-  let tabs = document.getElementsByClassName("tabs");
-  let liElements = document.querySelectorAll(".tabs li");
+  let aElements = document.querySelectorAll(".tabs a");
   let divElements = document.querySelectorAll(".tabs div");
 
-  console.log(divElements);
-  console.log(liElements);
+  highlightA(anchor, aElements);
   showDiv(anchor, divElements);
-  showLi(anchor, liElements);
 };
 
 const showDiv = (anchor, elements) => {
-  elements.forEach(element => {});
-  console.log("elements: ", elements);
-  console.log("anchor: ", anchor);
+  elements.forEach(element => {
+    if (element.getAttribute("data") === anchor) {
+      element.classList.add("show");
+      element.classList.remove("hide");
+    } else {
+      element.classList.add("hide");
+    }
+  });
 };
 
-const showLi = anchor => {
-  console.log("showLi working!!!");
+const highlightA = (anchor, elements) => {
+  elements.forEach(element => {
+    if (element.text === anchor) {
+      element.classList.add("active");
+    } else {
+      element.classList.remove("active");
+    }
+  });
 };
 
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
+    // this.highlightA = this.highlightA.bind(this);
     this.state = {
       home: "active",
       profile: "",
@@ -86,7 +95,7 @@ class Tabs extends React.Component {
             Messages
           </A>
         </li>
-        <Div data="home" className="show">
+        <Div data="Home" className="show">
           1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -95,7 +104,7 @@ class Tabs extends React.Component {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </Div>
-        <Div data="profile" className="hide">
+        <Div data="Profile" className="hide">
           2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -104,7 +113,7 @@ class Tabs extends React.Component {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </Div>
-        <Div data="messages" className="hide">
+        <Div data="Messages" className="hide">
           3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
