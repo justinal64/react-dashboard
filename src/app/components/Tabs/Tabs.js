@@ -32,6 +32,8 @@ const A = styled.a`
 
 const isActive = (e, anchor) => {
   e.preventDefault();
+  console.log(e);
+  console.log(anchor);
   let aElements = document.querySelectorAll(".tabs a");
   let divElements = document.querySelectorAll(".tabs div");
 
@@ -63,6 +65,7 @@ const highlightA = (anchor, elements) => {
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
+    // this.highlightA = this.highlightA.bind(this);
     this.state = {
       home: "active",
       profile: "",
