@@ -17,6 +17,7 @@ import SimpleLineChart from "../screens/Charts/SimpleLineChart.js";
 import SocialMediaChart from "../screens/Charts/SocialMediaChart.js";
 import Tables from "../screens/Tables";
 import Cards from "../screens/Cards";
+import TSTest from "../screens/TSTest";
 const App = () => {
   return (
     <main>
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/simplelinechart" component={SimpleLineChart} />
         <Route path="/socialmediachart" component={SocialMediaChart} />
         <Route path="/tables" component={Tables} />
+        <Route path="/tstest" component={TSTest} />
         <Route path="*" component={NotFound} />
       </Switch>
     </main>
