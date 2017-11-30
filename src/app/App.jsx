@@ -38,7 +38,11 @@ const App = () => {
         <Route path="/simplelinechart" component={SimpleLineChart} />
         <Route path="/socialmediachart" component={SocialMediaChart} />
         <Route path="/tables" component={Tables} />
+<<<<<<< HEAD
         <Route path="/tstest" component={TSTest} />
+=======
+        <Route path="/tabs" component={Tabs} />
+>>>>>>> master
         <Route path="*" component={NotFound} />
       </Switch>
     </main>

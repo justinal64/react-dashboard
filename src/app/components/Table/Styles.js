@@ -27,8 +27,3 @@ export const TableLeftAligned = Table.extend`
     border: 1px solid ${props => (props.border ? "#e1e6ef" : "transparent")};
   }
 `;
-
-export const TH = styled.th`
-  font-size: 1.25rem;
-  border-bottom: 2px solid #e1e6ef;
-`;
