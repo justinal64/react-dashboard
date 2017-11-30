@@ -12,21 +12,10 @@ let config = {
     path: path.resolve(__dirname, "public"), // output path
     filename: "output.js" // output filename
   },
+  devtool: "source-map",
   resolve: {
     // These options change how modules are resolved
-    extensions: [
-      ".js",
-      ".jsx",
-      ".ts",
-      ".tsx",
-      ".json",
-      ".scss",
-      ".css",
-      ".jpeg",
-      ".jpg",
-      ".gif",
-      ".png"
-    ], // Automatically resolve certain extensions
+    extensions: [".js", ".ts", ".tsx"], // Automatically resolve certain extensions
     alias: {
       // Create aliases
       images: path.resolve(__dirname, "src/assets/images") // src/assets/images alias
@@ -35,11 +24,7 @@ let config = {
   module: {
     rules: [
       // loader rules
-      {
-        test: /\.tsx?$/,
-        exclude: /node_modules/, // exclude the node_modules directory
-        loader: "ts-loader"
-      },
+      { test: /\.tsx?$/, loader: "ts-loader" },
       {
         test: /\.js$/, // files ending with .js
         exclude: /node_modules/, // exclude the node_modules directory
