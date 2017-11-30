@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from "../../components/Typography/Header/Header";
 import SideNavigation from "../../components/Navigation/SideNavigation";
 import { getIcon } from "../../components/Helper/Helper";
 import { Row, Col, Grid } from "react-flexbox-grid";

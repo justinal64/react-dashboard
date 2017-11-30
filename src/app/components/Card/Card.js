@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../Typography/Header/Header";
 import { colors } from "../Styles/Styles";
 
 const getTheme = color => {
@@ -59,7 +58,9 @@ const StyledCardBody = styled.div`
   color: ${props => (props.background ? "white" : "black")};
 `;
 
-const StyledLabel = styled.span`float: right;`;
+const StyledLabel = styled.span`
+  float: right;
+`;
 
 const Card = props => {
   const {

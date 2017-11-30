@@ -1,8 +1,10 @@
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
-import { getFontSize, getColor } from "../../Styles/Styles";
+import { getFontSize } from "../../Styles/Styles";
 
-const Title = styled.span`${getFontSize};`;
+const Title = styled.span`
+  ${getFontSize};
+`;
 const SubTitle = styled.span`
   ${getFontSize};
   padding-left: 0.25rem;
