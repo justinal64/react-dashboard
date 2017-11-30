@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import { getFontSize, getColor } from "../../Styles/Styles";
 
-const Title = styled.span`${getFontSize};`;
+const Title = styled.span`
+  ${getFontSize};
+`;
 const SubTitle = styled.span`
   ${getFontSize};
   padding-left: 0.25rem;
@@ -36,6 +39,17 @@ const Header = props => {
       {addCode(codetext, font)}
     </div>
   );
+};
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired
+  // viewBox: PropTypes.string.isRequired,
+  // className: PropTypes.string,
+  // fill: PropTypes.string,
+  // width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  // height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  // label: PropTypes.string,
+  // style: PropTypes.oneOfType([PropTypes.object])
 };
 
 export default Header;

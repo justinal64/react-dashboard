@@ -4,14 +4,16 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "webpack --progress",
-        "start": "webpack --progress && webpack-dev-server -d --hot --config webpack.config.js --watch --progress",
-        "production": "NODE_ENV=production webpack --progress"
+        "start": "react-scripts-ts start",
+        "build": "react-scripts-ts build",
+        "test": "react-scripts-ts test --env=jsdom",
+        "eject": "react-scripts-ts eject"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@types/react": "^16.0.25",
         "autoprefixer": "^7.1.1",
         "babel-core": "^6.24.1",
         "babel-loader": "^7.0.0",
@@ -31,11 +33,12 @@
         "style-loader": "^0.16.1",
         "uglifyjs-webpack-plugin": "^0.4.3",
         "webpack": "^2.3.3",
-        "webpack-dev-server": "^2.4.2"
+        "webpack-dev-server": "^2.4.2",
+        "react-scripts-ts": "1.0.6"
     },
     "dependencies": {
+        "@types/chart.js": "^2.7.1",
         "axios": "^0.16.2",
-        "chart.js": "^2.7.0",
         "prop-types": "^15.5.10",
         "react-chartjs-2": "^2.6.2",
         "react-collapsible": "^2.0.3",
@@ -46,9 +49,11 @@
         "react-prism": "^4.3.0",
         "react-redux": "^5.0.6",
         "react-router-dom": "^4.2.0",
+        "react-scripts-ts": "2.8.0",
         "redux": "^3.7.2",
         "redux-promise": "^0.5.3",
         "styled-components": "^2.1.2",
+        "ts-loader": "^3.2.0",
         "tslint": "^5.7.0",
         "typescript": "^2.6.2"
     }

@@ -9,7 +9,7 @@ let config = {
   entry: "./src/index.js", // entry file
   output: {
     // output
-    path: path.resolve(__dirname, "public"), // ouput path
+    path: path.resolve(__dirname, "public"), // output path
     filename: "output.js" // output filename
   },
   resolve: {
@@ -17,6 +17,8 @@ let config = {
     extensions: [
       ".js",
       ".jsx",
+      ".ts",
+      ".tsx",
       ".json",
       ".scss",
       ".css",
@@ -33,6 +35,7 @@ let config = {
   module: {
     rules: [
       // loader rules
+      // { test: /\.ts?$/, loader: "ts-loader" }, Work on this!!!!!!!
       {
         test: /\.js$/, // files ending with .js
         exclude: /node_modules/, // exclude the node_modules directory

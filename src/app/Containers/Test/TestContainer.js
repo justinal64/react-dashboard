@@ -1,15 +1,9 @@
 import React, { Component } from "react";
 import SideNavigation from "../../components/Navigation/SideNavigation";
-import LineChart from "../../components/ChartJS/LineChart";
-import BarChart from "../../components/ChartJS/BarChart";
-import PieChart from "../../components/ChartJS/PieChart";
-import SimpleLineChart from "../../components/ChartJS/SimpleLineChart";
-import HorizontalBarChart from "../../components/ChartJS/HorizontalBarChart";
-import GraphStyling from "../../components/GraphStyling/GraphStyling";
 import SampleData from "../../../sample-data";
 import { connect } from "react-redux";
 import fetchData from "../../../actions/fetch_data";
-
+import Header from "../../components/Typography/Header/Header";
 import { Row, Col, Grid } from "react-flexbox-grid";
 
 class TestContainer extends Component {
@@ -39,7 +33,7 @@ class TestContainer extends Component {
                 <Col xs={12} sm={12} md={6} lg={6} className="col">
                   <div className="chart_styling">
                     <Col xs={12} sm={12} md={12} lg={12}>
-                      Test Container
+                      <Header title="Test" />
                     </Col>
                   </div>
                 </Col>
