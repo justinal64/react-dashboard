@@ -9,7 +9,7 @@ let config = {
   entry: "./src/index.js", // entry file
   output: {
     // output
-    path: path.resolve(__dirname, "public"), // ouput path
+    path: path.resolve(__dirname, "public"), // output path
     filename: "output.js" // output filename
   },
   resolve: {
@@ -17,6 +17,8 @@ let config = {
     extensions: [
       ".js",
       ".jsx",
+      ".ts",
+      ".tsx",
       ".json",
       ".scss",
       ".css",
@@ -33,6 +35,11 @@ let config = {
   module: {
     rules: [
       // loader rules
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/, // exclude the node_modules directory
+        loader: "ts-loader"
+      },
       {
         test: /\.js$/, // files ending with .js
         exclude: /node_modules/, // exclude the node_modules directory
@@ -100,7 +107,7 @@ let config = {
     compress: true, // Enable gzip compression for everything served:
     hot: true // Enable webpack's Hot Module Replacement feature
   },
-  devtool: "eval-source-map" // enable devtool for better debugging experience
+  devtool: "inline-source-map" // enable devtool for better debugging experience original selection = eval-source-map
 };
 
 module.exports = config;
