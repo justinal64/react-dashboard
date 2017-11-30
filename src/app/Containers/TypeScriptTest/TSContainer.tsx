@@ -4,14 +4,7 @@ import * as React from "react";
 // import { Row, Col, Grid } from "react-flexbox-grid";
 
 class TestContainer extends React.Component<any, {}> {
-  componentWillMount() {
-    // this.props.fetchData();
-  }
-
-  componentDidMount() {
-    // setInterval(this.props.fetchData.bind(this), 100000); // 300000 = 5 minutes
-  }
-  render() {
+  public render() {
     return (
       <div>TSContainer Test Working!!</div>
       // <div id="body">

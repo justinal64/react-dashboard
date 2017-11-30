@@ -35,7 +35,11 @@ let config = {
   module: {
     rules: [
       // loader rules
-      { test: /\.tsx?$/, loader: "ts-loader" },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/, // exclude the node_modules directory
+        loader: "ts-loader"
+      },
       {
         test: /\.js$/, // files ending with .js
         exclude: /node_modules/, // exclude the node_modules directory
